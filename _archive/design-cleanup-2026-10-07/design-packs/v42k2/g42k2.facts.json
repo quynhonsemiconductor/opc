@@ -1,0 +1,157 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.2.7",
+ "group": "g42k2",
+ "screens": [
+  {
+   "file": "readiness.html",
+   "title": "Cài đặt · Sẵn sàng (readiness theo mô hình)",
+   "pattern": "checklist",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 33,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "setup-business.html",
+   "title": "Cài đặt · Hộ & mô hình kinh doanh",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 30,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "setup-data.html",
+   "title": "Cài đặt · Dữ liệu nền",
+   "pattern": "datatable",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 31,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "connections.html",
+   "title": "Cài đặt · Kết nối (17 nhóm)",
+   "pattern": "datatable",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 28,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "setup-policy.html",
+   "title": "Cài đặt · Vai trò & ngưỡng duyệt",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 30,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  }
+ ]
+}

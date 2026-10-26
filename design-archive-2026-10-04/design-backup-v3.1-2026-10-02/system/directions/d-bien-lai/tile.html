@@ -1,0 +1,250 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Style tile — Biên Lai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  /* Biên Lai — thermal receipt tokens */
+  --desk:#e4dfd3;        /* counter surface the slips sit on */
+  --paper:#faf8f2;       /* thermal paper */
+  --ink:#1c1b18;         /* print black */
+  --ink-2:#56534b;       /* faded print (meta) */
+  --rule:#a9a497;        /* perforation / dotted leaders */
+  --accent:#4a3a8c;      /* mực tím — stamp-pad violet, the ONE accent */
+  --on-accent:#faf8f2;
+  --ok:#1d6a3a; --warn:#8a5200; --danger:#a3241b;
+  --font-display:"Public Sans",sans-serif; --font-body:"Public Sans",sans-serif; --font-fig:"IBM Plex Mono",monospace;
+  --r:0px; --s:8px;
+  --zz-down:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6'%3E%3Cpath d='M0 0h12L6 6z'/%3E%3C/svg%3E");
+  --zz-up:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6'%3E%3Cpath d='M0 6h12L6 0z'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+body{margin:0;width:1200px;height:800px;overflow:hidden;background:var(--desk);color:var(--ink);font:16px/1.45 var(--font-body)}
+.fig{font-family:var(--font-fig);font-variant-numeric:tabular-nums;font-weight:500;letter-spacing:-.01em}
+.tile{display:grid;grid-template-columns:276px 364px 440px;gap:28px;padding:28px 32px;height:100%}
+.col{display:flex;flex-direction:column;gap:18px;min-width:0}
+.lbl{font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.lbl .fig{font-weight:500}
+
+/* meta column */
+.name{font:800 44px/1 var(--font-display);letter-spacing:-.02em}
+.kw{font-size:16px;color:var(--ink-2);margin-top:6px}
+.by{font:500 13px var(--font-fig);color:var(--ink-2);margin-top:2px}
+.anchor{font-size:14px;line-height:1.35;color:var(--ink)}
+.anchor .fig{font-size:13px;color:var(--ink-2)}
+.anchor + .anchor{margin-top:6px}
+.spec-d{font:800 34px/1.1 var(--font-display);letter-spacing:-.015em}
+.spec-b{font-size:16px;margin-top:6px}
+.spec-n{font:600 32px/1.1 var(--font-fig);margin-top:6px;letter-spacing:-.02em}
+.spec-c{font-size:13px;color:var(--ink-2);margin-top:6px}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px}
+.role{display:flex;align-items:center;gap:8px;font-size:13px;line-height:1.2}
+.role i{width:26px;height:26px;flex:none;border:1px solid rgba(28,27,24,.25)}
+.role b{display:block;font-weight:600;color:var(--ink)}
+.role span{color:var(--ink-2);font-family:var(--font-fig)}
+
+/* paper + perforation */
+.paper{background:var(--paper);position:relative}
+.zz-t::before,.zz-b::after{content:"";position:absolute;left:0;right:0;height:6px;background:var(--paper);
+  -webkit-mask:var(--zz-down) repeat-x 0 0/12px 6px;mask:var(--zz-down) repeat-x 0 0/12px 6px}
+.zz-b::after{bottom:-6px}
+.zz-t::before{top:-6px;-webkit-mask-image:var(--zz-up);mask-image:var(--zz-up)}
+
+/* receipt */
+.receipt{padding:18px 22px 16px;margin-top:6px}
+.r-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.r-title{font:800 22px/1.1 var(--font-display)}
+.r-date{font-size:14px;color:var(--ink-2)}
+.r-k{font-size:14px;color:var(--ink-2);margin-top:12px}
+.r-big{font:600 40px/1.05 var(--font-fig);letter-spacing:-.03em;margin-top:2px}
+.r-sub{font-size:15px;margin-top:6px}
+.r-sub .up{color:var(--ok);font-weight:700}
+.hr{border:0;border-top:2px dashed var(--rule);margin:12px 0 8px}
+.ln{display:flex;align-items:baseline;gap:6px;font-size:16px;min-height:28px}
+.ln .lead{flex:1;border-bottom:2px dotted var(--rule);transform:translateY(-5px);min-width:12px}
+.ln .fig{font-size:16px}
+.ln.sub{padding-left:16px;font-size:15px;position:relative}
+.ln.sub::before{content:"";position:absolute;left:4px;top:-6px;width:8px;height:18px;border-left:2px solid var(--rule);border-bottom:2px solid var(--rule)}
+.ln.sub .t{display:inline-flex;align-items:center;gap:5px}
+.ln.sub.ok .t{color:var(--ok);font-weight:600}
+.ln.sub.wait .t{color:var(--warn);font-weight:600}
+.ln.sub .fig{font-size:15px}
+.ln.tot{font-weight:700}
+.r-foot{font:500 13px var(--font-fig);color:var(--ink-2);text-align:center;margin-top:10px}
+
+/* components */
+.btns{display:flex;gap:8px}
+.btn{height:44px;padding:0 14px;display:inline-flex;align-items:center;gap:8px;font:700 15px var(--font-body);border-radius:var(--r);border:2px solid transparent;white-space:nowrap}
+.btn.pri{background:var(--accent);color:var(--on-accent)}
+.btn.sec{background:var(--paper);border-color:var(--ink);color:var(--ink)}
+.btn.dis{background:transparent;border:2px dashed var(--rule);color:#6e6a60;cursor:not-allowed}
+.field{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end}
+.inp label{display:block;font-size:14px;font-weight:600;margin-bottom:4px}
+.inp .box{height:44px;background:var(--paper);border:2px solid var(--ink);display:flex;align-items:center;justify-content:flex-end;padding:0 12px;font-size:18px}
+.inp.focus .box{border-color:var(--accent);outline:3px solid rgba(74,58,140,.28);outline-offset:0}
+.inp .help{font-size:14px;color:var(--ink-2);margin-top:4px}
+.stamps{display:grid;grid-template-columns:1fr 1fr;gap:10px 10px}
+.stamp{display:inline-flex;align-items:center;gap:6px;justify-self:start;padding:3px 8px;border:2px solid currentColor;outline:1px solid currentColor;outline-offset:2px;
+  font:700 14px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.03em;background:var(--paper);white-space:nowrap}
+.stamp .fig{font-weight:600;letter-spacing:0}
+.stamp svg,.ic{width:16px;height:16px;flex:none}
+.s-ok{color:var(--ok)} .s-warn{color:var(--warn)} .s-err{color:var(--danger)}
+
+/* spike of slips */
+.spike{position:relative;padding:18px 0 22px 0;margin-top:0}
+.spike .rod{position:absolute;left:19px;top:0;bottom:8px;clip-path:polygon(50% 0,100% 10px,100% 100%,0 100%,0 10px);width:4px;background:linear-gradient(90deg,#77736a,#3b3933 60%,#77736a)}
+.spike .base{position:absolute;left:3px;bottom:0;width:36px;height:10px;background:var(--ink)}
+.slip .body::before{content:"";position:absolute;left:14px;top:20px;width:14px;height:14px;border-radius:50%;background:linear-gradient(90deg,var(--desk) 0 5px,#3b3933 5px 9px,var(--desk) 9px);box-shadow:inset 0 0 0 1px rgba(28,27,24,.25)}
+.slip{display:grid;grid-template-columns:1fr 112px;margin-bottom:26px;position:relative;z-index:1}
+.slip:last-of-type{margin-bottom:6px}
+.slip .body{padding:12px 14px 14px 40px;border-right:2px dashed var(--rule)}
+.slip .stub{padding:12px 10px;display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;position:relative}
+.slip .stub::before,.slip .stub::after{content:"";position:absolute;left:-9px;width:16px;height:16px;border-radius:50%;background:var(--desk)}
+.slip .stub::before{top:-8px}.slip .stub::after{bottom:-8px}
+.slip .h{font:700 17px/1.25 var(--font-body);margin:8px 0 6px}
+.slip .row{display:flex;align-items:baseline;gap:6px;font-size:15px;min-height:26px}
+.slip .row .lead{flex:1;border-bottom:2px dotted var(--rule);transform:translateY(-5px);min-width:10px}
+.slip .row .t{color:var(--ink-2);font-size:14px}
+.slip .amt{font:600 26px/1.1 var(--font-fig);letter-spacing:-.02em;margin:2px 0 4px}
+.slip .memo{font-size:15px}
+.slip .memo .fig{font-size:14px;background:#efece4;padding:0 4px}
+.slip .hint{font-size:15px;margin-top:6px;padding-top:6px;border-top:2px dashed var(--rule)}
+.slip .hint b{font-weight:600}
+.stub .code{font:500 13px/1.3 var(--font-fig);color:var(--ink-2);text-align:center}
+.stub .btn{padding:0 8px;justify-content:center;font-size:15px}
+
+
+.sig{border:2px dashed var(--accent);padding:12px 14px;background:rgba(250,248,242,.55)}
+.sig .lbl{color:var(--accent);margin-bottom:4px}
+.sig p{margin:0;font-size:15px;line-height:1.4}
+.sig .demo{display:flex;align-items:center;gap:10px;margin-top:10px}
+.tilt{transform:rotate(-2.5deg)}
+.tag{font:700 13px var(--font-body);color:var(--accent);border:2px solid var(--accent);padding:1px 6px;background:var(--paper)}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ok" viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></symbol>
+  <symbol id="i-wait" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 4.5V8l2.5 1.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-err" viewBox="0 0 16 16"><path d="M8 1.8l6.6 12H1.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"/><path d="M8 6v4M8 11.2v1.6" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 16 16"><path d="M3.5 1.5h9v13l-1.5-1-1.5 1-1.5-1-1.5 1-1.5-1-1.5 1z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 5.5h4M6 8.5h4" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+<div class="tile">
+
+<!-- ============ META ============ -->
+<section class="col">
+  <div>
+    <div class="name">Biên Lai</div>
+    <div class="kw">ngay thẳng · rành mạch · quen tay</div>
+    <div class="by">OPC by QNSC — direction D</div>
+  </div>
+  <div>
+    <div class="lbl">Anchors</div>
+    <div class="anchor"><span class="fig">refs/square-retail.png</span><br>POS sobriety, mono eyebrows, one action colour</div>
+    <div class="anchor"><span class="fig">refs/payos.vn.png</span><br>VietQR money speech, bold figures in Vietnamese</div>
+  </div>
+  <div>
+    <div class="lbl">Type · Public Sans + IBM Plex Mono</div>
+    <div class="spec-d">Tiền hôm nay</div>
+    <div class="spec-b">Đã nhận tiền chuyển khoản, đang chờ ngân hàng xác minh — ặ ườ ễ ỹ</div>
+    <div class="spec-n">1.020.000 ₫</div>
+    <div class="spec-c">Sans 400–800 cho chữ · Mono 500/600 chỉ cho số tiền, mã đơn, giờ</div>
+  </div>
+  <div>
+    <div class="lbl">Colour roles</div>
+    <div class="roles">
+      <div class="role"><i style="background:var(--desk)"></i><div><b>quầy · bg</b><span>#e4dfd3</span></div></div>
+      <div class="role"><i style="background:var(--paper)"></i><div><b>giấy in nhiệt</b><span>#faf8f2</span></div></div>
+      <div class="role"><i style="background:var(--ink)"></i><div><b>mực in · ink</b><span>#1c1b18</span></div></div>
+      <div class="role"><i style="background:var(--ink-2)"></i><div><b>in nhạt · meta</b><span>#56534b</span></div></div>
+      <div class="role"><i style="background:var(--accent)"></i><div><b>mực tím · accent</b><span>#4a3a8c</span></div></div>
+      <div class="role"><i style="background:var(--rule)"></i><div><b>đường xé · rule</b><span>#a9a497</span></div></div>
+      <div class="role"><i style="background:var(--ok)"></i><div><b>đã xong · ok</b><span>#1d6a3a</span></div></div>
+      <div class="role"><i style="background:var(--warn)"></i><div><b>đang chờ · warn</b><span>#8a5200</span></div></div>
+      <div class="role"><i style="background:var(--danger)"></i><div><b>lỗi · danger</b><span>#a3241b</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECEIPT + COMPONENTS ============ -->
+<section class="col">
+  <div>
+    <div class="lbl">Real content slice · Trang chủ</div>
+    <div class="paper zz-t zz-b receipt">
+      <div class="r-head"><div class="r-title">Tiền hôm nay</div><div class="r-date fig">02/10/2026</div></div>
+      <div class="r-k">Doanh thu</div>
+      <div class="r-big">8.460.000 ₫</div>
+      <div class="r-sub"><span class="fig">23</span> đơn · <span class="up fig">+19%</span> so với hôm qua (<span class="fig">7.120.000 ₫</span>)</div>
+      <hr class="hr">
+      <div class="ln tot"><span>QR/chuyển khoản</span><span class="lead"></span><span class="fig">5.940.000 ₫</span></div>
+      <div class="ln sub ok"><span class="t"><svg class="ic"><use href="#i-ok"/></svg>đã xác minh</span><span class="lead"></span><span class="fig">4.560.000 ₫</span></div>
+      <div class="ln sub wait"><span class="t"><svg class="ic"><use href="#i-wait"/></svg>chờ xác minh</span><span class="lead"></span><span class="fig">1.380.000 ₫</span></div>
+      <div class="ln tot"><span>Tiền mặt</span><span class="lead"></span><span class="fig">2.520.000 ₫</span></div>
+      <div class="r-foot">— in lúc 11:20 · cập nhật liên tục —</div>
+    </div>
+  </div>
+  <div>
+    <div class="lbl">Components · square edges, 44px</div>
+    <div class="btns">
+      <span class="btn pri">Thu tiền</span>
+      <span class="btn sec">In biên lai</span>
+      <span class="btn dis" aria-disabled="true">Xuất hoá đơn</span>
+    </div>
+  </div>
+  <div class="field">
+    <div class="inp focus"><label>Khách đưa</label><div class="box fig">500.000 ₫</div></div>
+    <div class="inp"><label>Đơn DH-1041</label><div class="box fig">360.000 ₫</div></div>
+  </div>
+  <div class="inp" style="margin-top:-12px"><div class="help">Thối lại <span class="fig" style="color:var(--ink);font-weight:600">140.000 ₫</span></div></div>
+  <div class="stamps">
+    <span class="stamp s-warn"><svg><use href="#i-wait"/></svg>Chờ xác minh</span>
+    <span class="stamp s-ok"><svg><use href="#i-ok"/></svg>Đã xác minh <span class="fig">10:43</span></span>
+    <span class="stamp s-warn"><svg><use href="#i-doc"/></svg>Chờ mã CQT</span>
+    <span class="stamp s-err"><svg><use href="#i-err"/></svg>Lỗi · gửi lại</span>
+  </div>
+</section>
+
+<!-- ============ SPIKE (to-do) + SIGNATURE ============ -->
+<section class="col">
+  <div>
+    <div class="lbl">Cần xử lý · <span class="fig">2</span> tờ trên cây ghim <span class="tag">Signature</span></div>
+    <div class="spike">
+      <div class="rod"></div><div class="base"></div>
+
+      <div class="slip s1">
+        <div class="paper zz-b body">
+          <span class="stamp s-warn tilt"><svg><use href="#i-wait"/></svg>Chờ xác minh</span>
+          <div class="h">2 khoản QR chờ xác minh</div>
+          <div class="row"><span class="fig">DH-1043</span><span class="t fig">10:42</span><span class="lead"></span><span class="fig">1.020.000 ₫</span></div>
+          <div class="row"><span class="fig">DH-1041</span><span class="t fig">10:05</span><span class="lead"></span><span class="fig">360.000 ₫</span></div>
+        </div>
+        <div class="paper zz-b stub">
+          <div class="code">cuống<br>QR · 2 khoản</div>
+          <span class="btn pri">Đối chiếu</span>
+        </div>
+      </div>
+
+      <div class="slip s2">
+        <div class="paper zz-b body">
+          <span class="stamp s-warn tilt"><svg><use href="#i-err"/></svg>Chưa có mã đơn</span>
+          <div class="h">Chuyển khoản không có mã đơn</div>
+          <div class="amt">2.150.000 ₫</div>
+          <div class="memo">từ <span class="fig">NHA HANG BIEN DONG</span>, <span class="fig">09:15</span></div>
+          <div class="hint">gợi ý: <b>công nợ Nhà hàng Biển Đông</b></div>
+        </div>
+        <div class="paper zz-b stub">
+          <div class="code">cuống<br>CK <span>09:15</span></div>
+          <span class="btn sec">Gán vào đơn</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sig">
+    <div class="lbl">Signature move — tờ biên lai có cuống</div>
+    <p>Mỗi khoản tiền/hoá đơn là một tờ biên lai: thân tờ ghi số, <b>cuống xé</b> giữ hành động. Trạng thái là một dòng <b>dấu mộc</b> có giờ. Việc cần làm là xấp tờ ghim trên cây ghim — xử lý xong thì rút ra.</p>
+    <div class="demo">
+      <span class="stamp s-ok tilt"><svg><use href="#i-ok"/></svg>Đã xác minh <span class="fig">10:43</span></span>
+      <span class="stamp s-ok"><svg><use href="#i-doc"/></svg>Có mã CQT</span>
+    </div>
+  </div>
+</section>
+</div></body></html>

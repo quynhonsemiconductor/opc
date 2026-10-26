@@ -1,0 +1,157 @@
+/* F — Biển Chỉ Dẫn · tokens (3 tiers)
+   Tier 1  --p-*        primitives (raw values, never used by components directly)
+   Tier 2  semantic     roles on :root (canvas, ink, act, ok, pend, err …)
+   Tier 3  component    declared on the component selector, NOT on :root
+   Colour jobs (one each):
+     ink    = text, lines, lane numerals, primary structure
+     act    = signal yellow — "do this now" ONLY (primary button, lane-1 numeral + action)
+     ok     = expressway green — verified / done / có mã CQT
+     pend   = road blue, always HATCHED + outlined — waiting on the bank / tax authority
+     err    = red — error / failed
+*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap&subset=vietnamese");
+
+:root {
+  /* ---------- Tier 1 · primitives ---------- */
+  --p-ink-900: #121514;
+  --p-ink-800: #23282a;
+  --p-ink-700: #3d423f;
+  --p-ink-600: #545a56;
+  --p-ink-400: #8d928d;
+  --p-ink-300: #b9bcb6;
+  --p-ink-200: #d6d8d2;
+  --p-ink-100: #e9eae5;
+  --p-paper:   #f4f4f0;
+  --p-white:   #ffffff;
+
+  --p-yellow-500: #ffc400;
+  --p-yellow-200: #ffe58a;
+  --p-yellow-50:  #fff8db;
+
+  --p-green-700: #006b47;
+  --p-green-800: #005538;
+  --p-green-50:  #e4f2eb;
+
+  --p-blue-700: #0b4a8f;
+  --p-blue-200: #bcd0ea;
+  --p-blue-50:  #eef3fa;
+
+  --p-red-700: #b3141a;
+  --p-red-50:  #fbe9e8;
+
+  --p-font-barlow: "Barlow", "Public Sans", sans-serif;
+  --p-font-public: "Public Sans", sans-serif;
+
+  --p-space-1: 4px;  --p-space-2: 8px;  --p-space-3: 12px; --p-space-4: 16px;
+  --p-space-5: 20px; --p-space-6: 24px; --p-space-8: 32px; --p-space-10: 40px;
+
+  --p-radius-1: 3px; --p-radius-2: 4px; --p-radius-3: 6px;
+  --p-stroke-1: 1px; --p-stroke-2: 2px; --p-stroke-3: 3px;
+
+  /* ---------- Tier 2 · semantic ---------- */
+  --canvas:       var(--p-paper);
+  --surface:      var(--p-white);
+  --surface-sunk: var(--p-ink-100);
+  --ink:          var(--p-ink-900);
+  --ink-2:        var(--p-ink-700);   /* secondary text  ~10:1 on white */
+  --ink-3:        var(--p-ink-600);   /* meta text       ~7:1  on white */
+  --line:         var(--p-ink-200);
+  --line-strong:  var(--p-ink-900);
+  --line-quiet:   var(--p-ink-300);
+
+  --panel:        var(--p-ink-900);   /* dark sign — lane numerals only */
+  --on-panel:     var(--p-white);
+
+  --act:          var(--p-yellow-500);
+  --act-soft:     var(--p-yellow-50);
+  --on-act:       var(--p-ink-900);
+
+  --ok:           var(--p-green-700);
+  --ok-strong:    var(--p-green-800);
+  --ok-soft:      var(--p-green-50);
+  --on-ok:        var(--p-white);
+
+  --pend:         var(--p-blue-700);
+  --pend-soft:    var(--p-blue-50);
+  --pend-stripe:  var(--p-blue-200);
+  --pend-hatch:   repeating-linear-gradient(-45deg, var(--p-blue-200) 0 3px, var(--p-blue-50) 3px 8px);
+
+  --err:          var(--p-red-700);
+  --err-soft:     var(--p-red-50);
+  --on-err:       var(--p-white);
+
+  --disabled-bg:  var(--p-ink-100);
+  --disabled-ink: var(--p-ink-600);
+  --disabled-line:var(--p-ink-400);
+
+  --focus:        var(--p-ink-900);
+  --focus-halo:   var(--p-yellow-500);
+
+  --font-display: var(--p-font-barlow);
+  --font-body:    var(--p-font-public);
+
+  --fs-meta: 14px;  --fs-body: 16px;  --fs-lead: 18px;
+  --fs-h4: 18px;    --fs-h3: 20px;    --fs-h2: 24px;   --fs-h1: 30px;
+  --fs-money-l: 28px; --fs-money-xl: 44px; --fs-numeral: 44px;
+  --lh-body: 1.5;   --lh-tight: 1.15;
+
+  --space-1: var(--p-space-1); --space-2: var(--p-space-2); --space-3: var(--p-space-3);
+  --space-4: var(--p-space-4); --space-5: var(--p-space-5); --space-6: var(--p-space-6);
+  --space-8: var(--p-space-8); --space-10: var(--p-space-10);
+
+  --radius-s: var(--p-radius-1); --radius: var(--p-radius-2); --radius-l: var(--p-radius-3);
+  --stroke: var(--p-stroke-2); --hairline: var(--p-stroke-1);
+
+  --target: 44px;           /* default context */
+  --target-touch: 56px;     /* counter context */
+}
+
+/* ---------- Tier 3 · component tokens (scoped, not on :root) ---------- */
+.btn, .go {
+  --btn-h: var(--target);
+  --btn-px: var(--space-4);
+  --btn-font: 700 17px/1 var(--font-display);
+  --btn-radius: var(--radius);
+  --btn-border: var(--stroke) solid var(--line-strong);
+}
+[data-context="touch"] .btn, [data-context="touch"] .go { --btn-h: var(--target-touch); --btn-font: 700 18px/1 var(--font-display); }
+
+.nav {
+  --nav-w: 252px;
+  --nav-item-h: var(--target);
+  --nav-active-bar: 4px;
+}
+.card {
+  --card-bg: var(--surface);
+  --card-border: var(--stroke) solid var(--line);
+  --card-radius: var(--radius-l);
+  --card-pad: var(--space-5);
+}
+.lane {
+  --lane-num-w: 64px;
+  --lane-num-bg: var(--panel);
+  --lane-num-ink: var(--on-panel);
+  --lane-border: var(--stroke) solid var(--line);
+}
+.lane[data-now] { --lane-num-bg: var(--act); --lane-num-ink: var(--on-act); --lane-border: var(--stroke) solid var(--line-strong); }
+.sg {
+  --sg-h: 32px;
+  --sg-font: 700 15px/1 var(--font-display);
+}
+.ml {
+  --ml-stop: 10px;
+  --ml-gap: 6px;
+}
+.table {
+  --table-row-h: 52px;
+  --table-head: 600 14px/1.3 var(--font-body);
+}
+.input {
+  --input-h: var(--target);
+  --input-border: var(--stroke) solid var(--line-strong);
+}
+[data-context="touch"] .input { --input-h: var(--target-touch); }
+.prod {
+  --prod-min-h: 128px;
+  --prod-incart: var(--line-strong);
+}

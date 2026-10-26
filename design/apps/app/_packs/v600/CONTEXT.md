@@ -1,0 +1,9 @@
+# Context for the Evaluator — OPC v6.0.0 "Onboarding v6"
+OPC = responsive web app (phone first) for a Vietnamese household business (hộ kinh doanh). Users: chị An (owner, older, low-end Android), anh Khoa, nhân viên OPC (assisted lane). Design system "Modern · Calm" v4. Vietnamese, fewer words/icons, no AI slop.
+Goal of this round: an onboarding that is REAL, not what the BA docs assume. Decisions:
+- Five steps (≈10 min): 1 Số điện thoại · 2 Hộ kinh doanh (photo of giấy đăng ký or enter MST/CCCD; OPC does NOT assume a tax-portal lookup works for a household; doanh thu từ đầu năm asked) · 3 Cách bán và việc OPC làm (features first; providers only as choices) · 4 Xác minh chủ hộ (Cas ID app needs NFC, code lives 5 min, cannot scan on the same phone; OPC staff is a first-class path; "để sau" allowed) · 5 Hàng đầu tiên + bán thử.
+- Nothing of the household is connected during these steps: the platform sends the code (Zalo or SMS) and reads the photo. Bank, invoice, e-signature, purchasing, production and tax are gates in Sẵn sàng, just in time.
+- Sẵn sàng is organised by chain (Hộ và người · Bán và thu · Mua và trả · Chế biến và kho · Thuế và sổ): needs first with the flow each one unlocks, "Nên có" visible, "Làm sau" and "Đã xong" folded. Everything a hộ needs end to end is listed.
+- Legal thresholds (500 triệu quarterly, 1 tỷ e-invoice) come from news on Nghị định 68/2026 and must be confirmed by an accountant (NOTES).
+Rubric: ~/.claude/skills/uiux-studio/references/evaluator-rubric.md (group mode). Pass >= 8.0, no criterion < 7. Also judge realism: does any screen promise something that cannot exist? Is an older owner able to finish on a cheap phone?
+Inputs: <group>/<group>.png and .facts.json. Real screens in apps/app/screens/*.html — verify every claim. Return per-screen scores, the single most valuable fix, PASS/NEEDS_CHANGES, under 350 words.

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sẵn sàng · Xác minh chủ hộ — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../system/tokens.css">
+<link rel="stylesheet" href="../../../system/components/components.css">
+<link rel="stylesheet" href="../../../system/components/recipes.css">
+<link rel="stylesheet" href="../app-tokens.css">
+<style>
+/* layout only */
+.r-onboard__body > * { min-width: 0; }
+</style>
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /> <path d="M12 18h.01" /></symbol>
+</svg>
+<div class="r-onboard">
+  <header class="r-onboard__top">
+    <a class="c-icon-btn c-icon-btn--outline" href="readiness--new.html" aria-label="Quay lại Sẵn sàng"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+    <div class="c-steps" role="img" aria-label="Sẵn sàng: Xác minh chủ hộ"><span class="c-steps__label"><b>Sẵn sàng</b> · Xác minh chủ hộ</span></div>
+    <a class="r-onboard__help" href="onboard-help.html"><svg class="c-ic" aria-hidden="true"><use href="#i-help"/></svg>Hỏi</a>
+  </header>
+  <main class="r-onboard__body">
+    <h1 class="r-onboard__title">Xác minh chủ hộ</h1>
+    <p class="c-say">Chỉ cần khi ngân hàng hoặc nhà cung cấp hoá đơn đòi. Không xác minh thì OPC vẫn dùng đủ.</p>
+    <div class="c-options" role="radiogroup" aria-label="Cách xác minh"><button class="c-option c-option--big" type="button" role="radio" aria-checked="false"><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__body"><strong class="c-option__title"><svg class="c-ic" aria-hidden="true"><use href="#i-phone"/></svg>Tự xác minh trên điện thoại</strong><span class="c-option__meta">nhanh nhất · cần căn cước gắn chip và máy có NFC · khoảng 2 phút</span></span></button><button class="c-option c-option--big" type="button" role="radio" aria-checked="false"><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__body"><strong class="c-option__title"><svg class="c-ic" aria-hidden="true"><use href="#i-people"/></svg>Nhân viên OPC xác minh cùng chị</strong><span class="c-option__meta">dễ nhất · chị Thu mang máy đọc thẻ · Thứ Năm 02/07, 8:00</span></span></button><button class="c-option c-option--big" type="button" role="radio" aria-checked="false"><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__body"><strong class="c-option__title"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg>Để sau</strong><span class="c-option__meta">không mất gì · làm khi ngân hàng hoặc bên hoá đơn đòi</span></span></button></div>
+    <p class="r-yn__hint" id="vf-why">Chọn một cách để tiếp tục.</p>
+    <p class="u-meta">OPC chỉ lưu họ tên và số căn cước (mã hoá), không lưu ảnh.</p>
+    <p class="r-onboard__saved">Đã lưu — làm tiếp lúc nào cũng được</p>
+  </main>
+  <footer class="r-onboard__foot">
+    <button class="c-btn c-btn--act c-btn--block" type="button" aria-disabled="true" aria-describedby="vf-why">Tiếp tục</button>
+    <div class="r-onboard__alt"><a href="help.html">Vì sao có bên đòi xác minh?</a></div>
+  </footer>
+</div>
+</body>
+</html>

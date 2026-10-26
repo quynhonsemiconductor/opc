@@ -1,0 +1,1786 @@
+{
+  "screen": "onboard-bankacc.html",
+  "title": "Đăng ký · Tài khoản kinh doanh — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        216,
+        139,
+        560,
+        531
+      ]
+    },
+    {
+      "region": "Các bước đăng ký",
+      "box": [
+        824,
+        139,
+        400,
+        414
+      ]
+    },
+    {
+      "region": "Tiến độ đăng ký",
+      "box": [
+        824,
+        139,
+        400,
+        382
+      ]
+    },
+    {
+      "region": "footer",
+      "box": [
+        216,
+        670,
+        560,
+        164
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": "OnboardingStep",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Quay lại bước trước",
+      "box": [
+        16,
+        8,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-back",
+      "box": [
+        33,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 4,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-steps",
+      "component": "StepProgress",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "img",
+      "text": "Bước 4 trên 6: Thuế và tài khoản",
+      "box": [
+        84,
+        22,
+        1247,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 5,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bước 4/6 · Thuế và tài khoản",
+      "box": [
+        84,
+        22,
+        1247,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 6,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        84,
+        45,
+        1247,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        84,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 8,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        293,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 9,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        501,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 10,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        710,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 11,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        918,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 12,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1127,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 13,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "help",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hỏi",
+      "box": [
+        1343,
+        8,
+        81,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-help",
+      "box": [
+        1356,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 15,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        216,
+        139,
+        560,
+        531
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 16,
+      "parent": 15,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Tài khoản dùng cho kinh doanh",
+      "box": [
+        216,
+        139,
+        560,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 17,
+      "parent": 15,
+      "kind": "recipe",
+      "class": "r-gate",
+      "component": "CloseGate",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        195,
+        560,
+        81
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 18,
+      "parent": 17,
+      "kind": "recipe",
+      "class": "r-gate",
+      "component": null,
+      "of": "CloseGate",
+      "part": "i",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        195,
+        560,
+        81
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 19,
+      "parent": 18,
+      "kind": "recipe",
+      "class": "r-gate",
+      "component": null,
+      "of": "CloseGate",
+      "part": "b",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "MB 0901 2345 678 · chủ hộ Phạm Thị An",
+      "box": [
+        216,
+        212,
+        404,
+        46
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "recipe",
+      "class": "r-gate",
+      "component": null,
+      "of": "CloseGate",
+      "part": "ic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        213,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 21,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        220,
+        217,
+        14,
+        14
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 22,
+      "parent": 19,
+      "kind": "recipe",
+      "class": "r-gate",
+      "component": null,
+      "of": "CloseGate",
+      "part": "st",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã báo cơ quan thuế",
+      "box": [
+        216,
+        238,
+        144,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 23,
+      "parent": 18,
+      "kind": "recipe",
+      "class": "r-gate",
+      "component": null,
+      "of": "CloseGate",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 24,
+      "parent": 18,
+      "kind": "recipe",
+      "class": "r-gate",
+      "component": null,
+      "of": "CloseGate",
+      "part": "act",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        632,
+        207,
+        132,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 25,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Sửa",
+      "box": [
+        634,
+        207,
+        68,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 26,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Bỏ",
+      "box": [
+        706,
+        207,
+        58,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 27,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "block"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Thêm tài khoản hoặc ví điện tử",
+      "box": [
+        216,
+        296,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 28,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-banner",
+      "component": "Banner",
+      "of": null,
+      "part": null,
+      "variants": [
+        "pend"
+      ],
+      "state": [],
+      "role": "note",
+      "text": "",
+      "box": [
+        216,
+        372,
+        560,
+        100
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 29,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-banner",
+      "component": null,
+      "of": "Banner",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        404,
+        36,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 30,
+      "parent": 29,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-shield",
+      "box": [
+        240,
+        411,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 31,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-banner",
+      "component": null,
+      "of": "Banner",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        281,
+        385,
+        466,
+        74
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 32,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-banner",
+      "component": null,
+      "of": "Banner",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Mọi tài khoản, ví nhận tiền bán hàng phải báo cơ quan thuế",
+      "box": [
+        281,
+        385,
+        466,
+        49
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 33,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-banner",
+      "component": null,
+      "of": "Banner",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Không bắt buộc tài khoản đứng tên hộ.",
+      "box": [
+        281,
+        435,
+        466,
+        23
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 34,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [
+        "tight"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        492,
+        560,
+        137
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 35,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        509,
+        560,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 36,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Tuỳ chọn: nối để tiền về tự khớp",
+      "box": [
+        216,
+        509,
+        273,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 37,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-sub",
+      "component": "Subline",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Làm tay vẫn được: chị xác nhận tiền theo sao kê.",
+      "box": [
+        216,
+        549,
+        560,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 38,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-decide",
+      "component": null,
+      "of": "DecisionPanel",
+      "part": "acts",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        573,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 39,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Nối ngân hàng",
+      "box": [
+        216,
+        573,
+        161,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 40,
+      "parent": 38,
+      "kind": "recipe",
+      "class": "r-skip",
+      "component": "Skip",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Bỏ qua, làm tay",
+      "box": [
+        385,
+        573,
+        136,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 41,
+      "parent": 15,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "saved",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã lưu — làm tiếp lúc nào cũng được",
+      "box": [
+        216,
+        649,
+        560,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 42,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "aside",
+      "variants": [],
+      "state": [],
+      "role": "complementary",
+      "text": "Các bước đăng ký",
+      "box": [
+        824,
+        139,
+        400,
+        414
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 43,
+      "parent": 42,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": "StepMap",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Tiến độ đăng ký",
+      "box": [
+        824,
+        139,
+        400,
+        382
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đăng ký · còn khoảng 11 phút · làm dở vẫn lưu",
+      "box": [
+        845,
+        139,
+        379,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 45,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        168,
+        379,
+        283
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 46,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        168,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 47,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        174,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 48,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        180,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 49,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Số điện thoại — xong",
+      "box": [
+        885,
+        176,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 50,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        177,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 51,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        208,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 52,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        214,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 53,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        220,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 54,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hộ kinh doanh — xong",
+      "box": [
+        885,
+        216,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 55,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        217,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 56,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        248,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 57,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        254,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 58,
+      "parent": 57,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        260,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 59,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cách bán — xong",
+      "box": [
+        885,
+        256,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 60,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        257,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 61,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        288,
+        379,
+        83
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 62,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        845,
+        294,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 63,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Thuế và tài khoản",
+      "box": [
+        885,
+        296,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 64,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3 phút",
+      "box": [
+        1181,
+        297,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 65,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "why",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "VNeID, eTax, cách khai thuế và tài khoản ngân hàng dùng kinh doanh.",
+      "box": [
+        885,
+        324,
+        339,
+        41
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 66,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        370,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 67,
+      "parent": 66,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5",
+      "box": [
+        845,
+        376,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 68,
+      "parent": 66,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoá đơn",
+      "box": [
+        885,
+        378,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 69,
+      "parent": 66,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3 phút",
+      "box": [
+        1181,
+        380,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 70,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        410,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 71,
+      "parent": 70,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6",
+      "box": [
+        845,
+        416,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 72,
+      "parent": 70,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hàng và số đầu kỳ",
+      "box": [
+        885,
+        418,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 73,
+      "parent": 70,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5 phút",
+      "box": [
+        1181,
+        420,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 74,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "end",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 6 bước: làm giao dịch đầu tiên, rồi làm dần danh sách Sẵn sàng",
+      "box": [
+        845,
+        470,
+        379,
+        51
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 75,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": "contentinfo",
+      "text": "",
+      "box": [
+        216,
+        670,
+        560,
+        164
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 76,
+      "parent": 75,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act",
+        "block"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Tiếp tục",
+      "box": [
+        216,
+        690,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 77,
+      "parent": 75,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "alt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cách báo tài khoản cho cơ quan thuế",
+      "box": [
+        216,
+        754,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    }
+  ]
+}

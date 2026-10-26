@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hoá đơn · Hải sản khô Cô Hai — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../../../../system/tokens.css">
+<link rel="stylesheet" href="../../../../system/components/components.css">
+<link rel="stylesheet" href="../../../../system/components/recipes.css">
+<link rel="stylesheet" href="../../app-tokens.css">
+<style>
+/* layout only */
+.page { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); margin-top: var(--space-4); }
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.bar > label { flex: 1 1 var(--side-min); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5.5 9.5V20h13V9.5M10 20v-6h4v6"></path></symbol>
+  <symbol id="i-counter" viewBox="0 0 24 24"><path d="M3 10h18v10H3zM6 10V4h12v6M7 14h4M14 14h3M7 17h10"></path></symbol>
+  <symbol id="i-orders" viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h3"></path></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><path d="M3 6h18v12H3z"></path><circle cx="12" cy="12" r="2.8"></circle><path d="M6 9v.5M18 14.5v.5"></path></symbol>
+  <symbol id="i-invoice" viewBox="0 0 24 24"><path d="M6 3h8.5L18 6.5V21H6zM9 11h6M9 15h6M9 7h3"></path></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5zM3 7.5l9 4.5 9-4.5M12 12v9"></path></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c.5-4 3-6 6.5-6s6 2 6.5 6M15.5 4.8a3.4 3.4 0 010 6.4M18 14.5c2 .8 3.2 2.6 3.5 5.5"></path></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h7v16H4zM13 4h7v16h-7M7 8h1M16 8h1"></path></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14l4-4M8.5 11.5L6 14a3.5 3.5 0 005 5l2.5-2.5M15.5 12.5L18 10a3.5 3.5 0 00-5-5l-2.5 2.5"></path></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"></path></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4h16v12H10l-5 4v-4H4z"></path><path d="M8 9h8M8 12h5"></path></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l1.5 2h-15zM10 21h4"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"></path></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><path d="M3.5 3.5h6.5v6.5H3.5zM14 3.5h6.5v6.5H14zM3.5 14h6.5v6.5H3.5zM14 14h2.5v2.5H14zM18 18h2.5v2.5H18zM14 18.5v2M18.5 14h2"></path></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5.2l3.4 2.3"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"></path></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5L2.5 20h19z"></path><path d="M12 10v4.5M12 17v.5"></path></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><path d="M2.5 6.5h19v11h-19z"></path><circle cx="12" cy="12" r="2.6"></circle></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"></path></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4.5 8h15l-1 13h-13zM8.5 8V6a3.5 3.5 0 017 0v2"></path></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"></path></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M4 12h16"></path></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"></path></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V8a4 4 0 018 0v3"></path></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M4 20h16l-2-9H6zM12 11V6M8 6h8M12 15.5l2-2"></path></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"></path></symbol>
+
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M9 3.5h6v10H9zM5.5 11.5a6.5 6.5 0 0013 0M12 18v3"></path></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.5"></path></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></symbol>
+  <symbol id="i-fish" viewBox="0 0 24 24"><path d="M3 12c3-5 9-6 13-3l5-3v12l-5-3c-4 3-10 2-13-3z"></path><circle cx="8.5" cy="11" r=".8"></circle></symbol>
+  <symbol id="i-squid" viewBox="0 0 24 24"><path d="M12 3c3 2 4 5 4 8v2H8v-2c0-3 1-6 4-8zM9 13v6M12 13v8M15 13v6"></path></symbol>
+  <symbol id="i-shrimp" viewBox="0 0 24 24"><path d="M5 9c2-4 8-5 12-2 3 2 3 6 0 8-2 1.5-5 1-6-1l3-2M5 9l-2-3M6 8L4 4"></path></symbol>
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M8 3h8v3H8zM7 6h10l1 3v10a2 2 0 01-2 2H8a2 2 0 01-2-2V9z"></path><path d="M6.5 12h11"></path></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9M7 17H4.5V9h15v8H17M7 14h10v6.5H7z"></path></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"></path></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"></path></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-3-6z"></path></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7.5h4l2-3h6l2 3h4V19H3z"></path><circle cx="12" cy="13" r="3.5"></circle></symbol>
+</svg>
+<div class="r-shell" data-component="AppShell">
+  <nav class="c-nav r-shell__nav" aria-label="Điều hướng chính" data-part="SidebarNav.nav">
+    <div class="c-brand" data-component="BrandMark"><b class="c-brand__mark" data-part="BrandMark.mark">OPC</b><span class="c-brand__by" data-part="BrandMark.by">by QNSC</span></div>
+    <button class="c-hh" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai, Nhơn Lý" data-component="HouseholdSwitcher">
+      <span class="c-hh__mark" aria-hidden="true" data-part="HouseholdSwitcher.mark">CH</span>
+      <span class="c-hh__text" data-part="HouseholdSwitcher.text"><strong class="c-hh__name" data-part="HouseholdSwitcher.name">Cô Hai · Nhơn Lý</strong><span class="c-hh__sub" data-part="HouseholdSwitcher.sub">Xác minh L1</span></span>
+      <svg class="c-ic c-ic--s" aria-hidden="true" data-component="Icon" data-variant="s"><use href="#i-chev"></use></svg>
+    </button>
+    <ul class="c-nav__list" data-part="SidebarNav.list">
+      <li><a class="c-nav__item" href="home.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-home"></use></svg>Hôm nay</a></li>
+      <li><a class="c-nav__item c-nav__item--counter" href="counter.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-counter"></use></svg>Quầy bán hàng<svg class="c-ic c-ic--s" aria-hidden="true" data-component="Icon" data-variant="s"><use href="#i-arrow"></use></svg></a></li>
+      <li><a class="c-nav__item" href="orders.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-bag"></use></svg>Bán<span class="c-nav__count" aria-label="3 việc cần xem" data-part="SidebarNav.count">3</span></a></li>
+      <li><a class="c-nav__item" href="money.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-money"></use></svg>Tiền<span class="c-nav__count" aria-label="3 việc cần xem" data-part="SidebarNav.count">3</span></a></li>
+      <li><a class="c-nav__item" href="#" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-box"></use></svg>Hàng hoá</a></li>
+      <li><a class="c-nav__item" href="invoices.html" aria-current="page" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-book"></use></svg>Sổ &amp; thuế</a></li>
+      <li><a class="c-nav__item" href="approvals.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg>Cần xử lý<span class="c-nav__count" aria-label="6 việc cần xem" data-part="SidebarNav.count">6</span></a></li>
+    </ul>
+    <ul class="c-nav__list" data-part="SidebarNav.list">
+      <li><a class="c-nav__item" href="settings-users.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-gear"></use></svg>Cài đặt</a></li>
+      <li><a class="c-nav__item" href="#" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chat"></use></svg>Trợ giúp &amp; hỗ trợ</a></li>
+    </ul>
+    <div class="c-nav__foot" aria-label="Tình trạng kết nối" data-part="SidebarNav.foot">
+      <span class="c-conn" data-component="ConnectionStatus">MB (qua Casso) · cập nhật 2 phút trước</span>
+      <span class="c-conn" data-component="ConnectionStatus">Hoá đơn Hilo · hoạt động</span>
+      <span class="c-conn c-conn--off" data-component="ConnectionStatus" data-variant="off">Cổng thuế · chưa bật</span>
+    </div>
+  </nav>
+
+  <div class="r-shell__main" data-part="AppShell.main">
+    <header class="r-shell__top" data-part="AppShell.top">
+      <button class="c-hh c-hh--bar r-shell__phone" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai" data-part="HouseholdSwitcher.phone" data-variant="bar"><span class="c-hh__mark" aria-hidden="true" data-part="HouseholdSwitcher.mark">CH</span><span class="c-hh__text" data-part="HouseholdSwitcher.text"><strong class="c-hh__name" data-part="HouseholdSwitcher.name">Hải sản khô Cô Hai</strong><span class="c-hh__sub" data-part="HouseholdSwitcher.sub">Nhơn Lý · OPC</span></span></button>
+      <label class="c-search r-shell__desk" data-part="SearchField.desk"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-search"></use></svg><span class="u-sr">Tìm kiếm</span><input class="c-search__input" type="search" placeholder="Tìm đơn, món, khách…" data-part="SearchField.input"><button class="c-search__mic" type="button" aria-label="Tìm bằng giọng nói" data-tip="Tìm bằng giọng nói" data-part="SearchField.mic"><svg class="c-ic c-ic--s" aria-hidden="true" data-component="Icon" data-variant="s"><use href="#i-mic"></use></svg></button><span class="c-kbd u-pro" aria-hidden="true" data-component="Kbd">⌘K</span></label>
+      <div class="r-shell__spacer" data-part="AppShell.spacer"></div>
+      <button class="c-icon-btn r-shell__phone" type="button" aria-label="Tìm đơn, món, khách" data-part="IconButton.phone"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-search"></use></svg></button>
+      <span class="c-sync r-shell__desk" role="status" data-tip="Mọi thay đổi đã lưu lên máy chủ" data-part="SyncStatus.desk">Đã lưu · 10:45</span>
+      <a class="c-btn c-btn--quiet r-shell__desk" href="home--assistant.html" data-tip="Hỏi về màn này" data-part="Button.desk" data-variant="quiet"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chat"></use></svg>Trợ lý</a>
+      <a class="c-icon-btn r-shell__desk" href="home--notifications.html" aria-label="Thông báo — 4 chưa đọc" data-tip="Thông báo · 4 chưa đọc" data-part="IconButton.desk"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-bell"></use></svg><span class="c-icon-btn__badge" aria-hidden="true" data-part="IconButton.badge">4</span></a>
+      <button class="c-avatar" type="button" aria-label="Nguyễn Văn Phúc · Quản lý — tài khoản, thông báo (4)" data-component="AccountButton"><span class="c-avatar__face" aria-hidden="true" data-part="AccountButton.face">P</span></button>
+    </header>
+
+    <main class="r-shell__content" data-part="AppShell.content">
+      <nav class="c-subnav" aria-label="Sổ &amp; thuế" data-component="SectionNav"><a class="c-subnav__item" href="invoices.html" aria-current="page" data-part="SectionNav.item">Hoá đơn</a><a class="c-subnav__item" href="#" data-part="SectionNav.item">Sổ sách</a><a class="c-subnav__item" href="#" data-part="SectionNav.item">Thuế &amp; tờ khai</a><a class="c-subnav__item" href="#" data-part="SectionNav.item">Báo cáo</a></nav>
+      
+      <div class="r-page-head" data-component="PageHeader">
+        <div>
+          <h1 class="r-page-head__title" data-part="PageHeader.title">Hoá đơn</h1>
+          <p class="r-page-head__sub c-conn" data-part="ConnectionStatus.sub">Hilo · hoạt động</p>
+        </div>
+        <p class="u-meta">Ký hiệu <b>2C26MCH</b> · Tháng 10/2026: <b>19 hoá đơn</b> · <b class="u-money">7.080.000 ₫</b></p>
+      </div>
+
+      <div class="page">
+        <div class="c-banner c-banner--pend" role="status" data-component="Banner" data-variant="pend"><span class="c-banner__pic" data-part="Banner.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-clock"></use></svg></span><span class="c-banner__text" data-part="Banner.text"><strong class="c-banner__title" data-part="Banner.title">Hoá đơn 00000418 chờ mã CQT · 25 phút</strong><span class="c-banner__body" data-part="Banner.body">640.000 ₫ · DH-1036 · Anh Tuấn. Hilo báo lỗi 08:34, OPC đã gửi lại lúc 10:20.</span></span><span class="c-banner__actions" data-part="Banner.actions"><button class="c-btn c-btn--act" type="button" data-component="Button" data-variant="act">Gửi lại</button><button class="c-btn" type="button" data-component="Button">Xem</button></span></div>
+        <p class="c-say" data-component="OwnerSentence">Hoá đơn chờ mã vẫn đưa khách được; mã CQT sẽ gắn vào khi Hilo trả về.</p>
+        <div class="c-tabs" role="tablist" aria-label="Lọc theo trạng thái" data-component="StateTabs">
+  <button class="c-tabs__tab c-tabs__tab--you" role="tab" aria-selected="false" type="button" data-part="StateTabs.tab">Cần xem <span class="c-tabs__count" data-part="StateTabs.count">1</span></button>
+  <button class="c-tabs__tab" role="tab" aria-selected="false" type="button" data-part="StateTabs.tab">Chờ mã CQT <span class="c-tabs__count" data-part="StateTabs.count">1</span></button>
+  <button class="c-tabs__tab" role="tab" aria-selected="false" type="button" data-part="StateTabs.tab">Có mã <span class="c-tabs__count" data-part="StateTabs.count">18</span></button>
+  <button class="c-tabs__tab" role="tab" aria-selected="false" type="button" data-part="StateTabs.tab">Lỗi <span class="c-tabs__count" data-part="StateTabs.count">0</span></button>
+  <button class="c-tabs__tab" role="tab" aria-selected="true" type="button" data-part="StateTabs.tab" data-state="selected">Tất cả <span class="c-tabs__count" data-part="StateTabs.count">19</span></button>
+</div>
+        <section class="c-card" aria-label="Danh sách hoá đơn" data-component="Card">
+          <div class="c-table__scroll" data-part="Table.scroll"><table class="c-table c-table--stack" data-component="Table" data-variant="stack">
+            <thead><tr><th>Số HĐ</th><th>Đơn</th><th class="c-table__cell--opt" data-part="Table.cell">Giờ</th><th>Người mua</th><th class="c-table__num" data-part="Table.num">Tổng</th><th class="c-table__cell--opt" data-part="Table.cell">Loại</th><th>Mã CQT</th><th>Xem chi tiết</th></tr></thead>
+            <tbody>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000421</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1042</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">10:31</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1042 · 10:31</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">245.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000421</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000421" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000420</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1039</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">09:20</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1039 · 09:20</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">95.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000420</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000420" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000419</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1037</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">08:41</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1037 · 08:41</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">195.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000419</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000419" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr class="c-table__row--you" data-part="Table.row"><td class="c-table__code c-table__cell--main" data-part="Table.code">00000418</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1036</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">08:33</td><td class="c-table__cell--wide" data-part="Table.cell">Anh Tuấn<span class="c-table__phone" data-part="Table.phone"> · DH-1036 · 08:33</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">640.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--pend" data-component="StatusSign" data-variant="pend"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-clock"></use></svg></span>Chờ mã CQT</span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000418" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000417</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1035</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">08:20</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1035 · 08:20</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">1.250.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000417</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000417" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000416</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1034</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">08:12</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1034 · 08:12</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">40.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000416</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000416" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000415</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1033</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">08:09</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1033 · 08:09</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">160.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000415</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000415" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000414</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1032</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">08:03</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1032 · 08:03</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">95.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000414</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000414" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000413</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1031</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">07:58</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1031 · 07:58</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">230.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000413</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000413" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000412</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1030</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">07:52</td><td class="c-table__cell--wide" data-part="Table.cell">Chị Mai<span class="c-table__phone" data-part="Table.phone"> · DH-1030 · 07:52</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">980.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000412</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000412" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000411</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1029</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">07:46</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1029 · 07:46</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">50.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000411</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000411" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+              <tr><td class="c-table__code c-table__cell--main" data-part="Table.code">00000410</td><td class="c-table__cell--hide u-nowrap" data-part="Table.cell">DH-1028</td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">07:40</td><td class="c-table__cell--wide" data-part="Table.cell">Khách lẻ<span class="c-table__phone" data-part="Table.phone"> · DH-1028 · 07:40</span></td>
+                <td class="c-table__num c-table__cell--end" data-part="Table.num"><span class="u-money">120.000 ₫</span></td><td class="c-table__cell--hide c-table__cell--opt" data-part="Table.cell">Máy tính tiền</td><td class="c-table__cell--wide" data-part="Table.cell"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Có mã</span> <span class="c-table__code" data-part="Table.code"><span class="c-table__desk" data-part="Table.desk">M1-26-QN7K2-00000000000410</span></span></td>
+                <td class="c-table__cell--hide" data-part="Table.cell"><button class="c-btn c-btn--quiet" type="button" aria-label="Xem hoá đơn 00000410" data-component="Button" data-variant="quiet">Xem</button></td></tr>
+            </tbody>
+          </table></div>
+        </section>
+        <button class="c-btn c-btn--quiet c-btn--block" type="button" data-component="Button" data-variant="quiet block">Xem thêm 7 hoá đơn</button>
+      </div>
+    </main>
+</div>
+</div>
+
+<nav class="c-tabbar" aria-label="Điều hướng nhanh" data-component="PhoneTabBar">
+  <a class="c-tabbar__item" href="home.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-home"></use></svg>Hôm nay<span class="c-tabbar__count" aria-label="6 việc cần xử lý" data-part="PhoneTabBar.count">6</span></a>
+  <a class="c-tabbar__item c-tabbar__item--counter" href="counter.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-counter"></use></svg>Quầy</a>
+  <a class="c-tabbar__item" href="orders.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-orders"></use></svg>Bán<span class="c-tabbar__count" aria-label="3 cần xem" data-part="PhoneTabBar.count">3</span></a>
+  <a class="c-tabbar__item" href="money.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-money"></use></svg>Tiền<span class="c-tabbar__count" aria-label="3 cần xem" data-part="PhoneTabBar.count">3</span></a>
+  <a class="c-tabbar__item" href="home--more.html" aria-current="page" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-menu"></use></svg>Thêm</a>
+</nav>
+
+
+</body></html>

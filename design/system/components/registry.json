@@ -1,0 +1,2548 @@
+{
+  "$description": "Design-component registry: the stack-neutral name of every c-*/r-* class, its WAI-ARIA APG behaviour pattern (https://www.w3.org/WAI/ARIA/apg/patterns/), and its parts/variants. Library maps (references/component-maps/*.json) key off these names. status.mjs flags components missing here.",
+  "c-ic": {
+    "name": "Icon",
+    "apg": null,
+    "role": "decorative-svg",
+    "variants": [
+      "s",
+      "l"
+    ],
+    "parts": [],
+    "shadcn": "lucide-react (map sprite ids)"
+  },
+  "c-kbd": {
+    "name": "Kbd",
+    "apg": null,
+    "variants": [],
+    "parts": []
+  },
+  "c-brand": {
+    "name": "BrandMark",
+    "apg": null,
+    "variants": [],
+    "parts": [
+      "mark",
+      "by"
+    ],
+    "custom": true
+  },
+  "c-hh": {
+    "name": "HouseholdSwitcher",
+    "apg": "menu-button",
+    "variants": [
+      "bar"
+    ],
+    "parts": [
+      "mark",
+      "text",
+      "name",
+      "sub"
+    ],
+    "shadcn": "DropdownMenu trigger"
+  },
+  "c-nav": {
+    "name": "SidebarNav",
+    "apg": "disclosure-navigation",
+    "variants": [
+      "sheet"
+    ],
+    "parts": [
+      "list",
+      "item",
+      "item--counter",
+      "count",
+      "foot",
+      "grp",
+      "grp--open",
+      "row",
+      "item--here",
+      "peek",
+      "sub",
+      "subitem",
+      "list--foot"
+    ],
+    "shadcn": "Sidebar",
+    "since": "4.4.0",
+    "note": "current section open with its children (counts on children); others collapsed + 44px peek disclosure; role-shaped; replaces the in-page sub-nav ≥721px; role rails: a lone child renders flat under its own name"
+  },
+  "c-conn": {
+    "name": "ConnectionStatus",
+    "apg": null,
+    "role": "status-label",
+    "variants": [
+      "off",
+      "err"
+    ],
+    "parts": [],
+    "custom": true
+  },
+  "c-search": {
+    "name": "SearchField",
+    "apg": null,
+    "role": "searchbox",
+    "variants": [
+      "strong"
+    ],
+    "parts": [
+      "input",
+      "mic"
+    ],
+    "shadcn": "Input + icon"
+  },
+  "c-icon-btn": {
+    "name": "IconButton",
+    "apg": "button",
+    "variants": [
+      "outline"
+    ],
+    "parts": [
+      "badge"
+    ],
+    "shadcn": "Button size=icon"
+  },
+  "c-avatar": {
+    "name": "AccountButton",
+    "apg": "menu-button",
+    "variants": [],
+    "parts": [
+      "face"
+    ],
+    "shadcn": "Avatar inside DropdownMenu trigger"
+  },
+  "c-btn": {
+    "name": "Button",
+    "apg": "button",
+    "variants": [
+      "act",
+      "quiet",
+      "danger",
+      "wrap",
+      "block"
+    ],
+    "states": [
+      "hover",
+      "focus-visible",
+      "active",
+      "disabled",
+      "aria-disabled",
+      "aria-busy"
+    ],
+    "parts": [
+      "icon",
+      "label",
+      "kbd",
+      "count"
+    ],
+    "shadcn": "Button (variant: act→default, quiet→outline, danger→destructive-outline)"
+  },
+  "c-confirm": {
+    "name": "MoneyConfirm",
+    "apg": "button",
+    "variants": [
+      "done"
+    ],
+    "states": [
+      "aria-disabled (locked until bank reports)"
+    ],
+    "parts": [
+      "pic",
+      "label",
+      "reason"
+    ],
+    "custom": true
+  },
+  "c-card": {
+    "name": "Card",
+    "apg": null,
+    "role": "region",
+    "variants": [
+      "tight"
+    ],
+    "parts": [
+      "head",
+      "title"
+    ],
+    "shadcn": "Card"
+  },
+  "c-say": {
+    "name": "OwnerSentence",
+    "apg": null,
+    "variants": [],
+    "parts": [],
+    "custom": true
+  },
+  "c-sign": {
+    "name": "StatusSign",
+    "apg": null,
+    "role": "status-label",
+    "variants": [
+      "wait",
+      "pend",
+      "ok",
+      "you",
+      "err",
+      "unk"
+    ],
+    "parts": [
+      "pic"
+    ],
+    "shadcn": "Badge (custom variants)",
+    "note": "in tables ok/pass are words only (icon hidden)"
+  },
+  "c-moneyline": {
+    "name": "MoneyLine",
+    "apg": null,
+    "role": "img with aria-label",
+    "variants": [],
+    "states": [
+      "data-step=1|2|3"
+    ],
+    "parts": [],
+    "custom": true
+  },
+  "c-list": {
+    "name": "LedgerList",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [
+      "row",
+      "name",
+      "amt",
+      "meta"
+    ],
+    "custom": true
+  },
+  "c-meter": {
+    "name": "ThresholdMeter",
+    "apg": "meter",
+    "variants": [],
+    "parts": [
+      "row",
+      "bar",
+      "fill",
+      "mark"
+    ],
+    "shadcn": "Progress + marker"
+  },
+  "c-table": {
+    "name": "Table",
+    "apg": "table",
+    "variants": [
+      "row--err",
+      "stack"
+    ],
+    "parts": [
+      "scroll",
+      "num",
+      "code",
+      "total",
+      "row--link",
+      "cell--main",
+      "cell--end",
+      "cell--wide",
+      "cell--hide",
+      "cell--opt",
+      "phone",
+      "desk",
+      "row--sum",
+      "row--selected",
+      "optline",
+      "cell--act",
+      "row--err",
+      "zero",
+      "foot-note"
+    ],
+    "shadcn": "Table",
+    "note": "severity: row--you = needs you (blue); row--err or you+err sign = fault/overdue (red); no balance = zero \"0 ₫\"; totals in tfoot"
+  },
+  "c-switch": {
+    "name": "Switch",
+    "apg": "switch",
+    "variants": [],
+    "states": [
+      "aria-checked",
+      "disabled"
+    ],
+    "parts": [
+      "track",
+      "label",
+      "sub"
+    ],
+    "shadcn": "Switch + Label"
+  },
+  "c-seg": {
+    "name": "SegmentedChoice",
+    "apg": "radio",
+    "variants": [],
+    "states": [
+      "aria-checked"
+    ],
+    "parts": [
+      "opt"
+    ],
+    "shadcn": "ToggleGroup type=single (or RadioGroup)",
+    "note": "option aria-disabled=\"true\" = unavailable (struck through, reason in label)"
+  },
+  "c-filters": {
+    "name": "FilterBar",
+    "apg": "toolbar",
+    "variants": [],
+    "parts": [],
+    "shadcn": "ToggleGroup"
+  },
+  "c-filter": {
+    "name": "FilterChip",
+    "apg": "button (aria-pressed)",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Toggle"
+  },
+  "c-picker": {
+    "name": "Picker",
+    "apg": "combobox (opens dialog)",
+    "variants": [],
+    "parts": [
+      "label",
+      "sub",
+      "aside"
+    ],
+    "shadcn": "Button opening Command/Dialog"
+  },
+  "c-stepper": {
+    "name": "QuantityStepper",
+    "apg": "spinbutton",
+    "variants": [],
+    "parts": [
+      "btn",
+      "value"
+    ],
+    "custom": true
+  },
+  "c-qr": {
+    "name": "QrPayment",
+    "apg": null,
+    "role": "region + live status",
+    "variants": [
+      "compact",
+      "large"
+    ],
+    "parts": [
+      "img",
+      "meta",
+      "k",
+      "amt",
+      "status",
+      "status--pend",
+      "status--ok",
+      "status-pic"
+    ],
+    "custom": true
+  },
+  "c-tabbar": {
+    "name": "PhoneTabBar",
+    "apg": null,
+    "role": "navigation",
+    "variants": [],
+    "parts": [
+      "item",
+      "item--counter",
+      "count"
+    ],
+    "custom": true
+  },
+  "r-shell": {
+    "name": "AppShell",
+    "recipe": true,
+    "uses": [
+      "c-nav",
+      "c-hh",
+      "c-search",
+      "c-icon-btn",
+      "c-avatar",
+      "c-tabbar"
+    ],
+    "parts": [
+      "nav",
+      "main",
+      "top",
+      "spacer",
+      "content",
+      "phone",
+      "desk",
+      "long"
+    ]
+  },
+  "r-page-head": {
+    "name": "PageHeader",
+    "recipe": true,
+    "uses": [
+      "c-btn",
+      "c-conn"
+    ],
+    "parts": [
+      "title",
+      "sub",
+      "acts"
+    ]
+  },
+  "c-banner": {
+    "name": "Banner",
+    "apg": null,
+    "role": "status (alert for --err)",
+    "variants": [
+      "err",
+      "pend",
+      "ok"
+    ],
+    "parts": [
+      "pic",
+      "text",
+      "title",
+      "body",
+      "actions"
+    ],
+    "shadcn": "Alert"
+  },
+  "c-empty": {
+    "name": "EmptyState",
+    "apg": null,
+    "variants": [
+      "center",
+      "flush"
+    ],
+    "parts": [
+      "pic",
+      "title",
+      "body"
+    ],
+    "custom": true
+  },
+  "c-tabs": {
+    "name": "StateTabs",
+    "apg": "tabs",
+    "variants": [],
+    "states": [
+      "aria-selected"
+    ],
+    "parts": [
+      "tab",
+      "tab--you",
+      "count"
+    ],
+    "shadcn": "Tabs (TabsList/TabsTrigger)"
+  },
+  "c-dialog": {
+    "name": "Dialog",
+    "apg": "dialog-modal",
+    "variants": [],
+    "parts": [
+      "panel",
+      "head",
+      "k",
+      "title",
+      "body",
+      "foot",
+      "foot-note"
+    ],
+    "shadcn": "Dialog (desktop) / Drawer (≤720)"
+  },
+  "c-options": {
+    "name": "OptionList",
+    "apg": "radio",
+    "variants": [],
+    "parts": [],
+    "shadcn": "RadioGroup"
+  },
+  "c-option": {
+    "name": "OptionCard",
+    "apg": "radio",
+    "variants": [
+      "big",
+      "action"
+    ],
+    "states": [
+      "aria-checked",
+      "disabled"
+    ],
+    "parts": [
+      "radio",
+      "body",
+      "title",
+      "meta",
+      "why",
+      "amt",
+      "tag",
+      "pic"
+    ],
+    "shadcn": "RadioGroupItem as card"
+  },
+  "c-field": {
+    "name": "Field",
+    "apg": null,
+    "role": "labelled input",
+    "variants": [
+      "money"
+    ],
+    "states": [
+      "data-invalid",
+      "disabled",
+      "data-check (AI chưa chắc)"
+    ],
+    "parts": [
+      "label",
+      "control",
+      "input",
+      "suffix",
+      "hint"
+    ],
+    "shadcn": "Label + Input (+ FormMessage)"
+  },
+  "c-change": {
+    "name": "ChangeDue",
+    "apg": null,
+    "role": "status",
+    "variants": [
+      "none",
+      "short"
+    ],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.0.0"
+  },
+  "c-kv": {
+    "name": "FactList",
+    "apg": null,
+    "role": "description list",
+    "variants": [],
+    "parts": [
+      "raw"
+    ],
+    "custom": true
+  },
+  "c-steps": {
+    "name": "StepProgress",
+    "apg": null,
+    "role": "progressbar-like (aria-label 'Bước 3/6')",
+    "variants": [],
+    "parts": [
+      "label",
+      "bar",
+      "seg",
+      "seg--done",
+      "seg--now"
+    ],
+    "custom": true
+  },
+  "c-otp": {
+    "name": "CodeInput",
+    "apg": null,
+    "role": "group of 6 inputs (autocomplete one-time-code on the first)",
+    "variants": [],
+    "states": [
+      "data-invalid"
+    ],
+    "parts": [
+      "box"
+    ],
+    "shadcn": "InputOTP"
+  },
+  "c-answer": {
+    "name": "AssistantAnswer",
+    "apg": null,
+    "role": "region (aria-live polite)",
+    "variants": [],
+    "parts": [
+      "who",
+      "q",
+      "text",
+      "foot"
+    ],
+    "custom": true
+  },
+  "c-coach": {
+    "name": "CoachMark",
+    "apg": "dialog (non-modal)",
+    "variants": [],
+    "parts": [
+      "k",
+      "text",
+      "actions"
+    ],
+    "custom": true
+  },
+  "c-camera": {
+    "name": "CaptureFrame",
+    "apg": null,
+    "variants": [
+      "face"
+    ],
+    "parts": [
+      "frame",
+      "hint",
+      "shutter"
+    ],
+    "custom": true
+  },
+  "r-onboard": {
+    "name": "OnboardingStep",
+    "recipe": true,
+    "uses": [
+      "c-icon-btn",
+      "c-steps",
+      "c-btn"
+    ],
+    "parts": [
+      "top",
+      "help",
+      "body",
+      "title",
+      "saved",
+      "foot",
+      "alt",
+      "facts",
+      "fact"
+    ]
+  },
+  "r-help": {
+    "name": "HelpCenter",
+    "apg": null,
+    "role": "region",
+    "variants": [],
+    "parts": [
+      "find",
+      "list",
+      "c"
+    ],
+    "shadcn": "custom",
+    "since": "4.4.0",
+    "note": "assistant first, then people (call/Zalo/visit), 30-second guides, live connection status"
+  },
+  "c-chips": {
+    "name": "ActiveFilters",
+    "apg": null,
+    "role": "group",
+    "variants": [],
+    "parts": [
+      "clear",
+      "result"
+    ],
+    "custom": true
+  },
+  "c-chip": {
+    "name": "FilterChipRemovable",
+    "apg": "button (remove)",
+    "variants": [],
+    "parts": [
+      "k",
+      "x"
+    ],
+    "shadcn": "Badge + Button(icon)"
+  },
+  "c-menu": {
+    "name": "Menu",
+    "apg": "listbox (suggest) / menu (sort, aria-checked)",
+    "variants": [],
+    "parts": [
+      "group",
+      "item",
+      "aside",
+      "sub"
+    ],
+    "shadcn": "DropdownMenu / Command"
+  },
+  "c-menu-anchor": {
+    "name": "MenuAnchor",
+    "apg": null,
+    "variants": [
+      "end"
+    ],
+    "parts": [],
+    "custom": true
+  },
+  "c-cal": {
+    "name": "Calendar",
+    "apg": "grid (date picker dialog)",
+    "variants": [],
+    "parts": [
+      "head",
+      "grid",
+      "dow",
+      "day",
+      "day--out",
+      "day--today",
+      "day--range",
+      "day--start",
+      "day--end"
+    ],
+    "shadcn": "Calendar mode=range (react-day-picker)"
+  },
+  "c-pager": {
+    "name": "Pagination",
+    "apg": null,
+    "role": "navigation",
+    "variants": [],
+    "parts": [
+      "info",
+      "list",
+      "page",
+      "gap",
+      "step"
+    ],
+    "shadcn": "Pagination"
+  },
+  "r-listbar": {
+    "name": "ListToolbar",
+    "recipe": true,
+    "uses": [
+      "c-search",
+      "c-seg",
+      "c-btn",
+      "c-menu",
+      "c-chips"
+    ],
+    "parts": [
+      "row",
+      "end"
+    ]
+  },
+  "r-filter": {
+    "name": "FilterPanel",
+    "recipe": true,
+    "uses": [
+      "c-dialog",
+      "c-filter",
+      "c-btn"
+    ],
+    "parts": [
+      "group",
+      "h",
+      "opts"
+    ]
+  },
+  "c-skel": {
+    "name": "Skeleton",
+    "apg": null,
+    "role": "presentation (container aria-busy=true)",
+    "variants": [
+      "line",
+      "title",
+      "figure",
+      "block"
+    ],
+    "parts": [],
+    "shadcn": "Skeleton"
+  },
+  "c-skel-note": {
+    "name": "LoadingNote",
+    "apg": null,
+    "role": "status",
+    "variants": [],
+    "parts": [],
+    "custom": true
+  },
+  "c-timeline": {
+    "name": "Timeline",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [
+      "item",
+      "item--ok",
+      "item--pend",
+      "item--err",
+      "item--you",
+      "time",
+      "dot",
+      "body",
+      "what",
+      "who"
+    ],
+    "custom": true
+  },
+  "c-doc": {
+    "name": "DocumentPreview",
+    "apg": null,
+    "role": "document",
+    "variants": [],
+    "parts": [
+      "head",
+      "title",
+      "no",
+      "party",
+      "party-k",
+      "total",
+      "foot"
+    ],
+    "custom": true
+  },
+  "r-detail": {
+    "name": "DetailPage",
+    "recipe": true,
+    "uses": [
+      "c-btn",
+      "c-sign",
+      "c-card",
+      "c-timeline"
+    ],
+    "parts": [
+      "back",
+      "head",
+      "title",
+      "acts",
+      "grid"
+    ]
+  },
+  "c-subnav": {
+    "name": "SectionNav",
+    "apg": null,
+    "role": "navigation (links, aria-current=page)",
+    "variants": [
+      "wrap"
+    ],
+    "parts": [
+      "item",
+      "count",
+      "group"
+    ],
+    "shadcn": "NavigationMenu / Tabs as links"
+  },
+  "c-menulist": {
+    "name": "DestinationList",
+    "apg": null,
+    "role": "navigation list",
+    "variants": [],
+    "parts": [
+      "h",
+      "list",
+      "item",
+      "item--you",
+      "count",
+      "sub"
+    ],
+    "custom": true
+  },
+  "c-tasks": {
+    "name": "ApprovalList",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "custom": true
+  },
+  "c-task": {
+    "name": "ApprovalCard",
+    "apg": null,
+    "role": "article",
+    "variants": [
+      "first"
+    ],
+    "parts": [
+      "meta",
+      "src",
+      "src--ai",
+      "head",
+      "title",
+      "amt",
+      "evidence",
+      "after",
+      "actions"
+    ],
+    "custom": true
+  },
+  "c-drawer": {
+    "name": "SidePanel",
+    "apg": "dialog (modal on phone; non-modal docked on desktop)",
+    "variants": [
+      "wide",
+      "docked"
+    ],
+    "parts": [
+      "panel",
+      "head",
+      "k",
+      "title",
+      "body",
+      "foot"
+    ],
+    "shadcn": "Sheet side=right / Drawer"
+  },
+  "c-command": {
+    "name": "CommandPalette",
+    "apg": "combobox + listbox in a dialog",
+    "variants": [],
+    "parts": [
+      "panel",
+      "input",
+      "list",
+      "foot"
+    ],
+    "shadcn": "Command (cmdk) in Dialog"
+  },
+  "c-toasts": {
+    "name": "ToastRegion",
+    "apg": null,
+    "role": "region (live polite)",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Sonner <Toaster position=\"bottom-center\"/>",
+    "since": "4.0.0"
+  },
+  "c-toast": {
+    "name": "Toast",
+    "apg": null,
+    "role": "status (alert for --err)",
+    "variants": [
+      "err",
+      "ok",
+      "pend"
+    ],
+    "parts": [
+      "pic",
+      "text",
+      "bar"
+    ],
+    "shadcn": "Sonner toast"
+  },
+  "c-sync": {
+    "name": "SyncStatus",
+    "apg": null,
+    "role": "status",
+    "variants": [
+      "saving",
+      "offline"
+    ],
+    "parts": [],
+    "custom": true
+  },
+  "c-notices": {
+    "name": "NotificationList",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "custom": true
+  },
+  "c-notice": {
+    "name": "Notification",
+    "apg": null,
+    "role": "link",
+    "variants": [
+      "unread",
+      "money",
+      "warn",
+      "err"
+    ],
+    "parts": [
+      "pic",
+      "title",
+      "time",
+      "text"
+    ],
+    "custom": true
+  },
+  "c-check": {
+    "name": "Checkbox",
+    "apg": "checkbox",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Checkbox"
+  },
+  "c-bulkbar": {
+    "name": "BulkActionBar",
+    "apg": "toolbar",
+    "variants": [],
+    "parts": [
+      "count",
+      "sum",
+      "actions"
+    ],
+    "custom": true
+  },
+  "c-crumbs": {
+    "name": "Breadcrumb",
+    "apg": "breadcrumb",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Breadcrumb"
+  },
+  "c-receipt": {
+    "name": "Receipt",
+    "apg": null,
+    "role": "document",
+    "variants": [],
+    "parts": [
+      "shop",
+      "lines",
+      "line",
+      "total",
+      "foot",
+      "code"
+    ],
+    "custom": true
+  },
+  "c-msgcard": {
+    "name": "ZaloMessagePreview",
+    "apg": null,
+    "variants": [],
+    "parts": [
+      "from",
+      "body",
+      "actions"
+    ],
+    "custom": true
+  },
+  "c-sizepick": {
+    "name": "TextSizePicker",
+    "apg": "radio",
+    "variants": [],
+    "parts": [
+      "opt"
+    ],
+    "custom": true
+  },
+  "c-stat": {
+    "name": "TodayFigure",
+    "apg": null,
+    "role": "region",
+    "variants": [],
+    "parts": [
+      "top",
+      "label",
+      "fresh",
+      "main",
+      "fig",
+      "delta",
+      "chip",
+      "why",
+      "skel"
+    ],
+    "shadcn": "Card (custom) + recharts not needed",
+    "since": "4.0.0"
+  },
+  "c-bars": {
+    "name": "DayColumns",
+    "apg": null,
+    "role": "img list (7 values, sr text per bar)",
+    "variants": [],
+    "parts": [
+      "d",
+      "col",
+      "bar",
+      "k",
+      "v"
+    ],
+    "shadcn": "custom (CSS grid) or recharts BarChart",
+    "since": "4.0.0"
+  },
+  "c-split": {
+    "name": "MoneyTruthBar",
+    "apg": null,
+    "role": "img + legend list",
+    "variants": [
+      "legend-only"
+    ],
+    "parts": [
+      "bar",
+      "ok",
+      "pend",
+      "cash",
+      "legend",
+      "item",
+      "k",
+      "v",
+      "go",
+      "explain",
+      "skel"
+    ],
+    "shadcn": "custom",
+    "since": "4.0.0"
+  },
+  "c-health": {
+    "name": "ConnectionPill",
+    "apg": "tooltip",
+    "role": "status",
+    "variants": [
+      "err"
+    ],
+    "parts": [],
+    "shadcn": "Badge + Tooltip / Popover on touch",
+    "since": "4.0.0"
+  },
+  "c-off": {
+    "name": "OffLabel",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "span",
+    "since": "4.0.0"
+  },
+  "c-count": {
+    "name": "CountBadge",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Badge variant=secondary",
+    "since": "4.0.0"
+  },
+  "c-link": {
+    "name": "TextLink",
+    "apg": "link",
+    "role": "link",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Button variant=link",
+    "since": "4.0.0"
+  },
+  "c-sub": {
+    "name": "Subline",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "p",
+    "since": "4.0.0"
+  },
+  "c-figure": {
+    "name": "Figure",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "span",
+    "since": "4.0.0"
+  },
+  "c-todo": {
+    "name": "TodoList",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [
+      "item",
+      "item--now",
+      "item--done",
+      "n",
+      "t",
+      "m",
+      "go",
+      "later",
+      "skel"
+    ],
+    "shadcn": "custom list + Button",
+    "since": "4.0.0"
+  },
+  "c-orders": {
+    "name": "OrderRows",
+    "apg": null,
+    "role": "list of links",
+    "variants": [],
+    "parts": [
+      "row",
+      "who",
+      "st",
+      "amt",
+      "skel",
+      "skelrow"
+    ],
+    "shadcn": "custom list (not Table)",
+    "since": "4.0.0"
+  },
+  "c-debts": {
+    "name": "DebtList",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [
+      "row",
+      "k",
+      "v",
+      "m"
+    ],
+    "shadcn": "custom list",
+    "since": "4.0.0"
+  },
+  "c-tiles": {
+    "name": "TileGrid",
+    "apg": null,
+    "role": "group",
+    "variants": [],
+    "parts": [],
+    "shadcn": "CSS grid",
+    "since": "4.0.0"
+  },
+  "c-tile": {
+    "name": "ProductTile",
+    "apg": "button",
+    "role": "button",
+    "variants": [
+      "incart (data)",
+      "justadded (data)"
+    ],
+    "parts": [
+      "pic",
+      "name",
+      "price",
+      "meta",
+      "meta--low",
+      "qty",
+      "add"
+    ],
+    "shadcn": "button (custom)",
+    "since": "4.0.0"
+  },
+  "c-oline": {
+    "name": "OrderLine",
+    "apg": null,
+    "role": "listitem",
+    "variants": [],
+    "parts": [
+      "name",
+      "amt",
+      "calc"
+    ],
+    "shadcn": "custom + Stepper",
+    "since": "4.0.0"
+  },
+  "c-oempty": {
+    "name": "OrderEmpty",
+    "apg": null,
+    "role": "status",
+    "variants": [],
+    "parts": [
+      "pic"
+    ],
+    "shadcn": "Empty (custom)",
+    "since": "4.0.0"
+  },
+  "c-qrcard": {
+    "name": "QrCard",
+    "apg": null,
+    "role": "figure",
+    "variants": [],
+    "parts": [
+      "amt"
+    ],
+    "shadcn": "figure + img",
+    "since": "4.0.0"
+  },
+  "c-paysteps": {
+    "name": "PaymentSteps",
+    "apg": null,
+    "role": "list (aria-current=step)",
+    "variants": [],
+    "parts": [
+      "s",
+      "s--now",
+      "s--pendnow",
+      "s--oknow",
+      "s--done",
+      "s--next",
+      "dot",
+      "here"
+    ],
+    "shadcn": "custom Stepper",
+    "since": "4.0.0"
+  },
+  "c-waitbar": {
+    "name": "WaitBar",
+    "apg": null,
+    "role": "status (live polite)",
+    "variants": [],
+    "parts": [
+      "spin"
+    ],
+    "shadcn": "custom",
+    "since": "4.0.0"
+  },
+  "c-arrived": {
+    "name": "MoneyArrived",
+    "apg": null,
+    "role": "status (live assertive)",
+    "variants": [
+      "ok"
+    ],
+    "parts": [
+      "pic",
+      "k",
+      "amt",
+      "m"
+    ],
+    "shadcn": "custom + motion",
+    "since": "4.0.0"
+  },
+  "c-note": {
+    "name": "InlineNote",
+    "apg": null,
+    "role": "note",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Alert (subtle)",
+    "since": "4.0.0"
+  },
+  "c-cashpad": {
+    "name": "CashPad",
+    "apg": null,
+    "role": "group",
+    "variants": [
+      "empty"
+    ],
+    "parts": [
+      "field",
+      "input"
+    ],
+    "shadcn": "Input (numeric) custom",
+    "since": "4.0.0"
+  },
+  "c-quick": {
+    "name": "QuickAmounts",
+    "apg": "toggle button group",
+    "role": "group",
+    "variants": [],
+    "parts": [
+      "btn"
+    ],
+    "shadcn": "ToggleGroup",
+    "since": "4.0.0"
+  },
+  "r-home": {
+    "name": "HomeLayout",
+    "apg": null,
+    "role": "recipe",
+    "variants": [],
+    "parts": [],
+    "shadcn": "layout",
+    "since": "4.0.0"
+  },
+  "r-pos": {
+    "name": "CounterLayout",
+    "apg": null,
+    "role": "recipe",
+    "variants": [
+      "sheet"
+    ],
+    "parts": [],
+    "shadcn": "layout",
+    "since": "4.0.0"
+  },
+  "r-order": {
+    "name": "OrderPanel",
+    "apg": "dialog",
+    "role": "recipe",
+    "variants": [
+      "pay"
+    ],
+    "parts": [],
+    "shadcn": "Sheet on phone (side=\"bottom\")",
+    "since": "4.0.0"
+  },
+  "r-cartbar": {
+    "name": "PhoneCartPill",
+    "apg": null,
+    "role": "recipe",
+    "variants": [],
+    "parts": [],
+    "shadcn": "layout",
+    "since": "4.0.0"
+  },
+  "c-switch--row": {
+    "name": "SettingRow",
+    "apg": "switch",
+    "role": "switch (button role=switch)",
+    "variants": [
+      "on",
+      "off",
+      "lock",
+      "soon"
+    ],
+    "parts": [
+      "label",
+      "sub",
+      "state",
+      "track"
+    ],
+    "shadcn": "Switch + Label + Badge",
+    "since": "4.1.0",
+    "note": "label left, state pill (Bật / Tắt / Bắt buộc / Sắp có), 52x32 sea track; lock = track dimmed, soon = no track"
+  },
+  "r-listhead": {
+    "name": "ListHead",
+    "apg": null,
+    "role": "region",
+    "variants": [],
+    "parts": [
+      "fig",
+      "bar",
+      "due",
+      "duev"
+    ],
+    "shadcn": "custom",
+    "since": "4.1.0",
+    "note": "list page money head: one figure + truth bar + one neutral 'due' link; stacks on phone"
+  },
+  "r-feedbar": {
+    "name": "FeedFilterBar",
+    "apg": "toolbar",
+    "role": "radiogroup + toolbars",
+    "variants": [],
+    "parts": [
+      "group",
+      "k"
+    ],
+    "shadcn": "ToggleGroup + Tabs",
+    "since": "4.1.0",
+    "note": "time segment, then labelled filter rows; the second row's selected chip is soft"
+  },
+  "r-settings": {
+    "name": "SettingsGroups",
+    "apg": null,
+    "role": "sections",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom (Card without border)",
+    "since": "4.1.0",
+    "note": "groups split by hairline + space, no card outline"
+  },
+  "c-option--best": {
+    "name": "OptionRecommended",
+    "apg": "radio",
+    "role": "radio",
+    "variants": [],
+    "parts": [
+      "tag--best"
+    ],
+    "shadcn": "RadioGroup item + Badge",
+    "since": "4.1.0",
+    "note": "the recommended choice; others under 'Cách khác', a folded 'Không chọn được'"
+  },
+  "c-table__who": {
+    "name": "TableWhoCell",
+    "apg": null,
+    "role": "cell",
+    "variants": [],
+    "parts": [
+      "b",
+      "small"
+    ],
+    "shadcn": "TableCell",
+    "since": "4.1.0",
+    "note": "customer + code·time·channel in one cell; replaces 3 columns"
+  },
+  "r-detail__head--calm": {
+    "name": "DetailHead",
+    "apg": null,
+    "role": "header",
+    "variants": [],
+    "parts": [
+      "title",
+      "fig",
+      "acts"
+    ],
+    "shadcn": "custom",
+    "since": "4.1.0",
+    "note": "title + figure under it + one primary; destructive is c-btn--danger c-btn--quiet; actions wrap / grid on phone"
+  },
+  "c-split__you": {
+    "name": "MoneyTruthBar · unassigned segment",
+    "apg": null,
+    "role": "part of img",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.1.0"
+  },
+  "c-split__err": {
+    "name": "MoneyTruthBar · rejected segment",
+    "apg": null,
+    "role": "part of img",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.1.0"
+  },
+  "c-timeline__item--ai": {
+    "name": "Timeline AI draft",
+    "apg": null,
+    "role": "listitem",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.1.0",
+    "note": "hatched dot = drafted by Trợ lý, waiting for a person; --you = neutral ink dot"
+  },
+  "c-todo__item--wait": {
+    "name": "Todo waiting row",
+    "apg": null,
+    "role": "listitem",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.1.0",
+    "note": "OPC is handling it; no button"
+  },
+  "r-onboard__recap": {
+    "name": "WizardRecap",
+    "apg": "disclosure",
+    "role": "details/summary",
+    "variants": [],
+    "parts": [
+      "summary"
+    ],
+    "shadcn": "Collapsible",
+    "since": "4.1.0",
+    "note": "done steps fold into one verified line so next steps show first"
+  },
+  "r-onboard__proof": {
+    "name": "WizardProductProof",
+    "apg": null,
+    "role": "figure",
+    "variants": [],
+    "parts": [
+      "k",
+      "legend",
+      "by"
+    ],
+    "shadcn": "custom (real components inside)",
+    "since": "4.1.3",
+    "note": "the product itself as the picture: verified money card + truth bar + legend; no drawn art"
+  },
+  "r-onboard__flow": {
+    "name": "WizardDataFlow",
+    "apg": null,
+    "role": "figure",
+    "variants": [],
+    "parts": [
+      "small"
+    ],
+    "shadcn": "custom",
+    "since": "4.1.3",
+    "note": "MB → Casso → Quầy OPC with a read-only lock line"
+  },
+  "c-stepmap": {
+    "name": "StepMap",
+    "apg": null,
+    "role": "navigation (ol, aria-current=step)",
+    "variants": [
+      "compact (<1180, via r-onboard__aside--compact)"
+    ],
+    "parts": [
+      "k",
+      "list",
+      "s--done/--now/--next",
+      "n",
+      "t",
+      "m",
+      "why",
+      "end"
+    ],
+    "shadcn": "custom",
+    "since": "4.1.5"
+  },
+  "r-onboard__aside": {
+    "name": "WizardSidePanel",
+    "apg": null,
+    "role": "complementary",
+    "variants": [
+      "--desk (hidden <1180)",
+      "--compact (strip <1180)"
+    ],
+    "parts": [],
+    "shadcn": "custom (grid area)",
+    "since": "4.1.5",
+    "note": "generator: redesign/onboard_aside.py"
+  },
+  "r-onboard__sample": {
+    "name": "SampleTag",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Badge (secondary)",
+    "since": "4.1.5"
+  },
+  "c-works": {
+    "name": "WorkList",
+    "apg": null,
+    "role": "list of links",
+    "variants": [],
+    "parts": [
+      "c-work"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.0"
+  },
+  "c-work": {
+    "name": "WorkItem",
+    "apg": null,
+    "role": "link",
+    "variants": [
+      "aria-current"
+    ],
+    "parts": [
+      "state",
+      "when",
+      "t",
+      "m",
+      "src"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.0",
+    "note": "one tracked job (Control Tower) or one sales request"
+  },
+  "r-tower": {
+    "name": "ListDetailSplit",
+    "apg": null,
+    "role": "two regions",
+    "variants": [
+      "--list (phone: list only)"
+    ],
+    "parts": [
+      "detail",
+      "k",
+      "t"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.0"
+  },
+  "c-rules": {
+    "name": "RuleChecks",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__r--fail"
+    ],
+    "parts": [
+      "r"
+    ],
+    "shadcn": "Badge list",
+    "since": "4.2.0"
+  },
+  "c-decide": {
+    "name": "DecisionPanel",
+    "apg": "group",
+    "role": "group",
+    "variants": [],
+    "parts": [
+      "q",
+      "fig",
+      "acts",
+      "who",
+      "auto"
+    ],
+    "shadcn": "custom (Card + Field + Button)",
+    "since": "4.2.0",
+    "note": "reason field empty with a placeholder; risky paths aria-disabled until confirmed"
+  },
+  "c-quote": {
+    "name": "SourceQuote",
+    "apg": null,
+    "role": "figure",
+    "variants": [],
+    "parts": [
+      "from",
+      "text",
+      "media"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.0"
+  },
+  "c-match": {
+    "name": "MatchLine",
+    "apg": null,
+    "role": "text",
+    "variants": [
+      "--unsure"
+    ],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.0"
+  },
+  "c-journey": {
+    "name": "OrderJourney",
+    "apg": null,
+    "role": "list (aria-current=step)",
+    "variants": [
+      "__s--done",
+      "__s--now",
+      "__s--warn"
+    ],
+    "parts": [
+      "s"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.0"
+  },
+  "r-board": {
+    "name": "Board",
+    "apg": null,
+    "role": "regions per stage",
+    "variants": [
+      "__card--you"
+    ],
+    "parts": [
+      "col",
+      "head",
+      "count",
+      "sum",
+      "list",
+      "card",
+      "t",
+      "lines",
+      "how",
+      "cod",
+      "acts",
+      "tabs"
+    ],
+    "shadcn": "custom (skill pattern r-board, OPC skin)",
+    "since": "4.2.0",
+    "note": "phone: stage tabs, one column at a time; drag is never the only way (buttons on cards)"
+  },
+  "r-split": {
+    "name": "ListDetail",
+    "apg": "listbox + region",
+    "kind": "recipe",
+    "pattern": "split"
+  },
+  "r-pick": {
+    "name": "PickList",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__chk--ok"
+    ],
+    "parts": [
+      "l",
+      "chk",
+      "name",
+      "qty"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.0"
+  },
+  "c-sim": {
+    "name": "SimulatedTag",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Badge (outline, dashed)",
+    "since": "4.2.0"
+  },
+  "r-courier": {
+    "name": "CourierLink",
+    "apg": null,
+    "role": "page (no shell)",
+    "variants": [],
+    "parts": [
+      "cod",
+      "or",
+      "issue"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.0"
+  },
+  "r-alloc": {
+    "name": "AllocationList",
+    "apg": "group of checkboxes",
+    "role": "group",
+    "variants": [],
+    "parts": [
+      "row",
+      "body",
+      "why",
+      "amt",
+      "sum"
+    ],
+    "shadcn": "Checkbox list (custom)",
+    "since": "4.2.2",
+    "note": "one transfer → several invoices; 'đủ' is arithmetic, money truth stays separate"
+  },
+  "c-tag": {
+    "name": "Tag",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Badge (secondary)",
+    "since": "4.2.2"
+  },
+  "r-upcoming": {
+    "name": "NotCountedYet",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.2",
+    "note": "'Chưa tính' pending chip + reason"
+  },
+  "r-paid": {
+    "name": "FoldedHistory",
+    "apg": "disclosure",
+    "role": "details",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Collapsible",
+    "since": "4.2.2"
+  },
+  "c-table__row--muted": {
+    "name": "TableRow · not counted",
+    "apg": null,
+    "role": "row",
+    "variants": [],
+    "parts": [],
+    "shadcn": "TableRow (muted)",
+    "since": "4.2.3"
+  },
+  "c-decide__result": {
+    "name": "ResultPreview",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.3",
+    "note": "the irreversible outcome stated right above the primary button"
+  },
+  "r-capture": {
+    "name": "CaptureRead",
+    "apg": null,
+    "role": "figure",
+    "variants": [],
+    "parts": [
+      "thumb",
+      "logo",
+      "pick"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.3",
+    "note": "document thumbnail + what the assistant read + confidence; the guess is an editable control"
+  },
+  "r-stock": {
+    "name": "StockTable",
+    "apg": null,
+    "role": "table",
+    "variants": [
+      "__avail--low"
+    ],
+    "parts": [
+      "avail",
+      "held",
+      "note",
+      "quiet"
+    ],
+    "shadcn": "Table",
+    "since": "4.2.4",
+    "note": "Khả dụng is the truth column; tồn thực / đã giữ ghosted; phone folds them into the item cell"
+  },
+  "r-trace": {
+    "name": "Trace",
+    "apg": null,
+    "role": "group",
+    "variants": [
+      "__list--chain"
+    ],
+    "parts": [
+      "sum",
+      "col",
+      "h",
+      "list",
+      "i",
+      "pic",
+      "b",
+      "q"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.4",
+    "note": "two-way lot trace: Từ đâu (chain) | Tới đâu, balance line from OPC kiểm tra first"
+  },
+  "r-lock": {
+    "name": "LockConsequences",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [
+      "lead",
+      "sub"
+    ],
+    "shadcn": "AlertDialog body",
+    "since": "4.2.4",
+    "note": "worst consequence first, then the assistant draft, then in-stock effects; reason required"
+  },
+  "r-count": {
+    "name": "CountSheet",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__l--ok",
+      "__l--off"
+    ],
+    "parts": [
+      "l",
+      "in",
+      "u",
+      "d",
+      "why",
+      "hint",
+      "foot"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.4",
+    "note": "counted vs book per lot; differences need a reason; gate pinned (desktop)"
+  },
+  "c-timeline--quiet": {
+    "name": "Timeline · quiet",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.4"
+  },
+  "r-form2": {
+    "name": "FormTwoUp",
+    "apg": null,
+    "role": "group",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Form grid",
+    "since": "4.2.5",
+    "note": "short form, 2 columns ≥721px, 1 on phone"
+  },
+  "r-mat": {
+    "name": "MaterialsCheck",
+    "apg": null,
+    "role": "table",
+    "variants": [],
+    "parts": [
+      "have",
+      "cure"
+    ],
+    "shadcn": "Table",
+    "since": "4.2.5",
+    "note": "need vs available per material; the cure link sits under the shortage token"
+  },
+  "r-dash": {
+    "name": "NotYet",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.5",
+    "note": "grey dash for a figure that does not exist yet ('– / 40')"
+  },
+  "r-rail--quiet": {
+    "name": "QuietRail",
+    "apg": null,
+    "role": "complementary",
+    "variants": [],
+    "parts": [
+      "lot"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.5",
+    "note": "reference rail beside a form; one strong line (r-rail__lot)"
+  },
+  "r-detail__meta": {
+    "name": "DetailMeta",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.5",
+    "note": "logistics line under the head figure (promise and logistics kept apart)"
+  },
+  "r-recon": {
+    "name": "Reconcile",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__r--base"
+    ],
+    "parts": [
+      "r",
+      "k",
+      "v",
+      "d",
+      "go"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.6",
+    "note": "sources vs the base figure; each gap links to the to-do that clears it"
+  },
+  "r-gate": {
+    "name": "CloseGate",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__i--you",
+      "__i--unk",
+      "__i--wait",
+      "__i--ok"
+    ],
+    "parts": [
+      "i",
+      "pic",
+      "b",
+      "st",
+      "who",
+      "amt",
+      "act",
+      "done",
+      "foot"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.6",
+    "note": "to-dos before locking: tone + type icon carry the state, state word leads the meta, one action each; v4.5.1: no leading icon — status word carries the state"
+  },
+  "r-book": {
+    "name": "LedgerTable",
+    "apg": null,
+    "role": "table",
+    "variants": [],
+    "parts": [
+      "ok",
+      "tpl",
+      "q",
+      "more"
+    ],
+    "shadcn": "Table",
+    "since": "4.2.6",
+    "note": "book built from source records; clean rows quiet 'có mã' in ok tone; template caveat line"
+  },
+  "r-drawer__fig": {
+    "name": "DrawerFigure",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "SheetHeader",
+    "since": "4.2.6"
+  },
+  "r-taxcalc": {
+    "name": "TaxCalc",
+    "apg": null,
+    "role": "table",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Table",
+    "since": "4.2.7",
+    "note": "explainable tax per industry group; phone labels each figure; total row collapses"
+  },
+  "r-trust": {
+    "name": "TrustLine",
+    "apg": null,
+    "role": "note",
+    "variants": [
+      "--gate"
+    ],
+    "parts": [],
+    "shadcn": "Alert (custom)",
+    "since": "4.2.7",
+    "note": "one amber disclosure per view for simulated / not confirmed / not yet paid; --gate is the neutral rule line"
+  },
+  "r-return": {
+    "name": "DraftDocument",
+    "apg": null,
+    "role": "article",
+    "variants": [],
+    "parts": [
+      "mark"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.7",
+    "note": "draft return as a document; rubber stamp NHÁP · MÔ PHỎNG never over figures; per-line source + 'báo sai'"
+  },
+  "r-howto": {
+    "name": "HowToSteps",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.7",
+    "note": "numbered hand-off steps to an outside system (eTax), each with at most one action"
+  },
+  "r-pay": {
+    "name": "PayFacts",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.7",
+    "note": "prefilled facts to pay outside OPC; total said once in the head"
+  },
+  "r-gate__i--match": {
+    "name": "CloseGate · money match",
+    "apg": null,
+    "role": "listitem",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.7",
+    "note": "solid verified row for bank outflow ↔ receipt"
+  },
+  "c-sign--pass": {
+    "name": "Sign · pass",
+    "apg": null,
+    "role": "status",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Badge (ghost)",
+    "since": "4.2.8",
+    "note": "healthy state said quietly (check + text, no pill) so exceptions win the first read"
+  },
+  "r-gate--err": {
+    "name": "CloseGate · error group",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.8"
+  },
+  "r-ready__area": {
+    "name": "ReadinessArea",
+    "apg": "disclosure",
+    "role": "group",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Collapsible",
+    "since": "4.2.8",
+    "note": "a done area collapsed to one line"
+  },
+  "r-model": {
+    "name": "ModelChoice",
+    "apg": null,
+    "role": "group",
+    "variants": [],
+    "parts": [
+      "plan"
+    ],
+    "shadcn": "Checkbox cards",
+    "since": "4.2.8",
+    "note": "multi-select business model; each option states its plan consequence; c-option__box = checkbox"
+  },
+  "r-import": {
+    "name": "ImportPaths",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__best"
+    ],
+    "parts": [
+      "list"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.8"
+  },
+  "r-conn": {
+    "name": "ConnectorTable",
+    "apg": null,
+    "role": "table",
+    "variants": [],
+    "parts": [
+      "g",
+      "n",
+      "manual"
+    ],
+    "shadcn": "Table",
+    "since": "4.2.8",
+    "note": "17 categories grouped; provider, state, freshness/consent, manual path"
+  },
+  "r-policy": {
+    "name": "ApprovalPolicy",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__r--lock"
+    ],
+    "parts": [
+      "r",
+      "t",
+      "who",
+      "v",
+      "amt"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.8",
+    "note": "rule · who decides · threshold; locked rules cannot be delegated"
+  },
+  "r-roles": {
+    "name": "RolesExplainer",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.8"
+  },
+  "r-roster": {
+    "name": "Roster",
+    "apg": null,
+    "role": "table",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Table",
+    "since": "4.2.8"
+  },
+  "r-prices": {
+    "name": "PriceTable",
+    "apg": null,
+    "role": "table",
+    "variants": [],
+    "parts": [
+      "def",
+      "rule",
+      "delta",
+      "stock",
+      "ok"
+    ],
+    "shadcn": "Table",
+    "since": "4.2.9",
+    "note": "price lists as columns; default marked; which-price rule above the grid; delta vs retail emphasised"
+  },
+  "r-plist": {
+    "name": "PriceList",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__main"
+    ],
+    "parts": [
+      "k",
+      "v"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.9"
+  },
+  "r-shell--program": {
+    "name": "ProgramShell",
+    "apg": null,
+    "role": "application",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom layout",
+    "since": "4.2.10",
+    "note": "programme viewer shell: own nav, no household switcher, no assistant"
+  },
+  "r-pstats": {
+    "name": "ProgramStats",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.10",
+    "note": "aggregate stats with last-period movement; 2-up on phone"
+  },
+  "r-funnel": {
+    "name": "Funnel",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "--part",
+      "__s--part"
+    ],
+    "parts": [
+      "s",
+      "k",
+      "bar",
+      "v",
+      "h"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.10",
+    "note": "stages on one base; smaller-base stages in a separate labelled group with hatched shorter bars"
+  },
+  "r-adopt": {
+    "name": "AdoptionBars",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [
+      "r",
+      "bar",
+      "v"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.10"
+  },
+  "r-issue__n": {
+    "name": "IssueCount",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Badge",
+    "since": "4.2.10"
+  },
+  "r-preport": {
+    "name": "ProgramReport",
+    "apg": null,
+    "role": "article",
+    "variants": [],
+    "parts": [
+      "h",
+      "list",
+      "toc"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.10"
+  },
+  "c-health--off": {
+    "name": "HealthChip · offline",
+    "apg": null,
+    "role": "status",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Badge (pending)",
+    "since": "4.2.11",
+    "note": "device offline = pending tone with queued count; red reserved for conflicts"
+  },
+  "r-offbar": {
+    "name": "OfflineBanner",
+    "apg": null,
+    "role": "status",
+    "variants": [],
+    "parts": [],
+    "shadcn": "Alert (custom)",
+    "since": "4.2.11",
+    "note": "no internet — keep working; queued items link"
+  },
+  "r-qchip": {
+    "name": "QueuedChip",
+    "apg": null,
+    "role": "status",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.11",
+    "note": "action saved on device, waiting to send"
+  },
+  "r-offrules": {
+    "name": "OfflineRules",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.2.11",
+    "note": "works / queues / needs network"
+  },
+  "r-queue": {
+    "name": "SendQueue",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "--done"
+    ],
+    "parts": [
+      "i",
+      "n",
+      "b",
+      "t",
+      "a"
+    ],
+    "shadcn": "custom",
+    "since": "4.2.11",
+    "note": "ordered, duplicate-safe, cancellable while queued; stops at the first item that needs a decision"
+  },
+  "r-demo": {
+    "name": "DemoConsole",
+    "apg": null,
+    "role": "document",
+    "variants": [],
+    "parts": [
+      "main",
+      "head",
+      "badge",
+      "acts",
+      "h",
+      "path",
+      "start",
+      "id",
+      "grid",
+      "card",
+      "chips",
+      "panel",
+      "levers",
+      "ctl",
+      "lab",
+      "conns",
+      "bad",
+      "sec2"
+    ],
+    "shadcn": "custom (demo build only)",
+    "since": "4.2.11",
+    "note": "outside the product; never in production builds"
+  },
+  "c-tiles--few": {
+    "name": "TileGrid · few",
+    "apg": null,
+    "role": "group",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.0",
+    "note": "2-up grid for a small catalogue"
+  },
+  "c-tile--big": {
+    "name": "ProductTile · big",
+    "apg": null,
+    "role": "button",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.0",
+    "note": "idle hairline, in-cart raised; states 'còn · đã giữ'"
+  },
+  "r-pos__known": {
+    "name": "KnownCustomerChips",
+    "apg": null,
+    "role": "group",
+    "variants": [],
+    "parts": [
+      "kc"
+    ],
+    "shadcn": "ToggleGroup",
+    "since": "4.3.0",
+    "note": "pick a known customer → their price list, credit rules"
+  },
+  "r-order__custok": {
+    "name": "CounterCustomer",
+    "apg": null,
+    "role": "note",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.0"
+  },
+  "r-home__run": {
+    "name": "RunLine",
+    "apg": null,
+    "role": "link",
+    "variants": [],
+    "parts": [
+      "err"
+    ],
+    "shadcn": "custom",
+    "since": "4.3.0",
+    "note": "'OPC đang chạy n việc · n lỗi' → Control Tower"
+  },
+  "r-home__moneyline": {
+    "name": "MoneyStatesInWords",
+    "apg": null,
+    "role": "note",
+    "variants": [],
+    "parts": [
+      "mk",
+      "tomoney"
+    ],
+    "shadcn": "custom",
+    "since": "4.3.0",
+    "note": "summary of money states without figures (figures live on Tiền)"
+  },
+  "r-audit": {
+    "name": "AuditLog",
+    "apg": null,
+    "role": "list",
+    "variants": [],
+    "parts": [
+      "filters",
+      "find",
+      "chg",
+      "id"
+    ],
+    "shadcn": "custom",
+    "since": "4.3.0",
+    "note": "append-only, before → after, source, event id"
+  },
+  "r-model__sum": {
+    "name": "PlanSummary",
+    "apg": null,
+    "role": "status",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.1",
+    "note": "running plan tally above the primary"
+  },
+  "r-sure": {
+    "name": "SureValue",
+    "apg": null,
+    "role": "text",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.1",
+    "note": "value the assistant read with certainty"
+  },
+  "r-gate__i--nice": {
+    "name": "CloseGate · recommended",
+    "apg": null,
+    "role": "listitem",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.1"
+  },
+  "r-onboard__aside--desk": {
+    "name": "OnboardAside · desktop only",
+    "apg": null,
+    "role": "complementary",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.1"
+  },
+  "r-den": {
+    "name": "DenominationCount",
+    "apg": null,
+    "role": "list",
+    "variants": [
+      "__i--zero"
+    ],
+    "parts": [
+      "i",
+      "v",
+      "n",
+      "t"
+    ],
+    "shadcn": "custom",
+    "since": "4.3.2",
+    "note": "count cash by note; zero rows dashed"
+  },
+  "r-shift": {
+    "name": "ShiftClose",
+    "apg": null,
+    "role": "group",
+    "variants": [],
+    "parts": [
+      "exp",
+      "big",
+      "minus",
+      "why",
+      "foot",
+      "cod",
+      "amt"
+    ],
+    "shadcn": "custom",
+    "since": "4.3.2",
+    "note": "expected vs counted, reason gate, hand-over result"
+  },
+  "r-plist__row": {
+    "name": "PriceList · row with status",
+    "apg": null,
+    "role": "listitem",
+    "variants": [],
+    "parts": [],
+    "shadcn": "custom",
+    "since": "4.3.2"
+  }
+}

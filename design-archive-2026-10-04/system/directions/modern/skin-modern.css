@@ -1,0 +1,133 @@
+/* Direction "Modern" — skin over the v3.1 system (loaded after components.css + recipes.css + tokens-override.css).
+   Borderless white cards on cool grey, soft elevation, 20px radius, sans-only type with heavy display numbers,
+   a brand-coloured hero card, frosted top/tab bars, brand primary buttons, Lucide icons. */
+
+body { background: var(--canvas); font-family: var(--font-body); letter-spacing: -.006em; }
+.c-ic { stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }   /* Lucide geometry */
+
+/* ---------- type: confident, sans, tight ---------- */
+.r-page-head__title, .r-detail__title, .r-onboard__title { font: 700 32px/1.12 var(--font-title); letter-spacing: -.028em; }
+.c-card__title, .c-drawer__title, .c-dialog__title, .c-sheet__title { font-family: var(--font-title); font-weight: 650; letter-spacing: -.015em; }
+.c-card__title { font-size: 18px; }
+.c-card__title::before { content: none; }
+.u-money { font-weight: 650; letter-spacing: -.02em; }
+.r-money-hero__big { font-weight: 750; letter-spacing: -.045em; }
+.r-ticket__total, .c-qr__amt { font-weight: 700; letter-spacing: -.03em; }
+@media (max-width: 720px) { .r-page-head__title { font-size: 26px; } }
+
+/* ---------- surfaces: borderless, elevated, generous ---------- */
+.c-card { border: 1px solid transparent; border-radius: var(--radius-l); box-shadow: var(--elev-1); --card-pad: 24px; }
+.c-card__head { border-bottom: 0; padding-bottom: 0; margin-bottom: var(--space-4); }
+.c-lane, .c-task, .c-prod, .c-qr, .c-msign, .c-option, .c-banner, .c-picker, .c-hh, .r-invoice { border-color: transparent; box-shadow: var(--elev-1); }
+.c-lane, .c-task, .c-option { border-radius: 18px; }
+.c-lane:hover, .c-task:hover, .c-prod:hover, .c-option:hover { box-shadow: var(--elev-2); }
+.c-empty { border: 0; background: var(--surface); box-shadow: var(--elev-1); border-radius: var(--radius-l); }
+.c-banner { border-radius: 16px; }
+.c-banner--pend { border: 1.5px dashed color-mix(in srgb, var(--pend) 45%, transparent); box-shadow: none; }
+.c-banner--err { border: 1px solid color-mix(in srgb, var(--err) 25%, transparent); box-shadow: none; }
+
+/* ---------- the hero: Tiền hôm nay as a brand card ---------- */
+/* big figure on its own line; sparkline + its caption sit beneath it as one readable row */
+.r-money-hero__big-row { flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-4); }
+.r-money-hero__big { flex-basis: 100%; }
+.r-money-hero__big-row .c-spark { order: 1; --spark-w: 168px; --spark-h: 40px; }
+.r-money-hero__big-row .r-money-hero__lbl { order: 2; padding: 0; }
+.c-brand__mark, .c-hh--bar .c-hh__mark { background: var(--act); color: var(--on-act); }
+.c-card:has(> .r-money-hero) { background: var(--hero-bg); color: var(--hero-ink); border: 0; box-shadow: 0 24px 48px -20px color-mix(in srgb, var(--brand-900) 55%, transparent); --card-pad: 28px; }
+.c-card:has(> .r-money-hero) .c-card__title, .c-card:has(> .r-money-hero) .r-money-hero__big, .c-card:has(> .r-money-hero) .c-say b { color: var(--hero-ink); }
+.c-card:has(> .r-money-hero) .c-say, .c-card:has(> .r-money-hero) .r-money-hero__lbl, .c-card:has(> .r-money-hero) .r-money-hero__pend, .c-card:has(> .r-money-hero) .c-conn, .c-card:has(> .r-money-hero) .r-money-hero__legend, .c-card:has(> .r-money-hero) .r-money-hero__side-h { color: var(--hero-ink-2); }
+.c-card:has(> .r-money-hero) .r-money-hero__lbl b, .c-card:has(> .r-money-hero) .r-money-hero__legend b, .c-card:has(> .r-money-hero) .r-money-hero__side-h .u-money { color: var(--hero-ink); }
+.c-card:has(> .r-money-hero) .u-money--pend { color: #ffd56b; }
+.c-card:has(> .r-money-hero) .r-money-hero__side { border-left-color: var(--hero-line); }
+.c-card:has(> .r-money-hero) .c-msign { background: var(--hero-chip); border: 1px solid var(--hero-line); box-shadow: none; color: var(--hero-ink); }
+.c-card:has(> .r-money-hero) .c-msign__pic { background: rgb(255 255 255 / .12); color: var(--hero-ink); }
+.c-card:has(> .r-money-hero) .c-msign__sub { color: var(--hero-ink-2); }
+.c-card:has(> .r-money-hero) .c-msign--pend { border: 1.5px dashed rgb(255 213 107 / .8); }
+.c-card:has(> .r-money-hero) .c-msign--pend .c-msign__word, .c-card:has(> .r-money-hero) .c-msign--pend .c-msign__amt { color: #ffd56b; }
+.c-card:has(> .r-money-hero) .c-msign--pend .c-msign__pic { background: repeating-linear-gradient(-45deg, rgb(255 213 107 / .35) 0 1.5px, transparent 1.5px 6px); color: #ffd56b; }
+.c-card:has(> .r-money-hero) .c-msign--ok .c-msign__pic { background: rgb(18 183 106 / .25); color: #75e0a7; }
+.c-card:has(> .r-money-hero) .c-msign__go, .c-card:has(> .r-money-hero) .c-msign__go--quiet { background: rgb(255 255 255 / .16); color: var(--hero-ink); border-left: 1px solid var(--hero-line); }
+.c-card:has(> .r-money-hero) .c-sign--pend { background: rgb(255 250 235 / .95); }
+.c-card:has(> .r-money-hero) .c-trend { background: var(--hero-chip); color: var(--hero-ink); }
+.c-card:has(> .r-money-hero) .c-spark path { stroke: var(--hero-ink); }
+.c-card:has(> .r-money-hero) .c-spark .c-spark__area { fill: rgb(255 255 255 / .14); }
+.c-card:has(> .r-money-hero) .c-spark circle { fill: var(--brand-600); stroke: var(--hero-ink); }
+.c-card:has(> .r-money-hero) .c-truthbar__cash { background: rgb(255 255 255 / .45); }
+.c-card:has(> .r-money-hero) .c-truthbar__ok { background: #32d583; }
+.c-card:has(> .r-money-hero) .c-btn { background: rgb(255 255 255 / .14); color: var(--hero-ink); border-color: var(--hero-line); box-shadow: none; }
+.c-card:has(> .r-money-hero) .c-btn:hover { background: rgb(255 255 255 / .22); }
+.c-card:has(> .r-money-hero) .c-conn::before { background: #32d583; }
+
+/* ---------- buttons: brand primary, quiet secondary ---------- */
+.c-btn { border-radius: 12px; border-color: var(--line-quiet); box-shadow: 0 1px 2px rgb(16 24 40 / .05); font-weight: 600; }
+.c-btn--act, .c-confirm:not([aria-disabled="true"]):not(.c-confirm--done) { background: var(--act); border-color: var(--act); color: var(--on-act); box-shadow: 0 1px 2px rgb(16 24 40 / .1), inset 0 -1px 0 rgb(0 0 0 / .12); }
+.c-btn--act:hover, .c-confirm:not([aria-disabled="true"]):not(.c-confirm--done):hover { background: var(--act-hover); border-color: var(--act-hover); }
+.c-btn--act .c-ic { color: currentColor; }
+.c-confirm { border-radius: 16px; }
+.c-confirm__pic { color: var(--on-act); }
+.c-icon-btn--outline { border-color: var(--line); }
+
+/* ---------- lanes: numbered circles ---------- */
+.c-lane__n { width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--surface-sunk); color: var(--ink-2); font: 700 18px/1 var(--font-display); }
+.c-lane--now { box-shadow: 0 0 0 2px var(--act-soft), var(--elev-2); border-color: color-mix(in srgb, var(--act) 35%, transparent); }
+.c-lane--now .c-lane__n { background: var(--act); color: var(--on-act); }
+@container (max-width: 560px) { .c-lane__n { border: 0; border-radius: 50%; } }
+.c-lane__kicker { display: none; }
+
+/* ---------- signs ---------- */
+.c-sign { font-weight: 600; }
+.c-sign--you { background: var(--act-soft); border-color: color-mix(in srgb, var(--act) 25%, transparent); color: var(--brand-700); }
+[data-brand="lime"] .c-sign--you { color: var(--ink); }
+
+/* ---------- navigation: frosted, brand-tinted current ---------- */
+.r-shell__nav, .c-nav { background: color-mix(in srgb, var(--surface) 70%, var(--canvas)); }
+.r-shell__nav { border-right: 1px solid var(--line); }
+.c-nav__item { border-radius: 10px; color: var(--ink-2); }
+.c-nav__item:hover { background: var(--surface-sunk); }
+.c-nav__item[aria-current="page"] { background: var(--act-soft); color: var(--brand-700); box-shadow: none; }
+[data-brand="lime"] .c-nav__item[aria-current="page"] { color: var(--ink); }
+.c-nav__item[aria-current="page"] .c-ic { color: var(--brand-600); }
+.c-nav__item--counter, .c-nav__item--counter:hover { background: var(--act); color: var(--on-act); box-shadow: 0 6px 14px -6px color-mix(in srgb, var(--act) 70%, transparent); }
+.c-nav__item--counter > .c-ic:first-child { color: var(--on-act); }
+.c-nav__count { background: var(--surface-sunk); }
+.c-nav__item[aria-current="page"] .c-nav__count { background: var(--act); color: var(--on-act); }
+.r-shell__top { position: sticky; top: 0; z-index: 8; background: var(--glass); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgb(16 24 40 / .06); }
+.c-tabbar { background: var(--glass); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-top: 1px solid rgb(16 24 40 / .06); }
+.c-tabbar__item[aria-current="page"] { color: var(--brand-700); }
+[data-brand="lime"] .c-tabbar__item[aria-current="page"] { color: var(--ink); }
+.c-tabbar__item[aria-current="page"]::before { background: var(--act); }
+.c-tabbar__item--counter .c-ic { background: var(--act); color: var(--on-act); box-shadow: 0 0 0 6px var(--act); border-radius: 8px; }
+.c-tabs__tab[aria-selected="true"]::after, .c-subnav__item[aria-current="page"]::after { background: var(--act); height: 2.5px; }
+.c-tabs__tab--you .c-tabs__count, .c-nav__item[aria-current="page"] .c-nav__count { background: var(--act); color: var(--on-act); }
+.c-search { border-radius: 12px; border-color: var(--line); background: var(--surface); }
+.c-sync { border-color: var(--line); }
+
+/* ---------- controls ---------- */
+.c-filter[aria-pressed="true"] { background: var(--act); border-color: var(--act); color: var(--on-act); }
+.c-switch[aria-checked="true"] .c-switch__track { background: var(--act); }
+.c-option[aria-checked="true"] { border-color: var(--act); box-shadow: 0 0 0 1.5px var(--act), var(--elev-2); }
+.c-otp__box:focus, .c-field__control:focus-within, .c-search:focus-within { border-color: var(--act); }
+
+/* ---------- counter ---------- */
+.c-prod { border-radius: 16px; }
+.c-prod__img { border-radius: 12px; }
+.c-prod__img--sea { background: linear-gradient(160deg, #e5efff, #f2f7ff); color: var(--brand-700); }
+.c-prod__img--warm { background: linear-gradient(160deg, #fff4e5, #fffaf2); color: #b54708; }
+.c-prod[data-incart] { border-color: var(--act); box-shadow: 0 0 0 2px var(--act), var(--elev-2); }
+.c-prod__badge { background: var(--act); color: var(--on-act); }
+
+/* ---------- charts ---------- */
+.c-daybars__bar { height: 14px; border-radius: 999px; background: color-mix(in srgb, var(--brand-600) 28%, var(--surface-sunk)); }
+.c-daybars__day--today .c-daybars__bar { background: var(--act); border: 0; }
+.c-meter__fill { background: var(--act); }
+.c-truthbar { height: 12px; }
+
+/* ---------- tables ---------- */
+.c-table th { background: transparent; text-transform: none; color: var(--ink-3); font-weight: 500; }
+.c-table__row--you td:first-child { box-shadow: inset 3px 0 0 var(--act); }
+
+/* ---------- overlays ---------- */
+.c-dialog__panel, .c-drawer__panel, .c-command__panel { border-radius: 20px; }
+.c-drawer__panel { border-radius: 20px 0 0 20px; }
+@media (max-width: 720px) { .c-drawer__panel { border-radius: 20px 20px 0 0; } }
+.c-toast { border-radius: 14px; }

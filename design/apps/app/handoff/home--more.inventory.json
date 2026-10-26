@@ -1,0 +1,7263 @@
+{
+  "screen": "home--more.html",
+  "title": "Tổng quan · Thêm — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "Điều hướng chính",
+      "box": [
+        0,
+        0,
+        252,
+        900
+      ]
+    },
+    {
+      "region": "header",
+      "box": [
+        252,
+        0,
+        1188,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        252,
+        73,
+        1188,
+        1517
+      ]
+    },
+    {
+      "region": "Điều hướng nhanh",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "region": "Tất cả mục",
+      "box": [
+        420,
+        117,
+        600,
+        1670
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": "AppShell",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        1590
+      ]
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "nav",
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Điều hướng chính",
+      "box": [
+        0,
+        0,
+        252,
+        900
+      ]
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-brand",
+      "component": "BrandMark",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        16,
+        227,
+        24
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC",
+      "box": [
+        20,
+        16,
+        47,
+        24
+      ]
+    },
+    {
+      "id": 4,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "by",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "by QNSC",
+      "box": [
+        75,
+        21,
+        61,
+        14
+      ]
+    },
+    {
+      "id": 5,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-hh",
+      "component": "HouseholdSwitcher",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Đổi hộ kinh doanh — đang chọn Đặc sản Cao Nguyên An Nhiên, Pleiku",
+      "box": [
+        12,
+        56,
+        227,
+        56
+      ]
+    },
+    {
+      "id": 6,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "AN",
+      "box": [
+        23,
+        67,
+        34,
+        34
+      ]
+    },
+    {
+      "id": 7,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        67,
+        67,
+        114,
+        35
+      ]
+    },
+    {
+      "id": 8,
+      "parent": 7,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "An Nhiên · Pleiku",
+      "box": [
+        67,
+        67,
+        114,
+        18
+      ]
+    },
+    {
+      "id": 9,
+      "parent": 7,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xác minh L1",
+      "box": [
+        67,
+        84,
+        114,
+        18
+      ]
+    },
+    {
+      "id": 10,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        210,
+        75,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 11,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        128,
+        227,
+        373
+      ]
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        128,
+        227,
+        143
+      ]
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        128,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tổng quan",
+      "box": [
+        12,
+        128,
+        181,
+        44
+      ]
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-home",
+      "box": [
+        24,
+        139,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 16,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "peek",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Thu gọn Tổng quan",
+      "box": [
+        195,
+        128,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 17,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        209,
+        142,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        174,
+        227,
+        89
+      ]
+    },
+    {
+      "id": 19,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hôm nay",
+      "box": [
+        46,
+        174,
+        193,
+        44
+      ]
+    },
+    {
+      "id": 20,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Cần xử lý",
+      "box": [
+        46,
+        219,
+        193,
+        44
+      ]
+    },
+    {
+      "id": 21,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        157,
+        229,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 22,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        273,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 23,
+      "parent": 22,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        273,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 24,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Mua hàng",
+      "box": [
+        12,
+        273,
+        181,
+        44
+      ]
+    },
+    {
+      "id": 25,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-download",
+      "box": [
+        24,
+        284,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 26,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "peek",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Xem mục con của Mua hàng",
+      "box": [
+        195,
+        273,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 27,
+      "parent": 26,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        209,
+        287,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 28,
+      "parent": 22,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 29,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đơn mua",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 30,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Nhà cung cấp",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 31,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Chi phí",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 32,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        319,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 33,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        319,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 34,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Bán hàng",
+      "box": [
+        12,
+        319,
+        181,
+        44
+      ]
+    },
+    {
+      "id": 35,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-bag",
+      "box": [
+        24,
+        330,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 36,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        157,
+        329,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 37,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "peek",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Xem mục con của Bán hàng",
+      "box": [
+        195,
+        319,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 38,
+      "parent": 37,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        209,
+        333,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 39,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 40,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Yêu cầu",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 41,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 42,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đơn bán",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 43,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Giao hàng",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 44,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Khách hàng",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 45,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        365,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 46,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        365,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 47,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kho hàng",
+      "box": [
+        12,
+        365,
+        181,
+        44
+      ]
+    },
+    {
+      "id": 48,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-box",
+      "box": [
+        24,
+        376,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 49,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "peek",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Xem mục con của Kho hàng",
+      "box": [
+        195,
+        365,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        209,
+        379,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 51,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 52,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hàng và giá",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 53,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tồn kho",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 54,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kiểm kho",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 55,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        411,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 56,
+      "parent": 55,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        411,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 57,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tiền",
+      "box": [
+        12,
+        411,
+        181,
+        44
+      ]
+    },
+    {
+      "id": 58,
+      "parent": 57,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-money",
+      "box": [
+        24,
+        422,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 59,
+      "parent": 57,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        157,
+        421,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 60,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "peek",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Xem mục con của Tiền",
+      "box": [
+        195,
+        411,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 61,
+      "parent": 60,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        209,
+        425,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 62,
+      "parent": 55,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 63,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thu chi và đối chiếu",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 64,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 65,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Công nợ",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 66,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hoá đơn",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 67,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        457,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 68,
+      "parent": 67,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        457,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 69,
+      "parent": 68,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Sổ và kê khai",
+      "box": [
+        12,
+        457,
+        181,
+        44
+      ]
+    },
+    {
+      "id": 70,
+      "parent": 69,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-book",
+      "box": [
+        24,
+        468,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 71,
+      "parent": 68,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "peek",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Xem mục con của Sổ và kê khai",
+      "box": [
+        195,
+        457,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 72,
+      "parent": 71,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        209,
+        471,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 73,
+      "parent": 67,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 74,
+      "parent": 73,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kỳ và đối soát",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 75,
+      "parent": 73,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kê khai",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 76,
+      "parent": 73,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Sổ sách",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 77,
+      "parent": 73,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Nhật ký",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 78,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        781,
+        227,
+        103
+      ]
+    },
+    {
+      "id": 79,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        794,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 80,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        794,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 81,
+      "parent": 80,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thiết lập",
+      "box": [
+        12,
+        794,
+        181,
+        44
+      ]
+    },
+    {
+      "id": 82,
+      "parent": 81,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-gear",
+      "box": [
+        24,
+        805,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 83,
+      "parent": 81,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1",
+      "box": [
+        157,
+        804,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 84,
+      "parent": 80,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "peek",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Xem mục con của Thiết lập",
+      "box": [
+        195,
+        794,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 85,
+      "parent": 84,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        209,
+        808,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 86,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 87,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Sẵn sàng",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 88,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hộ kinh doanh",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 89,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Dữ liệu nền",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 90,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Người dùng và quyền",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 91,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kết nối",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 92,
+      "parent": 91,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 93,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tính năng",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 94,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hiển thị",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 95,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Trợ giúp và hỗ trợ",
+      "box": [
+        12,
+        840,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 96,
+      "parent": 95,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chat",
+      "box": [
+        24,
+        851,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 97,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "main",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        252,
+        0,
+        1188,
+        1590
+      ]
+    },
+    {
+      "id": 98,
+      "parent": 97,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        252,
+        0,
+        1188,
+        73
+      ]
+    },
+    {
+      "id": 99,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "phone",
+      "variants": [
+        "bar"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Đổi hộ kinh doanh — đang chọn Đặc sản An Nhiên",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 100,
+      "parent": 99,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "AN",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 101,
+      "parent": 99,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 102,
+      "parent": 101,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đặc sản An Nhiên",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 103,
+      "parent": 101,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Pleiku",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 104,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tìm kiếm",
+      "box": [
+        284,
+        12,
+        390,
+        48
+      ]
+    },
+    {
+      "id": 105,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-search",
+      "box": [
+        297,
+        25,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 106,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "input",
+      "variants": [],
+      "state": [],
+      "role": "textbox",
+      "text": "",
+      "box": [
+        329,
+        13,
+        291,
+        46
+      ]
+    },
+    {
+      "id": 107,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-kbd",
+      "component": "Kbd",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "⌘K",
+      "box": [
+        630,
+        24,
+        35,
+        24
+      ]
+    },
+    {
+      "id": 108,
+      "parent": 98,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "spacer",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        686,
+        36,
+        368,
+        0
+      ]
+    },
+    {
+      "id": 109,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": null,
+      "of": "IconButton",
+      "part": "phone",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Tìm đơn, món, khách",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 110,
+      "parent": 109,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-search",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 111,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-health",
+      "component": null,
+      "of": "ConnectionPill",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": "status",
+      "text": "Đã lưu · 10:45",
+      "box": [
+        1066,
+        14,
+        140,
+        44
+      ]
+    },
+    {
+      "id": 112,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "desk",
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Trợ lý",
+      "box": [
+        1218,
+        14,
+        78,
+        44
+      ]
+    },
+    {
+      "id": 113,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thông báo — 4 chưa đọc",
+      "box": [
+        1308,
+        14,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 114,
+      "parent": 113,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-bell",
+      "box": [
+        1319,
+        25,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 115,
+      "parent": 113,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": null,
+      "of": "IconButton",
+      "part": "badge",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        1328,
+        18,
+        22,
+        20
+      ]
+    },
+    {
+      "id": 116,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-avatar",
+      "component": null,
+      "of": "AccountButton",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Nguyễn Minh Khoa · Người vận hành — tài khoản",
+      "box": [
+        1364,
+        14,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 117,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-avatar",
+      "component": null,
+      "of": "AccountButton",
+      "part": "face",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "K",
+      "box": [
+        1366,
+        16,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 118,
+      "parent": 97,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "content",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        252,
+        73,
+        1188,
+        1517
+      ]
+    },
+    {
+      "id": 119,
+      "parent": 118,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": "PageHeader",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        105,
+        1124,
+        66
+      ]
+    },
+    {
+      "id": 120,
+      "parent": 119,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hôm nay",
+      "box": [
+        284,
+        105,
+        353,
+        36
+      ]
+    },
+    {
+      "id": 121,
+      "parent": 119,
+      "kind": "component",
+      "class": "c-sub",
+      "component": "Subline",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Thứ Ba, 06/10/2026 · Hạnh bán hàng từ 07:00",
+      "box": [
+        284,
+        147,
+        353,
+        24
+      ]
+    },
+    {
+      "id": 122,
+      "parent": 119,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "acts",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1106,
+        101,
+        302,
+        44
+      ]
+    },
+    {
+      "id": 123,
+      "parent": 122,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đối chiếu tiền",
+      "box": [
+        1106,
+        101,
+        142,
+        44
+      ]
+    },
+    {
+      "id": 124,
+      "parent": 122,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Tạo đơn",
+      "box": [
+        1256,
+        101,
+        100,
+        44
+      ]
+    },
+    {
+      "id": 125,
+      "parent": 122,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Thao tác khác: ghi khoản chi, nhập hàng",
+      "box": [
+        1364,
+        101,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 126,
+      "parent": 125,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-more",
+      "box": [
+        1375,
+        112,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 127,
+      "parent": 118,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": "HomeLayout",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        195,
+        1124,
+        1355
+      ]
+    },
+    {
+      "id": 128,
+      "parent": 127,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "hero",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        195,
+        654,
+        365
+      ]
+    },
+    {
+      "id": 129,
+      "parent": 128,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        195,
+        654,
+        22
+      ]
+    },
+    {
+      "id": 130,
+      "parent": 129,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Doanh thu hôm nay · 5 đơn đã giao",
+      "box": [
+        284,
+        195,
+        299,
+        22
+      ]
+    },
+    {
+      "id": 131,
+      "parent": 129,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "fresh",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "MB · cập nhật 2 phút trước",
+      "box": [
+        744,
+        199,
+        194,
+        14
+      ]
+    },
+    {
+      "id": 132,
+      "parent": 128,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "main",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        244,
+        654,
+        168
+      ]
+    },
+    {
+      "id": 133,
+      "parent": 132,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "fig",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "7.235.000₫",
+      "box": [
+        284,
+        244,
+        391,
+        72
+      ]
+    },
+    {
+      "id": 134,
+      "parent": 132,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "delta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "so với thứ Ba trước",
+      "box": [
+        284,
+        332,
+        391,
+        28
+      ]
+    },
+    {
+      "id": 135,
+      "parent": 134,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "chip",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6%",
+      "box": [
+        284,
+        332,
+        62,
+        28
+      ]
+    },
+    {
+      "id": 136,
+      "parent": 135,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-trend",
+      "box": [
+        294,
+        338,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 137,
+      "parent": 132,
+      "kind": "component",
+      "class": "c-stat",
+      "component": null,
+      "of": "TodayFigure",
+      "part": "why",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Vì sao?",
+      "box": [
+        284,
+        368,
+        109,
+        44
+      ]
+    },
+    {
+      "id": 138,
+      "parent": 137,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev-r",
+      "box": [
+        362,
+        381,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 139,
+      "parent": 132,
+      "kind": "component",
+      "class": "c-bars",
+      "component": "DayColumns",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Doanh thu 7 ngày gần nhất",
+      "box": [
+        699,
+        252,
+        239,
+        160
+      ]
+    },
+    {
+      "id": 140,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "d",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        699,
+        252,
+        24,
+        160
+      ]
+    },
+    {
+      "id": 141,
+      "parent": 140,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "col",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        699,
+        252,
+        24,
+        138
+      ]
+    },
+    {
+      "id": 142,
+      "parent": 141,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        699,
+        303,
+        24,
+        88
+      ]
+    },
+    {
+      "id": 143,
+      "parent": 140,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "T4 T4 30/9 · 6.100.000 ₫",
+      "box": [
+        699,
+        398,
+        24,
+        14
+      ]
+    },
+    {
+      "id": 144,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "d",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        729,
+        252,
+        24,
+        160
+      ]
+    },
+    {
+      "id": 145,
+      "parent": 144,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "col",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        729,
+        252,
+        24,
+        138
+      ]
+    },
+    {
+      "id": 146,
+      "parent": 145,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        729,
+        313,
+        24,
+        78
+      ]
+    },
+    {
+      "id": 147,
+      "parent": 144,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "T5 T5 01/10 · 5.400.000 ₫",
+      "box": [
+        729,
+        398,
+        24,
+        14
+      ]
+    },
+    {
+      "id": 148,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "d",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        759,
+        252,
+        24,
+        160
+      ]
+    },
+    {
+      "id": 149,
+      "parent": 148,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "col",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        759,
+        252,
+        24,
+        138
+      ]
+    },
+    {
+      "id": 150,
+      "parent": 149,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        759,
+        263,
+        24,
+        128
+      ]
+    },
+    {
+      "id": 151,
+      "parent": 148,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "T6 T6 02/10 · 8.900.000 ₫",
+      "box": [
+        759,
+        398,
+        24,
+        14
+      ]
+    },
+    {
+      "id": 152,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "d",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        789,
+        252,
+        24,
+        160
+      ]
+    },
+    {
+      "id": 153,
+      "parent": 152,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "col",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        789,
+        252,
+        24,
+        138
+      ]
+    },
+    {
+      "id": 154,
+      "parent": 153,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        789,
+        252,
+        24,
+        138
+      ]
+    },
+    {
+      "id": 155,
+      "parent": 152,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "T7 T7 03/10 · 9.600.000 ₫",
+      "box": [
+        789,
+        398,
+        24,
+        14
+      ]
+    },
+    {
+      "id": 156,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "d",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        819,
+        252,
+        24,
+        160
+      ]
+    },
+    {
+      "id": 157,
+      "parent": 156,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "col",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        819,
+        252,
+        24,
+        138
+      ]
+    },
+    {
+      "id": 158,
+      "parent": 157,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        819,
+        287,
+        24,
+        104
+      ]
+    },
+    {
+      "id": 159,
+      "parent": 156,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "CN CN 04/10 · 7.200.000 ₫",
+      "box": [
+        819,
+        398,
+        24,
+        14
+      ]
+    },
+    {
+      "id": 160,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "d",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        848,
+        252,
+        24,
+        160
+      ]
+    },
+    {
+      "id": 161,
+      "parent": 160,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "col",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        848,
+        252,
+        24,
+        138
+      ]
+    },
+    {
+      "id": 162,
+      "parent": 161,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        848,
+        293,
+        24,
+        98
+      ]
+    },
+    {
+      "id": 163,
+      "parent": 160,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "T2 T2 05/10 · 6.800.000 ₫",
+      "box": [
+        848,
+        398,
+        24,
+        14
+      ]
+    },
+    {
+      "id": 164,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "d",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        878,
+        252,
+        60,
+        160
+      ]
+    },
+    {
+      "id": 165,
+      "parent": 164,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "col",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        878,
+        252,
+        60,
+        136
+      ]
+    },
+    {
+      "id": 166,
+      "parent": 165,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        878,
+        286,
+        60,
+        102
+      ]
+    },
+    {
+      "id": 167,
+      "parent": 164,
+      "kind": "component",
+      "class": "c-bars",
+      "component": null,
+      "of": "DayColumns",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hôm nay: 7.235.000 ₫, đang bán",
+      "box": [
+        878,
+        396,
+        60,
+        16
+      ]
+    },
+    {
+      "id": 168,
+      "parent": 128,
+      "kind": "component",
+      "class": "c-split",
+      "component": "MoneyTruthBar",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        440,
+        654,
+        119
+      ]
+    },
+    {
+      "id": 169,
+      "parent": 168,
+      "kind": "component",
+      "class": "c-split",
+      "component": null,
+      "of": "MoneyTruthBar",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": "img",
+      "text": "Đã xác minh 4.745.000 ₫, chờ xác minh 390.000 ₫, chưa thu 2.100.000 ₫",
+      "box": [
+        284,
+        465,
+        654,
+        20
+      ]
+    },
+    {
+      "id": 170,
+      "parent": 169,
+      "kind": "component",
+      "class": "c-split",
+      "component": null,
+      "of": "MoneyTruthBar",
+      "part": "ok",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        465,
+        425,
+        20
+      ]
+    },
+    {
+      "id": 171,
+      "parent": 169,
+      "kind": "component",
+      "class": "c-split",
+      "component": null,
+      "of": "MoneyTruthBar",
+      "part": "pend",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        712,
+        465,
+        35,
+        20
+      ]
+    },
+    {
+      "id": 172,
+      "parent": 169,
+      "kind": "component",
+      "class": "c-split",
+      "component": null,
+      "of": "MoneyTruthBar",
+      "part": "you",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        750,
+        465,
+        188,
+        20
+      ]
+    },
+    {
+      "id": 173,
+      "parent": 168,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "moneyline",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        515,
+        654,
+        44
+      ]
+    },
+    {
+      "id": 174,
+      "parent": 173,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "mk",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "phần lớn đã khớp sao kê",
+      "box": [
+        284,
+        515,
+        178,
+        44
+      ]
+    },
+    {
+      "id": 175,
+      "parent": 173,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "mk",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "1 khoản chờ xác minh",
+      "box": [
+        478,
+        515,
+        158,
+        44
+      ]
+    },
+    {
+      "id": 176,
+      "parent": 173,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "mk",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "2 đơn chưa thu",
+      "box": [
+        652,
+        515,
+        116,
+        44
+      ]
+    },
+    {
+      "id": 177,
+      "parent": 173,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "tomoney",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "chi tiết ở Tiền",
+      "box": [
+        784,
+        515,
+        94,
+        44
+      ]
+    },
+    {
+      "id": 178,
+      "parent": 127,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "todo",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        195,
+        422,
+        511
+      ]
+    },
+    {
+      "id": 179,
+      "parent": 178,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1011,
+        220,
+        372,
+        44
+      ]
+    },
+    {
+      "id": 180,
+      "parent": 179,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Cần làm",
+      "box": [
+        1011,
+        230,
+        108,
+        24
+      ]
+    },
+    {
+      "id": 181,
+      "parent": 180,
+      "kind": "component",
+      "class": "c-count",
+      "component": "CountBadge",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        1093,
+        230,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 182,
+      "parent": 179,
+      "kind": "component",
+      "class": "c-link",
+      "component": "TextLink",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Xem tất cả",
+      "box": [
+        1288,
+        220,
+        95,
+        44
+      ]
+    },
+    {
+      "id": 183,
+      "parent": 178,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "run",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "OPC đang chạy 3 việc",
+      "box": [
+        1011,
+        280,
+        372,
+        44
+      ]
+    },
+    {
+      "id": 184,
+      "parent": 183,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-clock",
+      "box": [
+        1023,
+        294,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 185,
+      "parent": 183,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "err",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1 lỗi",
+      "box": [
+        1206,
+        289,
+        60,
+        25
+      ]
+    },
+    {
+      "id": 186,
+      "parent": 185,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-alert",
+      "box": [
+        1214,
+        295,
+        14,
+        14
+      ]
+    },
+    {
+      "id": 187,
+      "parent": 183,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev-r",
+      "box": [
+        1355,
+        294,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 188,
+      "parent": 178,
+      "kind": "component",
+      "class": "c-todo",
+      "component": "TodoList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        332,
+        396,
+        305
+      ]
+    },
+    {
+      "id": 189,
+      "parent": 188,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        332,
+        396,
+        112
+      ]
+    },
+    {
+      "id": 190,
+      "parent": 189,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1",
+      "box": [
+        1011,
+        370,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 191,
+      "parent": 189,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Soạn DH-2052 cho Sunrise Hotel",
+      "box": [
+        1059,
+        346,
+        194,
+        43
+      ]
+    },
+    {
+      "id": 192,
+      "parent": 189,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "20 gói bò, 30 hũ muối · trước 15:00",
+      "box": [
+        1059,
+        391,
+        194,
+        39
+      ]
+    },
+    {
+      "id": 193,
+      "parent": 189,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "go",
+      "variants": [
+        "act"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Soạn hàng",
+      "box": [
+        1265,
+        366,
+        118,
+        44
+      ]
+    },
+    {
+      "id": 194,
+      "parent": 188,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        448,
+        396,
+        72
+      ]
+    },
+    {
+      "id": 195,
+      "parent": 194,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2",
+      "box": [
+        1011,
+        466,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 196,
+      "parent": 194,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Nhận hàng MH-0118 thiếu 5 hũ",
+      "box": [
+        1059,
+        463,
+        243,
+        22
+      ]
+    },
+    {
+      "id": 197,
+      "parent": 194,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "HTX Cao Nguyên · chờ chị quyết",
+      "box": [
+        1059,
+        486,
+        243,
+        20
+      ]
+    },
+    {
+      "id": 198,
+      "parent": 194,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "go",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Xem",
+      "box": [
+        1314,
+        462,
+        69,
+        44
+      ]
+    },
+    {
+      "id": 199,
+      "parent": 188,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        524,
+        396,
+        112
+      ]
+    },
+    {
+      "id": 200,
+      "parent": 199,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        1011,
+        562,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 201,
+      "parent": 199,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hoá đơn DH-2047 chưa rõ kết quả",
+      "box": [
+        1059,
+        538,
+        243,
+        43
+      ]
+    },
+    {
+      "id": 202,
+      "parent": 199,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1.840.000 ₫ · bên hoá đơn im lặng từ 10:12",
+      "box": [
+        1059,
+        583,
+        243,
+        39
+      ]
+    },
+    {
+      "id": 203,
+      "parent": 199,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "go",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Xem",
+      "box": [
+        1314,
+        558,
+        69,
+        44
+      ]
+    },
+    {
+      "id": 204,
+      "parent": 178,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "later",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "4 việc không gấp",
+      "box": [
+        1011,
+        637,
+        372,
+        44
+      ]
+    },
+    {
+      "id": 205,
+      "parent": 204,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev-r",
+      "box": [
+        1365,
+        658,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 206,
+      "parent": 127,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "orders",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        746,
+        654,
+        433
+      ]
+    },
+    {
+      "id": 207,
+      "parent": 206,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        779,
+        654,
+        44
+      ]
+    },
+    {
+      "id": 208,
+      "parent": 207,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Đơn gần đây",
+      "box": [
+        284,
+        789,
+        111,
+        24
+      ]
+    },
+    {
+      "id": 209,
+      "parent": 207,
+      "kind": "component",
+      "class": "c-link",
+      "component": "TextLink",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tất cả đơn",
+      "box": [
+        844,
+        779,
+        94,
+        44
+      ]
+    },
+    {
+      "id": 210,
+      "parent": 206,
+      "kind": "component",
+      "class": "c-orders",
+      "component": "OrderRows",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        272,
+        839,
+        678,
+        340
+      ]
+    },
+    {
+      "id": 211,
+      "parent": 210,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        272,
+        839,
+        678,
+        68
+      ]
+    },
+    {
+      "id": 212,
+      "parent": 211,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "who",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Khách lẻDH-2053 · Bán nhanh · 10:44",
+      "box": [
+        284,
+        852,
+        313,
+        42
+      ]
+    },
+    {
+      "id": 213,
+      "parent": 211,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "st",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        613,
+        858,
+        173,
+        30
+      ]
+    },
+    {
+      "id": 214,
+      "parent": 213,
+      "kind": "component",
+      "class": "c-sign",
+      "component": "StatusSign",
+      "of": null,
+      "part": null,
+      "variants": [
+        "wait"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Chờ khách chuyển",
+      "box": [
+        613,
+        858,
+        173,
+        30
+      ]
+    },
+    {
+      "id": 215,
+      "parent": 214,
+      "kind": "component",
+      "class": "c-sign",
+      "component": null,
+      "of": "StatusSign",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        622,
+        864,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 216,
+      "parent": 215,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-clock",
+      "box": [
+        623,
+        865,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 217,
+      "parent": 211,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "715.000 ₫",
+      "box": [
+        802,
+        864,
+        136,
+        18
+      ]
+    },
+    {
+      "id": 218,
+      "parent": 210,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        272,
+        907,
+        678,
+        68
+      ]
+    },
+    {
+      "id": 219,
+      "parent": 218,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "who",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhà hàng Phố NúiDH-2051 · Zalo OA · 10:20",
+      "box": [
+        284,
+        920,
+        316,
+        42
+      ]
+    },
+    {
+      "id": 220,
+      "parent": 218,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "st",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        616,
+        926,
+        170,
+        30
+      ]
+    },
+    {
+      "id": 221,
+      "parent": 220,
+      "kind": "component",
+      "class": "c-sign",
+      "component": "StatusSign",
+      "of": null,
+      "part": null,
+      "variants": [
+        "wait"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Đang giao · thu hộ",
+      "box": [
+        616,
+        926,
+        170,
+        30
+      ]
+    },
+    {
+      "id": 222,
+      "parent": 221,
+      "kind": "component",
+      "class": "c-sign",
+      "component": null,
+      "of": "StatusSign",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        625,
+        932,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 223,
+      "parent": 222,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-clock",
+      "box": [
+        626,
+        933,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 224,
+      "parent": 218,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1.150.000 ₫",
+      "box": [
+        802,
+        932,
+        136,
+        18
+      ]
+    },
+    {
+      "id": 225,
+      "parent": 210,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        272,
+        975,
+        678,
+        68
+      ]
+    },
+    {
+      "id": 226,
+      "parent": 225,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "who",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Sunrise HotelDH-2052 · Zalo OA · 09:02",
+      "box": [
+        284,
+        988,
+        358,
+        42
+      ]
+    },
+    {
+      "id": 227,
+      "parent": 225,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "st",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        658,
+        994,
+        128,
+        30
+      ]
+    },
+    {
+      "id": 228,
+      "parent": 227,
+      "kind": "component",
+      "class": "c-sign",
+      "component": "StatusSign",
+      "of": null,
+      "part": null,
+      "variants": [
+        "wait"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Đã giữ hàng",
+      "box": [
+        658,
+        994,
+        128,
+        30
+      ]
+    },
+    {
+      "id": 229,
+      "parent": 228,
+      "kind": "component",
+      "class": "c-sign",
+      "component": null,
+      "of": "StatusSign",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        667,
+        1000,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 230,
+      "parent": 229,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-clock",
+      "box": [
+        668,
+        1001,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 231,
+      "parent": 225,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6.250.000 ₫",
+      "box": [
+        802,
+        1000,
+        136,
+        18
+      ]
+    },
+    {
+      "id": 232,
+      "parent": 210,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        272,
+        1043,
+        678,
+        68
+      ]
+    },
+    {
+      "id": 233,
+      "parent": 232,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "who",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Homestay Mây NgànDH-2045 · Thêm tay · 09:40",
+      "box": [
+        284,
+        1056,
+        347,
+        42
+      ]
+    },
+    {
+      "id": 234,
+      "parent": 232,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "st",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        647,
+        1062,
+        139,
+        30
+      ]
+    },
+    {
+      "id": 235,
+      "parent": 234,
+      "kind": "component",
+      "class": "c-sign",
+      "component": "StatusSign",
+      "of": null,
+      "part": null,
+      "variants": [
+        "pend"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Chờ xác minh",
+      "box": [
+        647,
+        1062,
+        139,
+        30
+      ]
+    },
+    {
+      "id": 236,
+      "parent": 235,
+      "kind": "component",
+      "class": "c-sign",
+      "component": null,
+      "of": "StatusSign",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        656,
+        1068,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 237,
+      "parent": 236,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-clock",
+      "box": [
+        657,
+        1069,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 238,
+      "parent": 232,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "390.000 ₫",
+      "box": [
+        802,
+        1068,
+        136,
+        18
+      ]
+    },
+    {
+      "id": 239,
+      "parent": 210,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        272,
+        1111,
+        678,
+        68
+      ]
+    },
+    {
+      "id": 240,
+      "parent": 239,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "who",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Sunrise HotelDH-2049 · Định kỳ · 08:30",
+      "box": [
+        284,
+        1124,
+        381,
+        42
+      ]
+    },
+    {
+      "id": 241,
+      "parent": 239,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "st",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        681,
+        1130,
+        105,
+        30
+      ]
+    },
+    {
+      "id": 242,
+      "parent": 241,
+      "kind": "component",
+      "class": "c-sign",
+      "component": "StatusSign",
+      "of": null,
+      "part": null,
+      "variants": [
+        "ok"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Đã đóng",
+      "box": [
+        681,
+        1130,
+        105,
+        30
+      ]
+    },
+    {
+      "id": 243,
+      "parent": 242,
+      "kind": "component",
+      "class": "c-sign",
+      "component": null,
+      "of": "StatusSign",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        690,
+        1136,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 244,
+      "parent": 243,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        691,
+        1137,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 245,
+      "parent": 239,
+      "kind": "component",
+      "class": "c-orders",
+      "component": null,
+      "of": "OrderRows",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4.550.000 ₫",
+      "box": [
+        802,
+        1136,
+        136,
+        18
+      ]
+    },
+    {
+      "id": 246,
+      "parent": 127,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "side",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kỳ thuế, công nợ, mua và kho",
+      "box": [
+        986,
+        746,
+        422,
+        804
+      ]
+    },
+    {
+      "id": 247,
+      "parent": 246,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "part",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        779,
+        422,
+        215
+      ]
+    },
+    {
+      "id": 248,
+      "parent": 247,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        779,
+        422,
+        44
+      ]
+    },
+    {
+      "id": 249,
+      "parent": 248,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Kỳ Quý III",
+      "box": [
+        986,
+        789,
+        80,
+        24
+      ]
+    },
+    {
+      "id": 250,
+      "parent": 248,
+      "kind": "component",
+      "class": "c-link",
+      "component": "TextLink",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đối chiếu",
+      "box": [
+        1326,
+        779,
+        82,
+        44
+      ]
+    },
+    {
+      "id": 251,
+      "parent": 247,
+      "kind": "component",
+      "class": "c-sub",
+      "component": "Subline",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5 việc · hạn khai 31/10",
+      "box": [
+        986,
+        839,
+        422,
+        24
+      ]
+    },
+    {
+      "id": 252,
+      "parent": 247,
+      "kind": "component",
+      "class": "c-meter",
+      "component": "ThresholdMeter",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        883,
+        422,
+        111
+      ]
+    },
+    {
+      "id": 253,
+      "parent": 252,
+      "kind": "component",
+      "class": "c-meter",
+      "component": null,
+      "of": "ThresholdMeter",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Doanh thu từ 01/01 · 718,4 triệumốc 1 tỷ",
+      "box": [
+        986,
+        900,
+        422,
+        20
+      ]
+    },
+    {
+      "id": 254,
+      "parent": 252,
+      "kind": "component",
+      "class": "c-meter",
+      "component": null,
+      "of": "ThresholdMeter",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": "img",
+      "text": "Doanh thu từ 01/01 718.400.000 ₫, dưới mốc 1 tỷ",
+      "box": [
+        986,
+        948,
+        422,
+        6
+      ]
+    },
+    {
+      "id": 255,
+      "parent": 254,
+      "kind": "component",
+      "class": "c-meter",
+      "component": null,
+      "of": "ThresholdMeter",
+      "part": "fill",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        948,
+        303,
+        6
+      ]
+    },
+    {
+      "id": 256,
+      "parent": 252,
+      "kind": "component",
+      "class": "c-meter",
+      "component": null,
+      "of": "ThresholdMeter",
+      "part": "why",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhịp năm khoảng 1,06 tỷ · mốc chờ kế toán xác nhận",
+      "box": [
+        986,
+        974,
+        422,
+        20
+      ]
+    },
+    {
+      "id": 257,
+      "parent": 256,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-alert",
+      "box": [
+        986,
+        974,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 258,
+      "parent": 246,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "part",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1021,
+        422,
+        206
+      ]
+    },
+    {
+      "id": 259,
+      "parent": 258,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "17.700.000 ₫",
+      "box": [
+        986,
+        1050,
+        422,
+        24
+      ]
+    },
+    {
+      "id": 260,
+      "parent": 259,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Khách còn nợ",
+      "box": [
+        986,
+        1050,
+        118,
+        24
+      ]
+    },
+    {
+      "id": 261,
+      "parent": 258,
+      "kind": "component",
+      "class": "c-debts",
+      "component": "DebtList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1091,
+        422,
+        137
+      ]
+    },
+    {
+      "id": 262,
+      "parent": 261,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1091,
+        422,
+        68
+      ]
+    },
+    {
+      "id": 263,
+      "parent": 262,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Sunrise Hotel",
+      "box": [
+        986,
+        1103,
+        308,
+        21
+      ]
+    },
+    {
+      "id": 264,
+      "parent": 262,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "8.400.000 ₫",
+      "box": [
+        1306,
+        1103,
+        102,
+        21
+      ]
+    },
+    {
+      "id": 265,
+      "parent": 262,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "quá hạn 12 ngày · bảng kê chờ chị gửi nay",
+      "box": [
+        986,
+        1126,
+        422,
+        21
+      ]
+    },
+    {
+      "id": 266,
+      "parent": 261,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1159,
+        422,
+        69
+      ]
+    },
+    {
+      "id": 267,
+      "parent": 266,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhà hàng Phố Núi",
+      "box": [
+        986,
+        1172,
+        308,
+        21
+      ]
+    },
+    {
+      "id": 268,
+      "parent": 266,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3.900.000 ₫",
+      "box": [
+        1306,
+        1172,
+        102,
+        21
+      ]
+    },
+    {
+      "id": 269,
+      "parent": 266,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "hạn 12/10",
+      "box": [
+        986,
+        1194,
+        422,
+        21
+      ]
+    },
+    {
+      "id": 270,
+      "parent": 246,
+      "kind": "recipe",
+      "class": "r-home",
+      "component": null,
+      "of": "HomeLayout",
+      "part": "part",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1255,
+        422,
+        294
+      ]
+    },
+    {
+      "id": 271,
+      "parent": 270,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1284,
+        422,
+        44
+      ]
+    },
+    {
+      "id": 272,
+      "parent": 271,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Mua và kho",
+      "box": [
+        986,
+        1294,
+        99,
+        24
+      ]
+    },
+    {
+      "id": 273,
+      "parent": 271,
+      "kind": "component",
+      "class": "c-link",
+      "component": "TextLink",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đơn mua",
+      "box": [
+        1308,
+        1284,
+        100,
+        44
+      ]
+    },
+    {
+      "id": 274,
+      "parent": 273,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev-r",
+      "box": [
+        1386,
+        1297,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 275,
+      "parent": 270,
+      "kind": "component",
+      "class": "c-debts",
+      "component": "DebtList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1344,
+        422,
+        205
+      ]
+    },
+    {
+      "id": 276,
+      "parent": 275,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1344,
+        422,
+        68
+      ]
+    },
+    {
+      "id": 277,
+      "parent": 276,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "MH-0118 đã về",
+      "box": [
+        986,
+        1356,
+        334,
+        21
+      ]
+    },
+    {
+      "id": 278,
+      "parent": 276,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "45/50 hũ",
+      "box": [
+        1333,
+        1356,
+        75,
+        21
+      ]
+    },
+    {
+      "id": 279,
+      "parent": 276,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "chờ chị xác nhận nhập kho",
+      "box": [
+        986,
+        1379,
+        422,
+        21
+      ]
+    },
+    {
+      "id": 280,
+      "parent": 275,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1412,
+        422,
+        69
+      ]
+    },
+    {
+      "id": 281,
+      "parent": 280,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bò một nắng",
+      "box": [
+        986,
+        1425,
+        359,
+        21
+      ]
+    },
+    {
+      "id": 282,
+      "parent": 280,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "26 gói",
+      "box": [
+        1357,
+        1425,
+        51,
+        21
+      ]
+    },
+    {
+      "id": 283,
+      "parent": 280,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "khả dụng · +40 gói Thứ Năm (MH-0121)",
+      "box": [
+        986,
+        1448,
+        422,
+        21
+      ]
+    },
+    {
+      "id": 284,
+      "parent": 275,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        986,
+        1481,
+        422,
+        69
+      ]
+    },
+    {
+      "id": 285,
+      "parent": 284,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Phải trả tuần này",
+      "box": [
+        986,
+        1494,
+        308,
+        21
+      ]
+    },
+    {
+      "id": 286,
+      "parent": 284,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4.050.000 ₫",
+      "box": [
+        1306,
+        1494,
+        102,
+        21
+      ]
+    },
+    {
+      "id": 287,
+      "parent": 284,
+      "kind": "component",
+      "class": "c-debts",
+      "component": null,
+      "of": "DebtList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "HTX 2.800.000 ₫ hạn 08/10",
+      "box": [
+        986,
+        1517,
+        422,
+        21
+      ]
+    },
+    {
+      "id": 288,
+      "parent": null,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": "PhoneTabBar",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Điều hướng nhanh",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 289,
+      "parent": 288,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tổng quan",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 290,
+      "parent": 289,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-home",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 291,
+      "parent": 289,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 292,
+      "parent": 288,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Mua",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 293,
+      "parent": 292,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-download",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 294,
+      "parent": 288,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Bán",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 295,
+      "parent": 294,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-bag",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 296,
+      "parent": 294,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 297,
+      "parent": 288,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kho",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 298,
+      "parent": 297,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-box",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 299,
+      "parent": 288,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thêm",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 300,
+      "parent": 299,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-menu",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 301,
+      "parent": null,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": "Dialog",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "dialog",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ]
+    },
+    {
+      "id": 302,
+      "parent": 301,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "panel",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        24,
+        640,
+        852
+      ]
+    },
+    {
+      "id": 303,
+      "parent": 302,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        24,
+        640,
+        77
+      ]
+    },
+    {
+      "id": 304,
+      "parent": 303,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Tất cả",
+      "box": [
+        420,
+        40,
+        77,
+        28
+      ]
+    },
+    {
+      "id": 305,
+      "parent": 303,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Đóng",
+      "box": [
+        976,
+        40,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 306,
+      "parent": 305,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-x",
+      "box": [
+        987,
+        51,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 307,
+      "parent": 302,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        101,
+        640,
+        775
+      ]
+    },
+    {
+      "id": 308,
+      "parent": 307,
+      "kind": "component",
+      "class": "c-nav",
+      "component": "SidebarNav",
+      "of": null,
+      "part": null,
+      "variants": [
+        "sheet"
+      ],
+      "state": [],
+      "role": "navigation",
+      "text": "Hôm nay, Quầy, Bán và Tiền cũng ở thanh dưới màn hình.",
+      "box": [
+        420,
+        117,
+        600,
+        1670
+      ]
+    },
+    {
+      "id": 309,
+      "parent": 308,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        117,
+        600,
+        1183
+      ]
+    },
+    {
+      "id": 310,
+      "parent": 309,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        117,
+        600,
+        143
+      ]
+    },
+    {
+      "id": 311,
+      "parent": 310,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        117,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 312,
+      "parent": 311,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tổng quan",
+      "box": [
+        420,
+        117,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 313,
+      "parent": 312,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-home",
+      "box": [
+        432,
+        128,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 314,
+      "parent": 310,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        440,
+        163,
+        580,
+        89
+      ]
+    },
+    {
+      "id": 315,
+      "parent": 314,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hôm nay",
+      "box": [
+        450,
+        163,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 316,
+      "parent": 314,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Cần xử lý",
+      "box": [
+        450,
+        208,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 317,
+      "parent": 316,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        984,
+        218,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 318,
+      "parent": 309,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        262,
+        600,
+        188
+      ]
+    },
+    {
+      "id": 319,
+      "parent": 318,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        262,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 320,
+      "parent": 319,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Mua hàng",
+      "box": [
+        420,
+        262,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 321,
+      "parent": 320,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-download",
+      "box": [
+        432,
+        273,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 322,
+      "parent": 318,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        440,
+        308,
+        580,
+        134
+      ]
+    },
+    {
+      "id": 323,
+      "parent": 322,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đơn mua",
+      "box": [
+        450,
+        308,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 324,
+      "parent": 322,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Nhà cung cấp",
+      "box": [
+        450,
+        353,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 325,
+      "parent": 322,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Chi phí",
+      "box": [
+        450,
+        398,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 326,
+      "parent": 309,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        452,
+        600,
+        233
+      ]
+    },
+    {
+      "id": 327,
+      "parent": 326,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        452,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 328,
+      "parent": 327,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Bán hàng",
+      "box": [
+        420,
+        452,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 329,
+      "parent": 328,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-bag",
+      "box": [
+        432,
+        463,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 330,
+      "parent": 326,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        440,
+        498,
+        580,
+        179
+      ]
+    },
+    {
+      "id": 331,
+      "parent": 330,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Yêu cầu",
+      "box": [
+        450,
+        498,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 332,
+      "parent": 331,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        984,
+        508,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 333,
+      "parent": 330,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đơn bán",
+      "box": [
+        450,
+        543,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 334,
+      "parent": 330,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Giao hàng",
+      "box": [
+        450,
+        588,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 335,
+      "parent": 330,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Khách hàng",
+      "box": [
+        450,
+        633,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 336,
+      "parent": 309,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        687,
+        600,
+        188
+      ]
+    },
+    {
+      "id": 337,
+      "parent": 336,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        687,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 338,
+      "parent": 337,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kho hàng",
+      "box": [
+        420,
+        687,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 339,
+      "parent": 338,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-box",
+      "box": [
+        432,
+        698,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 340,
+      "parent": 336,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        440,
+        733,
+        580,
+        134
+      ]
+    },
+    {
+      "id": 341,
+      "parent": 340,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hàng và giá",
+      "box": [
+        450,
+        733,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 342,
+      "parent": 340,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tồn kho",
+      "box": [
+        450,
+        778,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 343,
+      "parent": 340,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kiểm kho",
+      "box": [
+        450,
+        823,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 344,
+      "parent": 309,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        877,
+        600,
+        188
+      ]
+    },
+    {
+      "id": 345,
+      "parent": 344,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        877,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 346,
+      "parent": 345,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tiền",
+      "box": [
+        420,
+        877,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 347,
+      "parent": 346,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-money",
+      "box": [
+        432,
+        888,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 348,
+      "parent": 344,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        440,
+        923,
+        580,
+        134
+      ]
+    },
+    {
+      "id": 349,
+      "parent": 348,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thu chi và đối chiếu",
+      "box": [
+        450,
+        923,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 350,
+      "parent": 349,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        984,
+        933,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 351,
+      "parent": 348,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Công nợ",
+      "box": [
+        450,
+        968,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 352,
+      "parent": 348,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hoá đơn",
+      "box": [
+        450,
+        1013,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 353,
+      "parent": 309,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        1067,
+        600,
+        233
+      ]
+    },
+    {
+      "id": 354,
+      "parent": 353,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        1067,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 355,
+      "parent": 354,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Sổ và kê khai",
+      "box": [
+        420,
+        1067,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 356,
+      "parent": 355,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-book",
+      "box": [
+        432,
+        1078,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 357,
+      "parent": 353,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        440,
+        1113,
+        580,
+        179
+      ]
+    },
+    {
+      "id": 358,
+      "parent": 357,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kỳ và đối soát",
+      "box": [
+        450,
+        1113,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 359,
+      "parent": 357,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kê khai",
+      "box": [
+        450,
+        1158,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 360,
+      "parent": 357,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Sổ sách",
+      "box": [
+        450,
+        1203,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 361,
+      "parent": 357,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Nhật ký",
+      "box": [
+        450,
+        1248,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 362,
+      "parent": 308,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        1324,
+        600,
+        427
+      ]
+    },
+    {
+      "id": 363,
+      "parent": 362,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "grp",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        1337,
+        600,
+        368
+      ]
+    },
+    {
+      "id": 364,
+      "parent": 363,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        1337,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 365,
+      "parent": 364,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thiết lập",
+      "box": [
+        420,
+        1337,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 366,
+      "parent": 365,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-gear",
+      "box": [
+        432,
+        1348,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 367,
+      "parent": 363,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        440,
+        1383,
+        580,
+        314
+      ]
+    },
+    {
+      "id": 368,
+      "parent": 367,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Sẵn sàng",
+      "box": [
+        450,
+        1383,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 369,
+      "parent": 367,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hộ kinh doanh",
+      "box": [
+        450,
+        1428,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 370,
+      "parent": 367,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Dữ liệu nền",
+      "box": [
+        450,
+        1473,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 371,
+      "parent": 367,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Người dùng và quyền",
+      "box": [
+        450,
+        1518,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 372,
+      "parent": 367,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kết nối",
+      "box": [
+        450,
+        1563,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 373,
+      "parent": 372,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1",
+      "box": [
+        984,
+        1573,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 374,
+      "parent": 367,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tính năng",
+      "box": [
+        450,
+        1608,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 375,
+      "parent": 367,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "subitem",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hiển thị",
+      "box": [
+        450,
+        1653,
+        570,
+        44
+      ]
+    },
+    {
+      "id": 376,
+      "parent": 362,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Trợ giúp và hỗ trợ",
+      "box": [
+        420,
+        1707,
+        600,
+        44
+      ]
+    },
+    {
+      "id": 377,
+      "parent": 376,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chat",
+      "box": [
+        432,
+        1718,
+        22,
+        22
+      ]
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.5.5",
+ "group": "q7",
+ "screens": [
+  {
+   "file": "home--offline.html",
+   "title": "Tổng quan · mất kết nối",
+   "pattern": "overview",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 42,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "overview",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 157,
+     "block": 13,
+     "icons": 7,
+     "iconRate": 4.5,
+     "rules": 5,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "600",
+      "400",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 4,
+     "chips": 1,
+     "tinted": 2
+    }
+   }
+  },
+  {
+   "file": "home--loading.html",
+   "title": "Tổng quan · đang tải",
+   "pattern": "overview",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 29,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "overview",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 73,
+     "block": 10,
+     "icons": 4,
+     "iconRate": 5.5,
+     "rules": 6,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 1,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "home--simple.html",
+   "title": "Hôm nay · chế độ Gọn, chữ lớn",
+   "pattern": "overview",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 39,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "overview",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 135,
+     "block": 10,
+     "icons": 5,
+     "iconRate": 3.7,
+     "rules": 4,
+     "sizes": 3,
+     "sizeList": [
+      16,
+      18,
+      21
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 1,
+     "tinted": 2
+    }
+   }
+  },
+  {
+   "file": "home--more.html",
+   "title": "Phone · Thêm (tất cả)",
+   "pattern": "overview",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 33,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "panel",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 45,
+     "block": 4,
+     "icons": 6,
+     "iconRate": 13.3,
+     "rules": 1,
+     "sizes": 2,
+     "sizeList": [
+      14,
+      16
+     ],
+     "weights": 2,
+     "weightList": [
+      "600",
+      "400"
+     ],
+     "greys": 2,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 2
+    }
+   }
+  },
+  {
+   "file": "home--command.html",
+   "title": "Bảng lệnh ⌘K",
+   "pattern": "overview",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 10,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "panel",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 44,
+     "block": 6,
+     "icons": 1,
+     "iconRate": 2.3,
+     "rules": 2,
+     "sizes": 2,
+     "sizeList": [
+      14,
+      16
+     ],
+     "weights": 3,
+     "weightList": [
+      "600",
+      "700",
+      "400"
+     ],
+     "greys": 3,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  }
+ ]
+}

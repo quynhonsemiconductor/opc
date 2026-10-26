@@ -1,0 +1,40 @@
+/* Direction "Modern" (candidate v4.0) — loaded AFTER system/tokens.css. Apple + Stripe/Ramp + Revolut references.
+   Sans only, cool neutrals, real brand colour, borderless white cards with soft elevation, frosted bars.
+   Semantics: brand = primary action and "do now"; ok = verified (green); pend = waiting (amber, hatched + dashed); err = red. */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap&subset=vietnamese");
+:root {
+  --p-ink-900: #101828; --p-ink-800: #1d2939; --p-ink-700: #344054; --p-ink-600: #475467;
+  --p-ink-400: #98a2b3; --p-ink-300: #d0d5dd; --p-ink-200: #e4e7ec; --p-ink-100: #f2f4f7; --p-paper: #f4f5f7;
+  /* Ocean (default) */
+  --brand-900: #0a2a66; --brand-700: #0b4bd1; --brand-600: #0a6cff; --brand-100: #e5efff; --brand-50: #f2f7ff;
+  --hero-bg: radial-gradient(120% 140% at 100% 0%, #2f8bff 0%, transparent 55%), linear-gradient(135deg, #0a2a66 0%, #0b4bd1 100%);
+  --hero-ink: #ffffff; --hero-ink-2: rgb(255 255 255 / .78); --hero-chip: rgb(255 255 255 / .14); --hero-line: rgb(255 255 255 / .22);
+  --on-brand: #ffffff;
+
+  --canvas: var(--p-paper); --surface: #ffffff; --surface-sunk: var(--p-ink-100);
+  --ink: var(--p-ink-900); --ink-2: var(--p-ink-700); --ink-3: var(--p-ink-600);
+  --line: var(--p-ink-200); --line-quiet: var(--p-ink-300); --line-strong: var(--p-ink-300); --line-ink: var(--brand-600);
+  --panel: var(--p-ink-900); --on-panel: #ffffff;
+  --act: var(--brand-600); --act-hover: var(--brand-700); --act-soft: var(--brand-50); --on-act: var(--on-brand);
+  --ok: #067647; --ok-strong: #05603a; --ok-soft: #ecfdf3; --on-ok: #ffffff;
+  --pend: #b54708; --pend-soft: #fffaeb; --pend-stripe: #fedf89;
+  --pend-hatch: repeating-linear-gradient(-45deg, #fedf89 0 1.5px, #fffaeb 1.5px 6px);
+  --err: #d92d20; --err-soft: #fef3f2;
+  --focus: var(--brand-600); --focus-halo: color-mix(in srgb, var(--brand-600) 25%, transparent);
+  --font-display: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-title: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius-s: 8px; --radius: 12px; --radius-l: 20px;
+  --elev-1: 0 1px 2px rgb(16 24 40 / .05), 0 1px 3px rgb(16 24 40 / .04);
+  --elev-2: 0 12px 16px -4px rgb(16 24 40 / .08), 0 4px 6px -2px rgb(16 24 40 / .03);
+  --elev-3: 0 24px 48px -12px rgb(16 24 40 / .18);
+  --glass: rgb(255 255 255 / .72);
+}
+/* Ink & Lime variant (Ramp-like): <html data-brand="lime"> */
+[data-brand="lime"] {
+  --brand-900: #0c0e12; --brand-700: #1d2128; --brand-600: #13161b; --brand-100: #f3f8c8; --brand-50: #fbfde8;
+  --act: #13161b; --act-hover: #2a2f37; --act-soft: #f6fbd1; --on-act: #e8f25c; --on-brand: #e8f25c;
+  --hero-bg: radial-gradient(90% 120% at 100% 0%, rgb(232 242 92 / .28) 0%, transparent 60%), linear-gradient(160deg, #13161b 0%, #252a33 100%);
+  --hero-chip: rgb(255 255 255 / .10); --line-ink: #13161b; --focus: #13161b;
+  --focus-halo: color-mix(in srgb, #c7d63a 45%, transparent);
+}

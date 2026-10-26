@@ -1,0 +1,5 @@
+- Idea: Biển Lặng — calm, precise pro tool with coastal warmth; quiet sidebar + action row + 1px-hairline cards (Mercury demo, Linear restraint).
+- Fonts: Onest (body/display, neutral grotesk, full Vietnamese, warmer than Inter) + JetBrains Mono for every money/time/order figure (tabular, reads as "exact").
+- Colours: sand #f3eee5 / paper #fffcf6 / stone #ebe4d7 neutrals; deep sea-teal ink #12302f and action #0d5a5e; coral #e0603f with ONE job ("needs you": pending node, Cần xử lý count, Chờ xác minh); moss ok, brick error.
+- Signature: Vạch thủy triều (tide line) — 3-node Chờ chuyển → Đã nhận → Đã xác minh beside every amount, level-bar form for totals; chart gridlines are dotted depth contours with the value breaking the line.
+- Self-score 7/10: calm, legible and the tide line carries real meaning, but beyond the tide line and the sand/coral palette the frame is still close to good generic SaaS; ₫ in mono reads slightly technical at display size.

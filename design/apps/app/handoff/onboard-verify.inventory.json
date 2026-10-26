@@ -1,0 +1,822 @@
+{
+  "screen": "onboard-verify.html",
+  "title": "Sẵn sàng · Xác minh chủ hộ — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        216,
+        129,
+        560,
+        552
+      ]
+    },
+    {
+      "region": "footer",
+      "box": [
+        216,
+        680,
+        560,
+        164
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": "OnboardingStep",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Quay lại Sẵn sàng",
+      "box": [
+        16,
+        8,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-back",
+      "box": [
+        33,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 4,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-steps",
+      "component": "StepProgress",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "img",
+      "text": "Sẵn sàng: Xác minh chủ hộ",
+      "box": [
+        84,
+        28,
+        1247,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 5,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Sẵn sàng · Xác minh chủ hộ",
+      "box": [
+        84,
+        28,
+        1247,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 6,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "help",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hỏi",
+      "box": [
+        1343,
+        8,
+        81,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-help",
+      "box": [
+        1356,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 8,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "OPC chỉ lưu họ tên và số căn cước (mã hoá), không lưu ảnh.",
+      "box": [
+        216,
+        129,
+        560,
+        552
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Xác minh chủ hộ",
+      "box": [
+        216,
+        129,
+        560,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 10,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-say",
+      "component": "OwnerSentence",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chỉ cần khi ngân hàng hoặc nhà cung cấp hoá đơn đòi. Không xác minh thì OPC vẫn ",
+      "box": [
+        216,
+        184,
+        560,
+        46
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 11,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-options",
+      "component": "OptionList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "radiogroup",
+      "text": "Cách xác minh",
+      "box": [
+        216,
+        251,
+        560,
+        300
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-option",
+      "component": "OptionCard",
+      "of": null,
+      "part": null,
+      "variants": [
+        "big"
+      ],
+      "state": [],
+      "role": "radio",
+      "text": "",
+      "box": [
+        216,
+        251,
+        560,
+        108
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "radio",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        294,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 14,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        269,
+        268,
+        478,
+        74
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tự xác minh trên điện thoại",
+      "box": [
+        269,
+        268,
+        478,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 16,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-phone",
+      "box": [
+        269,
+        270,
+        20,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 17,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "nhanh nhất · cần căn cước gắn chip và máy có NFC · khoảng 2 phút",
+      "box": [
+        269,
+        294,
+        478,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 18,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-option",
+      "component": "OptionCard",
+      "of": null,
+      "part": null,
+      "variants": [
+        "big"
+      ],
+      "state": [],
+      "role": "radio",
+      "text": "",
+      "box": [
+        216,
+        367,
+        560,
+        88
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 19,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "radio",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        400,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 20,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        269,
+        386,
+        455,
+        50
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 21,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhân viên OPC xác minh cùng chị",
+      "box": [
+        269,
+        386,
+        455,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-people",
+      "box": [
+        269,
+        388,
+        20,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 23,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "dễ nhất · chị Thu mang máy đọc thẻ · Thứ Năm 02/07, 8:00",
+      "box": [
+        269,
+        412,
+        455,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 24,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-option",
+      "component": "OptionCard",
+      "of": null,
+      "part": null,
+      "variants": [
+        "big"
+      ],
+      "state": [],
+      "role": "radio",
+      "text": "",
+      "box": [
+        216,
+        463,
+        560,
+        88
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 25,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "radio",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        496,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 26,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        269,
+        482,
+        427,
+        50
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 27,
+      "parent": 26,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Để sau",
+      "box": [
+        269,
+        482,
+        427,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-clock",
+      "box": [
+        269,
+        484,
+        20,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 29,
+      "parent": 26,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "không mất gì · làm khi ngân hàng hoặc bên hoá đơn đòi",
+      "box": [
+        269,
+        508,
+        427,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 30,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-yn",
+      "component": null,
+      "of": "Yn",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chọn một cách để tiếp tục.",
+      "box": [
+        216,
+        575,
+        560,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 31,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "saved",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã lưu — làm tiếp lúc nào cũng được",
+      "box": [
+        216,
+        659,
+        560,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 32,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": "contentinfo",
+      "text": "",
+      "box": [
+        216,
+        680,
+        560,
+        164
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 33,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act",
+        "block"
+      ],
+      "state": [
+        "disabled"
+      ],
+      "role": "button",
+      "text": "Tiếp tục",
+      "box": [
+        216,
+        700,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 34,
+      "parent": 32,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "alt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Vì sao có bên đòi xác minh?",
+      "box": [
+        216,
+        764,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    }
+  ]
+}

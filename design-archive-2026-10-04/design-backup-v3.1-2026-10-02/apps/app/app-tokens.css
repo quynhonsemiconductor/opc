@@ -1,0 +1,4 @@
+/* app-tokens.css — OPC — app (owner, staff, accountant) only. ONLY semantic-token overrides for this app's audience/context
+   (e.g. a default density, a sub-brand accent). Never primitives, never component styling. Loaded after the system tokens. */
+:root {
+}

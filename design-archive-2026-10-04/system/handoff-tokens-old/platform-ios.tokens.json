@@ -1,0 +1,35 @@
+{
+  "$description": "uiux-studio export of tokens.css — set \"platform-ios\" (overrides base)",
+  "semantic": {
+    "font-body": {
+      "$type": "fontFamily",
+      "$value": [
+        "-apple-system",
+        "SF Pro Text",
+        "system-ui",
+        "sans-serif"
+      ]
+    },
+    "target": {
+      "$type": "dimension",
+      "$value": {
+        "value": 44,
+        "unit": "px"
+      }
+    },
+    "safe-top": {
+      "$type": "dimension",
+      "$value": {
+        "value": 59,
+        "unit": "px"
+      }
+    },
+    "safe-bottom": {
+      "$type": "dimension",
+      "$value": {
+        "value": 34,
+        "unit": "px"
+      }
+    }
+  }
+}

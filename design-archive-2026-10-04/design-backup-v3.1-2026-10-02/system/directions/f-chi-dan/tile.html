@@ -1,0 +1,175 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Style tile — Biển Chỉ Dẫn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{ /* F — Biển Chỉ Dẫn: wayfinding signage on a light canvas */
+  --bg:#f2f2ee; --surface:#ffffff; --ink:#121514; --ink-2:#464b48; --line:#cfd1cb;
+  --panel:#16191a; --on-panel:#ffffff; --on-panel-2:#c3c8c4; --panel-line:#343a3b;
+  --signal:#ffc400; --on-signal:#121514;          /* act now */
+  --route:#006b47; --on-route:#ffffff;            /* cao tốc green — verified / done */
+  --road:#0b4a8f; --on-road:#ffffff;              /* quốc lộ blue — secondary category, invoice/CQT */
+  --danger:#c0161c; --on-danger:#ffffff;
+  --disabled-bg:#e4e5e0; --disabled-ink:#5f6460;
+  --font-display:"Barlow",sans-serif; --font-body:"Public Sans",sans-serif;
+  --r:4px; --r-lg:6px; --s:8px; }
+*{box-sizing:border-box}
+body{margin:0;width:1200px;height:800px;overflow:hidden;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-body);font-variant-numeric:tabular-nums}
+.tile{display:grid;grid-template-columns:340px 1fr;height:100%}
+.meta{padding:24px 28px 20px;border-right:2px solid var(--ink);display:grid;align-content:start;gap:14px;background:var(--surface)}
+.work{padding:26px 28px;display:grid;gap:22px;align-content:start}
+.lbl{font:600 13px/1.3 var(--font-body);color:var(--ink-2);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.lbl::before{content:"";width:10px;height:10px;background:var(--ink);border-radius:1px}
+.disp{font-family:var(--font-display)}
+.name{font:700 40px/1 var(--font-display);letter-spacing:-.01em}
+.kw{color:var(--ink-2);font-size:16px;margin-top:6px}
+.brand{display:inline-flex;align-items:center;gap:6px;font:700 15px/1 var(--font-display);margin-bottom:12px}
+.brand b{background:var(--ink);color:var(--signal);padding:4px 6px;border-radius:var(--r);letter-spacing:.02em}
+.brand span{font:500 13px var(--font-body);color:var(--ink-2)}
+.sw{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sw div{height:44px;border-radius:var(--r);font:600 13px/1.15 var(--font-body);display:flex;align-items:end;padding:5px 7px}
+/* components */
+.btn{height:48px;padding:0 18px;border-radius:var(--r);font:700 17px/1 var(--font-display);display:inline-flex;align-items:center;gap:10px;border:2px solid var(--ink);letter-spacing:.01em}
+.btn-p{background:var(--signal);color:var(--on-signal)}
+.btn-s{background:var(--surface);color:var(--ink)}
+.btn-d{background:var(--disabled-bg);color:var(--disabled-ink);border:2px dashed #9da29d}
+.field{display:grid;gap:4px}
+.field label{font:600 14px var(--font-body)}
+.input{height:48px;width:220px;border:2px solid var(--ink);border-radius:var(--r);background:var(--surface);display:flex;align-items:center;justify-content:space-between;padding:0 12px;font:700 20px var(--font-display)}
+.input span{font:500 14px var(--font-body);color:var(--ink-2)}
+.row{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+.st{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 12px 0 4px;border-radius:var(--r);font:700 15px/1 var(--font-display);letter-spacing:.01em}
+.st i{width:28px;height:28px;border-radius:3px;display:grid;place-items:center;flex:none}
+.st svg{width:20px;height:20px}
+.st-wait{background:var(--signal);color:var(--on-signal)} .st-wait i{background:var(--ink)}
+.st-ok{background:var(--route);color:var(--on-route)} .st-ok i{background:#fff}
+.st-cqt{background:var(--road);color:var(--on-road)} .st-cqt i{background:#fff}
+.st-err{background:var(--danger);color:var(--on-danger)} .st-err i{background:#fff}
+/* money panel */
+.money{background:var(--surface);border:2px solid var(--ink);border-radius:var(--r-lg);overflow:hidden}
+.money-h{background:var(--panel);color:var(--on-panel);display:flex;align-items:center;justify-content:space-between;padding:8px 16px;font:700 20px/1.2 var(--font-display)}
+.money-h small{font:500 14px var(--font-body);color:var(--on-panel-2)}
+.money-b{display:grid;grid-template-columns:300px 1fr;gap:0}
+.total{padding:12px 16px 14px;border-right:2px solid var(--line)}
+.total .big{font:700 46px/1 var(--font-display);letter-spacing:-.01em}
+.total .sub{font-size:15px;color:var(--ink-2);margin-top:6px;line-height:1.4}
+.up{display:inline-flex;align-items:center;gap:4px;font:700 15px var(--font-display);color:var(--route)}
+.split{padding:12px 16px 14px;display:grid;gap:8px}
+.bar{display:flex;height:12px;border-radius:2px;overflow:hidden;gap:2px}
+.legend{display:grid;grid-template-columns:1fr auto;column-gap:16px;row-gap:3px;font-size:15px;align-items:center}
+.legend .amt{font:700 18px var(--font-display);text-align:right}
+.legend .grp{font:600 15px var(--font-body)}
+.legend .ind{padding-left:30px;color:var(--ink-2)}
+.legend .ind .amt{color:var(--ink)}
+.pg{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:2px;vertical-align:-4px;margin-right:6px}
+.pg svg{width:14px;height:14px}
+/* lanes */
+.lanes{display:grid;gap:10px}
+.route{display:grid;gap:4px}
+.route .st{height:44px;font-size:18px;width:100%}
+.route .st i{width:36px;height:36px}.route .st svg{width:24px;height:24px}
+.route .arr{padding-left:12px;height:12px;display:flex;align-items:center}
+.st-pend{background:var(--surface);color:var(--ink);border:2px solid var(--ink)} .st-pend i{background:var(--ink)}
+.lane{display:grid;grid-template-columns:96px 1fr auto;background:var(--panel);color:var(--on-panel);border-radius:var(--r-lg);overflow:hidden;min-height:112px}
+.num{background:var(--signal);color:var(--on-signal);font:800 92px/1 var(--font-display);display:grid;place-items:center;letter-spacing:-.03em}
+.lane-b{padding:10px 16px;display:grid;align-content:center;gap:3px}
+.lane-t{font:700 20px/1.2 var(--font-display)}
+.lane-d{font:400 15px/1.45 var(--font-body);color:var(--on-panel-2)}
+.lane-d b{color:var(--on-panel);font-weight:600}
+.lane-a{display:flex;align-items:center;padding:0 16px}
+.go{height:52px;padding:0 16px 0 18px;background:var(--signal);color:var(--on-signal);border-radius:var(--r);font:700 19px/1 var(--font-display);display:inline-flex;align-items:center;gap:10px}
+.go svg{width:24px;height:24px}
+.sig{position:relative;border:2px dashed var(--ink);border-radius:var(--r-lg);padding:28px 10px 10px}
+.sig-tag{position:absolute;top:-2px;left:-2px;background:var(--ink);color:var(--signal);font:700 14px/1 var(--font-display);padding:6px 10px;border-radius:var(--r-lg) 0 var(--r) 0;letter-spacing:.02em}
+.slice-h{display:flex;align-items:baseline;justify-content:space-between}
+</style></head><body><div class="tile">
+<section class="meta">
+  <div>
+    <div class="brand"><b>OPC</b><span>by QNSC</span></div>
+    <div class="name">Biển Chỉ Dẫn</div>
+    <div class="kw">rõ ràng · thẳng thắn · bước kế tiếp</div>
+  </div>
+  <div><div class="lbl">Anchors</div>
+    <div style="font-size:15px;line-height:1.45">refs/linear.png — cấu trúc, mật độ<br>Biển cao tốc VN · biển sân bay</div></div>
+  <div><div class="lbl">Type · Barlow 700 / Public Sans 400</div>
+    <div class="disp" style="font:700 36px/1.05 var(--font-display)">Cần xử lý ngay</div>
+    <div style="margin-top:6px">Khách chuyển 10:42, chưa ghi mã đơn — gán đúng người.</div>
+    <div class="disp" style="font:700 42px/1.05 var(--font-display);margin-top:4px">1.020.000 ₫</div>
+    <div style="font-size:14px;color:var(--ink-2)">0,5 kg mực khô · số đều cột (tnum)</div></div>
+  <div><div class="lbl">Colour roles · bo góc 4–6px</div><div class="sw">
+    <div style="background:var(--bg);border:1px solid var(--line)">nền sáng</div>
+    <div style="background:var(--panel);color:#fff">bảng biển</div>
+    <div style="background:var(--signal);color:var(--ink)">làm ngay</div>
+    <div style="background:var(--route);color:#fff">cao tốc · đã xong</div>
+    <div style="background:var(--road);color:#fff">quốc lộ · phụ</div>
+    <div style="background:var(--danger);color:#fff">lỗi</div></div></div>
+  <div><div class="lbl">Trạng thái tiền · đọc từ quầy</div><div class="route">
+    <span class="st st-pend"><i><svg viewBox="0 0 24 24" fill="#fff"><path d="M3 3h8v8H3zM5 5v4h4V5zM13 3h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zM13 13h3v3h-3zM18 13h3v3h-3zM13 18h3v3h-3zM18 18h3v3h-3z"/></svg></i>Chờ khách chuyển</span>
+    <span class="arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#121514" stroke-width="3.4" stroke-linecap="square"><path d="M12 3v17M6 14l6 6 6-6"/></svg></span>
+    <span class="st st-wait"><i><svg viewBox="0 0 24 24" fill="none" stroke="#ffc400" stroke-width="2.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2.5" stroke-linecap="square"/></svg></i>Đã nhận · chờ xác minh</span>
+    <span class="arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#121514" stroke-width="3.4" stroke-linecap="square"><path d="M12 3v17M6 14l6 6 6-6"/></svg></span>
+    <span class="st st-ok"><i><svg viewBox="0 0 24 24" fill="none" stroke="#006b47" stroke-width="3.2" stroke-linecap="square"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Đã xác minh</span>
+  </div></div>
+</section>
+<section class="work">
+  <div><div class="lbl">Components</div>
+    <div class="row">
+      <span class="btn btn-p">Xác nhận đã nhận <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      <span class="btn btn-s">In hoá đơn</span>
+      <span class="btn btn-d">Xuất hoá đơn</span>
+      <div class="field"><label>Số tiền khách chuyển</label><div class="input">1.020.000 ₫<span>VND</span></div></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <span class="st st-wait"><i><svg viewBox="0 0 24 24" fill="none" stroke="#ffc400" stroke-width="2.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2.5" stroke-linecap="square"/></svg></i>Chờ xác minh</span>
+      <span class="st st-ok"><i><svg viewBox="0 0 24 24" fill="none" stroke="#006b47" stroke-width="3.2" stroke-linecap="square"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Đã xác minh</span>
+      <span class="st st-cqt"><i><svg viewBox="0 0 24 24" fill="none" stroke="#0b4a8f" stroke-width="2.6" stroke-linecap="square"><path d="M7 3h7l4 4v14H7z"/><path d="M10 12h5M10 16h3"/></svg></i>Chờ mã CQT</span>
+      <span class="st st-err"><i><svg viewBox="0 0 24 24" fill="none" stroke="#c0161c" stroke-width="3" stroke-linecap="square"><path d="M12 3L2.5 20h19z" stroke-linejoin="miter"/><path d="M12 10v4.5M12 17.2v.3"/></svg></i>Lỗi</span>
+    </div>
+  </div>
+
+  <div><div class="lbl">Real content slice · Trang chủ</div>
+    <div class="money">
+      <div class="money-h">Tiền hôm nay <small>Cập nhật 10:48 · 02/10</small></div>
+      <div class="money-b">
+        <div class="total">
+          <div style="font:600 15px var(--font-body);color:var(--ink-2)">Doanh thu</div>
+          <div class="big">8.460.000 ₫</div>
+          <div class="sub">23 đơn · <span class="up"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="square"><path d="M12 20V5M6 11l6-6 6 6"/></svg>+19%</span> so với hôm qua (7.120.000 ₫)</div>
+        </div>
+        <div class="split">
+          <div class="bar" aria-hidden="true">
+            <div style="flex:4560;background:var(--route)"></div><div style="flex:1380;background:var(--signal)"></div><div style="flex:2520;background:var(--road)"></div>
+          </div>
+          <div class="legend">
+            <div class="grp"><span class="pg" style="background:var(--ink)"><svg viewBox="0 0 24 24" fill="#fff"><path d="M3 3h8v8H3zM5 5v4h4V5zM13 3h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zM13 13h3v3h-3zM18 13h3v3h-3zM13 18h3v3h-3zM18 18h3v3h-3z"/></svg></span>QR / chuyển khoản</div><div class="amt">5.940.000 ₫</div>
+            <div class="ind"><span class="pg" style="background:var(--route)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="square"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>đã xác minh</div><div class="amt" style="font-size:16px">4.560.000 ₫</div>
+            <div class="ind"><span class="pg" style="background:var(--signal)"><svg viewBox="0 0 24 24" fill="none" stroke="#121514" stroke-width="3" stroke-linecap="square"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/></svg></span>chờ xác minh</div><div class="amt" style="font-size:16px">1.380.000 ₫</div>
+            <div class="grp"><span class="pg" style="background:var(--road)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><rect x="3" y="6.5" width="18" height="11"/><circle cx="12" cy="12" r="2.6"/></svg></span>Tiền mặt</div><div class="amt">2.520.000 ₫</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sig"><span class="sig-tag">DẤU ẤN · LÀN KHẨN — số làn to + mũi tên hành động</span>
+    <div class="slice-h" style="margin:2px 2px 8px"><div class="disp" style="font:700 20px var(--font-display)">Cần xử lý</div><div style="font-size:14px;color:var(--ink-2)">2 việc · làm theo thứ tự số</div></div>
+    <div class="lanes">
+      <div class="lane">
+        <div class="num">1</div>
+        <div class="lane-b">
+          <div class="lane-t">2 khoản QR chờ xác minh</div>
+          <div class="lane-d"><b>DH-1043</b> 1.020.000 ₫ (10:42) · <b>DH-1041</b> 360.000 ₫ (10:05)</div>
+        </div>
+        <div class="lane-a"><span class="go">Đối chiếu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+      <div class="lane">
+        <div class="num">2</div>
+        <div class="lane-b">
+          <div class="lane-t">Chuyển khoản không có mã đơn</div>
+          <div class="lane-d"><b>2.150.000 ₫</b> từ NHA HANG BIEN DONG, 09:15<br>Gợi ý: công nợ Nhà hàng Biển Đông</div>
+        </div>
+        <div class="lane-a"><span class="go">Gán vào đơn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </div>
+  </div>
+</section></div></body></html>

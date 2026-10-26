@@ -1,0 +1,8 @@
+/Users/benq/Desktop/qnsc/opc/design/_packs/v41/g1-money-orders.png  1600x2540
+  money.html                     pattern:matching   1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  money--assign.html             pattern:matching   1440x900: probe 0 · stress 0 · a11y 0 · keys 35 | 390x844: probe 0 · stress 0 · a11y 0
+  orders.html                    pattern:data-table 1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  order-detail.html              pattern:detail     1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+facts → /Users/benq/Desktop/qnsc/opc/design/_packs/v41/g1-money-orders.facts.json
+machine pass clean — hand the sheet + facts + context pack to ONE evaluator (group mode)
+EXIT 0

@@ -1,0 +1,8 @@
+/Users/benq/Desktop/qnsc/opc/design/_packs/v41r2/g4.png  1600x2540
+  onboard-welcome.html           pattern:wizard     1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  onboard-phone.html             pattern:wizard     1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  onboard-otp.html               pattern:wizard     1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  onboard-household.html         pattern:wizard     1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+facts → /Users/benq/Desktop/qnsc/opc/design/_packs/v41r2/g4.facts.json
+machine pass clean — hand the sheet + facts + context pack to ONE evaluator (group mode)
+EXIT 0

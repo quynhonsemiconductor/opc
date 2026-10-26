@@ -1,0 +1,1986 @@
+{
+  "screen": "onboard-done.html",
+  "title": "Xong — Đăng ký OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        440,
+        97,
+        560,
+        1221
+      ]
+    },
+    {
+      "region": "footer",
+      "box": [
+        0,
+        1318,
+        1440,
+        172
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": "OnboardingStep",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        1490
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Quay lại bước trước",
+      "box": [
+        16,
+        8,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        33,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 4,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-brand",
+      "component": "BrandMark",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        84,
+        24,
+        1247,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 5,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC",
+      "box": [
+        92,
+        24,
+        49,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 6,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "by",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "by QNSC",
+      "box": [
+        149,
+        29,
+        62,
+        14
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 7,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "help",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hỏi",
+      "box": [
+        1343,
+        8,
+        81,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 8,
+      "parent": 7,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1356,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 9,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        440,
+        97,
+        560,
+        1221
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 10,
+      "parent": 9,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Xong! Hải sản khô Cô Hai đã sẵn sàng bán hàng",
+      "box": [
+        465,
+        122,
+        510,
+        69
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 11,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-lanes",
+      "component": "LaneList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã làm xong",
+      "box": [
+        465,
+        207,
+        510,
+        634
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        207,
+        510,
+        95
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        482,
+        224,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        491,
+        233,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 15,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        208,
+        444,
+        77
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 16,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Số điện thoại",
+      "box": [
+        546,
+        220,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 17,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        249,
+        412,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 18,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 02/10/2026 · 0905 812 347",
+      "box": [
+        546,
+        249,
+        258,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 19,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        285,
+        444,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 20,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        310,
+        510,
+        95
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 21,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        482,
+        327,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        491,
+        336,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 23,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        311,
+        444,
+        77
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 24,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Thông tin hộ",
+      "box": [
+        546,
+        323,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 25,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        352,
+        412,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 26,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 02/10/2026 · MST 4101678912",
+      "box": [
+        546,
+        352,
+        280,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 27,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        388,
+        444,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 28,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        413,
+        510,
+        95
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 29,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        482,
+        430,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 30,
+      "parent": 29,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        491,
+        439,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 31,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        414,
+        444,
+        77
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 32,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Xác minh chủ hộ",
+      "box": [
+        546,
+        426,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 33,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        455,
+        412,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 34,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 02/10/2026",
+      "box": [
+        546,
+        455,
+        140,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 35,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        491,
+        444,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 36,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        516,
+        510,
+        95
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 37,
+      "parent": 36,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        482,
+        533,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 38,
+      "parent": 37,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        491,
+        542,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 39,
+      "parent": 36,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        517,
+        444,
+        77
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 40,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Liên kết ngân hàng MB",
+      "box": [
+        546,
+        529,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 41,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        558,
+        412,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 42,
+      "parent": 41,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 02/10/2026 · tài khoản 0123 4567 89",
+      "box": [
+        546,
+        558,
+        335,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 43,
+      "parent": 36,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        594,
+        444,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 44,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        619,
+        510,
+        119
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 45,
+      "parent": 44,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        482,
+        636,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 46,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        491,
+        645,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 47,
+      "parent": 44,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        620,
+        444,
+        101
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 48,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hàng hoá",
+      "box": [
+        546,
+        632,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 49,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        661,
+        412,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 02/10/2026 · 9 món · 2 món nên xem lại giá trong Hàng hoá",
+      "box": [
+        546,
+        661,
+        412,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 51,
+      "parent": 44,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        721,
+        444,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 52,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        746,
+        510,
+        95
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 53,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        482,
+        763,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 54,
+      "parent": 53,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        491,
+        772,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 55,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        747,
+        444,
+        77
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 56,
+      "parent": 55,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hoá đơn điện tử",
+      "box": [
+        546,
+        759,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 57,
+      "parent": 55,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        788,
+        412,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 58,
+      "parent": 57,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 02/10/2026 · tự xuất khi bán",
+      "box": [
+        546,
+        788,
+        265,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 59,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        824,
+        444,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 60,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Nên làm thêm",
+      "box": [
+        465,
+        857,
+        510,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 61,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-lanes",
+      "component": "LaneList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nên làm thêm",
+      "box": [
+        465,
+        897,
+        510,
+        357
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 62,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        897,
+        510,
+        175
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 63,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1",
+      "box": [
+        482,
+        914,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 64,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        898,
+        444,
+        101
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 65,
+      "parent": 64,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "kicker",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Người dùng",
+      "box": [
+        546,
+        910,
+        412,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 66,
+      "parent": 65,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        911,
+        18,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 67,
+      "parent": 64,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Mời con hoặc nhân viên cùng dùng",
+      "box": [
+        546,
+        934,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 68,
+      "parent": 64,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        963,
+        412,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 69,
+      "parent": 68,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Mỗi người có tên riêng, mọi thao tác được ghi lại",
+      "box": [
+        546,
+        963,
+        372,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 70,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        999,
+        444,
+        72
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 71,
+      "parent": 70,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Mời",
+      "box": [
+        546,
+        999,
+        66,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 72,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        465,
+        1080,
+        510,
+        175
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 73,
+      "parent": 72,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2",
+      "box": [
+        482,
+        1097,
+        44,
+        44
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 74,
+      "parent": 72,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        1081,
+        444,
+        101
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 75,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "kicker",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Giao hàng",
+      "box": [
+        546,
+        1093,
+        412,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 76,
+      "parent": 75,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        1093,
+        18,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 77,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Đặt mức giao hàng khi tiền chờ xác minh",
+      "box": [
+        546,
+        1116,
+        412,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 78,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        546,
+        1145,
+        412,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 79,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Mặc định 2.000.000 ₫",
+      "box": [
+        546,
+        1145,
+        171,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 80,
+      "parent": 72,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        530,
+        1181,
+        444,
+        72
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 81,
+      "parent": 80,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đặt",
+      "box": [
+        546,
+        1181,
+        68,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 82,
+      "parent": 9,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "saved",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã lưu — làm tiếp lúc nào cũng được",
+      "box": [
+        465,
+        1270,
+        510,
+        23
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 83,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": "contentinfo",
+      "text": "",
+      "box": [
+        0,
+        1318,
+        1440,
+        172
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 84,
+      "parent": 83,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act",
+        "block"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Mở quầy bán hàng",
+      "box": [
+        440,
+        1330,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 85,
+      "parent": 84,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        795,
+        1347,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 86,
+      "parent": 83,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "alt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Gọi chị Lan",
+      "box": [
+        440,
+        1394,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    }
+  ]
+}

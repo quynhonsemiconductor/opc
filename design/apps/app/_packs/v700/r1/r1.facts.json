@@ -1,0 +1,337 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "7.0.0",
+ "group": "r1",
+ "screens": [
+  {
+   "file": "onboard-consent.html",
+   "title": "Đăng ký · Đồng ý dữ liệu (1/6)",
+   "pattern": "wizard",
+   "note": "Đồng ý rõ ràng theo Luật 91/2025; quyền xuất/xoá.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 7,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "form",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 124,
+     "block": 18,
+     "icons": 0,
+     "iconRate": 0,
+     "rules": 3,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 0,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "onboard-household--unregistered.html",
+   "title": "Đăng ký · Chưa có giấy đăng ký (2/6)",
+   "pattern": "wizard",
+   "note": "Hướng dẫn đăng ký ở xã (NĐ 168/2025), nhân viên OPC hỗ trợ; chỉ mở phần chuẩn bị.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 5,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "form",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 112,
+     "block": 22,
+     "icons": 0,
+     "iconRate": 0,
+     "rules": 3,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 0,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "onboard-features.html",
+   "title": "Đăng ký · Việc OPC làm (3/6)",
+   "pattern": "onboarding step",
+   "note": "Features first: 11 việc OPC làm, 4 cần nối để bắt đầu; cách nối gợi ý sẵn, Đổi được.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 5,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 182,
+     "block": 19,
+     "icons": 0,
+     "iconRate": 0,
+     "rules": 3,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 2,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "onboard-gov.html",
+   "title": "Đăng ký · VNeID và eTax (4/6)",
+   "pattern": "wizard",
+   "note": "Chỉ hỏi đã có chưa, OPC không giữ mật khẩu.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 8,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "form",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 102,
+     "block": 18,
+     "icons": 0,
+     "iconRate": 0,
+     "rules": 2,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 0,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "onboard-bankacc.html",
+   "title": "Đăng ký · Tài khoản kinh doanh (4/6)",
+   "pattern": "wizard",
+   "note": "Tài khoản/ví dùng kinh doanh và đã báo cơ quan thuế; nối ngân hàng tuỳ chọn.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 7,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "form",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 80,
+     "block": 13,
+     "icons": 1,
+     "iconRate": 1.3,
+     "rules": 2,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  }
+ ]
+}

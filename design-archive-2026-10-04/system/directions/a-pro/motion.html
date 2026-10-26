@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chuyển động OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="../../components/components.css">
+<link rel="stylesheet" href="../../components/recipes.css">
+<link rel="stylesheet" href="skin.css">
+<style>
+/* motion catalog layout + the signature motions (to be merged into components.css as c-* motion rules) */
+.wrap { max-width: 1180px; margin: 0 auto; padding: var(--space-8) var(--space-4) var(--space-10); display: grid; gap: var(--space-8); grid-template-columns: minmax(0, 1fr); }
+.head h1 { font: 600 34px/1.15 var(--font-title); letter-spacing: -.015em; }
+.head p { color: var(--ink-2); max-width: 70ch; margin-top: var(--space-2); }
+.demo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--space-6); align-items: start; }
+.demo h2 { font: 600 22px/1.2 var(--font-title); }
+.demo .why { color: var(--ink-2); margin-top: var(--space-2); }
+.demo .ctl { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
+.stage { position: relative; min-height: 180px; overflow: hidden; }
+@media (max-width: 860px) { .demo { grid-template-columns: minmax(0, 1fr); } }
+
+/* 1 · money ladder: station fill + check draw */
+.c-route__sq { transition: background var(--dur-4) var(--ease), border-color var(--dur-3) var(--ease), color var(--dur-3) var(--ease), transform var(--dur-3) var(--ease-spring); }
+.c-route__stn[aria-current="step"] .c-route__sq { transform: scale(1.08); }
+.c-route__here { transition: left var(--dur-3) var(--ease-spring); }
+.amt-pop { animation: pop var(--dur-3) var(--ease-spring); }
+@keyframes pop { 0% { transform: scale(.96); } 60% { transform: scale(1.04); } 100% { transform: scale(1); } }
+.check-draw path { stroke-dasharray: 24; stroke-dashoffset: 24; animation: draw var(--dur-4) var(--ease) forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.pulse { animation: pulse 1.2s var(--ease-out) 1; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pend) 35%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
+
+/* 2 · add to cart: fly + bump */
+.fly { position: fixed; z-index: 50; width: 28px; height: 28px; border-radius: 50%; background: var(--panel); pointer-events: none; transition: transform 520ms cubic-bezier(.5, -.2, .6, 1), opacity 520ms var(--ease); }
+.bump { animation: bump var(--dur-3) var(--ease-spring); }
+@keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.25); } 100% { transform: scale(1); } }
+.cartdemo { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) var(--space-4); border: 1px solid var(--line); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--elev-2); margin-top: var(--space-3); }
+.cartdemo b { font: 600 22px/1 var(--font-display); }
+
+/* 3 · approve: collapse + undo toast with time bar (does not vanish while hovered/focused) */
+.c-task { transition: opacity var(--dur-3) var(--ease), transform var(--dur-3) var(--ease), max-height var(--dur-3) var(--ease), margin var(--dur-3) var(--ease), padding var(--dur-3) var(--ease); max-height: 400px; overflow: hidden; }
+.c-task.is-gone { opacity: 0; transform: translateX(24px); max-height: 0; padding-block: 0; margin: 0; border-width: 0; }
+.toast { position: fixed; left: 50%; bottom: 24px; z-index: 60; width: min(520px, calc(100% - 32px)); transform: translate(-50%, 20px); opacity: 0; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-radius: var(--radius-l); background: var(--panel); color: var(--on-panel); box-shadow: var(--elev-3); transition: transform var(--dur-3) var(--ease-spring), opacity var(--dur-2) var(--ease); }
+.toast.is-on { transform: translate(-50%, 0); opacity: 1; }
+.toast .bar { grid-column: 1 / -1; height: 3px; border-radius: 3px; background: rgb(255 255 255 / .2); overflow: hidden; }
+.toast .bar i { display: block; height: 100%; width: 100%; background: var(--act); transform-origin: left; }
+.toast .c-btn { background: transparent; color: var(--on-panel); border-color: rgb(255 255 255 / .3); box-shadow: none; }
+
+/* 4 · lanes reorder (FLIP) */
+.c-lanes .c-lane { transition: transform var(--dur-3) var(--ease), opacity var(--dur-3) var(--ease), box-shadow var(--dur-2) var(--ease); }
+
+/* 5 · stamp on success */
+.stamp { position: absolute; right: 16px; top: 12px; padding: 6px 12px; border: 2px solid var(--ok); border-radius: 8px; color: var(--ok); font: 700 14px/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; transform: rotate(-8deg) scale(2.2); opacity: 0; }
+.stamp.is-on { animation: stamp 420ms var(--ease-spring) forwards; }
+@keyframes stamp { 0% { opacity: 0; transform: rotate(-8deg) scale(2.2); } 70% { opacity: 1; transform: rotate(-8deg) scale(.95); } 100% { opacity: 1; transform: rotate(-8deg) scale(1); } }
+
+/* 6 · count-up figure */
+.fig { font: 600 56px/1 var(--font-display); letter-spacing: -.035em; }
+
+/* glossary sheet (touch) */
+.gloss { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; padding: var(--space-5) var(--space-5) calc(var(--space-5) + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-radius: 18px 18px 0 0; box-shadow: var(--elev-3); transform: translateY(105%); transition: transform var(--dur-3) var(--ease-spring); max-width: 640px; margin: 0 auto; }
+.gloss.is-on { transform: translateY(0); }
+.gloss h3 { font: 600 22px/1.2 var(--font-title); }
+.gloss p { margin-top: var(--space-2); color: var(--ink-2); font-size: var(--fs-lead); }
+@media (prefers-reduced-motion: reduce) { .fly { display: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-qr" viewBox="0 0 24 24"><path d="M3.5 3.5h6.5v6.5H3.5zM14 3.5h6.5v6.5H14zM3.5 14h6.5v6.5H3.5zM14 14h2.5v2.5H14zM18 18h2.5v2.5H18z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5.2l3.4 2.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4.5 8h15l-1 13h-13zM8.5 8V6a3.5 3.5 0 017 0v2"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l1.5 2h-15zM10 21h4"/></symbol>
+</svg>
+<main class="wrap">
+  <header class="head">
+    <div class="c-brand"><b class="c-brand__mark">OPC</b><span class="c-brand__by">by QNSC</span></div>
+    <h1 style="margin-top:var(--space-3)">Chuyển động và tương tác</h1>
+    <p>Mỗi chuyển động giải thích một việc vừa xảy ra, không để trang trí. Thời lượng 120–480ms, nảy nhẹ khi xác nhận, và tắt hẳn khi máy bật “giảm chuyển động”. Bấm các nút để xem.</p>
+  </header>
+
+  <section class="demo" aria-labelledby="d1">
+    <div><h2 id="d1">1 · Tiền về, rồi được xác minh</h2>
+      <p class="why">Thang trạng thái đi từng bước. Ô gạch chéo chuyển thành xanh đặc khi ngân hàng khớp sao kê, và dấu ✓ được vẽ ra. Không bao giờ nhảy thẳng tới “xong”.</p>
+      <div class="ctl"><button class="c-btn" type="button" id="m1a">Khách chuyển tiền</button><button class="c-btn c-btn--act" type="button" id="m1b">Ngân hàng khớp sao kê</button><button class="c-btn c-btn--quiet" type="button" id="m1r">Làm lại</button></div></div>
+    <div class="stage c-card">
+      <div class="c-qr" style="grid-template-columns:minmax(0,1fr)"><div class="c-qr__meta"><span class="c-qr__k">VietQR · MB · DH1043</span><span class="c-qr__amt" id="m1amt">1.020.000 ₫</span></div><p class="c-qr__status" id="m1st" aria-live="polite"><span class="c-qr__status-pic"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg></span><span id="m1txt">Đang chờ khách chuyển…</span></p></div>
+      <ol class="c-route" id="m1route" aria-label="Trạng thái tiền" style="margin-top:var(--space-4)">
+        <li class="c-route__stn c-route__stn--wait" aria-current="step"><span class="c-route__here">ĐANG Ở ĐÂY</span><span class="c-route__sq"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg></span><span class="c-route__w">Chờ khách chuyển</span></li>
+        <li class="c-route__stn c-route__stn--pend"><span class="c-route__sq"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="c-route__w">Đã nhận · chờ xác minh</span></li>
+        <li class="c-route__stn c-route__stn--ok"><span class="c-route__sq" id="m1ok"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-route__w">Đã xác minh</span></li>
+      </ol>
+      <span class="stamp" id="m1stamp" aria-hidden="true">Đã xác minh</span>
+    </div>
+  </section>
+
+  <section class="demo" aria-labelledby="d2">
+    <div><h2 id="d2">2 · Thêm vào giỏ</h2>
+      <p class="why">Món “bay” xuống thanh giỏ, rồi số món nảy lên một lần. Người bán biết chắc đã thêm mà không phải nhìn sang chỗ khác.</p></div>
+    <div class="stage">
+      <div class="c-prods">
+        <button class="c-prod" type="button" data-add="85000"><span class="c-prod__name">Chả cá Quy Nhơn 500 g</span><span class="c-prod__price">85.000 ₫</span></button>
+        <button class="c-prod" type="button" data-add="95000"><span class="c-prod__name">Cá cơm sấy giòn hũ 250 g</span><span class="c-prod__price">95.000 ₫</span></button>
+        <button class="c-prod" type="button" data-add="40000"><span class="c-prod__name">Bánh tráng nước dừa</span><span class="c-prod__price">40.000 ₫</span></button>
+      </div>
+      <div class="cartdemo"><span><span class="u-meta">Giỏ · </span><span id="m2n">0</span> món</span><b id="m2t">0 ₫</b><span class="c-btn c-btn--act" id="m2btn"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg>Thu tiền</span></div>
+    </div>
+  </section>
+
+  <section class="demo" aria-labelledby="d3">
+    <div><h2 id="d3">3 · Duyệt việc, có hoàn tác</h2>
+      <p class="why">Thẻ thu gọn, việc tiếp theo trượt lên, và thanh “Hoàn tác” hiện 10 giây. Đang di chuột hoặc chạm vào thanh thì thời gian dừng: người lớn tuổi không bị mất cơ hội sửa.</p>
+      <div class="ctl"><button class="c-btn c-btn--quiet" type="button" id="m3r">Làm lại</button></div></div>
+    <ol class="c-tasks stage" id="m3list">
+      <li class="c-task c-task--first"><div class="c-task__meta"><span class="c-task__src c-task__src--ai">Trợ lý</span>09:50 · từ tin nhắn Zalo</div><div class="c-task__head"><strong class="c-task__title">Đơn Zalo DH-1040 · Khách sạn Hải Âu</strong><b class="c-task__amt">3.420.000 ₫</b></div><p class="c-task__after"><b>Sau khi duyệt:</b> giữ hàng, nhắc giao 14:30.</p><div class="c-task__actions"><button class="c-btn c-btn--act" type="button" data-approve>Xác nhận đơn</button><button class="c-btn" type="button">Sửa</button></div></li>
+      <li class="c-task"><div class="c-task__meta"><span class="c-task__src">Ngân hàng</span>09:15 · MB</div><div class="c-task__head"><strong class="c-task__title">Gán 2.150.000 ₫ vào DH-1038</strong><b class="c-task__amt">2.150.000 ₫</b></div><div class="c-task__actions"><button class="c-btn" type="button" data-approve>Gán</button></div></li>
+    </ol>
+  </section>
+
+  <section class="demo" aria-labelledby="d4">
+    <div><h2 id="d4">4 · Hover, tooltip, giải thích thuật ngữ</h2>
+      <p class="why">Trên máy tính: thẻ nổi lên khi di chuột, tooltip hiện sau 0,35 giây. Trên điện thoại không có hover, nên chạm vào chữ có gạch chấm sẽ mở bảng giải thích từ dưới lên.</p></div>
+    <div class="stage c-card" style="display:grid;gap:var(--space-3)">
+      <p>Hoá đơn 00000418 đang chờ <button type="button" class="c-term" data-gloss="cqt" style="background:none;border:0;padding:0;font:inherit;color:inherit">mã CQT</button> · chủ hộ đã <button type="button" class="c-term" data-gloss="l1" style="background:none;border:0;padding:0;font:inherit;color:inherit">xác minh L1</button>.</p>
+      <div class="ctl" style="margin:0"><button class="c-icon-btn c-icon-btn--outline" type="button" aria-label="Thông báo" data-tip="Thông báo · 4 chưa đọc"><svg class="c-ic" aria-hidden="true"><use href="#i-bell"/></svg></button><button class="c-icon-btn c-icon-btn--outline" type="button" aria-label="Trợ giúp" data-tip="Hỏi về màn này hoặc gọi chị Lan"><svg class="c-ic" aria-hidden="true"><use href="#i-help"/></svg></button><button class="c-btn" type="button" data-tip="Tạo đơn mới không qua quầy (đơn Zalo, điện thoại)"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg>Tạo đơn</button></div>
+    </div>
+  </section>
+
+  <section class="demo" aria-labelledby="d5">
+    <div><h2 id="d5">5 · Số tiền đếm lên khi mở trang</h2>
+      <p class="why">Doanh thu hôm nay đếm lên một lần trong 0,6 giây khi mở Tổng quan. Không lặp lại, và không chạy khi bật giảm chuyển động.</p>
+      <div class="ctl"><button class="c-btn" type="button" id="m5">Chạy lại</button></div></div>
+    <div class="stage c-card"><span class="u-meta">Doanh thu hôm nay</span><div class="fig" id="m5fig">8.460.000 ₫</div></div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><svg class="c-ic" aria-hidden="true" style="color:var(--act)"><use href="#i-check"/></svg><span id="toastTxt">Đã duyệt</span><button class="c-btn" type="button" id="undo">Hoàn tác</button><span class="bar"><i id="toastBar"></i></span></div>
+<div class="gloss" id="gloss" role="dialog" aria-modal="false" aria-labelledby="glossH"><h3 id="glossH"></h3><p id="glossP"></p><div class="ctl"><button class="c-btn c-btn--act" type="button" id="glossX">Đã hiểu</button></div></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const vnd = (n) => n.toLocaleString('vi-VN') + ' ₫';
+// 1 · ladder
+const stns = [...$('m1route').children];
+function setStep(i) {
+  stns.forEach((li, k) => { li.toggleAttribute('aria-current', k === i); if (k === i) li.setAttribute('aria-current', 'step'); const tag = li.querySelector('.c-route__here'); if (tag) tag.remove(); });
+  const tag = document.createElement('span'); tag.className = 'c-route__here'; tag.textContent = 'ĐANG Ở ĐÂY'; stns[i].prepend(tag);
+}
+$('m1a').onclick = () => { setStep(1); const st = $('m1st'); st.className = 'c-qr__status c-qr__status--pend pulse'; $('m1txt').textContent = 'Đã nhận 1.020.000 ₫ lúc 10:44 · chờ xác minh'; $('m1amt').classList.remove('amt-pop'); void $('m1amt').offsetWidth; $('m1amt').classList.add('amt-pop'); };
+$('m1b').onclick = () => { setStep(2); const st = $('m1st'); st.className = 'c-qr__status c-qr__status--ok'; $('m1txt').textContent = 'Đã xác minh 10:47 · MB'; const sq = $('m1ok'); sq.innerHTML = '<svg class="c-ic check-draw" aria-hidden="true" viewBox="0 0 24 24"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>'; const s = $('m1stamp'); s.classList.remove('is-on'); void s.offsetWidth; s.classList.add('is-on'); };
+$('m1r').onclick = () => { setStep(0); $('m1st').className = 'c-qr__status'; $('m1txt').textContent = 'Đang chờ khách chuyển…'; $('m1stamp').classList.remove('is-on'); $('m1ok').innerHTML = '<svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>'; };
+// 2 · cart
+let n = 0, t = 0;
+document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => {
+  n++; t += +b.dataset.add;
+  const r = b.getBoundingClientRect(), to = $('m2btn').getBoundingClientRect();
+  if (!reduce) { const d = document.createElement('i'); d.className = 'fly'; d.style.left = (r.left + r.width / 2 - 14) + 'px'; d.style.top = (r.top + r.height / 2 - 14) + 'px'; document.body.append(d);
+    requestAnimationFrame(() => { d.style.transform = `translate(${to.left - r.left - r.width / 2 + 30}px, ${to.top - r.top - r.height / 2 + 6}px) scale(.5)`; d.style.opacity = '.2'; });
+    setTimeout(() => d.remove(), 540); }
+  setTimeout(() => { $('m2n').textContent = n; $('m2t').textContent = vnd(t); const el = $('m2n').parentElement; el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }, reduce ? 0 : 480);
+}));
+// 3 · approve + undo (pauses on hover/focus)
+let timer = null, left = 10000, last = null, paused = false, tick = null;
+const toast = $('toast');
+function hideToast() { toast.classList.remove('is-on'); clearInterval(tick); }
+function showToast(txt) {
+  $('toastTxt').textContent = txt; left = 10000; toast.classList.add('is-on'); clearInterval(tick);
+  tick = setInterval(() => { if (paused) return; left -= 100; $('toastBar').style.transform = `scaleX(${Math.max(0, left / 10000)})`; if (left <= 0) hideToast(); }, 100);
+}
+['mouseenter', 'focusin'].forEach(e => toast.addEventListener(e, () => paused = true));
+['mouseleave', 'focusout'].forEach(e => toast.addEventListener(e, () => paused = false));
+$('m3list').addEventListener('click', e => { const b = e.target.closest('[data-approve]'); if (!b) return; last = b.closest('.c-task'); last.classList.add('is-gone'); showToast('Đã duyệt: ' + last.querySelector('.c-task__title').textContent); });
+$('undo').onclick = () => { if (last) last.classList.remove('is-gone'); hideToast(); };
+$('m3r').onclick = () => { document.querySelectorAll('.c-task').forEach(x => x.classList.remove('is-gone')); hideToast(); };
+// 4 · glossary
+const G = { cqt: ['Mã CQT là gì?', 'Mã của cơ quan thuế cấp cho mỗi hoá đơn. Hoá đơn chưa có mã vẫn đưa khách được; OPC tự gắn mã khi có.'], l1: ['Xác minh L1 là gì?', 'Chủ hộ đã được xác minh bằng CCCD và khuôn mặt (hoặc nhân viên OPC kiểm tra tại chỗ). Cần mức này để nhận tiền QR và xuất hoá đơn.'] };
+document.querySelectorAll('[data-gloss]').forEach(b => b.addEventListener('click', () => { const [h, p] = G[b.dataset.gloss]; $('glossH').textContent = h; $('glossP').textContent = p; $('gloss').classList.add('is-on'); $('glossX').focus(); }));
+$('glossX').onclick = () => $('gloss').classList.remove('is-on');
+// 5 · count-up
+function countUp() { const el = $('m5fig'), end = 8460000; if (reduce) { el.textContent = vnd(end); return; } const t0 = performance.now(); const step = (now) => { const p = Math.min(1, (now - t0) / 600); const e = 1 - Math.pow(1 - p, 3); el.textContent = vnd(Math.round(end * e / 1000) * 1000); if (p < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }
+$('m5').onclick = countUp; countUp();
+</script>
+</body>
+</html>

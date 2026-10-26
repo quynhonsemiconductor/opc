@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tổng quan · Tìm nhanh ⌘K — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../system/tokens.css">
+<link rel="stylesheet" href="../../../system/components/components.css">
+<link rel="stylesheet" href="../../../system/components/recipes.css">
+<link rel="stylesheet" href="../app-tokens.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /> <path d="M3 6h18" /> <path d="M16 10a4 4 0 0 1-8 0" /></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.268 21a2 2 0 0 0 3.464 0" /> <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /> <path d="M12 22V12" /> <path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /> <path d="m7.5 4.27 9 5.15" /></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" /></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol>
+  <symbol id="i-counter" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /> <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /> <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /> <path d="M2 7h20" /> <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <polyline points="7 10 12 15 17 10" /> <line x1="12" x2="12" y1="15" y2="3" /></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /> <circle cx="12" cy="12" r="3" /></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /> <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /> <line x1="4" x2="20" y1="18" y2="18" /></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /> <path d="m21 21-4.3-4.3" /></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /> <polyline points="16 7 22 7 22 13" /></symbol>
+</svg>
+<div inert class="r-shell">
+  <nav class="c-nav r-shell__nav" aria-label="Điều hướng chính">
+    <div class="c-brand"><b class="c-brand__mark">OPC</b><span class="c-brand__by">by QNSC</span></div>
+    <button class="c-hh" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Đặc sản Cao Nguyên An Nhiên, Pleiku">
+      <span class="c-hh__mark" aria-hidden="true">AN</span>
+      <span class="c-hh__text"><strong class="c-hh__name">An Nhiên · Pleiku</strong><span class="c-hh__sub">Xác minh L1</span></span>
+      <svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-chev"/></svg>
+    </button>
+    <ul class="c-nav__list"><li class="c-nav__grp c-nav__grp--open"><div class="c-nav__row"><a class="c-nav__item c-nav__item--here" href="home.html"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Tổng quan</a><button class="c-nav__peek" type="button" aria-expanded="true" aria-controls="nav-home" aria-label="Thu gọn Tổng quan"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="nav-home"><li><a class="c-nav__subitem" href="home.html" aria-current="page">Hôm nay</a></li><li><a class="c-nav__subitem" href="approvals.html">Cần xử lý<span class="c-nav__count" aria-label="3 việc cần xem">3</span></a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="purchases.html"><svg class="c-ic" aria-hidden="true"><use href="#i-download"/></svg>Mua hàng</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-buy" aria-label="Xem mục con của Mua hàng"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="nav-buy" hidden><li><a class="c-nav__subitem" href="purchases.html">Đơn mua</a></li><li><a class="c-nav__subitem" href="suppliers.html">Nhà cung cấp</a></li><li><a class="c-nav__subitem" href="purchases--expense.html">Chi phí</a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="orders.html"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg>Bán hàng<span class="c-nav__count" aria-label="3 việc cần xem">3</span></a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-orders" aria-label="Xem mục con của Bán hàng"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="nav-orders" hidden><li><a class="c-nav__subitem" href="sales-inbox.html">Yêu cầu<span class="c-nav__count" aria-label="3 việc cần xem">3</span></a></li><li><a class="c-nav__subitem" href="orders.html">Đơn bán</a></li><li><a class="c-nav__subitem" href="delivery.html">Giao hàng</a></li><li><a class="c-nav__subitem" href="customers.html">Khách hàng</a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="products.html"><svg class="c-ic" aria-hidden="true"><use href="#i-box"/></svg>Kho hàng</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-goods" aria-label="Xem mục con của Kho hàng"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="nav-goods" hidden><li><a class="c-nav__subitem" href="products.html">Hàng và giá</a></li><li><a class="c-nav__subitem" href="stock.html">Tồn kho</a></li><li><a class="c-nav__subitem" href="stock-count.html">Kiểm kho</a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="money.html"><svg class="c-ic" aria-hidden="true"><use href="#i-money"/></svg>Tiền<span class="c-nav__count" aria-label="4 việc cần xem">4</span></a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-money" aria-label="Xem mục con của Tiền"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="nav-money" hidden><li><a class="c-nav__subitem" href="money.html">Thu chi và đối chiếu<span class="c-nav__count" aria-label="4 việc cần xem">4</span></a></li><li><a class="c-nav__subitem" href="receivables.html">Công nợ</a></li><li><a class="c-nav__subitem" href="invoices.html">Hoá đơn</a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="period.html"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Sổ và kê khai</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-books" aria-label="Xem mục con của Sổ và kê khai"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="nav-books" hidden><li><a class="c-nav__subitem" href="period.html">Kỳ và đối soát</a></li><li><a class="c-nav__subitem" href="tax.html">Kê khai</a></li><li><a class="c-nav__subitem" href="books.html">Sổ sách</a></li><li><a class="c-nav__subitem" href="audit.html">Nhật ký</a></li></ul></li></ul>
+    <ul class="c-nav__list c-nav__list--foot"><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="readiness.html"><svg class="c-ic" aria-hidden="true"><use href="#i-gear"/></svg>Thiết lập<span class="c-nav__count c-nav__count--err" aria-label="1 kết nối lỗi">1</span></a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-settings" aria-label="Xem mục con của Thiết lập"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="nav-settings" hidden><li><a class="c-nav__subitem" href="readiness.html">Sẵn sàng</a></li><li><a class="c-nav__subitem" href="setup-business.html">Hộ kinh doanh</a></li><li><a class="c-nav__subitem" href="setup-data.html">Dữ liệu nền</a></li><li><a class="c-nav__subitem" href="setup-policy.html">Người dùng và quyền</a></li><li><a class="c-nav__subitem" href="connections.html">Kết nối<span class="c-nav__count c-nav__count--err" aria-label="1 kết nối lỗi">1</span></a></li><li><a class="c-nav__subitem" href="settings-features.html">Tính năng</a></li><li><a class="c-nav__subitem" href="settings-display.html">Hiển thị</a></li></ul></li><li><a class="c-nav__item" href="help.html"><svg class="c-ic" aria-hidden="true"><use href="#i-chat"/></svg>Trợ giúp và hỗ trợ</a></li></ul>
+  </nav>
+
+  <div class="r-shell__main">
+    <header class="r-shell__top">
+      <button class="c-hh c-hh--bar r-shell__phone" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Đặc sản An Nhiên"><span class="c-hh__mark" aria-hidden="true">AN</span><span class="c-hh__text"><strong class="c-hh__name">Đặc sản An Nhiên</strong><span class="c-hh__sub">Pleiku</span></span></button>
+      <label class="c-search r-shell__desk"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm kiếm</span><input class="c-search__input" type="search" placeholder="Tìm đơn, món, khách…"><span class="c-kbd u-pro" aria-hidden="true">⌘K</span></label>
+      <div class="r-shell__spacer"></div>
+      <button class="c-icon-btn r-shell__phone" type="button" aria-label="Tìm đơn, món, khách"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+      <span class="c-health r-shell__desk" role="status" tabindex="0" data-tip="Ngân hàng MB cập nhật 2 phút trước · hoá đơn máy tính tiền hoạt động · hoá đơn điện tử không trả lời 10:12 · Cổng thuế chưa bật · Đã lưu 10:45">Đã lưu · <b>10:45</b></span>
+      <a class="c-btn c-btn--quiet r-shell__desk" href="home--assistant.html">Trợ lý</a>
+      <a class="c-icon-btn" href="home--notifications.html" aria-label="Thông báo — 4 chưa đọc"><svg class="c-ic" aria-hidden="true"><use href="#i-bell"/></svg><span class="c-icon-btn__badge" aria-hidden="true">4</span></a>
+      <button class="c-avatar r-shell__desk" type="button" aria-label="Nguyễn Minh Khoa · Người vận hành — tài khoản"><span class="c-avatar__face" aria-hidden="true">K</span></button>
+    </header>
+
+    <main class="r-shell__content">
+      <div class="r-page-head">
+        <div>
+          <h1 class="r-page-head__title">Hôm nay</h1>
+          <p class="c-sub">Thứ Ba, 06/10/2026 · Hạnh bán hàng từ 07:00</p>
+        </div>
+        <div class="r-page-head__acts r-page-head__acts--desk">
+          <a class="c-btn" href="money.html">Đối chiếu tiền</a>
+          <button class="c-btn" type="button">Tạo đơn</button>
+          <button class="c-icon-btn c-icon-btn--outline" type="button" aria-label="Thao tác khác: ghi khoản chi, nhập hàng" data-tip="Ghi khoản chi · Nhập hàng" data-tip-end><svg class="c-ic" aria-hidden="true"><use href="#i-more"/></svg></button>
+        </div>
+      </div>
+
+      <div class="r-home">
+        <!-- 1 · the answer: how is today, and is the money real -->
+        <section class="c-stat r-home__hero" aria-labelledby="h-rev">
+          <div class="c-stat__top">
+            <h2 class="c-stat__label" id="h-rev">Doanh thu hôm nay · 5 đơn đã giao</h2>
+            <span class="c-stat__fresh">MB · cập nhật 2 phút trước</span>
+          </div>
+          <div class="c-stat__main">
+            <div>
+              <p class="c-stat__fig">7.235.000<span class="u-cur">₫</span></p>
+              <p class="c-stat__delta"><span class="c-stat__chip"><svg class="c-ic" aria-hidden="true"><use href="#i-trend"/></svg>6%</span>so với thứ Ba trước</p>
+              <a class="c-stat__why" href="home--assistant.html">Vì sao?<svg class="c-ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a>
+            </div>
+            <ol class="c-bars" aria-label="Doanh thu 7 ngày gần nhất" data-cap="7 ngày">
+              <li class="c-bars__d" style="--v:0.635" data-tip="T4 30/9 · 6.100.000 ₫"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T4<span class="u-sr"> T4 30/9 · 6.100.000 ₫</span></span></li><li class="c-bars__d" style="--v:0.563" data-tip="T5 01/10 · 5.400.000 ₫"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T5<span class="u-sr"> T5 01/10 · 5.400.000 ₫</span></span></li><li class="c-bars__d" style="--v:0.927" data-tip="T6 02/10 · 8.900.000 ₫"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T6<span class="u-sr"> T6 02/10 · 8.900.000 ₫</span></span></li><li class="c-bars__d" style="--v:1" data-tip="T7 03/10 · 9.600.000 ₫"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T7<span class="u-sr"> T7 03/10 · 9.600.000 ₫</span></span></li><li class="c-bars__d" style="--v:0.75" data-tip="CN 04/10 · 7.200.000 ₫"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">CN<span class="u-sr"> CN 04/10 · 7.200.000 ₫</span></span></li><li class="c-bars__d" style="--v:0.708" data-tip="T2 05/10 · 6.800.000 ₫"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T2<span class="u-sr"> T2 05/10 · 6.800.000 ₫</span></span></li><li class="c-bars__d c-bars__d--today" style="--v:0.754"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">Hôm nay<span class="u-sr">: 7.235.000 ₫, đang bán</span></span></li>
+            </ol>
+          </div>
+          <div class="c-split">
+            <div class="c-split__bar" role="img" aria-label="Đã xác minh 4.745.000 ₫, chờ xác minh 390.000 ₫, chưa thu 2.100.000 ₫"><i class="c-split__ok" style="flex:4745"></i><i class="c-split__pend" style="flex:390"></i><i class="c-split__you" style="flex:2100"></i></div>
+            <p class="r-home__moneyline"><span class="r-home__mk r-home__mk--ok">phần lớn đã khớp sao kê</span><a class="r-home__mk r-home__mk--pend" href="money.html">1 khoản chờ xác minh</a><a class="r-home__mk r-home__mk--you" href="receivables.html">2 đơn chưa thu</a><a class="r-home__tomoney" href="money.html">chi tiết ở Tiền</a></p>
+          </div>
+        </section>
+
+        <!-- 2 · what needs me now -->
+        <section class="c-card r-home__todo" aria-labelledby="h-todo">
+          <div class="c-card__head"><h2 class="c-card__title" id="h-todo">Cần làm <span class="c-count" aria-label="3 việc">3</span></h2><a class="c-link" href="approvals.html">Xem tất cả</a></div>
+          <a class="r-home__run" href="approvals--running.html"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg><span>OPC đang chạy <b>3 việc</b></span><span class="r-home__err"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg>1 lỗi</span><svg class="c-ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a>
+          <ol class="c-todo">
+            <li class="c-todo__item c-todo__item--now" id="todo-1"><span class="c-todo__n" aria-hidden="true">1</span>
+              <div><h3 class="c-todo__t">Soạn DH-2052 cho Sunrise Hotel</h3><p class="c-todo__m">20 gói bò, 30 hũ muối · trước 15:00</p></div>
+              <a class="c-btn c-btn--act c-todo__go" href="delivery--pick.html">Soạn hàng</a></li>
+            <li class="c-todo__item"><span class="c-todo__n" aria-hidden="true">2</span>
+              <div><h3 class="c-todo__t">Nhận hàng MH-0118 thiếu 5 hũ</h3><p class="c-todo__m">HTX Cao Nguyên · chờ chị quyết</p></div>
+              <a class="c-btn c-todo__go" href="purchase-detail--receive.html">Xem</a></li>
+            <li class="c-todo__item"><span class="c-todo__n" aria-hidden="true">3</span>
+              <div><h3 class="c-todo__t">Hoá đơn DH-2047 chưa rõ kết quả</h3><p class="c-todo__m"><span class="u-money">1.840.000 ₫</span> · bên hoá đơn im lặng từ 10:12</p></div>
+              <a class="c-btn c-todo__go" href="approvals--error.html">Xem</a></li>
+          </ol>
+          <a class="c-todo__later" href="approvals.html"><span><b>4 việc không gấp</b></span><svg class="c-ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a>
+        </section>
+
+        <!-- 3 · recent orders -->
+        <section class="c-card r-home__orders" aria-labelledby="h-orders">
+          <div class="c-card__head"><h2 class="c-card__title" id="h-orders">Đơn gần đây</h2><a class="c-link" href="orders.html">Tất cả đơn</a></div>
+          <ul class="c-orders">
+            <li class="c-orders__row"><a href="quick-sale--qr.html"><span class="c-orders__who">Khách lẻ<small>DH-2053 · Bán nhanh · 10:44</small></span><span class="c-orders__st"><span class="c-sign c-sign--wait"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Chờ khách chuyển</span></span><span class="c-orders__amt u-money">715.000 ₫</span></a></li>
+            <li class="c-orders__row"><a href="delivery.html"><span class="c-orders__who">Nhà hàng Phố Núi<small>DH-2051 · Zalo OA · 10:20</small></span><span class="c-orders__st"><span class="c-sign c-sign--wait"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Đang giao · thu hộ</span></span><span class="c-orders__amt u-money">1.150.000 ₫</span></a></li>
+            <li class="c-orders__row"><a href="order-detail.html"><span class="c-orders__who">Sunrise Hotel<small>DH-2052 · Zalo OA · 09:02</small></span><span class="c-orders__st"><span class="c-sign c-sign--wait"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Đã giữ hàng</span></span><span class="c-orders__amt u-money">6.250.000 ₫</span></a></li>
+            <li class="c-orders__row"><a href="money.html"><span class="c-orders__who">Homestay Mây Ngàn<small>DH-2045 · Thêm tay · 09:40</small></span><span class="c-orders__st"><span class="c-sign c-sign--pend"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Chờ xác minh</span></span><span class="c-orders__amt u-money">390.000 ₫</span></a></li>
+            <li class="c-orders__row"><a href="receivables.html"><span class="c-orders__who">Sunrise Hotel<small>DH-2049 · Định kỳ · 08:30</small></span><span class="c-orders__st"><span class="c-sign c-sign--ok"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>Đã đóng</span></span><span class="c-orders__amt u-money">4.550.000 ₫</span></a></li>
+          </ul>
+        </section>
+
+        <!-- 4 · period + receivables + readiness -->
+        <section class="c-card r-home__side" aria-label="Kỳ thuế, công nợ, mua và kho">
+          <div class="r-home__part" aria-labelledby="h-tax">
+            <div class="c-card__head"><h2 class="c-card__title" id="h-tax">Kỳ Quý III</h2><a class="c-link" href="period.html">Đối chiếu</a></div>
+            <p class="c-sub"><b>5 việc</b> · hạn khai 31/10</p>
+            <div class="c-meter c-meter--quiet">
+              <div class="c-meter__row"><span class="u-meta">Doanh thu từ 01/01 · <b>718,4 triệu</b></span><span class="u-meta u-nowrap">mốc 1 tỷ</span></div>
+              <div class="c-meter__bar" role="img" aria-label="Doanh thu từ 01/01 718.400.000 ₫, dưới mốc 1 tỷ"><span class="c-meter__fill" style="width:71.8%"></span></div>
+              <p class="c-meter__why"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg>Nhịp năm khoảng 1,06 tỷ · mốc chờ kế toán xác nhận</p>
+            </div>
+          </div>
+          <div class="r-home__part" aria-labelledby="h-debt">
+            <div class="c-card__head"><h2 class="c-card__title" id="h-debt">Khách còn nợ</h2><span class="u-money">17.700.000 ₫</span></div>
+            <ul class="c-debts">
+              <li class="c-debts__row"><span class="c-debts__k">Sunrise Hotel</span><span class="c-debts__v">8.400.000 ₫</span><span class="c-debts__m">quá hạn 12 ngày · bảng kê chờ chị gửi nay</span></li>
+              <li class="c-debts__row"><span class="c-debts__k">Nhà hàng Phố Núi</span><span class="c-debts__v">3.900.000 ₫</span><span class="c-debts__m">hạn 12/10</span></li>
+            </ul>
+          </div>
+          <div class="r-home__part" aria-labelledby="h-buy">
+            <div class="c-card__head"><h2 class="c-card__title" id="h-buy">Mua và kho</h2><a class="c-link" href="purchases.html">Đơn mua<svg class="c-ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></div>
+            <ul class="c-debts">
+              <li class="c-debts__row"><span class="c-debts__k"><a href="purchase-detail--receive.html">MH-0118 đã về</a></span><span class="c-debts__v">45/50 hũ</span><span class="c-debts__m">chờ chị xác nhận nhập kho</span></li>
+              <li class="c-debts__row"><span class="c-debts__k">Bò một nắng</span><span class="c-debts__v">26 gói</span><span class="c-debts__m">khả dụng · +40 gói Thứ Năm (MH-0121)</span></li>
+              <li class="c-debts__row"><span class="c-debts__k"><a href="receivables--payables.html">Phải trả tuần này</a></span><span class="c-debts__v">4.050.000 ₫</span><span class="c-debts__m">HTX 2.800.000 ₫ hạn 08/10</span></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<nav inert class="c-tabbar" aria-label="Điều hướng nhanh">
+  <a class="c-tabbar__item" href="home.html" aria-current="page"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Tổng quan<span class="c-tabbar__count" aria-label="3 việc cần làm">3</span></a>
+  <a class="c-tabbar__item" href="purchases.html"><svg class="c-ic" aria-hidden="true"><use href="#i-download"/></svg>Mua</a>
+  <a class="c-tabbar__item" href="orders.html"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg>Bán<span class="c-tabbar__count" aria-label="3 cần xem">3</span></a>
+  <a class="c-tabbar__item" href="stock.html"><svg class="c-ic" aria-hidden="true"><use href="#i-box"/></svg>Kho</a>
+  <a class="c-tabbar__item" href="home--more.html"><svg class="c-ic" aria-hidden="true"><use href="#i-menu"/></svg>Thêm</a>
+</nav>
+<div class="c-command" role="dialog" aria-modal="true" aria-label="Tìm nhanh và chạy lệnh">
+  <div class="c-command__panel">
+    <div class="c-command__input">
+      <svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg>
+      <input class="c-command__field" type="text" role="combobox" aria-expanded="true" aria-controls="cmd-list" aria-autocomplete="list" aria-activedescendant="cmd-o1" aria-label="Tìm đơn, hành động, trang" value="dh-205" autocomplete="off">
+      <span class="c-kbd" aria-hidden="true">Esc</span>
+    </div>
+    <div class="c-command__list">
+      <ul class="c-menu" id="cmd-list" role="listbox" aria-label="Kết quả">
+          <li role="none"><span class="c-menu__group" role="presentation">Đơn</span></li>
+          <li role="none"><button class="c-menu__item" id="cmd-o1" role="option" aria-selected="true" type="button"><span><mark>DH-205</mark>3<span class="c-menu__sub">Khách lẻ · chờ khách chuyển</span></span><span class="c-menu__aside">715.000 ₫</span></button></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><span><mark>DH-205</mark>2<span class="c-menu__sub">Sunrise Hotel · đã giữ hàng</span></span><span class="c-menu__aside">6.250.000 ₫</span></button></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><span><mark>DH-205</mark>1<span class="c-menu__sub">Nhà hàng Phố Núi · đang giao</span></span><span class="c-menu__aside">1.150.000 ₫</span></button></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><span><mark>DH-205</mark>0<span class="c-menu__sub">Anh Nam · hẹn giao mai</span></span><span class="c-menu__aside">585.000 ₫</span></button></li>
+          <li role="none"><span class="c-menu__group" role="presentation">Hành động</span></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg><span>Tạo đơn</span><span class="c-menu__aside"><span class="c-kbd">N</span></span></button></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-counter"/></svg><span>Bán nhanh</span><span class="c-menu__aside"><span class="c-kbd">Q</span></span></button></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-minus"/></svg><span>Ghi khoản chi</span><span class="c-menu__aside"></span></button></li>
+          <li role="none"><span class="c-menu__group" role="presentation">Đi tới</span></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg><span>Thuế &amp; tờ khai</span><span class="c-menu__aside"></span></button></li>
+          <li role="none"><button class="c-menu__item" role="option" aria-selected="false" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg><span>Nhật ký</span><span class="c-menu__aside"></span></button></li>
+      </ul>
+    </div>
+    <div class="c-command__foot">
+      <span><span class="c-kbd">↑</span><span class="c-kbd">↓</span> chọn</span>
+      <span><span class="c-kbd">Enter</span> mở</span>
+      <span><span class="c-kbd">Esc</span> đóng</span>
+      <span><span class="c-kbd">⌘K</span> mở lại</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

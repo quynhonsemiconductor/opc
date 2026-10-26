@@ -1,0 +1,5 @@
+# v7.6.0 · rebuilt core screens — context for the evaluator
+OPC: phone-first web app for Vietnamese household businesses (buy to resell). Demo An Nhiên, today 06/10/2026 10:45. Single source of numbers: /Users/benq/Desktop/qnsc/opc/design/_research/audit-e2e-v752.md. Status vocabulary: /Users/benq/Desktop/qnsc/opc/design/system/maps/status.json.
+Rules: a sales order has independent tracks Đơn · Giao · Hoá đơn · Tiền (list shows Giao · Hoá đơn · Tiền; phone shows the one that matters); stock out once at Đã giao; credit never blocks; no computed tax; books per TT 152/2025 (form codes pending the accountant), built automatically, cost of goods not in the expense book; OPC never moves money.
+Screens: orders (Đơn bán list) · orders--filtered · home (Hôm nay, now with Mua và kho) · delivery (board) · books (sổ doanh thu) · books--cost (sổ chi phí) · books--stock (sổ kho, quantity + value).
+Score each screen 0–10 on task clarity, business correctness, hierarchy, consistency with the rest of OPC v7, phone fit, copy (Vietnamese). Target ≥ 8.0, none < 7. Check numbers against the source of truth.

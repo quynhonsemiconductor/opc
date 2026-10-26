@@ -1,0 +1,335 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.5.5",
+ "group": "q15",
+ "screens": [
+  {
+   "file": "production.html",
+   "title": "Hàng hoá · Chế biến (lệnh)",
+   "pattern": "datatable",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 32,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "list",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 83,
+     "block": 8,
+     "icons": 1,
+     "iconRate": 1.2,
+     "rules": 5,
+     "sizes": 2,
+     "sizeList": [
+      14,
+      16
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 2,
+     "hues": 2,
+     "chips": 1,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "production-new.html",
+   "title": "Chế biến · Lệnh mới (OPC tính nguyên liệu, chặn khi thiếu)",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 34,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "list",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 148,
+     "block": 19,
+     "icons": 7,
+     "iconRate": 4.7,
+     "rules": 8,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 4,
+     "chips": 1,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "production-detail.html",
+   "title": "Chế biến · LCB-0412 đang làm",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 28,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 151,
+     "block": 20,
+     "icons": 1,
+     "iconRate": 0.7,
+     "rules": 6,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "production-detail--finish.html",
+   "title": "Chế biến · Ghi kết quả (sản lượng thấp cần lý do)",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 37,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "form",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 197,
+     "block": 15,
+     "icons": 2,
+     "iconRate": 1,
+     "rules": 7,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 1,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "product-detail.html",
+   "title": "Hàng hoá · Bò một nắng 500g (giá, thông tin, lịch sử giá)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 30,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 194,
+     "block": 15,
+     "icons": 1,
+     "iconRate": 0.5,
+     "rules": 4,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 1,
+     "tinted": 0
+    }
+   }
+  }
+ ]
+}

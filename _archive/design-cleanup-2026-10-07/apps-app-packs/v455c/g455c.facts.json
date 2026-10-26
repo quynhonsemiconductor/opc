@@ -1,0 +1,73 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.5.4",
+ "group": "g455c",
+ "screens": [
+  {
+   "file": "onboard-household.html",
+   "title": "Onboarding 2/6 · thông tin hộ",
+   "pattern": "wizard",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 7,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 94,
+     "block": 12,
+     "icons": 1,
+     "iconRate": 1.1,
+     "rules": 3,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "600",
+      "400"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 1,
+     "tinted": 0
+    }
+   }
+  }
+ ]
+}

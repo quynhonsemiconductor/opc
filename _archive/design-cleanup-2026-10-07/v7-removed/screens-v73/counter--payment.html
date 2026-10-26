@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quầy · Thu tiền QR (điện thoại) · DH-2053 — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../system/tokens.css">
+<link rel="stylesheet" href="../../../system/components/components.css">
+<link rel="stylesheet" href="../../../system/components/recipes.css">
+<link rel="stylesheet" href="../app-tokens.css">
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /> <path d="m21 21-4.3-4.3" /></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /> <path d="M12 22V12" /> <path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /> <path d="m7.5 4.27 9 5.15" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol>
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8" /> <path d="M10 5H8a2 2 0 0 0 0 4h.68" /> <path d="M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8" /> <path d="M14 5h2a2 2 0 0 1 0 4h-.68" /> <path d="M18 22H6" /> <path d="M9 2h6" /></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2" /> <circle cx="12" cy="12" r="2" /> <path d="M6 12h.01M18 12h.01" /></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></symbol>
+</svg>
+<div class="r-pos r-pos--sheet">
+  <header inert class="r-pos__top">
+    <a class="c-icon-btn c-icon-btn--outline" href="home.html" aria-label="Về Tổng quan" data-tip="Về Tổng quan"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+    <div class="r-pos__title"><h1><span class="r-pos__desk">Quầy bán hàng</span><span class="r-pos__phone">Quầy</span></h1><span>Ca sáng · từ 07:00 · Hạnh</span></div>
+    <span class="c-health" role="status" tabindex="0" data-tip="Ngân hàng cập nhật 2 phút trước · Hoá đơn hoạt động" data-tip-end><span class="r-pos__desk">MB · Hilo hoạt động · <b>2 phút trước</b></span><span class="r-pos__phone">MB · <b>2 phút</b></span></span>
+    <a class="c-btn r-pos__desk" href="shift-close.html">Đóng ca</a>
+    <button class="c-icon-btn r-pos__phone" type="button" aria-label="Thêm: đóng ca, đơn đã lưu tạm"><svg class="c-ic" aria-hidden="true"><use href="#i-more"/></svg></button>
+  </header>
+
+  <div class="r-pos__body">
+    <section inert class="r-pos__products" aria-label="Chọn món">
+      <label class="c-search"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm món</span><input class="c-search__input" type="search" placeholder="Tìm món hoặc quét mã vạch…"><span class="c-kbd r-pos__desk" aria-hidden="true">/</span></label>
+      <div class="r-pos__known" role="group" aria-label="Khách quen"><span class="u-meta">Khách quen:</span><button class="c-chip r-pos__kc" type="button">Sunrise Hotel</button><button class="c-chip r-pos__kc" type="button">Nhà hàng Phố Núi</button><button class="c-chip r-pos__kc" type="button">Homestay Mây Ngàn</button></div>
+      <div class="c-tiles c-tiles--few"><button class="c-tile c-tile--big" type="button" data-incart aria-label="Bò một nắng 500g, 260.000 ₫, trong đơn 2, còn 26 · đã giữ 20"><span class="c-tile__pic c-tile__pic--warm" aria-hidden="true"><svg class="c-ic"><use href="#i-box"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>×2</span><span class="c-tile__name">Bò một nắng 500g</span><span class="c-tile__price">260.000 ₫</span><span class="c-tile__meta">còn 26 · đã giữ 20</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button><button class="c-tile c-tile--big" type="button" data-incart aria-label="Muối kiến vàng 100g, 65.000 ₫, trong đơn 3, còn 50 · đã giữ 30"><span class="c-tile__pic c-tile__pic--leaf" aria-hidden="true"><svg class="c-ic"><use href="#i-jar"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>×3</span><span class="c-tile__name">Muối kiến vàng 100g</span><span class="c-tile__price">65.000 ₫</span><span class="c-tile__meta">còn 50 · đã giữ 30</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button></div>
+      <div class="r-pos__keys" aria-label="Phím tắt">
+        <span><span class="c-kbd">/</span>Tìm món</span>
+        <span><span class="c-kbd">+</span><span class="c-kbd">−</span>Số lượng</span>
+        <span><span class="c-kbd">F9</span>Thu tiền</span>
+        <span><span class="c-kbd">Esc</span>Huỷ đơn</span>
+      </div>
+    </section>
+
+    <aside role="dialog" aria-modal="true" class="r-order r-order--pay" aria-labelledby="h-order">
+      <span class="r-order__grip" aria-hidden="true"></span>
+      <div class="r-order__head">
+        <a class="c-icon-btn c-icon-btn--outline" href="counter.html" aria-label="Quay lại đơn để sửa món" data-tip="Sửa đơn"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+        <div class="r-order__id"><h2 class="r-order__code" id="h-order">Thu tiền · DH-2053</h2><span class="u-meta">2 món · Khách lẻ</span></div>
+      </div>
+      <div class="r-order__body">
+        <div class="c-seg" role="radiogroup" aria-label="Cách thanh toán">
+          <button class="c-seg__opt" type="button" role="radio" aria-checked="true">QR</button>
+          <button class="c-seg__opt" type="button" role="radio" aria-checked="false">Tiền mặt</button>
+          <button class="c-seg__opt" type="button" role="radio" aria-checked="false">Công nợ</button>
+        </div>
+        <figure class="c-qrcard">
+          <img src="../../../system/assets/qr-demo.svg" alt="Mã VietQR MB, số tiền 715.000 ₫, nội dung DH2053">
+          <figcaption><b class="c-qrcard__amt">715.000<span class="u-cur">₫</span></b><span class="u-meta">VietQR · MB · nội dung DH2053</span></figcaption>
+        </figure>
+        <ol class="c-paysteps" aria-label="Trạng thái tiền của đơn này">
+          <li class="c-paysteps__s c-paysteps__s--now" aria-current="step"><span class="c-paysteps__dot"></span><span>Chờ khách chuyển<span class="c-paysteps__here">Đang ở đây</span></span></li>
+          <li class="c-paysteps__s c-paysteps__s--next"><span class="c-paysteps__dot"></span><span>Đã nhận · chờ xác minh</span></li>
+          <li class="c-paysteps__s c-paysteps__s--next"><span class="c-paysteps__dot"></span><span>Đã xác minh</span></li>
+        </ol>
+        <div class="r-order__opts">
+          <button class="c-switch" type="button" role="switch" aria-checked="true"><span class="c-switch__track" aria-hidden="true"></span><span class="c-switch__label">In phiếu</span></button>
+          <button class="c-switch" type="button" role="switch" aria-checked="false"><span class="c-switch__track" aria-hidden="true"></span><span class="c-switch__label">Hoá đơn công ty<span class="c-switch__sub">nhập MST của khách</span></span></button>
+        </div>
+      </div>
+      <div class="r-order__foot">
+        <p class="c-waitbar" role="status" aria-live="polite"><span class="c-waitbar__spin" aria-hidden="true"></span><span><b>Đang chờ khách chuyển</b>OPC tự chuyển bước khi ngân hàng báo — không cần bấm</span></p>
+        <button class="c-btn" type="button">Khách đổi sang trả tiền mặt</button>
+        <p class="r-order__note">Bấm Thu tiền = phát hành hoá đơn máy tính tiền (Hilo)</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<a inert class="r-cartbar" href="#">
+  <span class="r-cartbar__t"><span>DH-2053 · 2 món · xem giỏ</span><strong>715.000<span class="u-cur">₫</span></strong></span>
+  <span class="c-btn c-btn--act">Thu tiền<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "version": "7.5.2",
+  "note": "One status vocabulary for every chip (c-sign), track (r-tracks) and gate row. The word on the chip can vary; the state, colour and icon may not. Enforced in the design by tools/v4/status7.py.",
+  "states": {
+    "ok":   {"means": "đã xong · đã khớp · đã xác minh", "icon": "check", "look": "green, solid (money truth: verified)", "examples": ["Đã đóng", "Đã xác minh", "Khớp", "Có mã CQT", "Đã trả đủ"]},
+    "pass": {"means": "bình thường, không cần làm gì", "icon": "check", "look": "quiet ink, no fill", "examples": ["Hoạt động", "Đã nối", "Đang dùng", "Không nợ", "Uỷ quyền đến 31/12/2026"]},
+    "pend": {"means": "chờ khớp / chờ xác minh / chờ cơ quan nhà nước — outcome not yet certain", "icon": "clock", "look": "amber hatch + dashed (money truth: pending)", "examples": ["Chờ xác minh", "Đã tiếp nhận · chờ chấp nhận", "Hoá đơn ghi 50 · lệch"]},
+    "wait": {"means": "đang làm hoặc đang là lượt của người khác — nothing for the owner to do", "icon": "clock", "look": "grey outline", "examples": ["Đang giao", "Đã giữ hàng", "Chờ khách chuyển", "Chờ hoá đơn điều chỉnh", "45/50 · chờ bù 5"]},
+    "you":  {"means": "cần chị xem hoặc quyết", "icon": "alert", "look": "brand tint", "examples": ["Cần chị quyết", "Chưa gán", "Về 45/50 · chờ chị", "Sắp hết hạn"]},
+    "err":  {"means": "hỏng · sai · quá hạn · thiếu", "icon": "x", "look": "red tint", "examples": ["Lỗi", "Quá hạn 12 ngày", "Thiếu 1.300.000 ₫", "MST người mua sai"]},
+    "unk":  {"means": "chưa rõ kết quả — never auto-retried", "icon": "help", "look": "dashed ink", "examples": ["Chưa rõ kết quả", "Chưa có phản hồi"]}
+  },
+  "exceptions": {"lock icon": "permission statements keep i-lock (\"Chỉ chị An\") with state wait"}
+}

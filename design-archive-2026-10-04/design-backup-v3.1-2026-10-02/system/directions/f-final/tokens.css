@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap&subset=vietnamese");
+/* OPC Design System — tokens.css (direction F "Biển Chỉ Dẫn", v1.0.0)
+   The ONLY place raw colour / type / space / radius values live. Three tiers:
+     1 primitive  --p-*      raw values; never used by components directly
+     2 semantic   roles      canvas, ink, act, ok, pend, err, type scale, space, layout
+     3 component  --btn-*, --lane-* …  NOT declared here. Components read them with a semantic fallback,
+                  e.g. min-height: var(--btn-h, var(--target)). Contexts below override tier 2 only.
+   Colour jobs (one job each):
+     ink  = text, lines, structure          act  = signal yellow — "do this now" ONLY
+     ok   = expressway green — verified     pend = road blue, always hatched + dashed — waiting on bank / tax authority
+     err  = red — error / failed only       cash and everything else stays neutral ink/grey */
+
+:root {
+  /* ---------- 1 · primitives ---------- */
+  --p-ink-900: #121514; --p-ink-800: #23282a; --p-ink-700: #3d423f; --p-ink-600: #545a56;
+  --p-ink-400: #8d928d; --p-ink-300: #b9bcb6; --p-ink-200: #d6d8d2; --p-ink-100: #e9eae5;
+  --p-paper: #f4f4f0; --p-white: #ffffff;
+  --p-yellow-500: #ffc400; --p-yellow-200: #ffe58a; --p-yellow-50: #fff8db;
+  --p-green-700: #006b47; --p-green-800: #005538; --p-green-50: #e4f2eb;
+  --p-blue-700: #0b4a8f; --p-blue-200: #bcd0ea; --p-blue-50: #eef3fa;
+  --p-red-700: #b3141a; --p-red-50: #fbe9e8;
+
+  --p-font-barlow: "Barlow", "Public Sans", sans-serif;
+  --p-font-public: "Public Sans", sans-serif;
+
+  --p-size-14: 14px; --p-size-15: 15px; --p-size-16: 16px; --p-size-17: 17px; --p-size-18: 18px;
+  --p-size-19: 19px; --p-size-20: 20px; --p-size-22: 22px; --p-size-24: 24px; --p-size-28: 28px;
+  --p-size-30: 30px; --p-size-44: 44px; --p-size-56: 56px; --p-size-72: 72px;
+
+  --p-space-1: 4px; --p-space-2: 8px; --p-space-3: 12px; --p-space-4: 16px; --p-space-5: 20px;
+  --p-space-6: 24px; --p-space-8: 32px; --p-space-10: 40px;
+
+  --p-radius-1: 3px; --p-radius-2: 4px; --p-radius-3: 6px;
+  --p-stroke-1: 1px; --p-stroke-2: 2px; --p-stroke-3: 3px;
+
+  /* ---------- 2 · semantic ---------- */
+  --canvas: var(--p-paper);
+  --surface: var(--p-white);
+  --surface-sunk: var(--p-ink-100);
+  --ink: var(--p-ink-900);
+  --ink-2: var(--p-ink-700);          /* secondary text ~10:1 on white */
+  --ink-3: var(--p-ink-600);          /* meta text ~7:1 on white */
+  --line: var(--p-ink-200);           /* hairlines between rows */
+  --line-quiet: var(--p-ink-300);     /* outlines of quiet controls */
+  --line-strong: var(--p-ink-900);    /* sign borders, primary structure */
+  --neutral-fill: var(--p-ink-400);   /* cash share in bars */
+
+  --panel: var(--p-ink-900);          /* dark sign — small badges only (calm rule: no large dark blocks) */
+  --on-panel: var(--p-white);
+
+  --act: var(--p-yellow-500);
+  --act-hover: var(--p-yellow-200);
+  --act-soft: var(--p-yellow-50);
+  --on-act: var(--p-ink-900);
+
+  --ok: var(--p-green-700);
+  --ok-strong: var(--p-green-800);
+  --ok-soft: var(--p-green-50);
+  --on-ok: var(--p-white);
+
+  --pend: var(--p-blue-700);
+  --pend-soft: var(--p-blue-50);
+  --pend-stripe: var(--p-blue-200);
+  --pend-hatch: repeating-linear-gradient(-45deg, var(--p-blue-200) 0 3px, var(--p-blue-50) 3px 8px);
+
+  --err: var(--p-red-700);
+  --err-soft: var(--p-red-50);
+  --on-err: var(--p-white);
+
+  --disabled-bg: var(--p-ink-100);
+  --disabled-ink: var(--p-ink-600);
+  --disabled-line: var(--p-ink-400);
+  --locked-hatch: repeating-linear-gradient(-45deg, transparent 0 10px, var(--p-ink-100) 10px 12px);
+
+  --scrim: color-mix(in srgb, var(--p-ink-900) 55%, transparent);   /* behind dialogs */
+  --focus: var(--p-ink-900);
+  --focus-halo: var(--p-yellow-500);
+
+  /* type */
+  --font-display: var(--p-font-barlow);   /* numbers, titles, signs, buttons */
+  --font-body: var(--p-font-public);      /* reading text */
+  --fs-meta: var(--p-size-14);            /* floor: nothing smaller anywhere */
+  --fs-note: var(--p-size-15);
+  --fs-body: var(--p-size-16);
+  --fs-control: var(--p-size-17);
+  --fs-lead: var(--p-size-18);
+  --fs-amount-s: var(--p-size-19);
+  --fs-h3: var(--p-size-20);
+  --fs-amount: var(--p-size-22);
+  --fs-h2: var(--p-size-24);
+  --fs-amount-l: var(--p-size-28);
+  --fs-h1: var(--p-size-30);
+  --fs-total: var(--p-size-44);
+  --fs-numeral: var(--p-size-44);
+  --fs-hero: var(--p-size-72);
+  --lh-body: 1.5; --lh-snug: 1.3; --lh-tight: 1.15;
+
+  /* space, shape */
+  --space-1: var(--p-space-1); --space-2: var(--p-space-2); --space-3: var(--p-space-3);
+  --space-4: var(--p-space-4); --space-5: var(--p-space-5); --space-6: var(--p-space-6);
+  --space-8: var(--p-space-8); --space-10: var(--p-space-10);
+  --radius-s: var(--p-radius-1); --radius: var(--p-radius-2); --radius-l: var(--p-radius-3);
+  --hairline: var(--p-stroke-1); --stroke: var(--p-stroke-2); --stroke-heavy: var(--p-stroke-3);
+
+  /* targets */
+  --target: 44px;                  /* default: laptop + phone browser */
+  --row-h: 52px;
+
+  /* layout (read by screens' grid rules) */
+  --shell-nav-w: 252px;
+  --shell-gutter: var(--space-8);
+  --page-gap: var(--space-5);
+  --side-min: 320px;               /* home right column */
+  --counter-ticket-w: 400px;
+  --counter-pay-w: 420px;
+  --counter-side-w: 440px;         /* 1024: ticket + pay stacked */
+  --phone-bar-space: 128px;        /* bottom padding under fixed bars on phone */
+  --phone-cart-space: 184px;
+
+  --safe-top: 0px; --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ---------- contexts (override tier 2 only) ---------- */
+/* Counter / any touch-first surface: 56px targets, larger control text */
+[data-density="touch"] { --target: 56px; --row-h: 64px; --fs-control: var(--p-size-18); }
+/* Accountant tables, long lists */
+[data-density="compact"] { --target: 44px; --row-h: 44px; --fs-control: var(--p-size-16); }
+
+@media (max-width: 1360px) {
+  :root { --counter-ticket-w: 380px; --counter-pay-w: 400px; }
+}
+@media (max-width: 1180px) {
+  :root { --shell-nav-w: 224px; --shell-gutter: var(--space-6); --side-min: 290px; }
+}
+@media (max-width: 720px) {
+  :root { --shell-gutter: var(--space-4); --page-gap: var(--space-4); --fs-hero: 52px; --fs-h1: var(--p-size-24); }
+}
+
+/* Native placeholders (F3 phase) — values are refined when native screens are designed */
+[data-platform="ios"] { --font-body: -apple-system, "SF Pro Text", system-ui, sans-serif; --target: 44px; --safe-top: 59px; --safe-bottom: 34px; }
+[data-platform="android"] { --font-body: "Roboto", system-ui, sans-serif; --target: 48px; --safe-top: 24px; --safe-bottom: 24px; }
+
+/* Dark theme — not in v1 scope. Stub: redefine tier 2 here, never primitives' meaning.
+[data-theme="dark"] { --canvas: …; --surface: …; --ink: …; }
+*/

@@ -1,0 +1,26 @@
+== a-so-tay
+page horizontal overflow: none
+fonts: Public Sans [loaded], Source Serif 4 [loaded]
+a11y /Users/benq/Desktop/qnsc/opc/design/system/directions/a-so-tay/tile.html → 0 rule(s) violated, 0 node(s); 1 need manual review
+== b-bang-gia
+page horizontal overflow: none
+fonts: Be Vietnam Pro [loaded], Big Shoulders Display [loaded]
+a11y /Users/benq/Desktop/qnsc/opc/design/system/directions/b-bang-gia/tile.html → 0 rule(s) violated, 0 node(s); 1 need manual review
+== c-bien-lang
+page horizontal overflow: none
+fonts: Onest [loaded], JetBrains Mono [loaded]
+a11y /Users/benq/Desktop/qnsc/opc/design/system/directions/c-bien-lang/tile.html → 1 rule(s) violated, 1 node(s); 1 need manual review
+  [serious] color-contrast ×1 — Elements must meet minimum color contrast ratio thresholds
+      .d.btn
+== d-bien-lai
+page horizontal overflow: none
+fonts: Public Sans [loaded], IBM Plex Mono [loaded]
+a11y /Users/benq/Desktop/qnsc/opc/design/system/directions/d-bien-lai/tile.html → 0 rule(s) violated, 0 node(s); 1 need manual review
+== e-tro-chuyen
+page horizontal overflow: none
+fonts: Plus Jakarta Sans [loaded], Bricolage Grotesque [loaded]
+a11y /Users/benq/Desktop/qnsc/opc/design/system/directions/e-tro-chuyen/tile.html → 0 rule(s) violated, 0 node(s); 0 need manual review
+== f-chi-dan
+page horizontal overflow: none
+fonts: Public Sans [loaded], Barlow [loaded]
+a11y /Users/benq/Desktop/qnsc/opc/design/system/directions/f-chi-dan/tile.html → 0 rule(s) violated, 0 node(s); 0 need manual review

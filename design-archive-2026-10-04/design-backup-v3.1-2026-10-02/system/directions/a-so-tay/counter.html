@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quầy bán hàng — Hải sản khô Cô Hai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<style>
+/* Counter layout — a fixed-height workstation; panes scroll on their own */
+.cshell { display: grid; grid-template-rows: auto minmax(0,1fr); height: 100vh; }
+.ctop { display: flex; align-items: center; gap: 16px; min-height: 72px; padding: 8px 24px; border-bottom: 1.5px solid var(--ink); }
+.ctitle { flex: 1; }
+.cconn { display: grid; gap: 2px; }
+.cmain { display: grid; grid-template-columns: minmax(0,1fr) auto; min-height: 0; }
+.cat { overflow-y: auto; padding: 20px 24px 24px; display: grid; grid-template-columns: minmax(0,1fr); gap: 16px; align-content: start; }
+.pgrid { grid-template-columns: repeat(auto-fill, minmax(176px, 1fr)); }
+.kbdrow { display: flex; gap: 16px; flex-wrap: wrap; padding-top: 4px; color: var(--ink-2); }
+.kbdrow .kbd { background: transparent; border-bottom-width: 1px; border-color: var(--rule); }
+.paycol .qrbox .stamp-lg { --stamp-h: 52px; --stamp-fs: var(--p-fs-20); }
+.kbdrow span { display: inline-flex; align-items: center; gap: 6px; }
+.rcol { display: grid; grid-template-columns: 448px 392px; min-height: 0; border-left: 1px solid var(--rule); }
+.ticket { overflow-y: auto; background: var(--bg-sunk); padding: 12px 20px 20px; }
+.paycol { overflow-y: auto; padding: 20px 24px 24px; display: grid; grid-template-columns: minmax(0,1fr); gap: 16px; align-content: start; border-left: 1px solid var(--rule); }
+.paycol .say { padding: 0; }
+.cartbar { display: none; }
+/* POS-sized ticket */
+.ticket .slip-h h2 { font-size: var(--p-fs-30); }
+.ticket .line .nm { font-size: var(--p-fs-18); }
+.ticket .line .calc { font-size: var(--text-body); }
+.ticket .line .amt { font-size: var(--p-fs-20); }
+.ticket .total { padding-top: 18px; }
+.ticket .total .k { font-size: var(--p-fs-20); }
+.ticket .total .v { font-size: var(--p-fs-40); }
+.ticket .novat, .ticket .inv .meta { font-size: var(--text-body); }
+
+@media (max-width: 1360px) {
+  .rcol { grid-template-columns: 400px 360px; }
+  .ticket .total .v { font-size: var(--p-fs-36); }
+  .ticket { padding: 12px 16px 20px; }
+  .paycol { padding: 20px; }
+  .cconn { display: none; }
+}
+@media (max-width: 1180px) {
+  .rcol { display: block; width: 440px; overflow-y: auto; }
+  .ticket, .paycol { overflow: visible; }
+  .paycol { border-left: 0; border-top: 1.5px solid var(--ink); }
+  .cat { padding: 16px; }
+  .pgrid { grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); }
+}
+@media (max-width: 760px) {
+  .cshell { display: block; height: auto; }
+  .ctop { position: sticky; top: 0; z-index: 5; background: var(--bg); gap: 4px; padding: 6px 12px 6px 4px; min-height: 64px; }
+  .ctitle h1 { font-size: var(--p-fs-20); }
+  .cmain { display: block; }
+  .rcol { display: none; }
+  .cat { padding: 12px 16px 104px; gap: 12px; }
+  .cconn-m { font-size: var(--text-meta); }
+  .pgrid { grid-template-columns: minmax(0,1fr); border-left: 0; }
+  .ptile { grid-template-areas: "pn pp" "pf pf"; grid-template-columns: minmax(0,1fr) auto; min-height: 56px; column-gap: 12px; row-gap: 2px; border-right: 0; padding: 8px 4px; align-content: center; }
+  .ptile.in { padding: 8px 4px 8px 12px; background: var(--bg); box-shadow: inset 3px 0 0 var(--ink); }
+  .ptile .pp { text-align: right; }
+  .ptile .pf { min-height: 0; }
+  .ptile .pf:empty { display: none; }
+  .cartbar { display: grid; grid-template-columns: minmax(0,1fr) auto; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; align-items: center; column-gap: 12px; row-gap: 4px; min-height: 72px; padding: 8px 16px calc(8px + env(safe-area-inset-bottom)); background: var(--ink); color: var(--on-ink); text-decoration: none; font-size: var(--p-fs-18); }
+  .cartbar .money { font-size: var(--p-fs-20); }
+  .cb-items { grid-column: 1 / -1; font-size: var(--text-meta); line-height: 20px; color: #d9dce3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cb-go { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; border: 1.5px solid var(--on-ink); border-radius: var(--radius); font-weight: 700; }
+}
+</style>
+</head>
+<body class="ctx-touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h5v-5.5h3V20h5V9.5"/></symbol>
+<symbol id="i-counter" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="10" rx="1"/><path d="M7 10V4.5h10V10M7 14h2M11 14h2M15 14h2M7 17h10"/></symbol>
+<symbol id="i-orders" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+<symbol id="i-money" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1"/><circle cx="12" cy="12" r="2.5"/><path d="M6.5 9.5v.01M17.5 14.5v.01"/></symbol>
+<symbol id="i-invoice" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 7.5 12 3.5l8.5 4v9L12 20.5l-8.5-4z"/><path d="M3.5 7.5 12 11.5l8.5-4M12 11.5v9"/></symbol>
+<symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M15.5 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.8.8 3 2.5 3.5 5.2"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M5 19V5a2 2 0 0 1 2-2h12v15H7a2 2 0 0 0-2 2 2 2 0 0 0 2 2h12"/><path d="M9 7.5h6M9 11h4"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
+<symbol id="i-ask" viewBox="0 0 24 24"><path d="M4 5h16v11H10l-6 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/></symbol>
+<symbol id="i-error" viewBox="0 0 24 24"><path d="M8.5 3h7L21 8.5v7L15.5 21h-7L3 15.5v-7z"/><path d="m9.5 9.5 5 5M14.5 9.5l-5 5"/></symbol>
+<symbol id="i-doc-wait" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h3"/><circle cx="15.5" cy="16.5" r="2.5"/></symbol>
+<symbol id="i-doc-ok" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 13.5l2 2 4-4.5"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+<symbol id="i-next" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-qr" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><path d="M14 14h2v2h-2zM18 14h2M14 18v2M17 17h3v3"/></symbol>
+<symbol id="i-cash" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1"/><circle cx="12" cy="12" r="2.5"/></symbol>
+<symbol id="i-debt" viewBox="0 0 24 24"><path d="M5 19h4L19.5 8.5l-4-4L5 15z"/><path d="m13.5 6.5 4 4"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V4h10v5"/><rect x="4" y="9" width="16" height="8" rx="1"/><path d="M7 14h10v6H7z"/></symbol>
+<symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V4h9v17M14 9h5v12M8 8h3M8 12h3M8 16h3M3 21h18"/></symbol>
+<symbol id="i-renew" viewBox="0 0 24 24"><path d="M19.5 10A8 8 0 0 0 5 7.5M4.5 4v4h4M4.5 14A8 8 0 0 0 19 16.5M19.5 20v-4h-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"/></symbol>
+<symbol id="i-expense" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4L6 21z"/><path d="M9 11h6"/></symbol>
+<symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5"/></symbol>
+</svg>
+
+<div class="cshell">
+  <header class="ctop">
+    <a class="btn btn-quiet hide-phone" href="home.html"><svg class="ic"><use href="#i-back"/></svg>Tổng quan</a>
+    <button class="btn btn-ghost menu-btn" aria-label="Mở menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <div class="ctitle">
+      <h1>Quầy bán hàng</h1>
+      <span class="meta">Ca sáng · mở 07:00 · Phúc</span>
+    </div>
+    <div class="cconn hide-phone">
+      <div class="conn"><span class="dot"></span><span><b>MB (qua Casso)</b> · cập nhật 2 phút trước</span></div>
+      <div class="conn"><span class="dot"></span><span><b>Hoá đơn Hilo</b> · hoạt động</span></div>
+    </div>
+    <button class="btn">Đóng ca</button>
+  </header>
+
+  <div class="cmain">
+    <section class="cat" aria-label="Chọn món">
+      <div class="conn phone-only cconn-m"><span class="dot"></span><span><b>MB</b> · cập nhật 2 phút trước · <b>Hilo</b> · hoạt động</span></div>
+      <div class="csearch">
+        <svg class="ic"><use href="#i-search"/></svg>
+        <label class="sr" for="q">Tìm món hoặc quét mã</label>
+        <input id="q" type="search" placeholder="Tìm món hoặc quét mã…" autocomplete="off">
+        <kbd class="kbd">/</kbd>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Nhóm hàng">
+        <button role="tab" aria-selected="true">Tất cả</button>
+        <button role="tab" aria-selected="false">Mực &amp; cá</button>
+        <button role="tab" aria-selected="false">Tôm &amp; ruốc</button>
+        <button role="tab" aria-selected="false">Đặc sản</button>
+        <button role="tab" aria-selected="false">Quà tặng</button>
+      </div>
+      <div class="pgrid num" role="tabpanel" aria-label="Tất cả món">
+        <button class="ptile in"><span class="pn">Mực khô loại 1</span><span class="pp">1.250.000 ₫<small>/kg</small></span>
+          <span class="pf"><span class="ps low"><svg class="ic ic-sm"><use href="#i-warn"/></svg>còn 3,2 kg</span><span class="incart">trong giỏ 0,5 kg</span></span></button>
+        <button class="ptile"><span class="pn">Cá thu một nắng</span><span class="pp">380.000 ₫<small>/kg</small></span><span class="pf"></span></button>
+        <button class="ptile"><span class="pn">Cá bò một nắng</span><span class="pp">320.000 ₫<small>/kg</small></span><span class="pf"></span></button>
+        <button class="ptile in"><span class="pn">Cá cơm sấy giòn hũ 250 g</span><span class="pp">95.000 ₫</span>
+          <span class="pf"><span class="incart">×2</span></span></button>
+        <button class="ptile"><span class="pn">Tôm khô loại 1 hũ 500 g</span><span class="pp">420.000 ₫</span>
+          <span class="pf"><span class="ps low"><svg class="ic ic-sm"><use href="#i-warn"/></svg>còn 6</span></span></button>
+        <button class="ptile"><span class="pn">Ruốc biển hũ 200 g</span><span class="pp">65.000 ₫</span><span class="pf"></span></button>
+        <button class="ptile"><span class="pn">Mực rim me hũ 300 g</span><span class="pp">120.000 ₫</span><span class="pf"></span></button>
+        <button class="ptile in"><span class="pn">Chả cá Quy Nhơn 500 g</span><span class="pp">85.000 ₫</span>
+          <span class="pf"><span class="incart">×1</span></span></button>
+        <button class="ptile"><span class="pn">Nem chợ Huyện (chục)</span><span class="pp">50.000 ₫</span><span class="pf"></span></button>
+        <button class="ptile in"><span class="pn">Bánh tráng nước dừa (xấp 10)</span><span class="pp">40.000 ₫</span>
+          <span class="pf"><span class="incart">×3</span></span></button>
+        <button class="ptile"><span class="pn">Muối ớt xanh hũ</span><span class="pp">30.000 ₫</span><span class="pf"></span></button>
+        <button class="ptile"><span class="pn">Túi giấy quà tặng</span><span class="pp">5.000 ₫</span><span class="pf"></span></button>
+      </div>
+      <div class="kbdrow meta hide-phone"><span><kbd class="kbd">/</kbd> tìm</span><span><kbd class="kbd">+</kbd> <kbd class="kbd">−</kbd> số lượng</span><span><kbd class="kbd">F9</kbd> thu tiền</span><span><kbd class="kbd">Esc</kbd> huỷ</span></div>
+    </section>
+
+    <div class="rcol">
+      <section class="ticket" aria-label="Phiếu DH-1043">
+        <div class="slip on-raised num">
+          <div class="slip-h"><h2>DH-1043</h2><span class="meta">02/10/2026 · 10:45</span></div>
+          <div class="cust">
+            <span><span class="meta" style="display:block">Khách</span><b>Khách lẻ</b></span>
+            <button class="btn btn-quiet">Đổi khách · tìm MST</button>
+          </div>
+          <div class="line sel">
+            <div><div class="nm">Mực khô loại 1</div><div class="calc">0,5 kg × 1.250.000</div></div>
+            <div class="amt">625.000</div>
+            <div class="qty" style="grid-column:1/-1">
+              <button class="btn" aria-label="Bớt 0,1 kg (phím −)"><svg class="ic"><use href="#i-minus"/></svg></button>
+              <output aria-label="Số lượng">0,5 kg</output>
+              <button class="btn" aria-label="Thêm 0,1 kg (phím +)"><svg class="ic"><use href="#i-plus"/></svg></button>
+              <span class="meta qty-k"><kbd class="kbd">−</kbd> <kbd class="kbd">+</kbd></span>
+            </div>
+          </div>
+          <button class="line line-btn"><span><span class="nm">Cá cơm sấy giòn</span><span class="calc">×2 × 95.000</span></span><span class="amt">190.000</span></button>
+          <button class="line line-btn"><span><span class="nm">Bánh tráng nước dừa</span><span class="calc">×3 × 40.000</span></span><span class="amt">120.000</span></button>
+          <button class="line line-btn"><span><span class="nm">Chả cá Quy Nhơn</span><span class="calc">×1 × 85.000</span></span><span class="amt">85.000</span></button>
+          <div class="total"><span class="k">Khách phải trả</span><span class="v">1.020.000 ₫</span></div>
+          <p class="novat">Không có dòng thuế GTGT (hoá đơn hộ kinh doanh).</p>
+
+          <div class="inv">
+            <div class="inv-fixed"><svg class="ic"><use href="#i-lock"/></svg><span><b>Hoá đơn máy tính tiền — tự phát hành sau khi thu tiền</b><span class="meta" style="display:block">Bắt buộc · không tắt được</span></span></div>
+            <button class="switch-row" role="switch" aria-checked="false"><span><span style="display:block;font-weight:600">Khách lấy hoá đơn công ty</span><span class="meta">tra MST</span></span><span class="switch" aria-hidden="true"></span></button>
+            <button class="switch-row" role="switch" aria-checked="true"><span style="font-weight:600">In phiếu</span><span class="switch" aria-hidden="true"></span></button>
+          </div>
+
+          <div class="stampline">
+            <span class="stamp stamp-pend"><svg class="ic"><use href="#i-clock"/></svg>chờ khách chuyển</span>
+            <span class="meta">Dấu xác minh in ở đây khi khớp sao kê.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="paycol" aria-labelledby="h-pay">
+        <div class="sec-h"><h2 id="h-pay">Thu tiền</h2><span class="meta">DH-1043 · 4 món</span></div>
+        <p class="say">Tiền vào là phiếu tự hoàn tất.</p>
+        <ol class="steps steps-quiet" aria-label="Trạng thái tiền của đơn">
+          <li class="cur" aria-current="step"><i></i><span>Chờ khách chuyển</span></li>
+          <li><i></i><span>Đã nhận · chờ xác minh</span></li>
+          <li><i></i><span>Đã xác minh</span></li>
+        </ol>
+        <div class="seg" role="radiogroup" aria-label="Cách thanh toán">
+          <button role="radio" aria-checked="true"><svg class="ic"><use href="#i-qr"/></svg>QR chuyển khoản</button>
+          <button role="radio" aria-checked="false"><svg class="ic"><use href="#i-cash"/></svg>Tiền mặt</button>
+          <button role="radio" aria-checked="false"><svg class="ic"><use href="#i-debt"/></svg>Công nợ</button>
+        </div>
+        <div class="qrbox num">
+          <div class="qr">
+            <svg class="qr-img" viewBox="-2 -2 33 33" role="img" aria-label="Mã VietQR MB, số tiền 1.020.000 ₫, nội dung DH1043" shape-rendering="crispEdges"><rect x="-2" y="-2" width="33" height="33" fill="#fff"/><path d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM11 0h1v1h-1zM12 0h1v1h-1zM13 0h1v1h-1zM14 0h1v1h-1zM15 0h1v1h-1zM17 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM11 1h1v1h-1zM12 1h1v1h-1zM13 1h1v1h-1zM17 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM13 2h1v1h-1zM16 2h1v1h-1zM17 2h1v1h-1zM19 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM16 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM16 5h1v1h-1zM18 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM9 6h1v1h-1zM11 6h1v1h-1zM12 6h1v1h-1zM17 6h1v1h-1zM18 6h1v1h-1zM19 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM10 7h1v1h-1zM12 7h1v1h-1zM15 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM2 8h1v1h-1zM3 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM10 8h1v1h-1zM11 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM15 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM0 9h1v1h-1zM3 9h1v1h-1zM4 9h1v1h-1zM5 9h1v1h-1zM8 9h1v1h-1zM10 9h1v1h-1zM11 9h1v1h-1zM12 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM23 9h1v1h-1zM24 9h1v1h-1zM26 9h1v1h-1zM0 10h1v1h-1zM2 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM9 10h1v1h-1zM11 10h1v1h-1zM14 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM25 10h1v1h-1zM26 10h1v1h-1zM27 10h1v1h-1zM28 10h1v1h-1zM0 11h1v1h-1zM1 11h1v1h-1zM2 11h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM5 11h1v1h-1zM6 11h1v1h-1zM8 11h1v1h-1zM10 11h1v1h-1zM14 11h1v1h-1zM15 11h1v1h-1zM17 11h1v1h-1zM20 11h1v1h-1zM21 11h1v1h-1zM24 11h1v1h-1zM26 11h1v1h-1zM28 11h1v1h-1zM0 12h1v1h-1zM1 12h1v1h-1zM2 12h1v1h-1zM4 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM8 12h1v1h-1zM9 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM16 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM24 12h1v1h-1zM28 12h1v1h-1zM0 13h1v1h-1zM3 13h1v1h-1zM4 13h1v1h-1zM8 13h1v1h-1zM9 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM14 13h1v1h-1zM16 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM21 13h1v1h-1zM22 13h1v1h-1zM27 13h1v1h-1zM0 14h1v1h-1zM1 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM12 14h1v1h-1zM18 14h1v1h-1zM19 14h1v1h-1zM20 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM4 15h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM18 15h1v1h-1zM19 15h1v1h-1zM22 15h1v1h-1zM23 15h1v1h-1zM0 16h1v1h-1zM1 16h1v1h-1zM2 16h1v1h-1zM6 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM20 16h1v1h-1zM22 16h1v1h-1zM23 16h1v1h-1zM25 16h1v1h-1zM26 16h1v1h-1zM27 16h1v1h-1zM28 16h1v1h-1zM1 17h1v1h-1zM3 17h1v1h-1zM5 17h1v1h-1zM6 17h1v1h-1zM7 17h1v1h-1zM8 17h1v1h-1zM10 17h1v1h-1zM11 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM16 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM24 17h1v1h-1zM25 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM1 18h1v1h-1zM6 18h1v1h-1zM10 18h1v1h-1zM11 18h1v1h-1zM13 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM17 18h1v1h-1zM19 18h1v1h-1zM20 18h1v1h-1zM21 18h1v1h-1zM22 18h1v1h-1zM23 18h1v1h-1zM27 18h1v1h-1zM1 19h1v1h-1zM3 19h1v1h-1zM6 19h1v1h-1zM7 19h1v1h-1zM10 19h1v1h-1zM11 19h1v1h-1zM14 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM28 19h1v1h-1zM1 20h1v1h-1zM6 20h1v1h-1zM10 20h1v1h-1zM16 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM27 20h1v1h-1zM8 21h1v1h-1zM10 21h1v1h-1zM11 21h1v1h-1zM16 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM27 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM10 22h1v1h-1zM13 22h1v1h-1zM14 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM27 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM10 23h1v1h-1zM12 23h1v1h-1zM13 23h1v1h-1zM14 23h1v1h-1zM15 23h1v1h-1zM17 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM25 23h1v1h-1zM26 23h1v1h-1zM28 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM11 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM15 24h1v1h-1zM16 24h1v1h-1zM17 24h1v1h-1zM18 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM8 25h1v1h-1zM9 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM14 25h1v1h-1zM15 25h1v1h-1zM16 25h1v1h-1zM17 25h1v1h-1zM20 25h1v1h-1zM21 25h1v1h-1zM24 25h1v1h-1zM25 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM8 26h1v1h-1zM9 26h1v1h-1zM14 26h1v1h-1zM24 26h1v1h-1zM25 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM10 27h1v1h-1zM14 27h1v1h-1zM15 27h1v1h-1zM17 27h1v1h-1zM20 27h1v1h-1zM25 27h1v1h-1zM26 27h1v1h-1zM27 27h1v1h-1zM28 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM11 28h1v1h-1zM13 28h1v1h-1zM14 28h1v1h-1zM16 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM22 28h1v1h-1zM23 28h1v1h-1zM26 28h1v1h-1zM27 28h1v1h-1z" fill="#121514"/></svg>
+            <dl class="qr-sum">
+              <dt class="sr">Số tiền</dt><dd class="money">1.020.000 ₫</dd>
+              <dt class="sr">Tài khoản và nội dung</dt><dd class="meta">VietQR · MB<br>nội dung DH1043</dd>
+            </dl>
+          </div>
+          <div class="qr-state" role="status"><span class="stamp stamp-pend stamp-lg"><svg class="ic"><use href="#i-clock"/></svg>Đang chờ khách chuyển…</span></div>
+          <p class="next">Đã nhận · chờ xác minh — giao hàng được vì dưới mức 2.000.000 ₫ bạn đặt</p>
+        </div>
+        <div class="confirm">
+          <button class="btn btn-primary btn-xl" disabled>Xác nhận đã thu 1.020.000 ₫<kbd class="kbd">F9</kbd></button>
+          <p class="unlock"><svg class="ic"><use href="#i-lock"/></svg>Tự mở khi MB báo tiền vào.</p>
+        </div>
+        <div class="sec-actions sec-3">
+          <button class="btn">Đổi sang tiền mặt</button>
+          <button class="btn btn-quiet">Lưu tạm</button>
+          <div class="more-wrap">
+            <button class="btn btn-quiet" aria-haspopup="menu" aria-expanded="false" aria-controls="m-more">Khác…</button>
+            <div class="menu" id="m-more" role="menu" hidden>
+              <button class="btn btn-danger" role="menuitem"><svg class="ic"><use href="#i-trash"/></svg>Huỷ đơn…<kbd class="kbd">Esc</kbd></button>
+            </div>
+          </div>
+        </div>
+        <details class="cash-alt">
+          <summary>Khách trả tiền mặt?<svg class="ic"><use href="#i-down"/></svg></summary>
+          <div class="quick num">
+            <button class="btn btn-quiet">1.020.000</button>
+            <button class="btn btn-quiet">1.050.000</button>
+            <button class="btn btn-quiet">1.100.000</button>
+            <button class="btn btn-quiet">1.200.000</button>
+          </div>
+          <div class="ln"><span class="k">Tiền thối</span><span class="a" style="color:var(--ink-2)">—</span><span class="s"></span></div>
+        </details>
+      </section>
+    </div>
+  </div>
+
+  <a class="cartbar num" href="counter--payment.html">
+    <span class="cb-items" title="Mực khô 0,5 kg · Cá cơm ×2 · Bánh tráng ×3 · Chả cá ×1">Mực khô 0,5 kg · Cá cơm ×2 · +2 món</span>
+    <span><b>4 món</b> · <span class="money">1.020.000 ₫</span></span>
+    <span class="cb-go">Thu tiền<svg class="ic"><use href="#i-next"/></svg></span>
+  </a>
+</div>
+</body>
+</html>

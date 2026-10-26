@@ -1,0 +1,1360 @@
+{
+  "screen": "onboard-household--open.html",
+  "title": "Đăng ký · Doanh thu từ đầu năm — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        216,
+        202,
+        560,
+        405
+      ]
+    },
+    {
+      "region": "Các bước đăng ký",
+      "box": [
+        824,
+        202,
+        400,
+        374
+      ]
+    },
+    {
+      "region": "Tiến độ đăng ký",
+      "box": [
+        824,
+        202,
+        400,
+        342
+      ]
+    },
+    {
+      "region": "footer",
+      "box": [
+        216,
+        607,
+        560,
+        164
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": "OnboardingStep",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Quay lại bước trước",
+      "box": [
+        16,
+        8,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-back",
+      "box": [
+        33,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 4,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-steps",
+      "component": "StepProgress",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "img",
+      "text": "Bước 2 trên 5: Hộ kinh doanh",
+      "box": [
+        84,
+        22,
+        1247,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 5,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bước 2/5 · Hộ kinh doanh",
+      "box": [
+        84,
+        22,
+        1247,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 6,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        84,
+        45,
+        1247,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        84,
+        45,
+        246,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 8,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        334,
+        45,
+        246,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 9,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        585,
+        45,
+        246,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 10,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        835,
+        45,
+        246,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 11,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1085,
+        45,
+        246,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 12,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "help",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hỏi",
+      "box": [
+        1343,
+        8,
+        81,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-help",
+      "box": [
+        1356,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 14,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        216,
+        202,
+        560,
+        405
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Doanh thu từ đầu năm",
+      "box": [
+        216,
+        202,
+        560,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 16,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-say",
+      "component": "OwnerSentence",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC dùng số này để nhắc chị khi gần các mốc thuế (500 triệu, 1 tỷ). Chưa chắc th",
+      "box": [
+        216,
+        258,
+        560,
+        46
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 17,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-field",
+      "component": "Field",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        324,
+        560,
+        111
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 18,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Doanh thu từ đầu năm đến nay (ước tính)",
+      "box": [
+        216,
+        324,
+        560,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 19,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "control",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        350,
+        560,
+        58
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "input",
+      "variants": [],
+      "state": [],
+      "role": "textbox",
+      "text": "",
+      "box": [
+        229,
+        351,
+        480,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 21,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "suffix",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "đồng",
+      "box": [
+        717,
+        370,
+        46,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 22,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Gồm cả tiền mặt và chuyển khoản",
+      "box": [
+        216,
+        414,
+        560,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 23,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-field",
+      "component": "Field",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        455,
+        560,
+        111
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 24,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị bắt đầu dùng OPC từ ngày",
+      "box": [
+        216,
+        455,
+        560,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 25,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "control",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        216,
+        481,
+        560,
+        58
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 26,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "input",
+      "variants": [],
+      "state": [],
+      "role": "textbox",
+      "text": "",
+      "box": [
+        229,
+        482,
+        534,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 27,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-field",
+      "component": null,
+      "of": "Field",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC chỉ ghi sổ từ ngày này",
+      "box": [
+        216,
+        545,
+        560,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 28,
+      "parent": 14,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "saved",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã lưu — làm tiếp lúc nào cũng được",
+      "box": [
+        216,
+        586,
+        560,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 29,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "aside",
+      "variants": [],
+      "state": [],
+      "role": "complementary",
+      "text": "Các bước đăng ký",
+      "box": [
+        824,
+        202,
+        400,
+        374
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 30,
+      "parent": 29,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": "StepMap",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Tiến độ đăng ký",
+      "box": [
+        824,
+        202,
+        400,
+        342
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 31,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đăng ký · còn khoảng 9 phút · làm dở vẫn lưu",
+      "box": [
+        845,
+        202,
+        379,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 32,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        231,
+        379,
+        243
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 33,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        231,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 34,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        237,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 35,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        243,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 36,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Số điện thoại — xong",
+      "box": [
+        885,
+        239,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 37,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        240,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 38,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        271,
+        379,
+        83
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 39,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2",
+      "box": [
+        845,
+        277,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 40,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hộ kinh doanh",
+      "box": [
+        885,
+        279,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 41,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2 phút",
+      "box": [
+        1181,
+        280,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 42,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "why",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị nhập mã số thuế hoặc chụp giấy đăng ký, OPC đọc giúp, chị xác nhận.",
+      "box": [
+        885,
+        307,
+        339,
+        41
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 43,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        353,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        845,
+        359,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 45,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cách bán và việc OPC làm",
+      "box": [
+        885,
+        361,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 46,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2 phút",
+      "box": [
+        1181,
+        363,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 47,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        393,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 48,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        845,
+        399,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 49,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xác minh chủ hộ",
+      "box": [
+        885,
+        401,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 50,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2 phút",
+      "box": [
+        1181,
+        403,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 51,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        433,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 52,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5",
+      "box": [
+        845,
+        439,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 53,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hàng đầu tiên",
+      "box": [
+        885,
+        441,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 54,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3 phút",
+      "box": [
+        1181,
+        443,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 55,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "end",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 5 bước: bán thử ở quầy, rồi làm dần danh sách Sẵn sàng",
+      "box": [
+        845,
+        493,
+        379,
+        51
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 56,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": "contentinfo",
+      "text": "",
+      "box": [
+        216,
+        607,
+        560,
+        164
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 57,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act",
+        "block"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Tiếp tục",
+      "box": [
+        216,
+        627,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 58,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "alt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Để sau, OPC nhắc lại",
+      "box": [
+        216,
+        691,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quầy bán hàng · DH-1043 — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../tokens.css">
+<link rel="stylesheet" href="../../../components/components.css">
+<link rel="stylesheet" href="../../../components/recipes.css">
+<link rel="stylesheet" href="../../../../apps/app/app-tokens.css">
+<link rel="stylesheet" href="../tokens-override.css">
+<link rel="stylesheet" href="../skin-modern.css">
+<link rel="stylesheet" href="redesign.css">
+</head>
+<body data-density="touch">
+<!--@icons-->
+<div class="r-pos">
+  <header class="r-pos__top">
+    <a class="c-icon-btn c-icon-btn--outline" href="home.html" aria-label="Về Tổng quan" data-tip="Về Tổng quan"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+    <div class="r-pos__title"><h1><span class="r-pos__desk">Quầy bán hàng</span><span class="r-pos__phone">Quầy</span></h1><span>Ca sáng · từ 07:00 · Phúc</span></div>
+    <span class="c-health" role="status" tabindex="0" data-tip="MB (qua Casso) cập nhật 2 phút trước · Hoá đơn Hilo hoạt động" data-tip-end><span class="r-pos__desk">MB · Hilo hoạt động · <b>2 phút trước</b></span><span class="r-pos__phone">MB · <b>2 phút</b></span></span>
+    <button class="c-btn r-pos__desk" type="button">Đóng ca</button>
+    <button class="c-icon-btn r-pos__phone" type="button" aria-label="Thêm: đóng ca, đơn đã lưu tạm"><svg class="c-ic" aria-hidden="true"><use href="#i-more"/></svg></button>
+  </header>
+
+  <div class="r-pos__body">
+    <section class="r-pos__products" aria-label="Chọn món">
+      <label class="c-search"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm món</span><input class="c-search__input" type="search" placeholder="Tìm món hoặc quét mã vạch…"><span class="c-kbd r-pos__desk" aria-hidden="true">/</span></label>
+      <div class="c-filters" role="toolbar" aria-label="Nhóm hàng">
+        <button class="c-filter" type="button" aria-pressed="true">Tất cả</button>
+        <button class="c-filter" type="button" aria-pressed="false">Mực &amp; cá</button>
+        <button class="c-filter" type="button" aria-pressed="false">Tôm &amp; ruốc</button>
+        <button class="c-filter" type="button" aria-pressed="false">Đặc sản</button>
+        <button class="c-filter" type="button" aria-pressed="false">Quà tặng</button>
+      </div>
+      <div class="c-tiles">
+        <button class="c-tile" type="button" data-incart aria-label="Mực khô loại 1, 1.250.000 ₫ một kg, trong đơn 0,5 kg, còn 3,2 kg"><span class="c-tile__pic c-tile__pic--sea" aria-hidden="true"><svg class="c-ic"><use href="#i-squid"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic"><use href="#i-check"/></svg>0,5 kg</span><span class="c-tile__name">Mực khô loại 1</span><span class="c-tile__price">1.250.000 ₫<small>/kg</small></span><span class="c-tile__meta c-tile__meta--low"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg>còn 3,2 kg</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic c-tile__pic--sea" aria-hidden="true"><svg class="c-ic"><use href="#i-fish"/></svg></span><span class="c-tile__name">Cá thu một nắng</span><span class="c-tile__price">380.000 ₫<small>/kg</small></span><span class="c-tile__meta"><svg class="c-ic" aria-hidden="true"><use href="#i-scale"/></svg>bán theo cân</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic c-tile__pic--sea" aria-hidden="true"><svg class="c-ic"><use href="#i-fish"/></svg></span><span class="c-tile__name">Cá bò một nắng</span><span class="c-tile__price">320.000 ₫<small>/kg</small></span><span class="c-tile__meta"><svg class="c-ic" aria-hidden="true"><use href="#i-scale"/></svg>bán theo cân</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button" data-incart aria-label="Cá cơm sấy giòn hũ 250 g, 95.000 ₫, trong đơn 2"><span class="c-tile__pic c-tile__pic--warm" aria-hidden="true"><svg class="c-ic"><use href="#i-jar"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic"><use href="#i-check"/></svg>×2</span><span class="c-tile__name">Cá cơm sấy giòn hũ 250 g</span><span class="c-tile__price">95.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic c-tile__pic--warm" aria-hidden="true"><svg class="c-ic"><use href="#i-jar"/></svg></span><span class="c-tile__name">Tôm khô loại 1 hũ 500 g</span><span class="c-tile__price">420.000 ₫</span><span class="c-tile__meta c-tile__meta--low"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg>còn 6 hũ</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic c-tile__pic--warm" aria-hidden="true"><svg class="c-ic"><use href="#i-jar"/></svg></span><span class="c-tile__name">Ruốc biển hũ 200 g</span><span class="c-tile__price">65.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic c-tile__pic--warm" aria-hidden="true"><svg class="c-ic"><use href="#i-jar"/></svg></span><span class="c-tile__name">Mực rim me hũ 300 g</span><span class="c-tile__price">120.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button" data-incart aria-label="Chả cá Quy Nhơn 500 g, 85.000 ₫, trong đơn 1"><span class="c-tile__pic c-tile__pic--sea" aria-hidden="true"><svg class="c-ic"><use href="#i-fish"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic"><use href="#i-check"/></svg>×1</span><span class="c-tile__name">Chả cá Quy Nhơn 500 g</span><span class="c-tile__price">85.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic c-tile__pic--leaf" aria-hidden="true"><svg class="c-ic"><use href="#i-box"/></svg></span><span class="c-tile__name">Nem chợ Huyện (chục)</span><span class="c-tile__price">50.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button" data-incart aria-label="Bánh tráng nước dừa xấp 10, 40.000 ₫, trong đơn 3"><span class="c-tile__pic c-tile__pic--leaf" aria-hidden="true"><svg class="c-ic"><use href="#i-box"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic"><use href="#i-check"/></svg>×3</span><span class="c-tile__name">Bánh tráng nước dừa (xấp 10)</span><span class="c-tile__price">40.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic c-tile__pic--leaf" aria-hidden="true"><svg class="c-ic"><use href="#i-jar"/></svg></span><span class="c-tile__name">Muối ớt xanh hũ</span><span class="c-tile__price">30.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+        <button class="c-tile" type="button"><span class="c-tile__pic" aria-hidden="true"><svg class="c-ic"><use href="#i-bag"/></svg></span><span class="c-tile__name">Túi giấy quà tặng</span><span class="c-tile__price">5.000 ₫</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button>
+      </div>
+      <div class="r-pos__keys" aria-label="Phím tắt">
+        <span><span class="c-kbd">/</span>Tìm món</span>
+        <span><span class="c-kbd">+</span><span class="c-kbd">−</span>Số lượng</span>
+        <span><span class="c-kbd">F9</span>Thu tiền</span>
+        <span><span class="c-kbd">Esc</span>Huỷ đơn</span>
+      </div>
+    </section>
+
+    <aside class="r-order" aria-labelledby="h-order">
+      <div class="r-order__head">
+        <div class="r-order__id"><h2 class="r-order__code" id="h-order">DH-1043</h2><span class="u-meta">4 món · tại quầy</span></div>
+        <button class="c-btn r-order__cust" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-people"/></svg>Khách lẻ<svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <button class="c-icon-btn" type="button" aria-label="Huỷ đơn (Esc)" data-tip="Huỷ đơn · Esc" data-tip-end><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+      </div>
+      <ul class="r-order__lines">
+        <li class="c-oline"><span class="c-oline__name">Mực khô loại 1</span><span class="c-oline__amt">625.000 ₫</span><span class="c-oline__calc">0,5 kg × 1.250.000 ₫</span>
+          <span class="c-stepper"><button class="c-stepper__btn" type="button" aria-label="Bớt mực khô"><svg class="c-ic" aria-hidden="true"><use href="#i-minus"/></svg></button><output class="c-stepper__value">0,5 kg</output><button class="c-stepper__btn" type="button" aria-label="Thêm mực khô"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg></button></span></li>
+        <li class="c-oline"><span class="c-oline__name">Cá cơm sấy giòn</span><span class="c-oline__amt">190.000 ₫</span><span class="c-oline__calc">2 × 95.000 ₫</span>
+          <span class="c-stepper"><button class="c-stepper__btn" type="button" aria-label="Bớt cá cơm sấy giòn"><svg class="c-ic" aria-hidden="true"><use href="#i-minus"/></svg></button><output class="c-stepper__value">2</output><button class="c-stepper__btn" type="button" aria-label="Thêm cá cơm sấy giòn"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg></button></span></li>
+        <li class="c-oline"><span class="c-oline__name">Bánh tráng nước dừa</span><span class="c-oline__amt">120.000 ₫</span><span class="c-oline__calc">3 × 40.000 ₫</span>
+          <span class="c-stepper"><button class="c-stepper__btn" type="button" aria-label="Bớt bánh tráng nước dừa"><svg class="c-ic" aria-hidden="true"><use href="#i-minus"/></svg></button><output class="c-stepper__value">3</output><button class="c-stepper__btn" type="button" aria-label="Thêm bánh tráng nước dừa"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg></button></span></li>
+        <li class="c-oline"><span class="c-oline__name">Chả cá Quy Nhơn</span><span class="c-oline__amt">85.000 ₫</span><span class="c-oline__calc">1 × 85.000 ₫</span>
+          <span class="c-stepper"><button class="c-stepper__btn" type="button" aria-label="Bớt chả cá Quy Nhơn"><svg class="c-ic" aria-hidden="true"><use href="#i-minus"/></svg></button><output class="c-stepper__value">1</output><button class="c-stepper__btn" type="button" aria-label="Thêm chả cá Quy Nhơn"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg></button></span></li>
+      </ul>
+      <div class="r-order__foot">
+        <div class="c-seg" role="radiogroup" aria-label="Cách thanh toán">
+          <button class="c-seg__opt" type="button" role="radio" aria-checked="true"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg>QR</button>
+          <button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-cash"/></svg>Tiền mặt</button>
+          <button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Công nợ</button>
+        </div>
+        <div class="r-order__total"><span>Khách phải trả</span><b>1.020.000<span class="u-cur">₫</span></b></div>
+        <div class="r-order__acts">
+          <button class="c-btn c-btn--xl" type="button">Lưu tạm</button>
+          <a class="c-btn c-btn--act c-btn--xl" href="counter--qr.html">Thu tiền<span class="c-kbd" aria-hidden="true">F9</span></a>
+        </div>
+        <p class="r-order__note">Hoá đơn máy tính tiền tự phát hành sau khi thu · không có dòng thuế GTGT</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<a class="r-cartbar" href="#">
+  <span class="r-cartbar__t"><span>DH-1043 · 4 món · xem giỏ</span><strong>1.020.000<span class="u-cur">₫</span></strong></span>
+  <span class="c-btn c-btn--act">Thu tiền<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+</a>
+</body>
+</html>

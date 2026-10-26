@@ -1,0 +1,157 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.2.6",
+ "group": "g42j3",
+ "screens": [
+  {
+   "file": "tax.html",
+   "title": "Thuế · Quý III (cách tính, chị duyệt)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 24,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "tax--return.html",
+   "title": "Thuế · Tờ khai nháp (tài liệu)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 27,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "tax-file.html",
+   "title": "Thuế · Gửi tờ khai (eTax tay hoặc ký và gửi · Mô phỏng)",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 24,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "tax-file--signed.html",
+   "title": "Thuế · Đã tiếp nhận → nộp tiền ngoài OPC",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 23,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "tax-evidence.html",
+   "title": "Thuế · Bằng chứng, kỳ đã đóng",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 24,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  }
+ ]
+}

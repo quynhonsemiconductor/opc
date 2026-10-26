@@ -1,0 +1,4837 @@
+{
+  "screen": "orders--loading.html",
+  "title": "Đang tải · Đơn hàng · Hải sản khô Cô Hai — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "Điều hướng chính",
+      "box": [
+        0,
+        0,
+        252,
+        900
+      ]
+    },
+    {
+      "region": "header",
+      "box": [
+        252,
+        0,
+        1188,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        252,
+        73,
+        1188,
+        835
+      ]
+    },
+    {
+      "region": "Bán",
+      "box": [
+        284,
+        97,
+        1124,
+        45
+      ]
+    },
+    {
+      "region": "Điều hướng nhanh",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": "AppShell",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        908
+      ]
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "nav",
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Điều hướng chính",
+      "box": [
+        0,
+        0,
+        252,
+        900
+      ]
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-brand",
+      "component": "BrandMark",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        16,
+        227,
+        25
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC",
+      "box": [
+        20,
+        16,
+        49,
+        25
+      ]
+    },
+    {
+      "id": 4,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "by",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "by QNSC",
+      "box": [
+        77,
+        22,
+        62,
+        14
+      ]
+    },
+    {
+      "id": 5,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-hh",
+      "component": "HouseholdSwitcher",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai, Nhơn Lý",
+      "box": [
+        12,
+        57,
+        227,
+        56
+      ]
+    },
+    {
+      "id": 6,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "CH",
+      "box": [
+        23,
+        68,
+        34,
+        34
+      ]
+    },
+    {
+      "id": 7,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        67,
+        67,
+        121,
+        36
+      ]
+    },
+    {
+      "id": 8,
+      "parent": 7,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cô Hai · Nhơn Lý",
+      "box": [
+        67,
+        67,
+        121,
+        19
+      ]
+    },
+    {
+      "id": 9,
+      "parent": 7,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xác minh L1",
+      "box": [
+        67,
+        86,
+        121,
+        18
+      ]
+    },
+    {
+      "id": 10,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        210,
+        76,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 11,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        129,
+        227,
+        336
+      ]
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hôm nay",
+      "box": [
+        12,
+        129,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        140,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 14,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Quầy bán hàng",
+      "box": [
+        12,
+        179,
+        227,
+        52
+      ]
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        194,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 16,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        211,
+        196,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 17,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Bán",
+      "box": [
+        12,
+        237,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 18,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        248,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 19,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        203,
+        247,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 20,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tiền",
+      "box": [
+        12,
+        283,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 21,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        294,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 22,
+      "parent": 20,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        203,
+        293,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 23,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hàng hoá",
+      "box": [
+        12,
+        329,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 24,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        340,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 25,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Sổ & thuế",
+      "box": [
+        12,
+        375,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 26,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        386,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 27,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Cần xử lý",
+      "box": [
+        12,
+        421,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        432,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 29,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6",
+      "box": [
+        203,
+        431,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 30,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        481,
+        227,
+        90
+      ]
+    },
+    {
+      "id": 31,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Cài đặt",
+      "box": [
+        12,
+        481,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 32,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        492,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 33,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Trợ giúp & hỗ trợ",
+      "box": [
+        12,
+        527,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 34,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        24,
+        538,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 35,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tình trạng kết nối",
+      "box": [
+        12,
+        783,
+        227,
+        101
+      ]
+    },
+    {
+      "id": 36,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-conn",
+      "component": "ConnectionStatus",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "MB (qua Casso) · cập nhật 2 phút trước",
+      "box": [
+        20,
+        796,
+        211,
+        38
+      ]
+    },
+    {
+      "id": 37,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-conn",
+      "component": "ConnectionStatus",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoá đơn Hilo · hoạt động",
+      "box": [
+        20,
+        840,
+        211,
+        19
+      ]
+    },
+    {
+      "id": 38,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-conn",
+      "component": "ConnectionStatus",
+      "of": null,
+      "part": null,
+      "variants": [
+        "off"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Cổng thuế · chưa bật",
+      "box": [
+        20,
+        865,
+        211,
+        19
+      ]
+    },
+    {
+      "id": 39,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "main",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        252,
+        0,
+        1188,
+        908
+      ]
+    },
+    {
+      "id": 40,
+      "parent": 39,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        252,
+        0,
+        1188,
+        73
+      ]
+    },
+    {
+      "id": 41,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "phone",
+      "variants": [
+        "bar"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 42,
+      "parent": 41,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "CH",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 43,
+      "parent": 41,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hải sản khô Cô Hai",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 45,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhơn Lý · OPC",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 46,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tìm kiếm",
+      "box": [
+        284,
+        12,
+        376,
+        48
+      ]
+    },
+    {
+      "id": 47,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        297,
+        25,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 48,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "input",
+      "variants": [],
+      "state": [],
+      "role": "textbox",
+      "text": "",
+      "box": [
+        329,
+        13,
+        233,
+        46
+      ]
+    },
+    {
+      "id": 49,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "mic",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Tìm bằng giọng nói",
+      "box": [
+        572,
+        14,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        585,
+        27,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 51,
+      "parent": 46,
+      "kind": "component",
+      "class": "c-kbd",
+      "component": "Kbd",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "⌘K",
+      "box": [
+        622,
+        24,
+        29,
+        24
+      ]
+    },
+    {
+      "id": 52,
+      "parent": 40,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "spacer",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        672,
+        36,
+        354,
+        0
+      ]
+    },
+    {
+      "id": 53,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": null,
+      "of": "IconButton",
+      "part": "phone",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Tìm đơn, món, khách",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 54,
+      "parent": 53,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 55,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-sync",
+      "component": null,
+      "of": "SyncStatus",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": "status",
+      "text": "Đã lưu · 10:45",
+      "box": [
+        1038,
+        20,
+        134,
+        32
+      ]
+    },
+    {
+      "id": 56,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "desk",
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Trợ lý",
+      "box": [
+        1183,
+        14,
+        113,
+        44
+      ]
+    },
+    {
+      "id": 57,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1200,
+        25,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 58,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": null,
+      "of": "IconButton",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thông báo — 4 chưa đọc",
+      "box": [
+        1308,
+        14,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 59,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1319,
+        25,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 60,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": null,
+      "of": "IconButton",
+      "part": "badge",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        1328,
+        18,
+        22,
+        20
+      ]
+    },
+    {
+      "id": 61,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-avatar",
+      "component": "AccountButton",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Nguyễn Văn Phúc · Quản lý — tài khoản, thông báo (4)",
+      "box": [
+        1364,
+        14,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 62,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-avatar",
+      "component": null,
+      "of": "AccountButton",
+      "part": "face",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "P",
+      "box": [
+        1366,
+        16,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 63,
+      "parent": 39,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "content",
+      "variants": [],
+      "state": [
+        "loading"
+      ],
+      "role": "main",
+      "text": "",
+      "box": [
+        252,
+        73,
+        1188,
+        835
+      ]
+    },
+    {
+      "id": 64,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-subnav",
+      "component": "SectionNav",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Bán",
+      "box": [
+        284,
+        97,
+        1124,
+        45
+      ]
+    },
+    {
+      "id": 65,
+      "parent": 64,
+      "kind": "component",
+      "class": "c-subnav",
+      "component": null,
+      "of": "SectionNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đơn hàng",
+      "box": [
+        284,
+        97,
+        100,
+        44
+      ]
+    },
+    {
+      "id": 66,
+      "parent": 64,
+      "kind": "component",
+      "class": "c-subnav",
+      "component": null,
+      "of": "SectionNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Giao hàng",
+      "box": [
+        388,
+        97,
+        105,
+        44
+      ]
+    },
+    {
+      "id": 67,
+      "parent": 64,
+      "kind": "component",
+      "class": "c-subnav",
+      "component": null,
+      "of": "SectionNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Khách hàng",
+      "box": [
+        496,
+        97,
+        117,
+        44
+      ]
+    },
+    {
+      "id": 68,
+      "parent": 63,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": "PageHeader",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        166,
+        1124,
+        64
+      ]
+    },
+    {
+      "id": 69,
+      "parent": 68,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Đơn hàng",
+      "box": [
+        284,
+        166,
+        203,
+        37
+      ]
+    },
+    {
+      "id": 70,
+      "parent": 68,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Thứ Sáu, 02/10/2026 · 23 đơn",
+      "box": [
+        284,
+        209,
+        203,
+        20
+      ]
+    },
+    {
+      "id": 71,
+      "parent": 68,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "acts",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1126,
+        186,
+        282,
+        44
+      ]
+    },
+    {
+      "id": 72,
+      "parent": 71,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Tạo đơn",
+      "box": [
+        1126,
+        186,
+        136,
+        44
+      ]
+    },
+    {
+      "id": 73,
+      "parent": 72,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1143,
+        197,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 74,
+      "parent": 71,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Mở quầy",
+      "box": [
+        1270,
+        186,
+        138,
+        44
+      ]
+    },
+    {
+      "id": 75,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1369,
+        197,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 76,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-skel-note",
+      "component": "LoadingNote",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "status",
+      "text": "Đang tải… · số liệu trước đó 10:43",
+      "box": [
+        284,
+        270,
+        1124,
+        23
+      ]
+    },
+    {
+      "id": 77,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-say",
+      "component": "OwnerSentence",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        308,
+        1124,
+        16
+      ]
+    },
+    {
+      "id": 78,
+      "parent": 77,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        308,
+        674,
+        16
+      ]
+    },
+    {
+      "id": 79,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-tabs",
+      "component": "StateTabs",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "tablist",
+      "text": "Lọc theo trạng thái",
+      "box": [
+        284,
+        340,
+        1124,
+        45
+      ]
+    },
+    {
+      "id": 80,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-tabs",
+      "component": null,
+      "of": "StateTabs",
+      "part": "tab",
+      "variants": [],
+      "state": [],
+      "role": "tab",
+      "text": "Cần xem",
+      "box": [
+        284,
+        340,
+        133,
+        44
+      ]
+    },
+    {
+      "id": 81,
+      "parent": 80,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        381,
+        354,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 82,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-tabs",
+      "component": null,
+      "of": "StateTabs",
+      "part": "tab",
+      "variants": [],
+      "state": [],
+      "role": "tab",
+      "text": "Chờ xác minh",
+      "box": [
+        421,
+        340,
+        173,
+        44
+      ]
+    },
+    {
+      "id": 83,
+      "parent": 82,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        558,
+        354,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 84,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-tabs",
+      "component": null,
+      "of": "StateTabs",
+      "part": "tab",
+      "variants": [],
+      "state": [],
+      "role": "tab",
+      "text": "Chưa thu",
+      "box": [
+        598,
+        340,
+        135,
+        44
+      ]
+    },
+    {
+      "id": 85,
+      "parent": 84,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        697,
+        354,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 86,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-tabs",
+      "component": null,
+      "of": "StateTabs",
+      "part": "tab",
+      "variants": [],
+      "state": [],
+      "role": "tab",
+      "text": "Hoàn tất",
+      "box": [
+        737,
+        340,
+        134,
+        44
+      ]
+    },
+    {
+      "id": 87,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        835,
+        354,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 88,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-tabs",
+      "component": null,
+      "of": "StateTabs",
+      "part": "tab",
+      "variants": [],
+      "state": [
+        "selected"
+      ],
+      "role": "tab",
+      "text": "Hôm nay",
+      "box": [
+        875,
+        340,
+        133,
+        44
+      ]
+    },
+    {
+      "id": 89,
+      "parent": 88,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        972,
+        354,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 90,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-tabs",
+      "component": null,
+      "of": "StateTabs",
+      "part": "tab",
+      "variants": [],
+      "state": [],
+      "role": "tab",
+      "text": "Tất cả",
+      "box": [
+        1012,
+        340,
+        87,
+        44
+      ]
+    },
+    {
+      "id": 91,
+      "parent": 63,
+      "kind": "recipe",
+      "class": "r-listbar",
+      "component": "ListToolbar",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        401,
+        1124,
+        50
+      ]
+    },
+    {
+      "id": 92,
+      "parent": 91,
+      "kind": "recipe",
+      "class": "r-listbar",
+      "component": null,
+      "of": "ListToolbar",
+      "part": "row",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        401,
+        1124,
+        50
+      ]
+    },
+    {
+      "id": 93,
+      "parent": 92,
+      "kind": "component",
+      "class": "c-menu-anchor",
+      "component": "MenuAnchor",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        402,
+        493,
+        48
+      ]
+    },
+    {
+      "id": 94,
+      "parent": 93,
+      "kind": "component",
+      "class": "c-search",
+      "component": "SearchField",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tìm",
+      "box": [
+        284,
+        402,
+        493,
+        48
+      ]
+    },
+    {
+      "id": 95,
+      "parent": 94,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        297,
+        415,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 96,
+      "parent": 94,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "input",
+      "variants": [],
+      "state": [],
+      "role": "combobox",
+      "text": "",
+      "box": [
+        329,
+        403,
+        439,
+        46
+      ]
+    },
+    {
+      "id": 97,
+      "parent": 93,
+      "kind": "component",
+      "class": "c-menu",
+      "component": "Menu",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "listbox",
+      "text": "Gợi ý",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 98,
+      "parent": 92,
+      "kind": "component",
+      "class": "c-seg",
+      "component": "SegmentedChoice",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "radiogroup",
+      "text": "Thời gian",
+      "box": [
+        785,
+        401,
+        374,
+        50
+      ]
+    },
+    {
+      "id": 99,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Hôm nay",
+      "box": [
+        788,
+        404,
+        90,
+        44
+      ]
+    },
+    {
+      "id": 100,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "7 ngày",
+      "box": [
+        881,
+        404,
+        90,
+        44
+      ]
+    },
+    {
+      "id": 101,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Tháng này",
+      "box": [
+        973,
+        404,
+        90,
+        44
+      ]
+    },
+    {
+      "id": 102,
+      "parent": 98,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Tự chọn",
+      "box": [
+        1066,
+        404,
+        90,
+        44
+      ]
+    },
+    {
+      "id": 103,
+      "parent": 92,
+      "kind": "recipe",
+      "class": "r-listbar",
+      "component": null,
+      "of": "ListToolbar",
+      "part": "end",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1167,
+        404,
+        241,
+        44
+      ]
+    },
+    {
+      "id": 104,
+      "parent": 103,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Lọc",
+      "box": [
+        1167,
+        404,
+        98,
+        44
+      ]
+    },
+    {
+      "id": 105,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1184,
+        415,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 106,
+      "parent": 103,
+      "kind": "component",
+      "class": "c-menu-anchor",
+      "component": "MenuAnchor",
+      "of": null,
+      "part": null,
+      "variants": [
+        "end"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1273,
+        404,
+        135,
+        44
+      ]
+    },
+    {
+      "id": 107,
+      "parent": 106,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Mới nhất",
+      "box": [
+        1273,
+        404,
+        135,
+        44
+      ]
+    },
+    {
+      "id": 108,
+      "parent": 107,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1373,
+        417,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 109,
+      "parent": 106,
+      "kind": "component",
+      "class": "c-menu",
+      "component": "Menu",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "menu",
+      "text": "Sắp xếp",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 110,
+      "parent": 109,
+      "kind": "component",
+      "class": "c-menu",
+      "component": null,
+      "of": "Menu",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "menuitemradio",
+      "text": "Mới nhất",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 111,
+      "parent": 110,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 112,
+      "parent": 109,
+      "kind": "component",
+      "class": "c-menu",
+      "component": null,
+      "of": "Menu",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "menuitemradio",
+      "text": "Tổng tiền lớn nhất",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 113,
+      "parent": 109,
+      "kind": "component",
+      "class": "c-menu",
+      "component": null,
+      "of": "Menu",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "menuitemradio",
+      "text": "Cần xem trước",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 114,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Danh sách đơn hàng",
+      "box": [
+        284,
+        467,
+        1124,
+        401
+      ]
+    },
+    {
+      "id": 115,
+      "parent": 114,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "scroll",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        309,
+        492,
+        1074,
+        351
+      ]
+    },
+    {
+      "id": 116,
+      "parent": 115,
+      "kind": "component",
+      "class": "c-table",
+      "component": "Table",
+      "of": null,
+      "part": null,
+      "variants": [
+        "stack"
+      ],
+      "state": [],
+      "role": "table",
+      "text": "MãKháchThanh toánTrạng thái",
+      "box": [
+        309,
+        492,
+        1074,
+        351
+      ]
+    },
+    {
+      "id": 117,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Giờ",
+      "box": [
+        444,
+        492,
+        83,
+        39
+      ]
+    },
+    {
+      "id": 118,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kênh",
+      "box": [
+        615,
+        492,
+        109,
+        39
+      ]
+    },
+    {
+      "id": 119,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Món",
+      "box": [
+        724,
+        492,
+        69,
+        39
+      ]
+    },
+    {
+      "id": 120,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tổng",
+      "box": [
+        793,
+        492,
+        148,
+        39
+      ]
+    },
+    {
+      "id": 121,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoá đơn",
+      "box": [
+        1248,
+        492,
+        135,
+        39
+      ]
+    },
+    {
+      "id": 122,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "code",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        309,
+        531,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 123,
+      "parent": 122,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        321,
+        549,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 124,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        444,
+        531,
+        83,
+        52
+      ]
+    },
+    {
+      "id": 125,
+      "parent": 124,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        456,
+        549,
+        40,
+        16
+      ]
+    },
+    {
+      "id": 126,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        527,
+        531,
+        88,
+        52
+      ]
+    },
+    {
+      "id": 127,
+      "parent": 126,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        539,
+        549,
+        45,
+        16
+      ]
+    },
+    {
+      "id": 128,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        615,
+        531,
+        109,
+        52
+      ]
+    },
+    {
+      "id": 129,
+      "parent": 128,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        627,
+        549,
+        60,
+        16
+      ]
+    },
+    {
+      "id": 130,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        724,
+        531,
+        69,
+        52
+      ]
+    },
+    {
+      "id": 131,
+      "parent": 130,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        736,
+        549,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 132,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        793,
+        531,
+        148,
+        52
+      ]
+    },
+    {
+      "id": 133,
+      "parent": 132,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        805,
+        549,
+        90,
+        16
+      ]
+    },
+    {
+      "id": 134,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        942,
+        531,
+        132,
+        52
+      ]
+    },
+    {
+      "id": 135,
+      "parent": 134,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        954,
+        549,
+        70,
+        16
+      ]
+    },
+    {
+      "id": 136,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1074,
+        531,
+        174,
+        52
+      ]
+    },
+    {
+      "id": 137,
+      "parent": 136,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1086,
+        549,
+        110,
+        16
+      ]
+    },
+    {
+      "id": 138,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1248,
+        531,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 139,
+      "parent": 138,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1260,
+        549,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 140,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "code",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        309,
+        583,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 141,
+      "parent": 140,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        321,
+        601,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 142,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        444,
+        583,
+        83,
+        52
+      ]
+    },
+    {
+      "id": 143,
+      "parent": 142,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        456,
+        601,
+        40,
+        16
+      ]
+    },
+    {
+      "id": 144,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        527,
+        583,
+        88,
+        52
+      ]
+    },
+    {
+      "id": 145,
+      "parent": 144,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        539,
+        601,
+        45,
+        16
+      ]
+    },
+    {
+      "id": 146,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        615,
+        583,
+        109,
+        52
+      ]
+    },
+    {
+      "id": 147,
+      "parent": 146,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        627,
+        601,
+        60,
+        16
+      ]
+    },
+    {
+      "id": 148,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        724,
+        583,
+        69,
+        52
+      ]
+    },
+    {
+      "id": 149,
+      "parent": 148,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        736,
+        601,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 150,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        793,
+        583,
+        148,
+        52
+      ]
+    },
+    {
+      "id": 151,
+      "parent": 150,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        805,
+        601,
+        90,
+        16
+      ]
+    },
+    {
+      "id": 152,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        942,
+        583,
+        132,
+        52
+      ]
+    },
+    {
+      "id": 153,
+      "parent": 152,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        954,
+        601,
+        70,
+        16
+      ]
+    },
+    {
+      "id": 154,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1074,
+        583,
+        174,
+        52
+      ]
+    },
+    {
+      "id": 155,
+      "parent": 154,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1086,
+        601,
+        110,
+        16
+      ]
+    },
+    {
+      "id": 156,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1248,
+        583,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 157,
+      "parent": 156,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1260,
+        601,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 158,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "code",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        309,
+        635,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 159,
+      "parent": 158,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        321,
+        653,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 160,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        444,
+        635,
+        83,
+        52
+      ]
+    },
+    {
+      "id": 161,
+      "parent": 160,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        456,
+        653,
+        40,
+        16
+      ]
+    },
+    {
+      "id": 162,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        527,
+        635,
+        88,
+        52
+      ]
+    },
+    {
+      "id": 163,
+      "parent": 162,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        539,
+        653,
+        45,
+        16
+      ]
+    },
+    {
+      "id": 164,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        615,
+        635,
+        109,
+        52
+      ]
+    },
+    {
+      "id": 165,
+      "parent": 164,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        627,
+        653,
+        60,
+        16
+      ]
+    },
+    {
+      "id": 166,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        724,
+        635,
+        69,
+        52
+      ]
+    },
+    {
+      "id": 167,
+      "parent": 166,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        736,
+        653,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 168,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        793,
+        635,
+        148,
+        52
+      ]
+    },
+    {
+      "id": 169,
+      "parent": 168,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        805,
+        653,
+        90,
+        16
+      ]
+    },
+    {
+      "id": 170,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        942,
+        635,
+        132,
+        52
+      ]
+    },
+    {
+      "id": 171,
+      "parent": 170,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        954,
+        653,
+        70,
+        16
+      ]
+    },
+    {
+      "id": 172,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1074,
+        635,
+        174,
+        52
+      ]
+    },
+    {
+      "id": 173,
+      "parent": 172,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1086,
+        653,
+        110,
+        16
+      ]
+    },
+    {
+      "id": 174,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1248,
+        635,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 175,
+      "parent": 174,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1260,
+        653,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 176,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "code",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        309,
+        687,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 177,
+      "parent": 176,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        321,
+        705,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 178,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        444,
+        687,
+        83,
+        52
+      ]
+    },
+    {
+      "id": 179,
+      "parent": 178,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        456,
+        705,
+        40,
+        16
+      ]
+    },
+    {
+      "id": 180,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        527,
+        687,
+        88,
+        52
+      ]
+    },
+    {
+      "id": 181,
+      "parent": 180,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        539,
+        705,
+        45,
+        16
+      ]
+    },
+    {
+      "id": 182,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        615,
+        687,
+        109,
+        52
+      ]
+    },
+    {
+      "id": 183,
+      "parent": 182,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        627,
+        705,
+        60,
+        16
+      ]
+    },
+    {
+      "id": 184,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        724,
+        687,
+        69,
+        52
+      ]
+    },
+    {
+      "id": 185,
+      "parent": 184,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        736,
+        705,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 186,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        793,
+        687,
+        148,
+        52
+      ]
+    },
+    {
+      "id": 187,
+      "parent": 186,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        805,
+        705,
+        90,
+        16
+      ]
+    },
+    {
+      "id": 188,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        942,
+        687,
+        132,
+        52
+      ]
+    },
+    {
+      "id": 189,
+      "parent": 188,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        954,
+        705,
+        70,
+        16
+      ]
+    },
+    {
+      "id": 190,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1074,
+        687,
+        174,
+        52
+      ]
+    },
+    {
+      "id": 191,
+      "parent": 190,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1086,
+        705,
+        110,
+        16
+      ]
+    },
+    {
+      "id": 192,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1248,
+        687,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 193,
+      "parent": 192,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1260,
+        705,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 194,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "code",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        309,
+        739,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 195,
+      "parent": 194,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        321,
+        757,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 196,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        444,
+        739,
+        83,
+        52
+      ]
+    },
+    {
+      "id": 197,
+      "parent": 196,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        456,
+        757,
+        40,
+        16
+      ]
+    },
+    {
+      "id": 198,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        527,
+        739,
+        88,
+        52
+      ]
+    },
+    {
+      "id": 199,
+      "parent": 198,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        539,
+        757,
+        45,
+        16
+      ]
+    },
+    {
+      "id": 200,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        615,
+        739,
+        109,
+        52
+      ]
+    },
+    {
+      "id": 201,
+      "parent": 200,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        627,
+        757,
+        60,
+        16
+      ]
+    },
+    {
+      "id": 202,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        724,
+        739,
+        69,
+        52
+      ]
+    },
+    {
+      "id": 203,
+      "parent": 202,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        736,
+        757,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 204,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        793,
+        739,
+        148,
+        52
+      ]
+    },
+    {
+      "id": 205,
+      "parent": 204,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        805,
+        757,
+        90,
+        16
+      ]
+    },
+    {
+      "id": 206,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        942,
+        739,
+        132,
+        52
+      ]
+    },
+    {
+      "id": 207,
+      "parent": 206,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        954,
+        757,
+        70,
+        16
+      ]
+    },
+    {
+      "id": 208,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1074,
+        739,
+        174,
+        52
+      ]
+    },
+    {
+      "id": 209,
+      "parent": 208,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1086,
+        757,
+        110,
+        16
+      ]
+    },
+    {
+      "id": 210,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1248,
+        739,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 211,
+      "parent": 210,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1260,
+        757,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 212,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "code",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        309,
+        791,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 213,
+      "parent": 212,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        321,
+        809,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 214,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        444,
+        791,
+        83,
+        52
+      ]
+    },
+    {
+      "id": 215,
+      "parent": 214,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        456,
+        809,
+        40,
+        16
+      ]
+    },
+    {
+      "id": 216,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        527,
+        791,
+        88,
+        52
+      ]
+    },
+    {
+      "id": 217,
+      "parent": 216,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        539,
+        809,
+        45,
+        16
+      ]
+    },
+    {
+      "id": 218,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        615,
+        791,
+        109,
+        52
+      ]
+    },
+    {
+      "id": 219,
+      "parent": 218,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        627,
+        809,
+        60,
+        16
+      ]
+    },
+    {
+      "id": 220,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        724,
+        791,
+        69,
+        52
+      ]
+    },
+    {
+      "id": 221,
+      "parent": 220,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        736,
+        809,
+        20,
+        16
+      ]
+    },
+    {
+      "id": 222,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "num",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        793,
+        791,
+        148,
+        52
+      ]
+    },
+    {
+      "id": 223,
+      "parent": 222,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        805,
+        809,
+        90,
+        16
+      ]
+    },
+    {
+      "id": 224,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        942,
+        791,
+        132,
+        52
+      ]
+    },
+    {
+      "id": 225,
+      "parent": 224,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        954,
+        809,
+        70,
+        16
+      ]
+    },
+    {
+      "id": 226,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1074,
+        791,
+        174,
+        52
+      ]
+    },
+    {
+      "id": 227,
+      "parent": 226,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1086,
+        809,
+        110,
+        16
+      ]
+    },
+    {
+      "id": 228,
+      "parent": 116,
+      "kind": "component",
+      "class": "c-table",
+      "component": null,
+      "of": "Table",
+      "part": "cell",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1248,
+        791,
+        135,
+        52
+      ]
+    },
+    {
+      "id": 229,
+      "parent": 228,
+      "kind": "component",
+      "class": "c-skel",
+      "component": "Skeleton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "line"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1260,
+        809,
+        80,
+        16
+      ]
+    },
+    {
+      "id": 230,
+      "parent": null,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": "PhoneTabBar",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Điều hướng nhanh",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 231,
+      "parent": 230,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hôm nay",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 232,
+      "parent": 231,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 233,
+      "parent": 231,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 234,
+      "parent": 230,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Quầy",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 235,
+      "parent": 234,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 236,
+      "parent": 230,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Bán",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 237,
+      "parent": 236,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 238,
+      "parent": 236,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 239,
+      "parent": 230,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tiền",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 240,
+      "parent": 239,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 241,
+      "parent": 239,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 242,
+      "parent": 230,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thêm",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 243,
+      "parent": 242,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

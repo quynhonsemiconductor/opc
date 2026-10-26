@@ -1,0 +1,237 @@
+/* OPC Design System — recipes.css (v1.0.0)
+   Product-specific compositions of c-* components (r-*). A recipe owns arrangement and its own small parts;
+   it never restyles a c-* component's look. Screens use recipes + components and add page grid only. */
+
+/* ================= r-shell — app shell: sidebar + top bar + content; phone = top bar + c-tabbar ================= */
+.r-shell { display: grid; grid-template-columns: var(--shell-nav-w) minmax(0, 1fr); min-height: 100vh; }
+.r-shell__nav { position: sticky; top: 0; height: 100vh; overflow-y: auto; border-right: var(--stroke) solid var(--line-strong); }
+.r-shell__main { min-width: 0; display: flex; flex-direction: column; }
+.r-shell__top { display: flex; align-items: center; gap: var(--space-3); min-height: 68px; padding: var(--space-3) var(--shell-gutter); background: var(--surface); border-bottom: var(--hairline) solid var(--line); }
+.r-shell__top .c-search { max-width: 520px; }
+.r-shell__spacer { flex: 1; }
+.r-shell__content { display: grid; gap: var(--space-6); padding: var(--space-6) var(--shell-gutter) var(--space-10); }
+.r-shell__phone { display: none; }
+@media (max-width: 1180px) { .r-shell__long { display: none; } }
+@media (max-width: 720px) {
+  .r-shell { grid-template-columns: minmax(0, 1fr); }
+  .r-shell__nav, .r-shell__desk { display: none; }
+  .r-shell__phone { display: flex; }
+  .r-shell__top { position: sticky; top: 0; z-index: 5; gap: 4px; min-height: 60px; padding: var(--space-2) var(--space-4); }
+  .r-shell__spacer { display: none; }
+  .r-shell__content { gap: var(--space-3); padding: var(--space-3) var(--space-4) var(--phone-bar-space); }
+}
+
+/* ================= r-page-head — date/title + shift line + page actions ================= */
+.r-page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+.r-page-head__title { font: 700 var(--fs-h1)/1.1 var(--font-display); letter-spacing: -.005em; }
+.r-page-head__sub { margin-top: 6px; }
+.r-page-head__acts { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+@media (max-width: 720px) {
+  .r-page-head__sub { margin-top: 2px; }
+  .r-page-head__acts { width: 100%; }
+  .r-page-head__acts > .c-btn { flex: 1 1 auto; }
+  .r-page-head__acts--desk { display: none; }   /* Hôm nay only: Quầy is in the tab bar; Tạo đơn / Ghi khoản chi live under Thêm */
+}
+
+/* ================= r-money-hero — "Tiền hôm nay": the page's largest answer ================= */
+.r-money-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-6); align-items: stretch; }
+.r-money-hero__tag { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin-bottom: 6px; }
+.r-money-hero__big-row { display: flex; align-items: flex-end; gap: var(--space-3); margin-top: 6px; }
+.r-money-hero__big { font: 700 var(--fs-hero)/.95 var(--font-display); letter-spacing: -.015em; white-space: nowrap; }
+.r-money-hero__lbl { padding-bottom: 2px; font: 500 var(--fs-note)/1.3 var(--font-body); color: var(--ink-2); }
+.r-money-hero__lbl b { font-family: var(--font-display); color: var(--ink); }
+.r-money-hero__pend { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 6px; font-size: var(--fs-lead); color: var(--ink-2); }
+.r-money-hero__pend .u-money { font-size: var(--fs-amount-l); }
+.r-money-hero__bar { margin: var(--space-3) 0 6px; }
+.r-money-hero__side { display: grid; align-content: center; gap: var(--space-2); min-width: 0; padding-left: var(--space-6); border-left: var(--stroke) solid var(--line-strong); }
+.r-money-hero__side-h { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); font: 600 var(--fs-body)/1.3 var(--font-body); }
+.r-money-hero__side-h .u-money { font-size: var(--fs-h3); }
+.r-money-hero__legend { display: none; }
+@media (max-width: 1180px) {
+  .r-money-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-4); }
+  .r-money-hero__side { padding-left: var(--space-4); }
+  .r-money-hero__big { font-size: 56px; }
+  .r-money-hero__big-row { flex-wrap: wrap; gap: 4px var(--space-3); }
+  .r-money-hero__lbl { width: 100%; }
+}
+@media (max-width: 720px) {
+  .r-money-hero { grid-template-columns: minmax(0, 1fr); }
+  .r-money-hero__big { font-size: var(--fs-hero); }
+  .r-money-hero__side { display: none; }            /* phone: the split lives in the legend + the Tiền tab */
+  .r-money-hero__legend { display: flex; flex-wrap: wrap; gap: 2px var(--space-4); font-size: var(--fs-note); color: var(--ink-2); }
+  .r-money-hero__legend b { font-family: var(--font-display); color: var(--ink); }
+}
+
+/* ================= r-due — a dated obligation inside a card (tax filing) ================= */
+.r-due { display: grid; gap: 4px; padding-top: var(--space-3); border-top: var(--hairline) solid var(--line); }
+.r-due__head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; }
+.r-due__title { font: 700 var(--fs-lead)/1.25 var(--font-display); }
+.r-due .u-money { font-size: var(--fs-h2); }
+
+/* ================= r-counter — counter focus mode: own header, 3 columns (products | ticket | pay) ================= */
+.r-counter { display: grid; grid-template-rows: auto minmax(0, 1fr); height: 100vh; }
+.r-counter__top { display: flex; align-items: center; gap: var(--space-3); min-height: 72px; padding: var(--space-2) var(--space-5); background: var(--surface); border-bottom: var(--stroke) solid var(--line-strong); }
+.r-counter__back { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-width: var(--target); min-height: var(--target); padding: 0 var(--space-3); border-radius: var(--radius); text-decoration: none; font: 600 var(--fs-body)/1 var(--font-body); }
+.r-counter__back:hover { background: var(--surface-sunk); }
+.r-counter__title { display: grid; min-width: 0; line-height: 1.2; }
+.r-counter__title h1 { font: 700 var(--fs-h2)/1.15 var(--font-display); white-space: nowrap; }
+.r-counter__title span { font-size: var(--fs-meta); color: var(--ink-2); white-space: nowrap; }
+.r-counter__conns { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-4); margin-left: auto; }
+.r-counter__col { min-height: 0; overflow-y: auto; }
+.r-counter__products { display: grid; align-content: start; gap: var(--space-4); padding: var(--space-5); }
+.r-counter__keys { display: flex; flex-wrap: wrap; gap: 6px var(--space-4); padding-top: var(--space-2); font-size: var(--fs-meta); color: var(--ink-3); }
+.r-counter__keys > span { display: inline-flex; align-items: center; gap: 6px; }
+.r-counter__phone-conns { display: none; }
+@media (max-width: 1180px) {
+  .r-counter { height: auto; min-height: 100vh; }
+  .r-counter__col { overflow: visible; }
+  .r-counter__back-label, .r-counter__conns > :nth-child(2) { display: none; }
+}
+@media (max-width: 720px) {
+  .r-counter { display: block; }
+  .r-counter__top { position: sticky; top: 0; z-index: 5; gap: var(--space-2); min-height: 64px; padding: var(--space-2) var(--space-3); }
+  .r-counter__back, .r-counter__conns, .r-counter__keys { display: none; }
+  .r-counter__top > .c-btn { margin-left: auto; }
+  .r-counter__products { gap: var(--space-3); padding: var(--space-3) var(--space-4) var(--phone-cart-space); }
+  .r-counter__phone-conns { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+}
+
+/* ================= r-ticket — the order being sold: lines with steppers, total, secondary actions ================= */
+.r-ticket { display: flex; flex-direction: column; background: var(--surface); border-left: var(--stroke) solid var(--line-strong); }
+.r-ticket__head { display: grid; gap: var(--space-3); padding: var(--space-4) var(--space-5) var(--space-3); border-bottom: var(--hairline) solid var(--line); }
+.r-ticket__row { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.r-ticket__code { font: 700 var(--fs-h2)/1 var(--font-display); }
+.r-ticket__lines { list-style: none; margin: 0; padding: 0 var(--space-5); }
+.c-sheet__body .r-ticket__lines { padding: 0; }
+.r-ticket__line { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px var(--space-3); padding: var(--space-3) 0; border-bottom: var(--hairline) solid var(--line); }
+.r-ticket__name { font: 600 var(--fs-control)/1.3 var(--font-body); }
+.r-ticket__amt { text-align: right; white-space: nowrap; font: 700 var(--fs-amount-s)/1 var(--font-display); }
+.r-ticket__calc { font-size: var(--fs-meta); color: var(--ink-3); }
+.r-ticket__sum { display: grid; gap: 4px; margin-top: auto; padding: var(--space-4) var(--space-5); border-top: var(--stroke) solid var(--line-strong); }
+.r-ticket__sum-k { font: 600 var(--fs-body)/1.3 var(--font-body); color: var(--ink-2); }
+.r-ticket__total { white-space: nowrap; font: 700 var(--fs-total)/1 var(--font-display); letter-spacing: -.01em; }
+.r-ticket__acts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); padding: 0 var(--space-5) var(--space-4); }
+@media (max-width: 1180px) { .r-ticket { border-left: 0; } .r-ticket__sum { margin-top: 0; } }
+
+/* ================= r-pay — take payment: method, QR, ladder, invoice, confirm ================= */
+.r-pay { display: flex; flex-direction: column; background: var(--canvas); border-left: var(--hairline) solid var(--line); }
+.r-pay__in { display: grid; gap: var(--space-3); padding: var(--space-3) var(--space-5); }
+.r-pay__foot { position: sticky; bottom: 0; display: grid; gap: var(--space-2); margin-top: auto; padding: var(--space-3) var(--space-5) var(--space-4); background: var(--canvas); border-top: var(--stroke) solid var(--line-strong); }
+.r-pay__total { display: none; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.r-pay__total span { font: 600 var(--fs-note)/1.3 var(--font-body); color: var(--ink-2); }
+.r-pay__total b { white-space: nowrap; font: 700 var(--fs-h1)/1 var(--font-display); }
+@media (max-width: 1180px) { .r-pay { border-left: 0; } .r-pay__total { display: flex; } }
+
+/* ================= r-invoice — fixed cash-register invoice notice + optional toggles ================= */
+.r-invoice { padding: 0 var(--space-3); background: var(--surface); border: var(--stroke) solid var(--line); border-radius: var(--radius-l); }
+.r-invoice__fixed { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: var(--hairline) solid var(--line); }
+.r-invoice__fixed strong { display: block; font: 600 var(--fs-body)/1.35 var(--font-body); }
+.r-invoice__toggles { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--space-2); }
+
+/* ================= r-cart-bar — phone: sticky cart summary + Thu tiền, clearly separated from the list ================= */
+.r-cart-bar { display: none; }
+@media (max-width: 720px) {
+  .r-cart-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; display: grid; gap: var(--space-2);
+    padding: var(--space-2) var(--space-4) calc(10px + var(--safe-bottom)); color: var(--ink);
+    background: var(--surface); border-top: var(--stroke-heavy) solid var(--line-strong);
+    box-shadow: 0 -12px 0 0 var(--canvas);     /* a canvas gap above the bar, so the last product row never touches it */
+  }
+}
+.r-cart-bar__sum { display: flex; align-items: center; gap: var(--space-3); min-height: var(--target); padding-bottom: var(--space-1); border-bottom: var(--hairline) solid var(--line); text-decoration: none; font: 500 var(--fs-note)/1.35 var(--font-body); }
+.r-cart-bar__edit { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; font: 700 var(--fs-body)/1 var(--font-display); text-decoration: underline; text-underline-offset: 3px; }
+.r-cart-bar__sum b { font-weight: 700; }
+.r-cart-bar__row { display: flex; align-items: center; gap: var(--space-3); }
+.r-cart-bar__t { display: grid; line-height: 1.2; }
+.r-cart-bar__t span { font-size: var(--fs-meta); color: var(--ink-2); }
+.r-cart-bar__t strong { white-space: nowrap; font: 700 var(--fs-h2)/1.1 var(--font-display); }
+.r-cart-bar__row .c-btn { margin-left: auto; --btn-px: 18px; }
+
+/* ================= r-pay-sheet — phone payment sheet arrangement ================= */
+.r-pay-sheet__who { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); }
+.r-pay-sheet__two { display: flex; justify-content: space-between; gap: var(--space-3); }
+.r-pay-sheet__two .c-btn { flex: 0 1 46%; }
+
+/* ================= r-onboard — one task per screen: top (back · steps · help) → title → body → sticky foot ================= */
+.r-onboard { min-height: 100vh; display: flex; flex-direction: column; background: var(--surface); }
+.r-onboard__top { position: sticky; top: 0; z-index: 5; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--space-3); padding: var(--space-2) var(--space-4); background: var(--surface); border-bottom: var(--stroke) solid var(--line-strong); }
+.r-onboard__help { display: inline-flex; align-items: center; gap: 6px; min-height: var(--target); padding: 0 var(--space-3); border: var(--stroke) solid var(--line-quiet); border-radius: var(--radius); font: 700 var(--fs-body)/1 var(--font-display); text-decoration: none; }
+.r-onboard__body { flex: 1; width: 100%; max-width: 560px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: var(--space-4); padding: var(--space-5) var(--space-4) var(--space-6); }
+.r-onboard__title { font: 700 var(--fs-h1)/1.15 var(--font-display); letter-spacing: -.005em; }
+.r-onboard__saved { display: flex; align-items: center; gap: var(--space-2); font-size: var(--fs-note); color: var(--ink-3); }
+.r-onboard__saved::before { content: ""; width: 10px; height: 10px; border-radius: 1px; background: var(--ok); }
+.r-onboard__foot { position: sticky; bottom: 0; display: grid; gap: var(--space-2); padding: var(--space-3) var(--space-4) calc(var(--space-3) + var(--safe-bottom)); background: var(--surface); border-top: var(--stroke) solid var(--line-strong); }
+.r-onboard__foot > * { width: 100%; max-width: 560px; margin: 0 auto; }
+.r-onboard__alt { display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap; font: 600 var(--fs-body)/1.3 var(--font-body); }
+.r-onboard__alt a, .r-onboard__alt button { min-height: var(--target); min-width: var(--target); padding: 0 var(--space-2); display: inline-flex; align-items: center; justify-content: center; text-underline-offset: 3px; text-decoration: underline; }
+.r-onboard__facts { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.r-onboard__fact { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-3); align-items: start; font-size: var(--fs-lead); line-height: 1.45; }
+.r-onboard__fact > .c-ic { color: var(--ok); width: 26px; height: 26px; }
+@media (min-width: 721px) {
+  .r-onboard { background: var(--canvas); }
+  .r-onboard__body { margin-top: var(--space-6); background: var(--surface); border: var(--stroke) solid var(--line); border-radius: var(--radius-l); padding: var(--space-6); }
+  .r-onboard__foot { position: static; background: transparent; border-top: 0; padding-bottom: var(--space-10); }
+}
+
+/* ================= r-help — help sheet content: questions → automatic answer → people ================= */
+.r-help__qs { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.r-help__people { display: grid; gap: var(--space-2); padding-top: var(--space-3); border-top: var(--stroke) solid var(--line-strong); }
+.r-help__people-h { font: 700 var(--fs-lead)/1.2 var(--font-display); }
+
+/* ================= r-listbar — list toolbar: search · date preset · filter · sort, then active chips ================= */
+.r-listbar { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+.r-listbar__row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.r-listbar__row > .c-search, .r-listbar__row > .c-menu-anchor { flex: 1 1 280px; }
+.r-listbar__row > .c-menu-anchor > .c-search { width: 100%; }
+.r-listbar__row > .c-seg { flex: 0 1 auto; }
+.r-listbar__end { display: flex; gap: var(--space-2); margin-left: auto; }
+@media (max-width: 720px) {
+  .r-listbar__row > .c-seg { display: none; }   /* phone: the date preset lives in the filter dialog; a non-default date shows as a chip */
+  .r-listbar__end { margin-left: 0; flex: 1 1 100%; flex-wrap: wrap; min-width: 0; }
+  .r-listbar__end > * { flex: 1; }
+}
+
+/* ================= r-filter — filter panel groups (dialog on desktop, full-screen on phone) ================= */
+.r-filter__group { display: grid; gap: var(--space-2); padding-bottom: var(--space-4); border-bottom: var(--hairline) solid var(--line); }
+.r-filter__h { font: 700 var(--fs-lead)/1.2 var(--font-display); }
+.r-filter__opts { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* ================= r-detail — detail page: back + title + state · main column + side column ================= */
+.r-detail__back { display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--target); padding: 0 var(--space-2) 0 0; text-decoration: none; font: 600 var(--fs-body)/1 var(--font-body); color: var(--ink-2); }
+.r-detail__head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.r-detail__title { font: 700 var(--fs-h1)/1.1 var(--font-display); }
+.r-detail__acts { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-left: auto; }
+.r-detail__grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(var(--side-min), 1fr); gap: var(--page-gap); align-items: start; }
+@media (max-width: 1180px) { .r-detail__grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 720px) { .r-detail__acts { margin-left: 0; width: 100%; } .r-detail__acts .c-btn { flex: 1; } }
+
+
+/* ======================================================================
+   v3.0.0 — A-Pro "Sổ Cái" material layer (hairlines, tiered surfaces, soft elevation, 10–14px radius,
+   rounded strokes, weight 500–600, motion). Overrides the v1–v2 material above; semantics unchanged.
+   Merged from directions/a-pro/skin.css after the GATE (2026-10-02).
+   ====================================================================== */
+.r-page-head__title, .r-detail__title, .r-onboard__title { font-family: var(--font-title); font-weight: 600; letter-spacing: -.015em; }
+.r-page-head__title { font-size: 34px; }
+.r-money-hero__big { font: 600 var(--fs-hero)/1 var(--font-display); letter-spacing: -.035em; }
+.r-money-hero__side { border-left: 1px solid var(--line); }
+.r-shell__nav { border-right: 1px solid var(--line); background: var(--canvas); }
+.r-shell__top { border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 92%, transparent); }
+.r-ticket { border-left: 1px solid var(--line); }
+.r-ticket__code { font: 600 var(--fs-h2)/1 var(--font-mono); letter-spacing: -.02em; }
+.r-ticket__total { font-weight: 600; letter-spacing: -.03em; }
+.r-ticket__sum, .r-pay__foot { border-top: 1px solid var(--line); }
+.r-counter__top { border-bottom: 1px solid var(--line); }
+.r-counter__title h1 { font: 600 var(--fs-h2)/1.15 var(--font-title); }
+.r-cart-bar { border-top: 1px solid var(--line); box-shadow: 0 -10px 30px -12px rgb(16 24 40 / .25); }
+.r-invoice { border: 1px solid var(--line); border-radius: var(--radius-l); }
+@media (max-width: 1180px) {
+  .r-money-hero__big { font-size: 52px; }
+}
+@media (max-width: 720px) {
+  .r-money-hero__big { font-size: 44px; }
+}
+@media (max-width: 720px) {
+  .r-page-head__title { font-size: 28px; }
+}
+.r-counter__products { grid-auto-rows: max-content; }   /* scroll containers (the category row) must not be squeezed when the list is long */

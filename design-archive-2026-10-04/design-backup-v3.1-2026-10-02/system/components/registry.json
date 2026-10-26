@@ -1,0 +1,1295 @@
+{
+ "$description": "Design-component registry: the stack-neutral name of every c-*/r-* class, its WAI-ARIA APG behaviour pattern (https://www.w3.org/WAI/ARIA/apg/patterns/), and its parts/variants. Library maps (references/component-maps/*.json) key off these names. status.mjs flags components missing here.",
+ "c-ic": {
+  "name": "Icon",
+  "apg": null,
+  "role": "decorative-svg",
+  "variants": [
+   "s",
+   "l"
+  ],
+  "parts": [],
+  "shadcn": "lucide-react (map sprite ids)"
+ },
+ "c-kbd": {
+  "name": "Kbd",
+  "apg": null,
+  "variants": [],
+  "parts": []
+ },
+ "c-brand": {
+  "name": "BrandMark",
+  "apg": null,
+  "variants": [],
+  "parts": [
+   "mark",
+   "by"
+  ],
+  "custom": true
+ },
+ "c-hh": {
+  "name": "HouseholdSwitcher",
+  "apg": "menu-button",
+  "variants": [
+   "bar"
+  ],
+  "parts": [
+   "mark",
+   "text",
+   "name",
+   "sub"
+  ],
+  "shadcn": "DropdownMenu trigger"
+ },
+ "c-nav": {
+  "name": "SidebarNav",
+  "apg": "disclosure-navigation",
+  "variants": [],
+  "parts": [
+   "list",
+   "item",
+   "item--counter",
+   "count",
+   "foot"
+  ],
+  "shadcn": "Sidebar"
+ },
+ "c-conn": {
+  "name": "ConnectionStatus",
+  "apg": null,
+  "role": "status-label",
+  "variants": [
+   "off",
+   "err"
+  ],
+  "parts": [],
+  "custom": true
+ },
+ "c-search": {
+  "name": "SearchField",
+  "apg": null,
+  "role": "searchbox",
+  "variants": [
+   "strong"
+  ],
+  "parts": [
+   "input",
+   "mic"
+  ],
+  "shadcn": "Input + icon"
+ },
+ "c-icon-btn": {
+  "name": "IconButton",
+  "apg": "button",
+  "variants": [
+   "outline"
+  ],
+  "parts": [
+   "badge"
+  ],
+  "shadcn": "Button size=icon"
+ },
+ "c-avatar": {
+  "name": "AccountButton",
+  "apg": "menu-button",
+  "variants": [],
+  "parts": [
+   "face"
+  ],
+  "shadcn": "Avatar inside DropdownMenu trigger"
+ },
+ "c-btn": {
+  "name": "Button",
+  "apg": "button",
+  "variants": [
+   "act",
+   "quiet",
+   "danger",
+   "wrap",
+   "block"
+  ],
+  "states": [
+   "hover",
+   "focus-visible",
+   "active",
+   "disabled",
+   "aria-disabled",
+   "aria-busy"
+  ],
+  "parts": [
+   "icon",
+   "label",
+   "kbd",
+   "count"
+  ],
+  "shadcn": "Button (variant: act→default, quiet→outline, danger→destructive-outline)"
+ },
+ "c-confirm": {
+  "name": "MoneyConfirm",
+  "apg": "button",
+  "variants": [
+   "done"
+  ],
+  "states": [
+   "aria-disabled (locked until bank reports)"
+  ],
+  "parts": [
+   "pic",
+   "label",
+   "reason"
+  ],
+  "custom": true
+ },
+ "c-card": {
+  "name": "Card",
+  "apg": null,
+  "role": "region",
+  "variants": [
+   "tight"
+  ],
+  "parts": [
+   "head",
+   "title"
+  ],
+  "shadcn": "Card"
+ },
+ "c-say": {
+  "name": "OwnerSentence",
+  "apg": null,
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-sign": {
+  "name": "StatusSign",
+  "apg": null,
+  "role": "status-label",
+  "variants": [
+   "wait",
+   "pend",
+   "ok",
+   "you",
+   "err",
+   "unk"
+  ],
+  "parts": [
+   "pic"
+  ],
+  "shadcn": "Badge (custom variants)"
+ },
+ "c-moneyline": {
+  "name": "MoneyLine",
+  "apg": null,
+  "role": "img with aria-label",
+  "variants": [],
+  "states": [
+   "data-step=1|2|3"
+  ],
+  "parts": [],
+  "custom": true
+ },
+ "c-lanes": {
+  "name": "LaneList",
+  "apg": null,
+  "role": "ordered list",
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-lane": {
+  "name": "Lane",
+  "apg": null,
+  "role": "listitem",
+  "variants": [
+   "now",
+   "done"
+  ],
+  "parts": [
+   "n",
+   "body",
+   "kicker",
+   "title",
+   "amt",
+   "hint",
+   "hint--phone",
+   "detail",
+   "list",
+   "pair",
+   "actions",
+   "more"
+  ],
+  "custom": true
+ },
+ "c-later": {
+  "name": "LaterTasks",
+  "apg": "disclosure",
+  "variants": [],
+  "parts": [
+   "summary",
+   "list",
+   "item",
+   "n",
+   "text"
+  ],
+  "shadcn": "Collapsible"
+ },
+ "c-list": {
+  "name": "LedgerList",
+  "apg": null,
+  "role": "list",
+  "variants": [],
+  "parts": [
+   "row",
+   "name",
+   "amt",
+   "meta"
+  ],
+  "custom": true
+ },
+ "c-msigns": {
+  "name": "MoneySignList",
+  "apg": null,
+  "role": "list",
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-msign": {
+  "name": "MoneySign",
+  "apg": null,
+  "role": "listitem",
+  "variants": [
+   "ok",
+   "pend",
+   "cash"
+  ],
+  "parts": [
+   "pic",
+   "word",
+   "sub",
+   "amt",
+   "go",
+   "go--quiet"
+  ],
+  "custom": true
+ },
+ "c-truthbar": {
+  "name": "TruthBar",
+  "apg": null,
+  "role": "img with aria-label",
+  "variants": [],
+  "parts": [
+   "ok",
+   "pend",
+   "cash"
+  ],
+  "custom": true
+ },
+ "c-meter": {
+  "name": "ThresholdMeter",
+  "apg": "meter",
+  "variants": [],
+  "parts": [
+   "row",
+   "bar",
+   "fill",
+   "mark"
+  ],
+  "shadcn": "Progress + marker"
+ },
+ "c-daybars": {
+  "name": "DayBars",
+  "apg": null,
+  "role": "list",
+  "variants": [],
+  "parts": [
+   "day",
+   "day--today",
+   "d",
+   "bar",
+   "v"
+  ],
+  "custom": true
+ },
+ "c-table": {
+  "name": "Table",
+  "apg": "table",
+  "variants": [
+   "stack"
+  ],
+  "parts": [
+   "scroll",
+   "num",
+   "code",
+   "total",
+   "row--link",
+   "cell--main",
+   "cell--end",
+   "cell--wide",
+   "cell--hide",
+   "cell--opt",
+   "phone",
+   "desk",
+   "row--sum",
+   "row--selected"
+  ],
+  "shadcn": "Table"
+ },
+ "c-switch": {
+  "name": "Switch",
+  "apg": "switch",
+  "variants": [],
+  "states": [
+   "aria-checked",
+   "disabled"
+  ],
+  "parts": [
+   "track",
+   "label",
+   "sub"
+  ],
+  "shadcn": "Switch + Label"
+ },
+ "c-seg": {
+  "name": "SegmentedChoice",
+  "apg": "radio",
+  "variants": [],
+  "states": [
+   "aria-checked"
+  ],
+  "parts": [
+   "opt"
+  ],
+  "shadcn": "ToggleGroup type=single (or RadioGroup)"
+ },
+ "c-filters": {
+  "name": "FilterBar",
+  "apg": "toolbar",
+  "variants": [],
+  "parts": [],
+  "shadcn": "ToggleGroup"
+ },
+ "c-filter": {
+  "name": "FilterChip",
+  "apg": "button (aria-pressed)",
+  "variants": [],
+  "parts": [],
+  "shadcn": "Toggle"
+ },
+ "c-picker": {
+  "name": "Picker",
+  "apg": "combobox (opens dialog)",
+  "variants": [],
+  "parts": [
+   "label",
+   "sub",
+   "aside"
+  ],
+  "shadcn": "Button opening Command/Dialog"
+ },
+ "c-prods": {
+  "name": "ProductGrid",
+  "apg": null,
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-prod": {
+  "name": "ProductButton",
+  "apg": "button",
+  "variants": [],
+  "states": [
+   "data-incart",
+   "disabled"
+  ],
+  "parts": [
+   "badge",
+   "name",
+   "price",
+   "unit",
+   "stock",
+   "stock--low",
+   "add",
+   "img"
+  ],
+  "custom": true
+ },
+ "c-stepper": {
+  "name": "QuantityStepper",
+  "apg": "spinbutton",
+  "variants": [],
+  "parts": [
+   "btn",
+   "value"
+  ],
+  "custom": true
+ },
+ "c-qr": {
+  "name": "QrPayment",
+  "apg": null,
+  "role": "region + live status",
+  "variants": [
+   "compact",
+   "large"
+  ],
+  "parts": [
+   "img",
+   "meta",
+   "k",
+   "amt",
+   "status",
+   "status--pend",
+   "status--ok",
+   "status-pic"
+  ],
+  "custom": true
+ },
+ "c-route": {
+  "name": "PaymentLadder",
+  "apg": null,
+  "role": "ordered list, aria-current=step",
+  "variants": [
+   "compact"
+  ],
+  "parts": [
+   "stn",
+   "stn--wait",
+   "stn--pend",
+   "stn--ok",
+   "sq",
+   "w",
+   "here",
+   "caption"
+  ],
+  "custom": true
+ },
+ "c-sheet": {
+  "name": "BottomSheet",
+  "apg": "dialog-modal",
+  "variants": [],
+  "parts": [
+   "top",
+   "grip",
+   "head",
+   "k",
+   "title",
+   "body",
+   "foot"
+  ],
+  "shadcn": "Drawer (vaul) / Sheet side=bottom"
+ },
+ "c-tabbar": {
+  "name": "PhoneTabBar",
+  "apg": null,
+  "role": "navigation",
+  "variants": [],
+  "parts": [
+   "item",
+   "item--counter",
+   "count"
+  ],
+  "custom": true
+ },
+ "r-shell": {
+  "name": "AppShell",
+  "recipe": true,
+  "uses": [
+   "c-nav",
+   "c-hh",
+   "c-search",
+   "c-icon-btn",
+   "c-avatar",
+   "c-tabbar"
+  ],
+  "parts": [
+   "nav",
+   "main",
+   "top",
+   "spacer",
+   "content",
+   "phone",
+   "desk",
+   "long"
+  ]
+ },
+ "r-page-head": {
+  "name": "PageHeader",
+  "recipe": true,
+  "uses": [
+   "c-btn",
+   "c-conn"
+  ],
+  "parts": [
+   "title",
+   "sub",
+   "acts"
+  ]
+ },
+ "r-money-hero": {
+  "name": "MoneyToday",
+  "recipe": true,
+  "uses": [
+   "c-card",
+   "c-say",
+   "c-sign",
+   "c-truthbar",
+   "c-msign"
+  ],
+  "parts": [
+   "tag",
+   "big-row",
+   "big",
+   "lbl",
+   "pend",
+   "bar",
+   "side",
+   "side-h"
+  ]
+ },
+ "r-due": {
+  "name": "DueItem",
+  "recipe": true,
+  "uses": [],
+  "parts": [
+   "head",
+   "title"
+  ]
+ },
+ "r-counter": {
+  "name": "CounterShell",
+  "recipe": true,
+  "uses": [
+   "c-icon-btn",
+   "c-conn",
+   "c-btn"
+  ],
+  "parts": [
+   "top",
+   "back",
+   "back-label",
+   "title",
+   "conns",
+   "col",
+   "products",
+   "keys",
+   "phone-conns"
+  ]
+ },
+ "r-ticket": {
+  "name": "OrderTicket",
+  "recipe": true,
+  "uses": [
+   "c-picker",
+   "c-stepper",
+   "c-btn"
+  ],
+  "parts": [
+   "head",
+   "row",
+   "code",
+   "lines",
+   "line",
+   "name",
+   "amt",
+   "calc",
+   "sum",
+   "sum-k",
+   "total",
+   "acts"
+  ]
+ },
+ "r-pay": {
+  "name": "PaymentPanel",
+  "recipe": true,
+  "uses": [
+   "c-seg",
+   "c-qr",
+   "c-route",
+   "c-confirm"
+  ],
+  "parts": [
+   "in",
+   "foot",
+   "total"
+  ]
+ },
+ "r-invoice": {
+  "name": "InvoiceOptions",
+  "recipe": true,
+  "uses": [
+   "c-switch"
+  ],
+  "parts": [
+   "fixed",
+   "toggles"
+  ]
+ },
+ "r-cart-bar": {
+  "name": "PhoneCartBar",
+  "recipe": true,
+  "uses": [
+   "c-btn"
+  ],
+  "parts": [
+   "sum",
+   "row",
+   "t"
+  ]
+ },
+ "r-pay-sheet": {
+  "name": "PhonePaymentSheet",
+  "recipe": true,
+  "uses": [
+   "c-sheet",
+   "c-picker",
+   "c-seg",
+   "c-qr",
+   "c-route",
+   "c-confirm"
+  ],
+  "parts": [
+   "who",
+   "two"
+  ]
+ },
+ "c-banner": {
+  "name": "Banner",
+  "apg": null,
+  "role": "status (alert for --err)",
+  "variants": [
+   "err",
+   "pend",
+   "ok"
+  ],
+  "parts": [
+   "pic",
+   "text",
+   "title",
+   "body",
+   "actions"
+  ],
+  "shadcn": "Alert"
+ },
+ "c-empty": {
+  "name": "EmptyState",
+  "apg": null,
+  "variants": [
+   "center",
+   "flush"
+  ],
+  "parts": [
+   "pic",
+   "title",
+   "body"
+  ],
+  "custom": true
+ },
+ "c-tabs": {
+  "name": "StateTabs",
+  "apg": "tabs",
+  "variants": [],
+  "states": [
+   "aria-selected"
+  ],
+  "parts": [
+   "tab",
+   "tab--you",
+   "count"
+  ],
+  "shadcn": "Tabs (TabsList/TabsTrigger)"
+ },
+ "c-dialog": {
+  "name": "Dialog",
+  "apg": "dialog-modal",
+  "variants": [],
+  "parts": [
+   "panel",
+   "head",
+   "k",
+   "title",
+   "body",
+   "foot",
+   "foot-note"
+  ],
+  "shadcn": "Dialog (desktop) / Drawer (≤720)"
+ },
+ "c-options": {
+  "name": "OptionList",
+  "apg": "radio",
+  "variants": [],
+  "parts": [],
+  "shadcn": "RadioGroup"
+ },
+ "c-option": {
+  "name": "OptionCard",
+  "apg": "radio",
+  "variants": [
+   "big",
+   "action"
+  ],
+  "states": [
+   "aria-checked",
+   "disabled"
+  ],
+  "parts": [
+   "radio",
+   "body",
+   "title",
+   "meta",
+   "why",
+   "amt",
+   "tag",
+   "pic"
+  ],
+  "shadcn": "RadioGroupItem as card"
+ },
+ "c-field": {
+  "name": "Field",
+  "apg": null,
+  "role": "labelled input",
+  "variants": [
+   "money"
+  ],
+  "states": [
+   "data-invalid",
+   "disabled",
+   "data-check (AI chưa chắc)"
+  ],
+  "parts": [
+   "label",
+   "control",
+   "input",
+   "suffix",
+   "hint"
+  ],
+  "shadcn": "Label + Input (+ FormMessage)"
+ },
+ "c-change": {
+  "name": "ChangeDue",
+  "apg": null,
+  "role": "status",
+  "variants": [
+   "short"
+  ],
+  "parts": [
+   "k",
+   "v"
+  ],
+  "custom": true
+ },
+ "c-kv": {
+  "name": "FactList",
+  "apg": null,
+  "role": "description list",
+  "variants": [],
+  "parts": [
+   "raw"
+  ],
+  "custom": true
+ },
+ "c-steps": {
+  "name": "StepProgress",
+  "apg": null,
+  "role": "progressbar-like (aria-label 'Bước 3/6')",
+  "variants": [],
+  "parts": [
+   "label",
+   "bar",
+   "seg",
+   "seg--done",
+   "seg--now"
+  ],
+  "custom": true
+ },
+ "c-otp": {
+  "name": "CodeInput",
+  "apg": null,
+  "role": "group of 6 inputs (autocomplete one-time-code on the first)",
+  "variants": [],
+  "states": [
+   "data-invalid"
+  ],
+  "parts": [
+   "box"
+  ],
+  "shadcn": "InputOTP"
+ },
+ "c-answer": {
+  "name": "AssistantAnswer",
+  "apg": null,
+  "role": "region (aria-live polite)",
+  "variants": [],
+  "parts": [
+   "who",
+   "q",
+   "text",
+   "foot"
+  ],
+  "custom": true
+ },
+ "c-coach": {
+  "name": "CoachMark",
+  "apg": "dialog (non-modal)",
+  "variants": [],
+  "parts": [
+   "k",
+   "text",
+   "actions"
+  ],
+  "custom": true
+ },
+ "c-coach-anchor": {
+  "name": "CoachTarget",
+  "apg": null,
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-camera": {
+  "name": "CaptureFrame",
+  "apg": null,
+  "variants": [
+   "face"
+  ],
+  "parts": [
+   "frame",
+   "hint",
+   "shutter"
+  ],
+  "custom": true
+ },
+ "r-onboard": {
+  "name": "OnboardingStep",
+  "recipe": true,
+  "uses": [
+   "c-icon-btn",
+   "c-steps",
+   "c-btn"
+  ],
+  "parts": [
+   "top",
+   "help",
+   "body",
+   "title",
+   "saved",
+   "foot",
+   "alt",
+   "facts",
+   "fact"
+  ]
+ },
+ "r-help": {
+  "name": "HelpSheet",
+  "recipe": true,
+  "uses": [
+   "c-sheet",
+   "c-filter",
+   "c-answer",
+   "c-btn"
+  ],
+  "parts": [
+   "qs",
+   "people",
+   "people-h"
+  ]
+ },
+ "c-chips": {
+  "name": "ActiveFilters",
+  "apg": null,
+  "role": "group",
+  "variants": [],
+  "parts": [
+   "clear",
+   "result"
+  ],
+  "custom": true
+ },
+ "c-chip": {
+  "name": "FilterChipRemovable",
+  "apg": "button (remove)",
+  "variants": [],
+  "parts": [
+   "k",
+   "x"
+  ],
+  "shadcn": "Badge + Button(icon)"
+ },
+ "c-menu": {
+  "name": "Menu",
+  "apg": "listbox (suggest) / menu (sort, aria-checked)",
+  "variants": [],
+  "parts": [
+   "group",
+   "item",
+   "aside",
+   "sub"
+  ],
+  "shadcn": "DropdownMenu / Command"
+ },
+ "c-menu-anchor": {
+  "name": "MenuAnchor",
+  "apg": null,
+  "variants": [
+   "end"
+  ],
+  "parts": [],
+  "custom": true
+ },
+ "c-cal": {
+  "name": "Calendar",
+  "apg": "grid (date picker dialog)",
+  "variants": [],
+  "parts": [
+   "head",
+   "grid",
+   "dow",
+   "day",
+   "day--out",
+   "day--today",
+   "day--range",
+   "day--start",
+   "day--end"
+  ],
+  "shadcn": "Calendar mode=range (react-day-picker)"
+ },
+ "c-pager": {
+  "name": "Pagination",
+  "apg": null,
+  "role": "navigation",
+  "variants": [],
+  "parts": [
+   "info",
+   "list",
+   "page",
+   "gap",
+   "step"
+  ],
+  "shadcn": "Pagination"
+ },
+ "r-listbar": {
+  "name": "ListToolbar",
+  "recipe": true,
+  "uses": [
+   "c-search",
+   "c-seg",
+   "c-btn",
+   "c-menu",
+   "c-chips"
+  ],
+  "parts": [
+   "row",
+   "end"
+  ]
+ },
+ "r-filter": {
+  "name": "FilterPanel",
+  "recipe": true,
+  "uses": [
+   "c-dialog",
+   "c-filter",
+   "c-btn"
+  ],
+  "parts": [
+   "group",
+   "h",
+   "opts"
+  ]
+ },
+ "c-skel": {
+  "name": "Skeleton",
+  "apg": null,
+  "role": "presentation (container aria-busy=true)",
+  "variants": [
+   "line",
+   "title",
+   "figure",
+   "block"
+  ],
+  "parts": [],
+  "shadcn": "Skeleton"
+ },
+ "c-skel-note": {
+  "name": "LoadingNote",
+  "apg": null,
+  "role": "status",
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-timeline": {
+  "name": "Timeline",
+  "apg": null,
+  "role": "list",
+  "variants": [],
+  "parts": [
+   "item",
+   "item--ok",
+   "item--pend",
+   "item--err",
+   "item--you",
+   "time",
+   "dot",
+   "body",
+   "what",
+   "who"
+  ],
+  "custom": true
+ },
+ "c-doc": {
+  "name": "DocumentPreview",
+  "apg": null,
+  "role": "document",
+  "variants": [],
+  "parts": [
+   "head",
+   "title",
+   "no",
+   "party",
+   "party-k",
+   "total",
+   "foot"
+  ],
+  "custom": true
+ },
+ "r-detail": {
+  "name": "DetailPage",
+  "recipe": true,
+  "uses": [
+   "c-btn",
+   "c-sign",
+   "c-card",
+   "c-timeline"
+  ],
+  "parts": [
+   "back",
+   "head",
+   "title",
+   "acts",
+   "grid"
+  ]
+ },
+ "c-subnav": {
+  "name": "SectionNav",
+  "apg": null,
+  "role": "navigation (links, aria-current=page)",
+  "variants": [
+   "wrap"
+  ],
+  "parts": [
+   "item",
+   "count",
+   "group"
+  ],
+  "shadcn": "NavigationMenu / Tabs as links"
+ },
+ "c-menulist": {
+  "name": "DestinationList",
+  "apg": null,
+  "role": "navigation list",
+  "variants": [],
+  "parts": [
+   "h",
+   "list",
+   "item",
+   "item--you",
+   "count",
+   "sub"
+  ],
+  "custom": true
+ },
+ "c-tasks": {
+  "name": "ApprovalList",
+  "apg": null,
+  "role": "list",
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-task": {
+  "name": "ApprovalCard",
+  "apg": null,
+  "role": "article",
+  "variants": [
+   "first"
+  ],
+  "parts": [
+   "meta",
+   "src",
+   "src--ai",
+   "head",
+   "title",
+   "amt",
+   "evidence",
+   "after",
+   "actions"
+  ],
+  "custom": true
+ },
+ "c-drawer": {
+  "name": "SidePanel",
+  "apg": "dialog (modal on phone; non-modal docked on desktop)",
+  "variants": [
+   "wide",
+   "docked"
+  ],
+  "parts": [
+   "panel",
+   "head",
+   "k",
+   "title",
+   "body",
+   "foot"
+  ],
+  "shadcn": "Sheet side=right / Drawer"
+ },
+ "c-command": {
+  "name": "CommandPalette",
+  "apg": "combobox + listbox in a dialog",
+  "variants": [],
+  "parts": [
+   "panel",
+   "input",
+   "list",
+   "foot"
+  ],
+  "shadcn": "Command (cmdk) in Dialog"
+ },
+ "c-toasts": {
+  "name": "ToastRegion",
+  "apg": null,
+  "role": "region aria-live",
+  "variants": [],
+  "parts": [],
+  "shadcn": "Sonner"
+ },
+ "c-toast": {
+  "name": "Toast",
+  "apg": null,
+  "role": "status (alert for --err)",
+  "variants": [
+   "err"
+  ],
+  "parts": [
+   "pic",
+   "text",
+   "bar"
+  ],
+  "shadcn": "Sonner toast"
+ },
+ "c-sync": {
+  "name": "SyncStatus",
+  "apg": null,
+  "role": "status",
+  "variants": [
+   "saving",
+   "offline"
+  ],
+  "parts": [],
+  "custom": true
+ },
+ "c-notices": {
+  "name": "NotificationList",
+  "apg": null,
+  "role": "list",
+  "variants": [],
+  "parts": [],
+  "custom": true
+ },
+ "c-notice": {
+  "name": "Notification",
+  "apg": null,
+  "role": "link",
+  "variants": [
+   "unread",
+   "money",
+   "warn",
+   "err"
+  ],
+  "parts": [
+   "pic",
+   "title",
+   "time",
+   "text"
+  ],
+  "custom": true
+ },
+ "c-check": {
+  "name": "Checkbox",
+  "apg": "checkbox",
+  "variants": [],
+  "parts": [],
+  "shadcn": "Checkbox"
+ },
+ "c-bulkbar": {
+  "name": "BulkActionBar",
+  "apg": "toolbar",
+  "variants": [],
+  "parts": [
+   "count",
+   "sum",
+   "actions"
+  ],
+  "custom": true
+ },
+ "c-crumbs": {
+  "name": "Breadcrumb",
+  "apg": "breadcrumb",
+  "variants": [],
+  "parts": [],
+  "shadcn": "Breadcrumb"
+ },
+ "c-spark": {
+  "name": "Sparkline",
+  "apg": null,
+  "role": "img + aria-label",
+  "variants": [],
+  "parts": [
+   "area"
+  ],
+  "custom": true
+ },
+ "c-trend": {
+  "name": "TrendChip",
+  "apg": null,
+  "variants": [
+   "down"
+  ],
+  "parts": [],
+  "custom": true
+ },
+ "c-receipt": {
+  "name": "Receipt",
+  "apg": null,
+  "role": "document",
+  "variants": [],
+  "parts": [
+   "shop",
+   "lines",
+   "line",
+   "total",
+   "foot",
+   "code"
+  ],
+  "custom": true
+ },
+ "c-msgcard": {
+  "name": "ZaloMessagePreview",
+  "apg": null,
+  "variants": [],
+  "parts": [
+   "from",
+   "body",
+   "actions"
+  ],
+  "custom": true
+ },
+ "c-sizepick": {
+  "name": "TextSizePicker",
+  "apg": "radio",
+  "variants": [],
+  "parts": [
+   "opt"
+  ],
+  "custom": true
+ }
+}

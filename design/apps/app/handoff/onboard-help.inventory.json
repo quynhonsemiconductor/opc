@@ -1,0 +1,2526 @@
+{
+  "screen": "onboard-help.html",
+  "title": "Hỏi về bước 5/6 · Hàng hoá — Đăng ký OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        216,
+        123,
+        560,
+        564
+      ]
+    },
+    {
+      "region": "Các bước đăng ký",
+      "box": [
+        824,
+        123,
+        400,
+        414
+      ]
+    },
+    {
+      "region": "Tiến độ đăng ký",
+      "box": [
+        824,
+        123,
+        400,
+        382
+      ]
+    },
+    {
+      "region": "footer",
+      "box": [
+        216,
+        686,
+        560,
+        164
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": "OnboardingStep",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Quay lại bước trước",
+      "box": [
+        16,
+        8,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-back",
+      "box": [
+        33,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 4,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-steps",
+      "component": "StepProgress",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "img",
+      "text": "Bước 6 trên 6: Hàng và số đầu kỳ",
+      "box": [
+        84,
+        22,
+        1247,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 5,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bước 6/6 · Hàng và số đầu kỳ",
+      "box": [
+        84,
+        22,
+        1247,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 6,
+      "parent": 4,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        84,
+        45,
+        1247,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        84,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 8,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        293,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 9,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        501,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 10,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        710,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 11,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        918,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 12,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-steps",
+      "component": null,
+      "of": "StepProgress",
+      "part": "seg",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1127,
+        45,
+        205,
+        5
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 13,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "help",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hỏi",
+      "box": [
+        1343,
+        8,
+        81,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-help",
+      "box": [
+        1356,
+        25,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 15,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        216,
+        123,
+        560,
+        564
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 16,
+      "parent": 15,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Thêm hàng hoá chị bán",
+      "box": [
+        216,
+        123,
+        560,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 17,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-say",
+      "component": "OwnerSentence",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chọn cách nào dễ nhất với chị. Món nào AI đọc chưa chắc, chị sẽ được kiểm tra lạ",
+      "box": [
+        216,
+        179,
+        560,
+        46
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 18,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-options",
+      "component": "OptionList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "radiogroup",
+      "text": "Cách thêm hàng hoá",
+      "box": [
+        216,
+        245,
+        560,
+        400
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 19,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-option",
+      "component": "OptionCard",
+      "of": null,
+      "part": null,
+      "variants": [
+        "big"
+      ],
+      "state": [],
+      "role": "radio",
+      "text": "",
+      "box": [
+        216,
+        245,
+        560,
+        112
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "radio",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        290,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 21,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        269,
+        277,
+        48,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-photo",
+      "box": [
+        280,
+        288,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 23,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        329,
+        262,
+        430,
+        78
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 24,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chụp bảng giá",
+      "box": [
+        329,
+        262,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 25,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "AI đọc giúp, chị kiểm tra lại",
+      "box": [
+        329,
+        288,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 26,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "tag",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Dễ nhất",
+      "box": [
+        329,
+        318,
+        74,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 27,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-option",
+      "component": "OptionCard",
+      "of": null,
+      "part": null,
+      "variants": [
+        "big"
+      ],
+      "state": [],
+      "role": "radio",
+      "text": "",
+      "box": [
+        216,
+        365,
+        560,
+        88
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "radio",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        398,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 29,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        269,
+        385,
+        48,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 30,
+      "parent": 29,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-mic",
+      "box": [
+        280,
+        396,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 31,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        329,
+        384,
+        430,
+        50
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 32,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nói tên và giá",
+      "box": [
+        329,
+        384,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 33,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Ví dụ: “bò một nắng gói nửa ký hai trăm sáu mươi nghìn”",
+      "box": [
+        329,
+        410,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 34,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-option",
+      "component": "OptionCard",
+      "of": null,
+      "part": null,
+      "variants": [
+        "big"
+      ],
+      "state": [],
+      "role": "radio",
+      "text": "",
+      "box": [
+        216,
+        461,
+        560,
+        88
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 35,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "radio",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        494,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 36,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        269,
+        481,
+        48,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 37,
+      "parent": 36,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-box",
+      "box": [
+        280,
+        492,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 38,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        329,
+        480,
+        430,
+        50
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 39,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chọn từ mẫu đặc sản",
+      "box": [
+        329,
+        480,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 40,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "24 món hay bán, chị sửa giá cho đúng",
+      "box": [
+        329,
+        506,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 41,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-option",
+      "component": "OptionCard",
+      "of": null,
+      "part": null,
+      "variants": [
+        "big"
+      ],
+      "state": [],
+      "role": "radio",
+      "text": "",
+      "box": [
+        216,
+        557,
+        560,
+        88
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 42,
+      "parent": 41,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "radio",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        233,
+        590,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 43,
+      "parent": 41,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        269,
+        577,
+        48,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-file",
+      "box": [
+        280,
+        588,
+        26,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 45,
+      "parent": 41,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        329,
+        576,
+        430,
+        50
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 46,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhập từ Excel",
+      "box": [
+        329,
+        576,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 47,
+      "parent": 45,
+      "kind": "component",
+      "class": "c-option",
+      "component": null,
+      "of": "OptionCard",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Làm trên máy tính",
+      "box": [
+        329,
+        602,
+        430,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 48,
+      "parent": 15,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "saved",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã lưu — làm tiếp lúc nào cũng được",
+      "box": [
+        216,
+        665,
+        560,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 49,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "aside",
+      "variants": [],
+      "state": [],
+      "role": "complementary",
+      "text": "Các bước đăng ký",
+      "box": [
+        824,
+        123,
+        400,
+        414
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": "StepMap",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Tiến độ đăng ký",
+      "box": [
+        824,
+        123,
+        400,
+        382
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 51,
+      "parent": 50,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đăng ký · còn khoảng 5 phút · làm dở vẫn lưu",
+      "box": [
+        845,
+        123,
+        379,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 52,
+      "parent": 50,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        152,
+        379,
+        283
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 53,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        152,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 54,
+      "parent": 53,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        158,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 55,
+      "parent": 54,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        164,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 56,
+      "parent": 53,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Số điện thoại — xong",
+      "box": [
+        885,
+        160,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 57,
+      "parent": 53,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        161,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 58,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        192,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 59,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        198,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 60,
+      "parent": 59,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        204,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 61,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hộ kinh doanh — xong",
+      "box": [
+        885,
+        200,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 62,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        201,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 63,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        232,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 64,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        238,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 65,
+      "parent": 64,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        244,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 66,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cách bán — xong",
+      "box": [
+        885,
+        240,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 67,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        241,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 68,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        272,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 69,
+      "parent": 68,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        278,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 70,
+      "parent": 69,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        284,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 71,
+      "parent": 68,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Thuế và tài khoản — xong",
+      "box": [
+        885,
+        280,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 72,
+      "parent": 68,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        281,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 73,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        312,
+        379,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 74,
+      "parent": 73,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        318,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 75,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        851,
+        324,
+        16,
+        16
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 76,
+      "parent": 73,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoá đơn — xong",
+      "box": [
+        885,
+        320,
+        294,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 77,
+      "parent": 73,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "xong",
+      "box": [
+        1191,
+        321,
+        33,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 78,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        845,
+        352,
+        379,
+        83
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 79,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6",
+      "box": [
+        845,
+        358,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 80,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hàng và số đầu kỳ",
+      "box": [
+        885,
+        360,
+        284,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 81,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5 phút",
+      "box": [
+        1181,
+        361,
+        43,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 82,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "why",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Thêm hàng và giá, rồi điền tồn đã đếm, tiền và công nợ lúc bắt đầu.",
+      "box": [
+        885,
+        388,
+        339,
+        41
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 83,
+      "parent": 50,
+      "kind": "component",
+      "class": "c-stepmap",
+      "component": null,
+      "of": "StepMap",
+      "part": "end",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 6 bước: làm giao dịch đầu tiên, rồi làm dần danh sách Sẵn sàng",
+      "box": [
+        845,
+        454,
+        379,
+        51
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 84,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": "contentinfo",
+      "text": "",
+      "box": [
+        216,
+        686,
+        560,
+        164
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 85,
+      "parent": 84,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "block"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Tiếp tục",
+      "box": [
+        216,
+        706,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 86,
+      "parent": 84,
+      "kind": "recipe",
+      "class": "r-onboard",
+      "component": null,
+      "of": "OnboardingStep",
+      "part": "alt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Để sauGọi chị Thu",
+      "box": [
+        216,
+        770,
+        560,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 87,
+      "parent": null,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": "Dialog",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "dialog",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 88,
+      "parent": 87,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "panel",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        90,
+        640,
+        721
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 89,
+      "parent": 88,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        90,
+        640,
+        89
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 90,
+      "parent": 89,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bước 6/6 · Hàng hoá",
+      "box": [
+        420,
+        106,
+        185,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 91,
+      "parent": 89,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hỏi về bước này",
+      "box": [
+        420,
+        131,
+        185,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 92,
+      "parent": 89,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Đóng, quay lại bước 5",
+      "box": [
+        964,
+        106,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 93,
+      "parent": 92,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-x",
+      "box": [
+        981,
+        123,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 94,
+      "parent": 88,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        179,
+        640,
+        632
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 95,
+      "parent": 94,
+      "kind": "recipe",
+      "class": "r-help",
+      "component": null,
+      "of": "HelpCenter",
+      "part": "people",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        195,
+        600,
+        227
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 96,
+      "parent": 95,
+      "kind": "recipe",
+      "class": "r-help",
+      "component": null,
+      "of": "HelpCenter",
+      "part": "people-h",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Cần người thật giúp?",
+      "box": [
+        420,
+        208,
+        600,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 97,
+      "parent": 95,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act",
+        "block",
+        "wrap"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Gọi chị Thu · OPC Gia Lai · Pleiku",
+      "box": [
+        420,
+        237,
+        600,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 98,
+      "parent": 95,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "block"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Nhắn Zalo OPC Gia Lai",
+      "box": [
+        420,
+        301,
+        600,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 99,
+      "parent": 95,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "block",
+        "wrap"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Nhờ người thân làm giúp · gửi link qua Zalo, chị chỉ xác nhận",
+      "box": [
+        420,
+        365,
+        600,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 100,
+      "parent": 94,
+      "kind": "recipe",
+      "class": "r-help",
+      "component": null,
+      "of": "HelpCenter",
+      "part": "qs",
+      "variants": [],
+      "state": [],
+      "role": "group",
+      "text": "Câu hỏi gợi ý",
+      "box": [
+        420,
+        437,
+        600,
+        104
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 101,
+      "parent": 100,
+      "kind": "component",
+      "class": "c-filter",
+      "component": "FilterChip",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [
+        "selected"
+      ],
+      "role": "button",
+      "text": "Bảng giá viết tay có đọc được không?",
+      "box": [
+        420,
+        437,
+        334,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 102,
+      "parent": 100,
+      "kind": "component",
+      "class": "c-filter",
+      "component": "FilterChip",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Sai giá thì sửa ở đâu?",
+      "box": [
+        762,
+        437,
+        204,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 103,
+      "parent": 100,
+      "kind": "component",
+      "class": "c-filter",
+      "component": "FilterChip",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Có mất phí không?",
+      "box": [
+        420,
+        493,
+        185,
+        48
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 104,
+      "parent": 94,
+      "kind": "component",
+      "class": "c-answer",
+      "component": "AssistantAnswer",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        420,
+        557,
+        600,
+        237
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 105,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-answer",
+      "component": null,
+      "of": "AssistantAnswer",
+      "part": "who",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Trợ lý OPC · trả lời tự động",
+      "box": [
+        437,
+        574,
+        566,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 106,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-answer",
+      "component": null,
+      "of": "AssistantAnswer",
+      "part": "q",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bảng giá viết tay có đọc được không?",
+      "box": [
+        437,
+        599,
+        566,
+        25
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 107,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-answer",
+      "component": null,
+      "of": "AssistantAnswer",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đọc được chữ viết tay rõ ràng. Món nào AI chưa chắc sẽ có khung xanh nét đứt để ",
+      "box": [
+        437,
+        632,
+        566,
+        81
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 108,
+      "parent": 104,
+      "kind": "component",
+      "class": "c-answer",
+      "component": null,
+      "of": "AssistantAnswer",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Câu trả lời có giúp được không?",
+      "box": [
+        437,
+        721,
+        566,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 109,
+      "parent": 108,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Có",
+      "box": [
+        659,
+        721,
+        60,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 110,
+      "parent": 108,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Không",
+      "box": [
+        727,
+        721,
+        91,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    }
+  ]
+}

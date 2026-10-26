@@ -1,0 +1,631 @@
+{
+  "project": "OPC — app (owner, staff, accountant)",
+  "phase": "locked",
+  "designVersion": "3.1.0",
+  "direction": "a-pro",
+  "platforms": [
+    "web"
+  ],
+  "sizes": [
+    "1440x900",
+    "1280x800",
+    "1024x768",
+    "390x844"
+  ],
+  "minTarget": 44,
+  "minFont": 13,
+  "paths": {
+    "brief": "BRIEF.md",
+    "design": "DESIGN.md",
+    "tokens": "tokens.css",
+    "components": "components/components.css",
+    "catalog": "components/catalog.html",
+    "screens": "screens",
+    "shots": "shots",
+    "handoff": "handoff",
+    "changelog": "CHANGELOG.md",
+    "registry": "components/registry.json",
+    "implementation": null
+  },
+  "screens": [
+    {
+      "file": "home.html",
+      "title": "Tổng quan",
+      "status": "locked",
+      "states": [
+        "home--offline.html",
+        "home--firstrun.html",
+        "home--loading.html",
+        "home--more.html",
+        "home--assistant.html",
+        "home--notifications.html",
+        "home--command.html",
+        "home--simple.html"
+      ]
+    },
+    {
+      "file": "counter.html",
+      "title": "Quầy bán hàng",
+      "status": "locked",
+      "states": [
+        "counter--cart.html",
+        "counter--payment.html",
+        "counter--payment--received.html",
+        "counter--payment--verified.html",
+        "counter--received.html",
+        "counter--verified.html",
+        "counter--cash.html",
+        "counter--offline.html",
+        "counter--empty.html"
+      ]
+    },
+    {
+      "file": "counter--cart.html",
+      "title": "Giỏ (phone sheet)",
+      "status": "locked",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--payment.html",
+      "title": "Thu tiền (phone sheet)",
+      "status": "locked",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--received.html",
+      "title": "Quầy · đã nhận, chờ xác minh",
+      "status": "passed",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--verified.html",
+      "title": "Quầy · đã xác minh",
+      "status": "passed",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--cash.html",
+      "title": "Quầy · tiền mặt",
+      "status": "passed",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--offline.html",
+      "title": "Quầy · mất kết nối ngân hàng",
+      "status": "passed",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--empty.html",
+      "title": "Quầy · giỏ trống",
+      "status": "passed",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--payment--received.html",
+      "title": "Thu tiền (phone) · chờ xác minh",
+      "status": "passed",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "counter--payment--verified.html",
+      "title": "Thu tiền (phone) · đã xác minh",
+      "status": "passed",
+      "states": [],
+      "stateOf": "counter.html"
+    },
+    {
+      "file": "home--offline.html",
+      "title": "Tổng quan · mất kết nối",
+      "status": "passed",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "home--firstrun.html",
+      "title": "Tổng quan · lần đầu",
+      "status": "passed",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "money--assign.html",
+      "title": "Gán khoản tiền vào đơn (dialog)",
+      "status": "passed",
+      "states": [],
+      "stateOf": "money.html"
+    },
+    {
+      "file": "money.html",
+      "title": "Tiền & đối soát",
+      "status": "passed",
+      "states": [
+        "money--assign.html",
+        "money--help.html"
+      ],
+      "todoStates": [
+        "empty",
+        "offline"
+      ]
+    },
+    {
+      "file": "orders.html",
+      "title": "Đơn hàng",
+      "status": "passed",
+      "states": [
+        "orders--filtered.html",
+        "orders--filters.html",
+        "orders--daterange.html",
+        "orders--search.html",
+        "orders--noresult.html",
+        "orders--loading.html",
+        "orders--peek.html",
+        "orders--bulk.html",
+        "orders--bulk--preview.html"
+      ],
+      "todoStates": [
+        "empty",
+        "detail"
+      ]
+    },
+    {
+      "file": "invoices.html",
+      "title": "Hoá đơn",
+      "status": "passed",
+      "states": [
+        "invoices--accountant.html"
+      ],
+      "todoStates": [
+        "error",
+        "detail"
+      ]
+    },
+    {
+      "file": "onboard-welcome.html",
+      "title": "Onboarding · chào mừng",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-phone.html",
+      "title": "Onboarding 1/6 · số điện thoại",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-otp.html",
+      "title": "Onboarding 1/6 · mã xác nhận",
+      "status": "passed",
+      "states": [
+        "onboard-otp--wrong.html"
+      ]
+    },
+    {
+      "file": "onboard-household.html",
+      "title": "Onboarding 2/6 · thông tin hộ",
+      "status": "passed",
+      "states": [
+        "onboard-household--notfound.html"
+      ]
+    },
+    {
+      "file": "onboard-verify.html",
+      "title": "Onboarding 3/6 · xác minh chủ hộ",
+      "status": "passed",
+      "states": [
+        "onboard-verify--failed.html"
+      ]
+    },
+    {
+      "file": "onboard-verify--camera.html",
+      "title": "Onboarding 3/6 · chụp CCCD",
+      "status": "passed",
+      "states": [
+        "onboard-verify--camera-denied.html"
+      ]
+    },
+    {
+      "file": "onboard-bank.html",
+      "title": "Onboarding 4/6 · liên kết MB",
+      "status": "passed",
+      "states": [
+        "onboard-bank--mismatch.html"
+      ]
+    },
+    {
+      "file": "onboard-bank--done.html",
+      "title": "Onboarding 4/6 · đã liên kết",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-products.html",
+      "title": "Onboarding 5/6 · thêm hàng",
+      "status": "passed",
+      "states": [
+        "onboard-products--unreadable.html"
+      ]
+    },
+    {
+      "file": "onboard-products--review.html",
+      "title": "Onboarding 5/6 · duyệt hàng AI đọc",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-help.html",
+      "title": "Onboarding · hỏi về bước này",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-invoice.html",
+      "title": "Onboarding 6/6 · hoá đơn",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-firstsale.html",
+      "title": "Onboarding · bán thử",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-done.html",
+      "title": "Onboarding · xong",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "onboard-assisted.html",
+      "title": "Onboarding · nhân viên hỗ trợ (desktop)",
+      "status": "passed",
+      "states": []
+    },
+    {
+      "file": "orders--filtered.html",
+      "title": "Đơn hàng · đang lọc",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "orders--filters.html",
+      "title": "Đơn hàng · bảng lọc",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "orders--daterange.html",
+      "title": "Đơn hàng · chọn khoảng ngày",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "orders--search.html",
+      "title": "Đơn hàng · gợi ý tìm kiếm",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "orders--noresult.html",
+      "title": "Đơn hàng · không có kết quả",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "invoices--accountant.html",
+      "title": "Hoá đơn · kế toán (compact, phân trang)",
+      "status": "review",
+      "states": [],
+      "stateOf": "invoices.html"
+    },
+    {
+      "file": "onboard-otp--wrong.html",
+      "title": "Onboarding · mã sai",
+      "status": "review",
+      "states": [],
+      "stateOf": "onboard-otp.html"
+    },
+    {
+      "file": "onboard-household--notfound.html",
+      "title": "Onboarding · không tìm thấy MST",
+      "status": "review",
+      "states": [],
+      "stateOf": "onboard-household.html"
+    },
+    {
+      "file": "onboard-verify--camera-denied.html",
+      "title": "Onboarding · chưa cho dùng camera",
+      "status": "review",
+      "states": [],
+      "stateOf": "onboard-verify--camera.html"
+    },
+    {
+      "file": "onboard-verify--failed.html",
+      "title": "Onboarding · xác minh chưa được",
+      "status": "review",
+      "states": [],
+      "stateOf": "onboard-verify.html"
+    },
+    {
+      "file": "onboard-bank--mismatch.html",
+      "title": "Onboarding · tên tài khoản không khớp",
+      "status": "review",
+      "states": [],
+      "stateOf": "onboard-bank.html"
+    },
+    {
+      "file": "onboard-products--unreadable.html",
+      "title": "Onboarding · AI chưa đọc được ảnh",
+      "status": "review",
+      "states": [],
+      "stateOf": "onboard-products.html"
+    },
+    {
+      "file": "home--loading.html",
+      "title": "Tổng quan · đang tải",
+      "status": "review",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "orders--loading.html",
+      "title": "Đơn hàng · đang tải",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "order-detail.html",
+      "title": "Chi tiết đơn DH-1040",
+      "status": "review",
+      "states": []
+    },
+    {
+      "file": "invoice-detail.html",
+      "title": "Chi tiết hoá đơn 00000418",
+      "status": "review",
+      "states": []
+    },
+    {
+      "file": "approvals.html",
+      "title": "Cần xử lý · việc chờ duyệt",
+      "status": "review",
+      "states": []
+    },
+    {
+      "file": "audit.html",
+      "title": "Cần xử lý · nhật ký",
+      "status": "review",
+      "states": []
+    },
+    {
+      "file": "settings-users.html",
+      "title": "Cài đặt · người dùng & quyền",
+      "status": "review",
+      "states": [
+        "settings-users--otp.html"
+      ]
+    },
+    {
+      "file": "settings-features.html",
+      "title": "Cài đặt · tính năng",
+      "status": "review",
+      "states": []
+    },
+    {
+      "file": "home--more.html",
+      "title": "Phone · Thêm (tất cả)",
+      "status": "review",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "home--assistant.html",
+      "title": "Trợ lý bên cạnh",
+      "status": "review",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "home--notifications.html",
+      "title": "Thông báo",
+      "status": "review",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "home--command.html",
+      "title": "Bảng lệnh ⌘K",
+      "status": "review",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "home--simple.html",
+      "title": "Hôm nay · chế độ Gọn, chữ lớn",
+      "status": "review",
+      "states": [],
+      "stateOf": "home.html"
+    },
+    {
+      "file": "money--help.html",
+      "title": "Trợ giúp theo ngữ cảnh",
+      "status": "review",
+      "states": [],
+      "stateOf": "money.html"
+    },
+    {
+      "file": "orders--peek.html",
+      "title": "Đơn hàng · xem nhanh",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "orders--bulk.html",
+      "title": "Đơn hàng · chọn nhiều + chế độ xem",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    },
+    {
+      "file": "settings-users--otp.html",
+      "title": "Mời kế toán · xác nhận OTP",
+      "status": "review",
+      "states": [],
+      "stateOf": "settings-users.html"
+    },
+    {
+      "file": "settings-display.html",
+      "title": "Cài đặt · hiển thị",
+      "status": "review",
+      "states": []
+    },
+    {
+      "file": "receipt.html",
+      "title": "Phiếu in & tin Zalo cho khách",
+      "status": "review",
+      "states": []
+    },
+    {
+      "file": "orders--bulk--preview.html",
+      "title": "Xem trước nhắc nợ hàng loạt",
+      "status": "review",
+      "states": [],
+      "stateOf": "orders.html"
+    }
+  ],
+  "notes": "phase: brief → research → directions → locked → screens. Managed by the uiux-studio skill; update on every change.",
+  "budget": {
+    "targets": "references/cost-playbook.md",
+    "log": []
+  },
+  "implementation": {
+    "maps": [
+      "../../system/maps/opc-shadcn.json"
+    ],
+    "baseUrl": null,
+    "routes": {},
+    "masks": [],
+    "threshold": 2,
+    "note": "OPC extension of the shadcn map (system/maps/opc-shadcn.json); custom components live in @/components/opc",
+    "prototypeArtifact": "https://claude.ai/artifact/E1Ra9kckq4tzv29oHPLyGh"
+  },
+  "tech": {
+    "platforms": [
+      "web"
+    ],
+    "ui": "headless",
+    "libs": [
+      "shadcn"
+    ],
+    "reason": "ADR 0007: React 19 + Vite SPA, Tailwind v4, shadcn/ui headless; distinctive brand; owner on laptop and phone browser",
+    "revisitWhen": null,
+    "decided": "2026-10-01"
+  },
+  "type": "app",
+  "created": "2026-10-01",
+  "extends": "../../system",
+  "flows": [
+    {
+      "name": "Đăng ký lần đầu (điện thoại)",
+      "steps": [
+        "onboard-welcome.html",
+        "onboard-phone.html",
+        "onboard-otp.html",
+        "onboard-household.html",
+        "onboard-verify.html",
+        "onboard-verify--camera.html",
+        "onboard-bank.html",
+        "onboard-bank--done.html",
+        "onboard-products.html",
+        "onboard-products--review.html",
+        "onboard-invoice.html",
+        "onboard-firstsale.html",
+        "onboard-done.html",
+        "home.html"
+      ]
+    },
+    {
+      "name": "Bán tại quầy (phone)",
+      "steps": [
+        "home.html",
+        "counter.html",
+        "counter--cart.html",
+        "counter--payment.html",
+        "counter--payment--received.html",
+        "counter--payment--verified.html"
+      ]
+    },
+    {
+      "name": "Bán tại quầy (desktop, QR)",
+      "steps": [
+        "counter.html",
+        "counter--received.html",
+        "counter--verified.html",
+        "counter--empty.html"
+      ]
+    },
+    {
+      "name": "Đối soát: gán tiền chưa có mã đơn",
+      "steps": [
+        "home.html",
+        "money.html",
+        "money--assign.html"
+      ]
+    },
+    {
+      "name": "Tìm và lọc đơn",
+      "steps": [
+        "orders.html",
+        "orders--search.html",
+        "orders--noresult.html",
+        "orders--filters.html",
+        "orders--daterange.html",
+        "orders--filtered.html"
+      ]
+    },
+    {
+      "name": "Điều hướng mới: tìm mọi thứ",
+      "steps": [
+        "home.html",
+        "home--more.html",
+        "approvals.html",
+        "audit.html",
+        "settings-features.html",
+        "settings-users.html"
+      ]
+    },
+    {
+      "name": "Lớp Pro: hỗ trợ & năng suất",
+      "steps": [
+        "home.html",
+        "home--assistant.html",
+        "home--notifications.html",
+        "home--command.html",
+        "orders--peek.html",
+        "orders--bulk.html",
+        "orders--bulk--preview.html",
+        "money--help.html",
+        "settings-display.html",
+        "home--simple.html",
+        "receipt.html",
+        "settings-users--otp.html"
+      ]
+    }
+  ]
+}

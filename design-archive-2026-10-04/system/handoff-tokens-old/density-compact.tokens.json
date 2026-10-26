@@ -1,0 +1,22 @@
+{
+  "$description": "uiux-studio export of tokens.css — set \"density-compact\" (overrides base)",
+  "semantic": {
+    "target": {
+      "$type": "dimension",
+      "$value": {
+        "value": 44,
+        "unit": "px"
+      }
+    },
+    "row-h": {
+      "$type": "dimension",
+      "$value": {
+        "value": 44,
+        "unit": "px"
+      }
+    },
+    "fs-control": {
+      "$value": "{primitive.p-size-16}"
+    }
+  }
+}

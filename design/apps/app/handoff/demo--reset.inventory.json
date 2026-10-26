@@ -1,0 +1,2010 @@
+{
+  "screen": "demo--reset.html",
+  "title": "Kho hàng · Tồn kho — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "main",
+      "box": [
+        160,
+        0,
+        1120,
+        1266
+      ]
+    },
+    {
+      "region": "header",
+      "box": [
+        180,
+        24,
+        1080,
+        213
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": "DemoConsole",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        1266
+      ]
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "main",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        160,
+        0,
+        1120,
+        1266
+      ]
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "Bảng điều khiển demo",
+      "box": [
+        180,
+        24,
+        1080,
+        213
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "badge",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "DEMO · không có trong sản phẩm",
+      "box": [
+        202,
+        46,
+        269,
+        26
+      ]
+    },
+    {
+      "id": 4,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-sub",
+      "component": "Subline",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đặc sản Cao Nguyên An Nhiên · dữ liệu mẫu của BA, design bổ sung · mọi kết nối l",
+      "box": [
+        202,
+        131,
+        1036,
+        24
+      ]
+    },
+    {
+      "id": 5,
+      "parent": 2,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "acts",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        202,
+        171,
+        1036,
+        44
+      ]
+    },
+    {
+      "id": 6,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Bắt đầu luồng demo",
+      "box": [
+        202,
+        171,
+        192,
+        44
+      ]
+    },
+    {
+      "id": 7,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đặt lại dữ liệu",
+      "box": [
+        406,
+        171,
+        142,
+        44
+      ]
+    },
+    {
+      "id": 8,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "panel",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        180,
+        261,
+        1080,
+        358
+      ]
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "h",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Đặt trước khi trình bày",
+      "box": [
+        201,
+        282,
+        1038,
+        23
+      ]
+    },
+    {
+      "id": 10,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "levers",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        201,
+        334,
+        1038,
+        84
+      ]
+    },
+    {
+      "id": 11,
+      "parent": 10,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "ctl",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        201,
+        334,
+        681,
+        84
+      ]
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "lab",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xem với vai",
+      "box": [
+        201,
+        334,
+        681,
+        17
+      ]
+    },
+    {
+      "id": 13,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-seg",
+      "component": "SegmentedChoice",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "radiogroup",
+      "text": "Xem với vai",
+      "box": [
+        201,
+        358,
+        681,
+        59
+      ]
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Chị An · chủ hộ",
+      "box": [
+        205,
+        362,
+        131,
+        51
+      ]
+    },
+    {
+      "id": 15,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Anh Khoa · vận hành",
+      "box": [
+        340,
+        362,
+        131,
+        51
+      ]
+    },
+    {
+      "id": 16,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Hạnh · bán hàng",
+      "box": [
+        476,
+        362,
+        131,
+        51
+      ]
+    },
+    {
+      "id": 17,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Chị Lan · kế toán",
+      "box": [
+        611,
+        362,
+        131,
+        51
+      ]
+    },
+    {
+      "id": 18,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "PM Quang · chương trình",
+      "box": [
+        747,
+        362,
+        131,
+        51
+      ]
+    },
+    {
+      "id": 19,
+      "parent": 10,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "ctl",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        898,
+        334,
+        341,
+        84
+      ]
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "lab",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Giờ demo",
+      "box": [
+        898,
+        334,
+        341,
+        17
+      ]
+    },
+    {
+      "id": 21,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-seg",
+      "component": "SegmentedChoice",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "radiogroup",
+      "text": "Giờ demo",
+      "box": [
+        898,
+        358,
+        341,
+        59
+      ]
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "06/10 10:45",
+      "box": [
+        902,
+        362,
+        108,
+        51
+      ]
+    },
+    {
+      "id": 23,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "06/10 16:05",
+      "box": [
+        1015,
+        362,
+        108,
+        51
+      ]
+    },
+    {
+      "id": 24,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "07/10 11:30",
+      "box": [
+        1127,
+        362,
+        108,
+        51
+      ]
+    },
+    {
+      "id": 25,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "ctl",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        201,
+        434,
+        1038,
+        165
+      ]
+    },
+    {
+      "id": 26,
+      "parent": 25,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "lab",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kết nối mô phỏng · X Invoice đang “không trả lời”",
+      "box": [
+        201,
+        434,
+        1038,
+        17
+      ]
+    },
+    {
+      "id": 27,
+      "parent": 25,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "conns",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Ngân hàng MBHilo · hoá đơn bán lẻZalo OACổng thuếMạng của máy",
+      "box": [
+        201,
+        458,
+        1038,
+        140
+      ]
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "pick",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Hoạt động",
+      "box": [
+        303,
+        477,
+        146,
+        44
+      ]
+    },
+    {
+      "id": 29,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        410,
+        488,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 30,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "pick",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Hoạt động",
+      "box": [
+        566,
+        477,
+        146,
+        44
+      ]
+    },
+    {
+      "id": 31,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        673,
+        488,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 32,
+      "parent": 27,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "bad",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "X Invoice · hoá đơn B2B",
+      "box": [
+        728,
+        458,
+        248,
+        83
+      ]
+    },
+    {
+      "id": 33,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "pick",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Không trả lời",
+      "box": [
+        737,
+        494,
+        163,
+        44
+      ]
+    },
+    {
+      "id": 34,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        861,
+        505,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 35,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "pick",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Hoạt động",
+      "box": [
+        1093,
+        477,
+        146,
+        44
+      ]
+    },
+    {
+      "id": 36,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        1200,
+        488,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 37,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "pick",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Chưa kết nối",
+      "box": [
+        288,
+        551,
+        161,
+        44
+      ]
+    },
+    {
+      "id": 38,
+      "parent": 37,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        410,
+        562,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 39,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-btn",
+      "component": null,
+      "of": "Button",
+      "part": "pick",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Có mạng",
+      "box": [
+        579,
+        551,
+        133,
+        44
+      ]
+    },
+    {
+      "id": 40,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-chev",
+      "box": [
+        673,
+        562,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 41,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "h",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Luồng xuyên suốt · 10 bước · bắt đầu ở đây",
+      "box": [
+        180,
+        643,
+        1080,
+        23
+      ]
+    },
+    {
+      "id": 42,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "path",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Sẵn sàngNhận hàngNhận đơn ZaloDuyệt ngoại lệSoạn, giaoHoá đơn, tiềnĐối chiếu kỳT",
+      "box": [
+        180,
+        679,
+        1080,
+        231
+      ]
+    },
+    {
+      "id": 43,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "start",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Cần xử lý",
+      "box": [
+        180,
+        679,
+        173,
+        98
+      ]
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UI-01 · bắt đầu",
+      "box": [
+        194,
+        711,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 45,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-01",
+      "box": [
+        375,
+        711,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 46,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-02",
+      "box": [
+        557,
+        711,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 47,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-03",
+      "box": [
+        738,
+        711,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 48,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-06",
+      "box": [
+        919,
+        711,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 49,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-04a",
+      "box": [
+        1101,
+        711,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 50,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-04b",
+      "box": [
+        194,
+        817,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 51,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-05",
+      "box": [
+        375,
+        817,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 52,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-05",
+      "box": [
+        557,
+        817,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 53,
+      "parent": 42,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "id",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-07",
+      "box": [
+        738,
+        817,
+        145,
+        21
+      ]
+    },
+    {
+      "id": 54,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "sec2",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        180,
+        934,
+        1080,
+        293
+      ]
+    },
+    {
+      "id": 55,
+      "parent": 54,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "h",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Kịch bản ngoại lệ · nhảy thẳng vào",
+      "box": [
+        180,
+        934,
+        1080,
+        23
+      ]
+    },
+    {
+      "id": 56,
+      "parent": 54,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "grid",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        180,
+        969,
+        1080,
+        257
+      ]
+    },
+    {
+      "id": 57,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Khách nợ quá hạnSunrise nợ 8.400.000 ₫ quá 12 ngày · đơn mới chờ chị An duyệt",
+      "box": [
+        180,
+        969,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 58,
+      "parent": 57,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        193,
+        1059,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 59,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-06",
+      "box": [
+        199,
+        1059,
+        65,
+        20
+      ]
+    },
+    {
+      "id": 60,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị An",
+      "box": [
+        276,
+        1059,
+        61,
+        20
+      ]
+    },
+    {
+      "id": 61,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thiếu tồnKhách hỏi 30 gói bò, kho còn 26 · sửa đơn hoặc nhập thêm",
+      "box": [
+        453,
+        969,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 62,
+      "parent": 61,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        466,
+        1059,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 63,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bán",
+      "box": [
+        472,
+        1059,
+        43,
+        20
+      ]
+    },
+    {
+      "id": 64,
+      "parent": 62,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị An",
+      "box": [
+        527,
+        1059,
+        61,
+        20
+      ]
+    },
+    {
+      "id": 65,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hoá đơn chưa rõ kết quảX Invoice không trả lời · OPC không tự gửi lại",
+      "box": [
+        726,
+        969,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 66,
+      "parent": 65,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        739,
+        1059,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 67,
+      "parent": 66,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-04",
+      "box": [
+        745,
+        1059,
+        65,
+        20
+      ]
+    },
+    {
+      "id": 68,
+      "parent": 66,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kết nối",
+      "box": [
+        822,
+        1059,
+        65,
+        20
+      ]
+    },
+    {
+      "id": 69,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tiền không khớpMột khoản về cho hai hoá đơn · gán tay",
+      "box": [
+        999,
+        969,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 70,
+      "parent": 69,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1012,
+        1059,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 71,
+      "parent": 70,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-04",
+      "box": [
+        1018,
+        1059,
+        65,
+        20
+      ]
+    },
+    {
+      "id": 72,
+      "parent": 70,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Anh Khoa",
+      "box": [
+        1095,
+        1059,
+        82,
+        20
+      ]
+    },
+    {
+      "id": 73,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kết nối lỗiX Invoice lỗi · làm tay trên cổng nhà cung cấp",
+      "box": [
+        180,
+        1104,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 74,
+      "parent": 73,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        193,
+        1193,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 75,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-01",
+      "box": [
+        199,
+        1193,
+        61,
+        20
+      ]
+    },
+    {
+      "id": 76,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kết nối",
+      "box": [
+        272,
+        1193,
+        65,
+        20
+      ]
+    },
+    {
+      "id": 77,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Mất mạngSoạn hàng khi mất mạng → có mạng lại, đơn đã bị sửa",
+      "box": [
+        453,
+        1104,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 78,
+      "parent": 77,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        466,
+        1193,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 79,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nguyên tắc 8",
+      "box": [
+        472,
+        1193,
+        107,
+        20
+      ]
+    },
+    {
+      "id": 80,
+      "parent": 78,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Anh Khoa",
+      "box": [
+        591,
+        1193,
+        82,
+        20
+      ]
+    },
+    {
+      "id": 81,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hàng cận hạnMuối kiến vàng còn 30 ngày · bán trước, nhắc khi nhận hàng",
+      "box": [
+        726,
+        1104,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 82,
+      "parent": 81,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        739,
+        1193,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 83,
+      "parent": 82,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kho",
+      "box": [
+        745,
+        1193,
+        43,
+        20
+      ]
+    },
+    {
+      "id": 84,
+      "parent": 82,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị An",
+      "box": [
+        800,
+        1193,
+        61,
+        20
+      ]
+    },
+    {
+      "id": 85,
+      "parent": 56,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "card",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Kỳ thuế đủ bằng chứngQuý III: khai, nộp ngoài OPC, khớp sao kê",
+      "box": [
+        999,
+        1104,
+        261,
+        123
+      ]
+    },
+    {
+      "id": 86,
+      "parent": 85,
+      "kind": "recipe",
+      "class": "r-demo",
+      "component": null,
+      "of": "DemoConsole",
+      "part": "chips",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1012,
+        1193,
+        235,
+        20
+      ]
+    },
+    {
+      "id": 87,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "UC-05",
+      "box": [
+        1018,
+        1193,
+        64,
+        20
+      ]
+    },
+    {
+      "id": 88,
+      "parent": 86,
+      "kind": "component",
+      "class": "c-tag",
+      "component": "Tag",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị An",
+      "box": [
+        1094,
+        1193,
+        61,
+        20
+      ]
+    },
+    {
+      "id": 89,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": "Dialog",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "dialog",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ]
+    },
+    {
+      "id": 90,
+      "parent": 89,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "panel",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        270,
+        640,
+        360
+      ]
+    },
+    {
+      "id": 91,
+      "parent": 90,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        270,
+        640,
+        85
+      ]
+    },
+    {
+      "id": 92,
+      "parent": 91,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chỉ dữ liệu demo",
+      "box": [
+        420,
+        286,
+        243,
+        17
+      ]
+    },
+    {
+      "id": 93,
+      "parent": 91,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Đặt lại dữ liệu demo?",
+      "box": [
+        420,
+        311,
+        243,
+        28
+      ]
+    },
+    {
+      "id": 94,
+      "parent": 91,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Đóng, không đặt lại",
+      "box": [
+        976,
+        286,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 95,
+      "parent": 94,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-x",
+      "box": [
+        987,
+        297,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 96,
+      "parent": 90,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Mọi thao tác đã làm trong buổi demo này sẽ mất; dữ liệu quay về 06/10/2026 10:45",
+      "box": [
+        400,
+        355,
+        640,
+        206
+      ]
+    },
+    {
+      "id": 97,
+      "parent": 96,
+      "kind": "recipe",
+      "class": "r-lock",
+      "component": "LockConsequences",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đơn, giữ hàng, giao hàng, tiền, hoá đơn, kỳ thuế — về như bộ mẫuKết nối mô phỏng",
+      "box": [
+        420,
+        435,
+        600,
+        94
+      ]
+    },
+    {
+      "id": 98,
+      "parent": 97,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-undo",
+      "box": [
+        420,
+        437,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 99,
+      "parent": 97,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-undo",
+      "box": [
+        420,
+        473,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 100,
+      "parent": 97,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-shield",
+      "box": [
+        420,
+        508,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 101,
+      "parent": 90,
+      "kind": "component",
+      "class": "c-dialog",
+      "component": null,
+      "of": "Dialog",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        400,
+        561,
+        640,
+        69
+      ]
+    },
+    {
+      "id": 102,
+      "parent": 101,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Không đặt lại",
+      "box": [
+        683,
+        574,
+        139,
+        44
+      ]
+    },
+    {
+      "id": 103,
+      "parent": 101,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "danger"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Đặt lại dữ liệu demo",
+      "box": [
+        830,
+        574,
+        190,
+        44
+      ]
+    }
+  ]
+}

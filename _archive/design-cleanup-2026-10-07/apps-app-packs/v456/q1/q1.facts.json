@@ -1,0 +1,332 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.5.5",
+ "group": "q1",
+ "screens": [
+  {
+   "file": "counter--cart.html",
+   "title": "Giỏ (phone sheet)",
+   "pattern": "pos",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 11,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "panel",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 51,
+     "block": 11,
+     "icons": 1,
+     "iconRate": 2,
+     "rules": 3,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "counter--payment.html",
+   "title": "Thu tiền (phone sheet)",
+   "pattern": "pos",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 7,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "panel",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 74,
+     "block": 11,
+     "icons": 0,
+     "iconRate": 0,
+     "rules": 6,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "counter--cash.html",
+   "title": "Quầy · tiền mặt",
+   "pattern": "pos",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 23,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "pos",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 96,
+     "block": 11,
+     "icons": 1,
+     "iconRate": 1,
+     "rules": 6,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 2
+    }
+   }
+  },
+  {
+   "file": "counter--offline.html",
+   "title": "Quầy · mất kết nối ngân hàng",
+   "pattern": "pos",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 21,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "pos",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 122,
+     "block": 23,
+     "icons": 3,
+     "iconRate": 2.5,
+     "rules": 5,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "counter--empty.html",
+   "title": "Quầy · giỏ trống",
+   "pattern": "pos",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 16,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "pos",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 95,
+     "block": 11,
+     "icons": 5,
+     "iconRate": 5.3,
+     "rules": 3,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1480 @@
+{
+  "screen": "counter--payment--received.html",
+  "title": "Đã nhận tiền · DH-1043 — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        77
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        0,
+        77,
+        1440,
+        674
+      ]
+    },
+    {
+      "region": "footer",
+      "box": [
+        0,
+        751,
+        1440,
+        149
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": "BottomSheet",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "dialog",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        77
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "grip",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        698,
+        4,
+        44,
+        4
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 3,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        12,
+        1408,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 4,
+      "parent": 3,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Khách phải trả · DH-1043",
+      "box": [
+        16,
+        16,
+        176,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 5,
+      "parent": 3,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "1.020.000 ₫",
+      "box": [
+        16,
+        33,
+        176,
+        32
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 6,
+      "parent": 3,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Đóng, quay lại chọn món",
+      "box": [
+        1368,
+        12,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1385,
+        29,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 8,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        0,
+        77,
+        1440,
+        674
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-pay-sheet",
+      "component": null,
+      "of": "PhonePaymentSheet",
+      "part": "who",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        87,
+        1408,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 10,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-picker",
+      "component": "Picker",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "",
+      "box": [
+        16,
+        87,
+        700,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 11,
+      "parent": 10,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        29,
+        104,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 12,
+      "parent": 10,
+      "kind": "component",
+      "class": "c-picker",
+      "component": null,
+      "of": "Picker",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Khách lẻ",
+      "box": [
+        63,
+        97,
+        99,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-picker",
+      "component": null,
+      "of": "Picker",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đổi · tên / MST",
+      "box": [
+        63,
+        116,
+        99,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 14,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-picker",
+      "component": "Picker",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "",
+      "box": [
+        724,
+        87,
+        700,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        737,
+        104,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 16,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-picker",
+      "component": null,
+      "of": "Picker",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4 món",
+      "box": [
+        771,
+        97,
+        51,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 17,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-picker",
+      "component": null,
+      "of": "Picker",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Sửa giỏ",
+      "box": [
+        771,
+        116,
+        51,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 18,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-seg",
+      "component": "SegmentedChoice",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "radiogroup",
+      "text": "Cách thanh toán",
+      "box": [
+        16,
+        151,
+        1408,
+        62
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 19,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "QR",
+      "box": [
+        19,
+        154,
+        465,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        227,
+        173,
+        18,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 21,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Tiền mặt",
+      "box": [
+        487,
+        154,
+        465,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        674,
+        173,
+        18,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 23,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-seg",
+      "component": null,
+      "of": "SegmentedChoice",
+      "part": "opt",
+      "variants": [],
+      "state": [],
+      "role": "radio",
+      "text": "Công nợ",
+      "box": [
+        956,
+        154,
+        465,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 24,
+      "parent": 23,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1144,
+        173,
+        18,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 25,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-qr",
+      "component": "QrPayment",
+      "of": null,
+      "part": null,
+      "variants": [
+        "compact"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        221,
+        1408,
+        124
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 26,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "img",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        27,
+        231,
+        104,
+        104
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 27,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        143,
+        228,
+        1270,
+        110
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "VietQR · MB · mã DH1043",
+      "box": [
+        143,
+        228,
+        170,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 29,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1.020.000 ₫",
+      "box": [
+        143,
+        250,
+        144,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 30,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "status",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã nhận 1.020.000 ₫ lúc 10:44 · chờ xác minh",
+      "box": [
+        143,
+        282,
+        1270,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 31,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "status-pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        152,
+        296,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 32,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        157,
+        301,
+        18,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 33,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-route",
+      "component": "PaymentLadder",
+      "of": null,
+      "part": null,
+      "variants": [
+        "compact"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Trạng thái tiền của đơn này",
+      "box": [
+        16,
+        353,
+        1408,
+        97
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 34,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "stn",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        377,
+        415,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 35,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "sq",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        206,
+        383,
+        36,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 36,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        214,
+        391,
+        20,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 37,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "w",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chờ khách chuyển",
+      "box": [
+        155,
+        431,
+        137,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 38,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "stn",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        431,
+        377,
+        577,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 39,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "here",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "ĐANG Ở ĐÂY",
+      "box": [
+        662,
+        351,
+        115,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 40,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "sq",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        695,
+        375,
+        51,
+        51
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 41,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        706,
+        387,
+        28,
+        28
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 42,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "w",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã nhận · chờ xác minh",
+      "box": [
+        629,
+        431,
+        182,
+        19
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 43,
+      "parent": 33,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "stn",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1009,
+        377,
+        415,
+        73
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "sq",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1198,
+        383,
+        36,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 45,
+      "parent": 44,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1206,
+        391,
+        20,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 46,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "w",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã xác minh",
+      "box": [
+        1171,
+        431,
+        91,
+        18
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 47,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-route",
+      "component": null,
+      "of": "PaymentLadder",
+      "part": "caption",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Giao hàng được — đơn dưới mức 2.000.000 ₫ bạn đặt. OPC tự xác nhận khi MB khớp s",
+      "box": [
+        16,
+        458,
+        1408,
+        32
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 48,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-invoice",
+      "component": "InvoiceOptions",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        498,
+        1408,
+        125
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 49,
+      "parent": 48,
+      "kind": "recipe",
+      "class": "r-invoice",
+      "component": null,
+      "of": "InvoiceOptions",
+      "part": "fixed",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoá đơn máy tính tiền — tự phát hành sau khi thu tiềnbắt buộc, không tắt được",
+      "box": [
+        29,
+        499,
+        1382,
+        67
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        29,
+        509,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 51,
+      "parent": 48,
+      "kind": "recipe",
+      "class": "r-invoice",
+      "component": null,
+      "of": "InvoiceOptions",
+      "part": "toggles",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        29,
+        565,
+        1382,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 52,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-switch",
+      "component": "Switch",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "switch",
+      "text": "",
+      "box": [
+        29,
+        565,
+        802,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 53,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-switch",
+      "component": null,
+      "of": "Switch",
+      "part": "track",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        29,
+        580,
+        46,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 54,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-switch",
+      "component": null,
+      "of": "Switch",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoá đơn công ty",
+      "box": [
+        87,
+        583,
+        129,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 55,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-switch",
+      "component": "Switch",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "switch",
+      "text": "",
+      "box": [
+        839,
+        565,
+        573,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 56,
+      "parent": 55,
+      "kind": "component",
+      "class": "c-switch",
+      "component": null,
+      "of": "Switch",
+      "part": "track",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        839,
+        580,
+        46,
+        26
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 57,
+      "parent": 55,
+      "kind": "component",
+      "class": "c-switch",
+      "component": null,
+      "of": "Switch",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "In phiếu",
+      "box": [
+        897,
+        583,
+        60,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 58,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": "contentinfo",
+      "text": "",
+      "box": [
+        0,
+        751,
+        1440,
+        149
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 59,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-confirm",
+      "component": "MoneyConfirm",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [
+        "disabled"
+      ],
+      "role": "button",
+      "text": "",
+      "box": [
+        16,
+        762,
+        1408,
+        64
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 60,
+      "parent": 59,
+      "kind": "component",
+      "class": "c-ic",
+      "component": null,
+      "of": "Icon",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        31,
+        774,
+        40,
+        40
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 61,
+      "parent": 59,
+      "kind": "component",
+      "class": "c-confirm",
+      "component": null,
+      "of": "MoneyConfirm",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xác nhận đã thu 1.020.000 ₫",
+      "box": [
+        83,
+        773,
+        1314,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 62,
+      "parent": 59,
+      "kind": "component",
+      "class": "c-confirm",
+      "component": null,
+      "of": "MoneyConfirm",
+      "part": "reason",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tự xác nhận khi MB khớp sao kê",
+      "box": [
+        83,
+        795,
+        1314,
+        20
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 63,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act",
+        "block"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Giao hàng trước · bán đơn tiếp",
+      "box": [
+        16,
+        834,
+        1408,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 64,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-kbd",
+      "component": "Kbd",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "N",
+      "box": [
+        848,
+        850,
+        24,
+        24
+      ],
+      "context": {
+        "density": "touch"
+      }
+    }
+  ]
+}

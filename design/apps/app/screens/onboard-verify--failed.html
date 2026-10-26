@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sẵn sàng · Chưa xác minh được — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../system/tokens.css">
+<link rel="stylesheet" href="../../../system/components/components.css">
+<link rel="stylesheet" href="../../../system/components/recipes.css">
+<link rel="stylesheet" href="../app-tokens.css">
+<style>
+/* layout only */
+.r-onboard__body > * { min-width: 0; }
+</style>
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></symbol>
+</svg>
+<div class="r-onboard">
+  <header class="r-onboard__top">
+    <a class="c-icon-btn c-icon-btn--outline" href="readiness--new.html" aria-label="Quay lại Sẵn sàng"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+    <div class="c-steps" role="img" aria-label="Sẵn sàng: Xác minh chủ hộ"><span class="c-steps__label"><b>Sẵn sàng</b> · Xác minh chủ hộ</span></div>
+    <a class="r-onboard__help" href="onboard-help.html"><svg class="c-ic" aria-hidden="true"><use href="#i-help"/></svg>Hỏi</a>
+  </header>
+  <main class="r-onboard__body">
+    <h1 class="r-onboard__title">Chưa xác minh được</h1>
+    <div class="c-banner c-banner--pend" role="status"><span class="c-banner__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="c-banner__text"><strong class="c-banner__title">Mã đã hết 5 phút</strong><span class="c-banner__body">Chưa mất gì cả. Chị tạo mã mới và quét lại.</span></span></div>
+    <ul class="r-gate"><li class="r-gate__i r-gate__i--wait"><span class="r-gate__b"><b><span class="r-gate__ic r-gate__ic--wait" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Máy không có NFC?</b><small>nhân viên OPC xác minh cùng chị bằng máy của họ</small></span><span class="r-gate__amt"></span><span class="r-gate__act"></span></li><li class="r-gate__i r-gate__i--wait"><span class="r-gate__b"><b><span class="r-gate__ic r-gate__ic--wait" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Căn cước chưa kích hoạt chip?</b><small>nhân viên OPC hướng dẫn kích hoạt</small></span><span class="r-gate__amt"></span><span class="r-gate__act"></span></li></ul>
+    <p class="c-say">Không xác minh vẫn dùng OPC được.</p>
+    <p class="r-onboard__saved">Đã lưu — làm tiếp lúc nào cũng được</p>
+  </main>
+  <footer class="r-onboard__foot">
+    <a class="c-btn c-btn--act c-btn--block" href="onboard-verify--app.html">Tạo mã mới</a>
+    <a class="c-btn c-btn--quiet c-btn--block" href="onboard-help.html">Hẹn nhân viên OPC · Thứ Năm 02/07</a>
+    <div class="r-onboard__alt"><a href="readiness--new.html">Để sau</a></div>
+  </footer>
+</div>
+</body>
+</html>

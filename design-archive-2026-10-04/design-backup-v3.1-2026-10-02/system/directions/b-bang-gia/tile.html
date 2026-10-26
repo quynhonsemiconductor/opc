@@ -1,0 +1,179 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Style tile — Bảng Giá Chợ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{ /* B — Bảng Giá Chợ: ink + white board, one turmeric accent reserved for money tags */
+  --bg:#EEECE6; --surface:#FFFFFF; --ink:#15130F; --ink-2:#4A463E; --line:#15130F; --line-soft:#D6D2C8;
+  --accent:#F2A20C; --on-accent:#15130F; /* vàng nghệ — only ever a filled tag/ring, never text on white */
+  --ok:#17703A; --on-ok:#FFFFFF; --danger:#B3261E; --on-danger:#FFFFFF; --muted-fill:#E4E1D9; --muted-ink:#6B675E;
+  --font-display:"Big Shoulders Display",sans-serif; --font-body:"Be Vietnam Pro",sans-serif;
+  --r:14px; --r-sm:8px; --stroke:2px; --s:8px; --notch:20px; }
+*{box-sizing:border-box} body{margin:0;width:1200px;height:800px;overflow:hidden;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-body);font-variant-numeric:tabular-nums}
+.tile{display:grid;grid-template-columns:360px minmax(0,1fr);height:100%}
+.meta{padding:24px 28px;border-right:var(--stroke) solid var(--line);display:grid;align-content:start;gap:14px;background:var(--surface)}
+.work{padding:26px 28px;display:grid;gap:18px;align-content:start}
+.lbl{font-size:14px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+.num{font-family:var(--font-display);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:.2px;white-space:nowrap}
+.cur{font-size:.6em;margin-left:.1em;font-weight:700}
+.btn,.st,.t,.h{white-space:nowrap}
+.brand{font-size:14px;color:var(--ink-2)} .brand b{color:var(--ink)}
+.name{font:900 54px/0.95 var(--font-display);letter-spacing:.3px}
+.kw{font-weight:600;margin-top:6px}
+.anch{font-size:14px;line-height:1.45}
+.sw{display:flex;gap:8px}.sw figure{margin:0;width:44px;text-align:center;font-size:13px;color:var(--ink-2)}
+.sw i{display:block;width:44px;height:44px;border-radius:var(--r-sm);border:var(--stroke) solid var(--line);margin-bottom:3px}
+
+/* ——— buttons, input, status ——— */
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{height:48px;padding:0 20px;border-radius:12px;border:var(--stroke) solid var(--ink);font:700 16px/1 var(--font-body);display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:focus-visible,.btn.focus{outline:3px solid var(--accent);outline-offset:2px}
+.btn[disabled]{background:var(--muted-fill);color:var(--muted-ink);border-color:var(--muted-fill)}
+.field{display:grid;gap:4px}
+.field label{font-size:14px;font-weight:600}
+.input{height:48px;width:270px;border:var(--stroke) solid var(--ink);border-radius:12px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;background:var(--surface);box-shadow:0 0 0 3px var(--accent)}
+.input .num{font-size:26px}
+.input small{font-size:14px;color:var(--ink-2)}
+.st{height:34px;padding:0 12px;border-radius:var(--r-sm);border:var(--stroke) solid var(--ink);font:600 15px/1 var(--font-body);display:inline-flex;align-items:center;gap:7px;background:var(--surface)}
+.st svg{width:18px;height:18px;flex:none}
+.st.wait{border-style:dashed}
+.st.ok{background:var(--ok);border-color:var(--ok);color:var(--on-ok)}
+.st.err{background:var(--danger);border-color:var(--danger);color:var(--on-danger)}
+
+/* ——— SIGNATURE: the price tag (chamfered notch + string hole, 2px ink outline) ——— */
+.tag-w{filter:drop-shadow(2px 0 0 var(--ink)) drop-shadow(-2px 0 0 var(--ink)) drop-shadow(0 2px 0 var(--ink)) drop-shadow(0 -2px 0 var(--ink));margin:2px}
+.tag{position:relative;background:var(--surface);border-radius:var(--r);padding:14px 18px 14px 50px;
+  clip-path:polygon(var(--notch) 0,100% 0,100% 100%,var(--notch) 100%,0 calc(100% - var(--notch)),0 var(--notch))}
+.tag::before{content:"";position:absolute;left:16px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--hole,var(--bg));box-shadow:inset 0 0 0 2px var(--ink)}
+.tag.gold{background:var(--accent);color:var(--on-accent)}
+.tag.big{--notch:30px;padding:22px 24px 22px 70px}
+.tag.big::before{left:22px;width:24px;height:24px;margin-top:-12px}
+.tag .t{font-weight:600;font-size:16px}
+
+/* ——— content slice ——— */
+.card{background:var(--surface);border:var(--stroke) solid var(--line);border-radius:var(--r);padding:18px 20px 8px}
+.card h2{font:800 34px/1 var(--font-display);margin:0}
+.head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.head span{font-size:14px;color:var(--ink-2)}
+.money{display:grid;grid-template-columns:390px minmax(0,1fr);gap:14px;--hole:var(--surface)}
+.total .num{font-size:76px;line-height:.95;margin:8px 0 12px}
+.total .d{font-size:16px;font-weight:500}
+.total .up{font-weight:700}
+.side{display:grid;gap:12px;align-content:start}
+.side .num{font-size:31px;line-height:1}
+.side .tag{padding:14px 14px 14px 46px}
+.side .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.split{display:grid;gap:4px;margin-top:8px;font-size:15px}
+.split div{display:flex;justify-content:space-between;align-items:center}
+.split b{font-weight:700}
+.dot{display:inline-flex;align-items:center;gap:6px}
+.dot svg{width:16px;height:16px}
+.todo{margin-top:16px}
+.todo h3{font:800 24px/1 var(--font-display);margin:0 0 6px;display:flex;align-items:center;gap:10px}
+.todo h3 em{font-style:normal;font:700 15px/1 var(--font-body);background:var(--ink);color:#fff;border-radius:6px;padding:4px 8px}
+.it{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-top:var(--stroke) solid var(--line)}
+.it .h{font-weight:700;font-size:17px}
+.it .x{font-size:15px;color:var(--ink-2)}
+.it .x b{color:var(--ink);font-weight:700}
+
+.sig{border:var(--stroke) dashed var(--ink);padding:12px 14px;border-radius:var(--r);--hole:var(--surface)}
+.sig p{margin:8px 0 0;font-size:14px;line-height:1.45}
+.anat{display:flex;align-items:center;gap:10px}
+.anat .tag{padding:10px 14px 10px 46px}
+.anat .num{font-size:30px;line-height:1}
+.anat .k{font-size:13px;color:var(--ink-2);line-height:1.35}
+.pin{display:inline-block;font:700 13px/1 var(--font-body);background:var(--ink);color:#fff;border-radius:6px;padding:4px 7px;margin-left:8px;vertical-align:middle}
+</style></head><body><div class="tile">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16 9.8"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4"/><path d="M14 3l5 5h-5z"/><circle cx="17" cy="17" r="4"/><path d="M17 15.5V17l1 .8"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3l9.5 17h-19z" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<section class="meta">
+  <div>
+    <div class="brand"><b>OPC</b> by QNSC · hướng B</div>
+    <div class="name">Bảng Giá Chợ</div>
+    <div class="kw">Đậm · Rõ · Đọc từ xa</div>
+  </div>
+  <div><div class="lbl">Neo tham chiếu · refs/</div>
+    <div class="anch">shopify-pos.png — khối to, một nút trả tiền<br>kiotviet.png — quen mắt chủ sạp Việt</div></div>
+  <div><div class="lbl">Chữ · Big Shoulders + Be Vietnam Pro</div>
+    <div style="font:800 42px/1 var(--font-display)">Mực khô Nhơn Lý</div>
+    <div style="margin:6px 0 4px">Chờ khách chuyển — ặ ườ ễ ợ ỹ</div>
+    <div class="num" style="font-size:50px;line-height:1">1.020.000<span class="cur">₫</span></div>
+    <div style="font-size:15px;color:var(--ink-2)">0,5 kg · 23 đơn · 09:15</div></div>
+  <div><div class="lbl">Vai trò màu</div><div class="sw">
+    <figure><i style="background:var(--bg)"></i>nền</figure>
+    <figure><i style="background:var(--surface)"></i>bảng</figure>
+    <figure><i style="background:var(--ink)"></i>mực</figure>
+    <figure><i style="background:var(--accent)"></i>tiền</figure>
+    <figure><i style="background:var(--ok)"></i>đúng</figure>
+    <figure><i style="background:var(--danger)"></i>lỗi</figure></div></div>
+  <div class="sig"><div class="lbl" style="margin:0 0 8px">Dấu hiệu riêng · Thẻ giá</div>
+    <div class="anat">
+      <div class="tag-w"><div class="tag"><div style="font-weight:600;font-size:15px;white-space:nowrap">Mực khô · 0,5 kg</div><div class="num">450.000<span class="cur">₫</span></div></div></div>
+      <div class="k">góc vát<br>lỗ xỏ dây<br>nét 2px</div>
+    </div>
+    <p>Món hàng, khoản tiền nằm trên thẻ giá như ở sạp. Tổng tiền là thẻ to nhất, duy nhất màu vàng nghệ.</p>
+  </div>
+</section>
+
+<section class="work">
+  <div><div class="lbl">Thành phần · trạng thái</div>
+    <div class="row" style="align-items:end">
+      <button class="btn primary focus">Thu tiền <svg width="18" height="18"><use href="#i-arrow"/></svg></button>
+      <button class="btn">In hoá đơn</button>
+      <button class="btn" disabled>Phát hành</button>
+      <div class="field" style="margin-left:8px"><label>Khách đưa (tiền mặt)</label>
+        <div class="input"><span class="num">3.000.000<span class="cur">₫</span></span><small>thối 480.000 ₫</small></div></div>
+    </div>
+    <div class="row" style="margin-top:14px">
+      <span class="st wait"><svg><use href="#i-clock"/></svg>Chờ xác minh</span>
+      <span class="st ok"><svg><use href="#i-check"/></svg>Đã xác minh</span>
+      <span class="st wait"><svg><use href="#i-doc"/></svg>Chờ mã CQT</span>
+      <span class="st"><svg><use href="#i-check"/></svg>Có mã CQT</span>
+      <span class="st err"><svg><use href="#i-alert"/></svg>Lỗi CQT</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="head"><h2>Tiền hôm nay</h2><span>Thứ Sáu 02/10 · cập nhật 10:48</span></div>
+    <div class="money">
+      <div class="tag-w"><div class="tag gold big total">
+        <div class="t">Doanh thu <span class="pin">thẻ giá · to nhất</span></div>
+        <div class="num">8.460.000<span class="cur">₫</span></div>
+        <div class="d">23 đơn · <span class="up">+19%</span></div><div class="d" style="white-space:nowrap">so với hôm qua (7.120.000 ₫)</div>
+      </div></div>
+      <div class="side">
+        <div class="tag-w"><div class="tag">
+          <div class="top"><span class="t">QR/chuyển khoản</span><span class="num">5.940.000<span class="cur">₫</span></span></div>
+          <div class="split">
+            <div><span class="dot" style="color:var(--ok)"><svg><use href="#i-check"/></svg><span style="color:var(--ink)">đã xác minh</span></span><b>4.560.000 ₫</b></div>
+            <div><span class="dot"><svg><use href="#i-clock"/></svg>chờ xác minh</span><b>1.380.000 ₫</b></div>
+          </div>
+        </div></div>
+        <div class="tag-w"><div class="tag">
+          <div class="top"><span class="t">Tiền mặt</span><span class="num">2.520.000<span class="cur">₫</span></span></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="todo">
+      <h3>Cần xử lý <em>2</em></h3>
+      <div class="it">
+        <div><div class="h">2 khoản QR chờ xác minh</div>
+          <div class="x">DH-1043 <b>1.020.000 ₫</b> (10:42), DH-1041 <b>360.000 ₫</b> (10:05)</div></div>
+        <button class="btn primary">Đối chiếu <svg width="18" height="18"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="it">
+        <div><div class="h">Chuyển khoản không có mã đơn</div>
+          <div class="x"><b>2.150.000 ₫</b> từ NHA HANG BIEN DONG, 09:15<br>· gợi ý: công nợ Nhà hàng Biển Đông</div></div>
+        <button class="btn">Gán vào đơn <svg width="18" height="18"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section></div></body></html>

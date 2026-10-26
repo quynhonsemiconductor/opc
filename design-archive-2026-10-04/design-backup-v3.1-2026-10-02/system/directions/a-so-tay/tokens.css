@@ -1,0 +1,135 @@
+/* Sổ Tay — tokens. Three tiers:
+   1. --p-*      primitives (raw values, never used directly by components)
+   2. semantic   roles on :root (--bg, --ink, --seal, --warn …)
+   3. component  declared on the component selector itself, never on :root */
+
+:root {
+  /* ---------- 1. primitives ---------- */
+  --p-paper-50: #fdfcf8;
+  --p-paper-100: #faf8f3;
+  --p-paper-200: #f3efe4;
+  --p-paper-300: #e9e3d4;
+  --p-white: #ffffff;
+  --p-rule-300: #d8d2c4;
+  --p-rule-400: #bdb5a3;
+  --p-ink-900: #172033;
+  --p-ink-700: #2c3548;
+  --p-ink-600: #4e5563;
+  --p-ink-500: #636a78;
+  --p-vermilion-600: #b8321a;   /* son con dấu */
+  --p-vermilion-50: #fbefe9;
+  --p-turmeric-700: #7a5300;    /* nghệ — attention, NOT the seal */
+  --p-turmeric-500: #b07d0a;
+  --p-turmeric-50: #f7eecf;
+
+  --p-font-serif: "Source Serif 4", Georgia, serif;
+  --p-font-sans: "Public Sans", "Segoe UI", sans-serif;
+
+  --p-fs-13: 13px; --p-fs-14: 14px; --p-fs-16: 16px; --p-fs-18: 18px; --p-fs-20: 20px;
+  --p-fs-24: 24px; --p-fs-30: 30px; --p-fs-36: 36px; --p-fs-40: 40px; --p-fs-48: 48px; --p-fs-56: 56px;
+
+  --p-sp-1: 4px; --p-sp-2: 8px; --p-sp-3: 12px; --p-sp-4: 16px; --p-sp-5: 20px;
+  --p-sp-6: 24px; --p-sp-8: 32px; --p-sp-10: 40px; --p-sp-12: 48px;
+
+  --p-r-0: 0; --p-r-2: 2px; --p-r-4: 4px;
+  --p-hair: 1px; --p-rule-strong: 1.5px;
+
+  /* ---------- 2. semantic ---------- */
+  --bg: var(--p-paper-100);
+  --bg-sunk: var(--p-paper-200);
+  --bg-raised: var(--p-white);          /* inputs, the receipt slip */
+  --ink: var(--p-ink-900);
+  --ink-2: var(--p-ink-600);            /* meta, pending */
+  --ink-3: var(--p-ink-500);            /* disabled text (still ≥ 4.5:1 on paper) */
+  --on-ink: var(--p-white);
+  --rule: var(--p-rule-300);
+  --rule-2: var(--p-rule-400);
+  --rule-strong: var(--p-ink-900);
+
+  --seal: var(--p-vermilion-600);       /* ONLY: money verified against the bank statement */
+  --seal-bg: var(--p-vermilion-50);
+  --pending: var(--p-ink-600);          /* dashed, empty seal */
+  --warn: var(--p-turmeric-700);        /* attention: overdue, low stock, renewals */
+  --warn-mark: var(--p-turmeric-500);
+  --warn-bg: var(--p-turmeric-50);
+  --error: var(--p-turmeric-700);       /* errors = solid turmeric block + octagon icon */
+  --on-error: var(--p-white);
+
+  --font-figure: var(--p-font-serif);   /* totals, money headings */
+  --font-head: var(--p-font-serif);
+  --font-ui: var(--p-font-sans);
+
+  --text-body: var(--p-fs-16);
+  --text-meta: var(--p-fs-14);
+  --text-min: var(--p-fs-14);
+  --lh-body: 1.5;
+  --lh-tight: 1.2;
+
+  --radius: var(--p-r-2);
+  --radius-lg: var(--p-r-4);
+  --target: 44px;                       /* overridden to 56px in .ctx-touch */
+  --gutter: var(--p-sp-8);
+}
+
+/* touch context (Counter) */
+.ctx-touch { --target: 56px; }
+
+/* ---------- 3. component tokens ---------- */
+.btn {
+  --btn-h: var(--target);
+  --btn-px: var(--p-sp-4);
+  --btn-fs: var(--p-fs-16);
+  --btn-bg: transparent;
+  --btn-fg: var(--ink);
+  --btn-border: var(--ink);
+}
+.btn-primary { --btn-bg: var(--ink); --btn-fg: var(--on-ink); --btn-border: var(--ink); }
+.btn-quiet { --btn-border: var(--rule-2); }
+.btn[disabled] { --btn-bg: transparent; --btn-fg: var(--ink-3); --btn-border: var(--rule-2); }
+
+.stamp {
+  --stamp-fs: var(--p-fs-18);
+  --stamp-h: 40px;
+  --stamp-px: var(--p-sp-3);
+  --stamp-tilt: -1.5deg;
+  --stamp-color: var(--seal);
+  --stamp-ring: 2px;
+}
+.stamp-lg { --stamp-fs: var(--p-fs-18); --stamp-h: 48px; --stamp-px: var(--p-sp-4); }
+.stamp-pend { --stamp-color: var(--pending); --stamp-tilt: 0deg; }
+
+.trail {
+  --trail-box: 13px;
+  --trail-gap: 8px;
+  --trail-done: var(--ink);
+  --trail-seal: var(--seal);
+  --trail-empty: var(--rule-2);
+}
+
+.tag {
+  --tag-h: 30px;
+  --tag-fs: var(--p-fs-14);
+  --tag-fg: var(--ink-2);
+  --tag-border: var(--ink-2);
+}
+
+.ledger {
+  --ledger-row: 48px;
+  --ledger-head-rule: var(--p-rule-strong);
+}
+
+.slip {
+  --slip-bg: var(--bg-raised);
+  --slip-tooth: 8px;
+  --slip-px: var(--p-sp-5);
+}
+
+.ptile {
+  --ptile-h: 112px;
+  --ptile-pad: var(--p-sp-3);
+}
+
+.nav-item {
+  --nav-h: 44px;
+  --nav-active-bar: 3px;
+}

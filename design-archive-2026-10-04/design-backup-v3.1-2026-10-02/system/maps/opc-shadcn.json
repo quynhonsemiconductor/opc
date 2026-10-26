@@ -1,0 +1,737 @@
+{
+ "library": "shadcn/ui (OPC extension)",
+ "platform": "web-react",
+ "docs": "https://ui.shadcn.com/docs/components",
+ "extends": "references/component-maps/shadcn.json",
+ "components": {
+  "Button": {
+   "use": "Button",
+   "import": "import { Button } from \"@/components/ui/button\"",
+   "variants": {
+    "_default": {
+     "variant": "outline"
+    },
+    "act": {
+     "variant": "default",
+     "note": "yellow --act; ONE per view"
+    },
+    "quiet": {
+     "variant": "outline",
+     "className": "border-line-quiet"
+    },
+    "danger": {
+     "variant": "outline",
+     "className": "text-err border-err"
+    },
+    "wrap": {
+     "variant": "outline",
+     "className": "h-auto whitespace-normal text-left font-body font-medium"
+    },
+    "block": {
+     "className": "w-full"
+    }
+   },
+   "states": {
+    "disabled": {
+     "disabled": true,
+     "note": "dashed border, never opacity only"
+    },
+    "aria-busy": {
+     "disabled": true,
+     "note": "spinner after label"
+    }
+   },
+   "parts": {
+    "icon": "lucide icon child",
+    "kbd": "<Kbd> child"
+   },
+   "notes": "add variant act to buttonVariants (cva); min-h from --target via theme"
+  },
+  "IconButton": {
+   "use": "Button size=icon",
+   "import": "import { Button } from \"@/components/ui/button\"",
+   "variants": {
+    "outline": {
+     "variant": "outline"
+    },
+    "_default": {
+     "variant": "ghost"
+    }
+   },
+   "parts": {
+    "badge": "absolute count badge (aria-hidden; count in aria-label)"
+   }
+  },
+  "Icon": {
+   "use": "lucide-react icon",
+   "import": "import { House, Store, ReceiptText, … } from \"lucide-react\"",
+   "notes": "sprite ids map 1:1 to lucide icons; strokeWidth 2.4, square caps; size 22/18/26",
+   "variants": {
+    "s": {
+     "size": 18
+    },
+    "l": {
+     "size": 26
+    },
+    "_default": {
+     "size": 22
+    }
+   }
+  },
+  "Kbd": {
+   "use": "Kbd",
+   "import": "import { Kbd } from \"@/components/ui/kbd\"",
+   "notes": "shadcn Kbd (2025) or a <kbd> with tokens"
+  },
+  "SearchField": {
+   "use": "Input with leading icon",
+   "import": "import { Input } from \"@/components/ui/input\"",
+   "variants": {
+    "strong": {
+     "className": "border-line-strong"
+    }
+   },
+   "parts": {
+    "input": "Input type=search"
+   }
+  },
+  "Card": {
+   "use": "Card",
+   "import": "import { Card } from \"@/components/ui/card\"",
+   "variants": {
+    "tight": {
+     "className": "p-4"
+    }
+   },
+   "parts": {
+    "head": "CardHeader (flex, baseline)",
+    "title": "CardTitle (with 12px ink square)"
+   }
+  },
+  "Table": {
+   "use": "Table",
+   "import": "import { Table } from \"@/components/ui/table\"",
+   "variants": {
+    "stack": {
+     "note": "below 720px render rows as 2-line items (cell roles main/end/wide/hide)"
+    }
+   },
+   "parts": {
+    "scroll": "overflow-x-auto wrapper",
+    "num": "TableCell text-right",
+    "code": "TableCell font-display"
+   }
+  },
+  "Switch": {
+   "use": "Switch + Label",
+   "import": "import { Switch } from \"@/components/ui/switch\"\nimport { Label } from \"@/components/ui/label\"",
+   "states": {
+    "aria-checked": {
+     "checked": true
+    },
+    "disabled": {
+     "disabled": true
+    }
+   }
+  },
+  "SegmentedChoice": {
+   "use": "ToggleGroup type=single",
+   "import": "import { ToggleGroup } from \"@/components/ui/toggle-group\"",
+   "notes": "role radiogroup semantics; selected = ink fill"
+  },
+  "FilterBar": {
+   "use": "ToggleGroup type=multiple or single",
+   "import": "import { ToggleGroup } from \"@/components/ui/toggle-group\"",
+   "notes": "horizontal scroll on phone"
+  },
+  "FilterChip": {
+   "use": "ToggleGroupItem",
+   "import": "import { ToggleGroup } from \"@/components/ui/toggle-group\"",
+   "states": {
+    "aria-pressed": {
+     "data-state": "on"
+    }
+   }
+  },
+  "BottomSheet": {
+   "use": "Drawer",
+   "import": "import { Drawer } from \"@/components/ui/drawer\"",
+   "parts": {
+    "title": "DrawerTitle = amount",
+    "foot": "DrawerFooter"
+   },
+   "notes": "vaul drawer; full height on 390; focus trap + Esc return to trigger"
+  },
+  "LaterTasks": {
+   "use": "Collapsible",
+   "import": "import { Collapsible } from \"@/components/ui/collapsible\"",
+   "notes": "open by default on desktop"
+  },
+  "ThresholdMeter": {
+   "use": "Progress + marker",
+   "import": "import { Progress } from \"@/components/ui/progress\"",
+   "notes": "add the 1 tỷ marker as an absolutely positioned child"
+  },
+  "HouseholdSwitcher": {
+   "use": "DropdownMenu trigger",
+   "import": "import { DropdownMenu } from \"@/components/ui/dropdown-menu\"",
+   "variants": {
+    "bar": {
+     "note": "phone header version"
+    }
+   }
+  },
+  "AccountButton": {
+   "use": "DropdownMenu trigger + Avatar",
+   "import": "import { Avatar, AvatarFallback } from \"@/components/ui/avatar\""
+  },
+  "Picker": {
+   "use": "Button opening Command in Dialog/Drawer",
+   "import": "import { Command } from \"@/components/ui/command\"",
+   "notes": "customer search by name / MST"
+  },
+  "SidebarNav": {
+   "use": "Sidebar",
+   "import": "import { Sidebar } from \"@/components/ui/sidebar\"",
+   "parts": {
+    "item--counter": "SidebarMenuButton with outline, trailing arrow",
+    "count": "SidebarMenuBadge (outlined)"
+   }
+  },
+  "BrandMark": {
+   "use": "BrandMark",
+   "import": "import { BrandMark } from \"@/components/opc/brand-mark\"",
+   "custom": true,
+   "notes": "OPC mark + by QNSC"
+  },
+  "ConnectionStatus": {
+   "use": "ConnectionStatus",
+   "import": "import { ConnectionStatus } from \"@/components/opc/connection-status\"",
+   "custom": true,
+   "notes": "dot + words; off = hollow, err = red"
+  },
+  "OwnerSentence": {
+   "use": "OwnerSentence",
+   "import": "import { OwnerSentence } from \"@/components/opc/owner-sentence\"",
+   "custom": true,
+   "notes": "plain sentence above a figure"
+  },
+  "StatusSign": {
+   "use": "StatusSign",
+   "import": "import { StatusSign } from \"@/components/opc/status-sign\"",
+   "custom": true,
+   "notes": "pictogram + word; variants wait/pend/ok/you/err/unk; build on Badge if wanted"
+  },
+  "MoneyLine": {
+   "use": "MoneyLine",
+   "import": "import { MoneyLine } from \"@/components/opc/money-line\"",
+   "custom": true,
+   "notes": "3 squares, data-step 1–3, role=img + aria-label"
+  },
+  "LaneList": {
+   "use": "LaneList",
+   "import": "import { LaneList } from \"@/components/opc/lane-list\"",
+   "custom": true,
+   "notes": "ordered list of max 3 Lane"
+  },
+  "Lane": {
+   "use": "Lane",
+   "import": "import { Lane } from \"@/components/opc/lane\"",
+   "custom": true,
+   "notes": "numbered urgency lane; only --now has a filled numeral"
+  },
+  "LedgerList": {
+   "use": "LedgerList",
+   "import": "import { LedgerList } from \"@/components/opc/ledger-list\"",
+   "custom": true,
+   "notes": "hairline rows"
+  },
+  "MoneySignList": {
+   "use": "MoneySignList",
+   "import": "import { MoneySignList } from \"@/components/opc/money-sign-list\"",
+   "custom": true,
+   "notes": "list of MoneySign"
+  },
+  "MoneySign": {
+   "use": "MoneySign",
+   "import": "import { MoneySign } from \"@/components/opc/money-sign\"",
+   "custom": true,
+   "notes": "state panel ok/pend/cash with optional go link"
+  },
+  "TruthBar": {
+   "use": "TruthBar",
+   "import": "import { TruthBar } from \"@/components/opc/truth-bar\"",
+   "custom": true,
+   "notes": "verified/pending/cash share bar"
+  },
+  "DayBars": {
+   "use": "DayBars",
+   "import": "import { DayBars } from \"@/components/opc/day-bars\"",
+   "custom": true,
+   "notes": "7-day rows"
+  },
+  "ProductGrid": {
+   "use": "ProductGrid",
+   "import": "import { ProductGrid } from \"@/components/opc/product-grid\"",
+   "custom": true,
+   "notes": "tile grid → rows on phone"
+  },
+  "ProductButton": {
+   "use": "ProductButton",
+   "import": "import { ProductButton } from \"@/components/opc/product-button\"",
+   "custom": true,
+   "notes": "adds to cart; data-incart badge"
+  },
+  "QuantityStepper": {
+   "use": "QuantityStepper",
+   "import": "import { QuantityStepper } from \"@/components/opc/quantity-stepper\"",
+   "custom": true,
+   "notes": "spinbutton semantics; −/value/+"
+  },
+  "QrPayment": {
+   "use": "QrPayment",
+   "import": "import { QrPayment } from \"@/components/opc/qr-payment\"",
+   "custom": true,
+   "notes": "VietQR + aria-live status"
+  },
+  "PaymentLadder": {
+   "use": "PaymentLadder",
+   "import": "import { PaymentLadder } from \"@/components/opc/payment-ladder\"",
+   "custom": true,
+   "notes": "3-station stepper with ĐANG Ở ĐÂY, aria-current=step"
+  },
+  "MoneyConfirm": {
+   "use": "MoneyConfirm",
+   "import": "import { MoneyConfirm } from \"@/components/opc/money-confirm\"",
+   "custom": true,
+   "notes": "locked until bank reports (aria-disabled + reason); --done"
+  },
+  "PhoneTabBar": {
+   "use": "PhoneTabBar",
+   "import": "import { PhoneTabBar } from \"@/components/opc/phone-tab-bar\"",
+   "custom": true,
+   "notes": "fixed bottom nav ≤720px"
+  },
+  "AppShell": {
+   "use": "AppShell",
+   "import": "import { AppShell } from \"@/components/opc/app-shell\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "PageHeader": {
+   "use": "PageHeader",
+   "import": "import { PageHeader } from \"@/components/opc/page-header\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "MoneyToday": {
+   "use": "MoneyToday",
+   "import": "import { MoneyToday } from \"@/components/opc/money-today\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "DueItem": {
+   "use": "DueItem",
+   "import": "import { DueItem } from \"@/components/opc/due-item\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "CounterShell": {
+   "use": "CounterShell",
+   "import": "import { CounterShell } from \"@/components/opc/counter-shell\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "OrderTicket": {
+   "use": "OrderTicket",
+   "import": "import { OrderTicket } from \"@/components/opc/order-ticket\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "PaymentPanel": {
+   "use": "PaymentPanel",
+   "import": "import { PaymentPanel } from \"@/components/opc/payment-panel\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "InvoiceOptions": {
+   "use": "InvoiceOptions",
+   "import": "import { InvoiceOptions } from \"@/components/opc/invoice-options\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "PhoneCartBar": {
+   "use": "PhoneCartBar",
+   "import": "import { PhoneCartBar } from \"@/components/opc/phone-cart-bar\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "PhonePaymentSheet": {
+   "use": "PhonePaymentSheet",
+   "import": "import { PhonePaymentSheet } from \"@/components/opc/phone-payment-sheet\"",
+   "custom": true,
+   "notes": "recipe: composition of the components it uses (registry.json → uses)"
+  },
+  "Banner": {
+   "use": "Alert",
+   "import": "import { Alert, AlertTitle, AlertDescription } from \"@/components/ui/alert\"",
+   "variants": {
+    "err": {
+     "variant": "destructive",
+     "role": "alert"
+    },
+    "pend": {
+     "className": "border-dashed border-pend bg-pend-soft"
+    },
+    "ok": {
+     "className": "border-ok bg-ok-soft"
+    }
+   },
+   "notes": "pictogram + title + body + actions; --err uses role=alert"
+  },
+  "StateTabs": {
+   "use": "Tabs > TabsList > TabsTrigger",
+   "import": "import { Tabs, TabsList, TabsTrigger } from \"@/components/ui/tabs\"",
+   "variants": {
+    "tab--you": {
+     "note": "dark count badge"
+    }
+   },
+   "notes": "count badge inside each trigger; horizontal scroll + edge fade on phone"
+  },
+  "Dialog": {
+   "use": "Dialog (≥721px) / Drawer (≤720px)",
+   "import": "import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from \"@/components/ui/dialog\"\nimport { Drawer } from \"@/components/ui/drawer\"",
+   "notes": "focus to title, trap, Esc, return focus; footer note = result preview; primary names the result"
+  },
+  "OptionList": {
+   "use": "RadioGroup",
+   "import": "import { RadioGroup } from \"@/components/ui/radio-group\""
+  },
+  "OptionCard": {
+   "use": "RadioGroupItem rendered as a card (label wraps title/meta/why/amount)",
+   "import": "import { RadioGroupItem } from \"@/components/ui/radio-group\"",
+   "states": {
+    "aria-checked": {
+     "checked": true
+    },
+    "disabled": {
+     "disabled": true
+    }
+   },
+   "variants": {
+    "big": {
+     "note": "pictogram + bigger title"
+    },
+    "action": {
+     "note": "no radio; a card that performs an action (render as Button/Link)"
+    }
+   }
+  },
+  "Field": {
+   "use": "Label + Input (+ FormMessage)",
+   "import": "import { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"",
+   "variants": {
+    "money": {
+     "inputMode": "numeric",
+     "className": "text-right font-display text-amount-l"
+    }
+   },
+   "states": {
+    "data-invalid": {
+     "aria-invalid": true
+    }
+   }
+  },
+  "EmptyState": {
+   "use": "EmptyState",
+   "import": "import { EmptyState } from \"@/components/opc/empty-state\"",
+   "custom": true,
+   "notes": "pic + title + body (+ one action)"
+  },
+  "ChangeDue": {
+   "use": "ChangeDue",
+   "import": "import { ChangeDue } from \"@/components/opc/change-due\"",
+   "custom": true,
+   "notes": "high-contrast change-due panel; --short = customer short of money"
+  },
+  "FactList": {
+   "use": "FactList",
+   "import": "import { FactList } from \"@/components/opc/fact-list\"",
+   "custom": true,
+   "notes": "<dl> of facts; raw bank strings verbatim"
+  },
+  "CodeInput": {
+   "use": "InputOTP > InputOTPGroup > InputOTPSlot ×6",
+   "import": "import { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/components/ui/input-otp\"",
+   "notes": "autocomplete one-time-code, paste fills all"
+  },
+  "Menu": {
+   "use": "DropdownMenu (sort, DropdownMenuRadioGroup) / Command in Popover (search suggestions)",
+   "import": "import { DropdownMenu } from \"@/components/ui/dropdown-menu\"\nimport { Command } from \"@/components/ui/command\""
+  },
+  "Calendar": {
+   "use": "Calendar mode=\"range\" in Dialog/Drawer",
+   "import": "import { Calendar } from \"@/components/ui/calendar\"",
+   "notes": "locale vi, weekStartsOn 1, disable future"
+  },
+  "Pagination": {
+   "use": "Pagination",
+   "import": "import { Pagination } from \"@/components/ui/pagination\"",
+   "notes": "compact (accountant) only; owners use load-more"
+  },
+  "FilterChipRemovable": {
+   "use": "Badge + Button size=icon",
+   "import": "import { Badge } from \"@/components/ui/badge\""
+  },
+  "StepProgress": {
+   "use": "StepProgress",
+   "import": "import { StepProgress } from \"@/components/opc/step-progress\"",
+   "custom": true,
+   "notes": "Bước n/6 + segments"
+  },
+  "AssistantAnswer": {
+   "use": "AssistantAnswer",
+   "import": "import { AssistantAnswer } from \"@/components/opc/assistant-answer\"",
+   "custom": true,
+   "notes": "automatic answer; aria-live; next to human help"
+  },
+  "CoachMark": {
+   "use": "CoachMark",
+   "import": "import { CoachMark } from \"@/components/opc/coach-mark\"",
+   "custom": true,
+   "notes": "guided first sale bubble; non-modal dialog"
+  },
+  "CoachTarget": {
+   "use": "CoachTarget",
+   "import": "import { CoachTarget } from \"@/components/opc/coach-target\"",
+   "custom": true,
+   "notes": "spotlight wrapper"
+  },
+  "CaptureFrame": {
+   "use": "CaptureFrame",
+   "import": "import { CaptureFrame } from \"@/components/opc/capture-frame\"",
+   "custom": true,
+   "notes": "frame around vendor capture SDK"
+  },
+  "ActiveFilters": {
+   "use": "ActiveFilters",
+   "import": "import { ActiveFilters } from \"@/components/opc/active-filters\"",
+   "custom": true,
+   "notes": "chips row + clear + result"
+  },
+  "MenuAnchor": {
+   "use": "MenuAnchor",
+   "import": "import { MenuAnchor } from \"@/components/opc/menu-anchor\"",
+   "custom": true,
+   "notes": "positions a Menu"
+  },
+  "OnboardingStep": {
+   "use": "OnboardingStep",
+   "import": "import { OnboardingStep } from \"@/components/opc/onboarding-step\"",
+   "custom": true,
+   "notes": "recipe"
+  },
+  "HelpSheet": {
+   "use": "HelpSheet",
+   "import": "import { HelpSheet } from \"@/components/opc/help-sheet\"",
+   "custom": true,
+   "notes": "recipe"
+  },
+  "ListToolbar": {
+   "use": "ListToolbar",
+   "import": "import { ListToolbar } from \"@/components/opc/list-toolbar\"",
+   "custom": true,
+   "notes": "recipe"
+  },
+  "FilterPanel": {
+   "use": "FilterPanel",
+   "import": "import { FilterPanel } from \"@/components/opc/filter-panel\"",
+   "custom": true,
+   "notes": "recipe"
+  },
+  "Skeleton": {
+   "use": "Skeleton",
+   "import": "import { Skeleton } from \"@/components/ui/skeleton\"",
+   "variants": {
+    "line": {
+     "className": "h-4"
+    },
+    "title": {
+     "className": "h-7"
+    },
+    "figure": {
+     "className": "h-14"
+    },
+    "block": {
+     "className": "h-24 rounded-md"
+    }
+   }
+  },
+  "LoadingNote": {
+   "use": "LoadingNote",
+   "import": "import { LoadingNote } from \"@/components/opc/loading-note\"",
+   "custom": true,
+   "notes": "'Đang tải… · số liệu trước đó hh:mm'"
+  },
+  "DocumentPreview": {
+   "use": "DocumentPreview",
+   "import": "import { DocumentPreview } from \"@/components/opc/document-preview\"",
+   "custom": true,
+   "notes": "paper-like e-invoice preview"
+  },
+  "Timeline": {
+   "use": "Timeline",
+   "import": "import { Timeline } from \"@/components/opc/timeline\"",
+   "custom": true,
+   "notes": "order/invoice history"
+  },
+  "SectionNav": {
+   "use": "nav with Link items (aria-current)",
+   "import": "import { Link } from \"@tanstack/react-router\"",
+   "notes": "one route per item; feature switches filter items",
+   "variants": {
+    "wrap": {
+     "className": "flex-wrap",
+     "note": "short lists: wrap instead of scrolling on phone"
+    }
+   }
+  },
+  "DestinationList": {
+   "use": "DestinationList",
+   "import": "import { DestinationList } from \"@/components/opc/destination-list\"",
+   "custom": true,
+   "notes": "phone Thêm sheet / settings index"
+  },
+  "ApprovalList": {
+   "use": "ApprovalList",
+   "import": "import { ApprovalList } from \"@/components/opc/approval-list\"",
+   "custom": true,
+   "notes": "approval inbox list"
+  },
+  "ApprovalCard": {
+   "use": "ApprovalCard",
+   "import": "import { ApprovalCard } from \"@/components/opc/approval-card\"",
+   "custom": true,
+   "notes": "evidence + consequence before approve; audit on action"
+  },
+  "SidePanel": {
+   "use": "Sheet side=right (desktop) / Drawer (phone)",
+   "import": "import { Sheet, SheetContent } from \"@/components/ui/sheet\"",
+   "variants": {
+    "wide": {
+     "className": "sm:max-w-[560px]"
+    },
+    "docked": {
+     "note": "render inline in a 3-column shell"
+    }
+   }
+  },
+  "CommandPalette": {
+   "use": "CommandDialog",
+   "import": "import { CommandDialog, CommandInput, CommandList, CommandGroup, CommandItem } from \"@/components/ui/command\"",
+   "notes": "⌘K and '/'; groups Đơn · Hành động · Đi tới"
+  },
+  "Toast": {
+   "use": "toast() from sonner",
+   "import": "import { toast } from \"sonner\"",
+   "variants": {
+    "err": {
+     "note": "duration: Infinity"
+    }
+   }
+  },
+  "ToastRegion": {
+   "use": "<Toaster />",
+   "import": "import { Toaster } from \"@/components/ui/sonner\""
+  },
+  "Checkbox": {
+   "use": "Checkbox",
+   "import": "import { Checkbox } from \"@/components/ui/checkbox\""
+  },
+  "Breadcrumb": {
+   "use": "Breadcrumb",
+   "import": "import { Breadcrumb } from \"@/components/ui/breadcrumb\""
+  },
+  "SyncStatus": {
+   "use": "SyncStatus",
+   "import": "import { SyncStatus } from \"@/components/opc/sync-status\"",
+   "custom": true,
+   "notes": "save/sync state"
+  },
+  "NotificationList": {
+   "use": "NotificationList",
+   "import": "import { NotificationList } from \"@/components/opc/notification-list\"",
+   "custom": true,
+   "notes": "notification centre"
+  },
+  "Notification": {
+   "use": "Notification",
+   "import": "import { Notification } from \"@/components/opc/notification\"",
+   "custom": true,
+   "notes": "row"
+  },
+  "BulkActionBar": {
+   "use": "BulkActionBar",
+   "import": "import { BulkActionBar } from \"@/components/opc/bulk-action-bar\"",
+   "custom": true,
+   "notes": "selection toolbar"
+  },
+  "Sparkline": {
+   "use": "Sparkline",
+   "import": "import { Sparkline } from \"@/components/opc/sparkline\"",
+   "custom": true,
+   "notes": "svg trend"
+  },
+  "TrendChip": {
+   "use": "TrendChip",
+   "import": "import { TrendChip } from \"@/components/opc/trend-chip\"",
+   "custom": true,
+   "notes": "neutral trend chip"
+  },
+  "Receipt": {
+   "use": "Receipt",
+   "import": "import { Receipt } from \"@/components/opc/receipt\"",
+   "custom": true,
+   "notes": "customer slip / PDF"
+  },
+  "ZaloMessagePreview": {
+   "use": "ZaloMessagePreview",
+   "import": "import { ZaloMessagePreview } from \"@/components/opc/zalo-message-preview\"",
+   "custom": true,
+   "notes": "ZNS template preview"
+  },
+  "TextSizePicker": {
+   "use": "TextSizePicker",
+   "import": "import { TextSizePicker } from \"@/components/opc/text-size-picker\"",
+   "custom": true,
+   "notes": "display pref"
+  }
+ },
+ "theme": {
+  "file": "theme.css",
+  "format": "css-vars",
+  "selector": ":root",
+  "vars": {
+   "--background": "canvas",
+   "--foreground": "ink",
+   "--card": "surface",
+   "--card-foreground": "ink",
+   "--popover": "surface",
+   "--popover-foreground": "ink",
+   "--primary": "act",
+   "--primary-foreground": "on-act",
+   "--secondary": "surface-sunk",
+   "--secondary-foreground": "ink",
+   "--muted": "surface-sunk",
+   "--muted-foreground": "ink-3",
+   "--accent": "surface-sunk",
+   "--accent-foreground": "ink",
+   "--destructive": "err",
+   "--border": "line",
+   "--input": "line-strong",
+   "--ring": "focus",
+   "--radius": "radius"
+  }
+ }
+}

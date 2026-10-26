@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tiền &amp; đối chiếu — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../../../../system/tokens.css">
+<link rel="stylesheet" href="../../../../system/components/components.css">
+<link rel="stylesheet" href="../../../../system/components/recipes.css">
+<link rel="stylesheet" href="../../app-tokens.css">
+<style>
+/* layout only */
+.m-ledger { grid-column: 1 / -1; }
+.m-match { margin-left: var(--space-2); } .m-match b { font-variant-numeric: tabular-nums; } .m-match a { color: var(--act-ink); font-weight: 600; }
+.m-main { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: var(--space-4) var(--space-8); }
+.m-main > :first-child { flex: none; }
+.m-main > .m-facts { flex: 1 1 var(--side-min); max-width: var(--facts-w); min-width: 0; }
+@media (max-width: 1180px) { .m-ledger { grid-column: auto; } }
+@media (max-width: 720px) { .m-main { display: grid; grid-template-columns: minmax(0, 1fr); } .m-main > .m-facts { max-width: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path> <path d="M12 9v4"></path> <path d="M12 17h.01"></path></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path> <path d="M3 6h18"></path> <path d="M16 10a4 4 0 0 1-8 0"></path></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path> <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14"></path> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path> <path d="M12 22V12"></path> <path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path> <path d="m7.5 4.27 9 5.15"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle> <polyline points="12 6 12 12 16 14"></polyline></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path> <polyline points="7 10 12 15 17 10"></polyline> <line x1="12" x2="12" y1="15" y2="3"></line></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path> <circle cx="12" cy="12" r="3"></circle></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path> <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"></line> <line x1="4" x2="20" y1="6" y2="6"></line> <line x1="4" x2="20" y1="18" y2="18"></line></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.3-4.3"></path></symbol>
+</svg>
+<div class="r-shell" data-component="AppShell">
+  <nav class="c-nav r-shell__nav" aria-label="Điều hướng chính" data-part="SidebarNav.nav">
+    <div class="c-brand" data-component="BrandMark"><b class="c-brand__mark" data-part="BrandMark.mark">OPC</b><span class="c-brand__by" data-part="BrandMark.by">by QNSC</span></div>
+    <button class="c-hh" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Đặc sản Cao Nguyên An Nhiên, Pleiku" data-component="HouseholdSwitcher">
+      <span class="c-hh__mark" aria-hidden="true" data-part="HouseholdSwitcher.mark">AN</span>
+      <span class="c-hh__text" data-part="HouseholdSwitcher.text"><strong class="c-hh__name" data-part="HouseholdSwitcher.name">An Nhiên · Pleiku</strong><span class="c-hh__sub" data-part="HouseholdSwitcher.sub">Xác minh L1</span></span>
+      <svg class="c-ic c-ic--s" aria-hidden="true" data-component="Icon" data-variant="s"><use href="#i-chev"></use></svg>
+    </button>
+    <ul class="c-nav__list" data-part="SidebarNav.list"><li class="c-nav__grp" data-part="SidebarNav.grp"><div class="c-nav__row" data-part="SidebarNav.row"><a class="c-nav__item" href="home.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-home"></use></svg>Tổng quan<span class="c-nav__count" aria-label="3 việc cần xem" data-part="SidebarNav.count">3</span></a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-home" aria-label="Xem mục con của Tổng quan" data-part="SidebarNav.peek"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chev"></use></svg></button></div><ul class="c-nav__sub" id="nav-home" hidden="" data-part="SidebarNav.sub"><li><a class="c-nav__subitem" href="home.html" data-part="SidebarNav.subitem">Hôm nay</a></li><li><a class="c-nav__subitem" href="approvals.html" data-part="SidebarNav.subitem">Cần xử lý<span class="c-nav__count" aria-label="3 việc cần xem" data-part="SidebarNav.count">3</span></a></li></ul></li><li class="c-nav__grp" data-part="SidebarNav.grp"><div class="c-nav__row" data-part="SidebarNav.row"><a class="c-nav__item" href="purchases.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-download"></use></svg>Mua hàng</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-buy" aria-label="Xem mục con của Mua hàng" data-part="SidebarNav.peek"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chev"></use></svg></button></div><ul class="c-nav__sub" id="nav-buy" hidden="" data-part="SidebarNav.sub"><li><a class="c-nav__subitem" href="purchases.html" data-part="SidebarNav.subitem">Đơn mua</a></li><li><a class="c-nav__subitem" href="suppliers.html" data-part="SidebarNav.subitem">Nhà cung cấp</a></li><li><a class="c-nav__subitem" href="purchases--expense.html" data-part="SidebarNav.subitem">Chi phí</a></li></ul></li><li class="c-nav__grp" data-part="SidebarNav.grp"><div class="c-nav__row" data-part="SidebarNav.row"><a class="c-nav__item" href="orders.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-bag"></use></svg>Bán hàng<span class="c-nav__count" aria-label="3 việc cần xem" data-part="SidebarNav.count">3</span></a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-orders" aria-label="Xem mục con của Bán hàng" data-part="SidebarNav.peek"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chev"></use></svg></button></div><ul class="c-nav__sub" id="nav-orders" hidden="" data-part="SidebarNav.sub"><li><a class="c-nav__subitem" href="sales-inbox.html" data-part="SidebarNav.subitem">Yêu cầu<span class="c-nav__count" aria-label="3 việc cần xem" data-part="SidebarNav.count">3</span></a></li><li><a class="c-nav__subitem" href="orders.html" data-part="SidebarNav.subitem">Đơn bán</a></li><li><a class="c-nav__subitem" href="delivery.html" data-part="SidebarNav.subitem">Giao hàng</a></li><li><a class="c-nav__subitem" href="customers.html" data-part="SidebarNav.subitem">Khách hàng</a></li></ul></li><li class="c-nav__grp" data-part="SidebarNav.grp"><div class="c-nav__row" data-part="SidebarNav.row"><a class="c-nav__item" href="products.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-box"></use></svg>Kho hàng</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-goods" aria-label="Xem mục con của Kho hàng" data-part="SidebarNav.peek"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chev"></use></svg></button></div><ul class="c-nav__sub" id="nav-goods" hidden="" data-part="SidebarNav.sub"><li><a class="c-nav__subitem" href="products.html" data-part="SidebarNav.subitem">Hàng và giá</a></li><li><a class="c-nav__subitem" href="stock.html" data-part="SidebarNav.subitem">Tồn kho</a></li><li><a class="c-nav__subitem" href="stock-count.html" data-part="SidebarNav.subitem">Kiểm kho</a></li></ul></li><li class="c-nav__grp c-nav__grp--open" data-part="SidebarNav.grp"><div class="c-nav__row" data-part="SidebarNav.row"><a class="c-nav__item c-nav__item--here" href="money.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-money"></use></svg>Tiền</a><button class="c-nav__peek" type="button" aria-expanded="true" aria-controls="nav-money" aria-label="Thu gọn Tiền" data-part="SidebarNav.peek"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chev"></use></svg></button></div><ul class="c-nav__sub" id="nav-money" data-part="SidebarNav.sub"><li><a class="c-nav__subitem" href="money.html" aria-current="page" data-part="SidebarNav.subitem">Thu chi và đối chiếu<span class="c-nav__count" aria-label="4 việc cần xem" data-part="SidebarNav.count">4</span></a></li><li><a class="c-nav__subitem" href="receivables.html" data-part="SidebarNav.subitem">Công nợ</a></li><li><a class="c-nav__subitem" href="invoices.html" data-part="SidebarNav.subitem">Hoá đơn</a></li></ul></li><li class="c-nav__grp" data-part="SidebarNav.grp"><div class="c-nav__row" data-part="SidebarNav.row"><a class="c-nav__item" href="period.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-book"></use></svg>Sổ và kê khai</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-books" aria-label="Xem mục con của Sổ và kê khai" data-part="SidebarNav.peek"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chev"></use></svg></button></div><ul class="c-nav__sub" id="nav-books" hidden="" data-part="SidebarNav.sub"><li><a class="c-nav__subitem" href="period.html" data-part="SidebarNav.subitem">Kỳ và đối soát</a></li><li><a class="c-nav__subitem" href="tax.html" data-part="SidebarNav.subitem">Kê khai</a></li><li><a class="c-nav__subitem" href="books.html" data-part="SidebarNav.subitem">Sổ sách</a></li><li><a class="c-nav__subitem" href="audit.html" data-part="SidebarNav.subitem">Nhật ký</a></li></ul></li></ul>
+    <ul class="c-nav__list c-nav__list--foot" data-part="SidebarNav.list"><li class="c-nav__grp" data-part="SidebarNav.grp"><div class="c-nav__row" data-part="SidebarNav.row"><a class="c-nav__item" href="readiness.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-gear"></use></svg>Thiết lập<span class="c-nav__count c-nav__count--err" aria-label="1 kết nối lỗi" data-part="SidebarNav.count">1</span></a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="nav-settings" aria-label="Xem mục con của Thiết lập" data-part="SidebarNav.peek"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chev"></use></svg></button></div><ul class="c-nav__sub" id="nav-settings" hidden="" data-part="SidebarNav.sub"><li><a class="c-nav__subitem" href="readiness.html" data-part="SidebarNav.subitem">Sẵn sàng</a></li><li><a class="c-nav__subitem" href="setup-business.html" data-part="SidebarNav.subitem">Hộ kinh doanh</a></li><li><a class="c-nav__subitem" href="setup-data.html" data-part="SidebarNav.subitem">Dữ liệu nền</a></li><li><a class="c-nav__subitem" href="setup-policy.html" data-part="SidebarNav.subitem">Người dùng và quyền</a></li><li><a class="c-nav__subitem" href="connections.html" data-part="SidebarNav.subitem">Kết nối<span class="c-nav__count c-nav__count--err" aria-label="1 kết nối lỗi" data-part="SidebarNav.count">1</span></a></li><li><a class="c-nav__subitem" href="settings-features.html" data-part="SidebarNav.subitem">Tính năng</a></li><li><a class="c-nav__subitem" href="settings-display.html" data-part="SidebarNav.subitem">Hiển thị</a></li></ul></li><li><a class="c-nav__item" href="help.html" data-part="SidebarNav.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-chat"></use></svg>Trợ giúp và hỗ trợ</a></li></ul>
+  </nav>
+
+  <div class="r-shell__main" data-part="AppShell.main">
+    <header class="r-shell__top" data-part="AppShell.top">
+      <button class="c-hh c-hh--bar r-shell__phone" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Đặc sản An Nhiên" data-part="HouseholdSwitcher.phone" data-variant="bar"><span class="c-hh__mark" aria-hidden="true" data-part="HouseholdSwitcher.mark">AN</span><span class="c-hh__text" data-part="HouseholdSwitcher.text"><strong class="c-hh__name" data-part="HouseholdSwitcher.name">Đặc sản An Nhiên</strong><span class="c-hh__sub" data-part="HouseholdSwitcher.sub">Pleiku</span></span></button>
+      <label class="c-search r-shell__desk" data-part="SearchField.desk"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-search"></use></svg><span class="u-sr">Tìm kiếm</span><input class="c-search__input" type="search" placeholder="Tìm đơn, món, khách…" data-part="SearchField.input"><span class="c-kbd u-pro" aria-hidden="true" data-component="Kbd">⌘K</span></label>
+      <div class="r-shell__spacer" data-part="AppShell.spacer"></div>
+      <button class="c-icon-btn r-shell__phone" type="button" aria-label="Tìm đơn, món, khách" data-part="IconButton.phone"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-search"></use></svg></button>
+      <span class="c-health r-shell__desk" role="status" tabindex="0" data-tip="Ngân hàng MB cập nhật 2 phút trước · hoá đơn máy tính tiền hoạt động · hoá đơn điện tử không trả lời 10:12 · Cổng thuế chưa bật · Đã lưu 10:45" data-part="ConnectionPill.desk">Đã lưu · <b>10:45</b></span>
+      <a class="c-btn c-btn--quiet r-shell__desk" href="home--assistant.html" data-part="Button.desk" data-variant="quiet">Trợ lý</a>
+      <a class="c-icon-btn" href="home--notifications.html" aria-label="Thông báo — 4 chưa đọc" data-component="IconButton"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-bell"></use></svg><span class="c-icon-btn__badge" aria-hidden="true" data-part="IconButton.badge">4</span></a>
+      <button class="c-avatar r-shell__desk" type="button" aria-label="Nguyễn Minh Khoa · Người vận hành — tài khoản" data-part="AccountButton.desk"><span class="c-avatar__face" aria-hidden="true" data-part="AccountButton.face">K</span></button>
+    </header>
+
+    <main class="r-shell__content" data-part="AppShell.content">
+      <nav class="c-subnav" aria-label="Tiền" data-component="SectionNav"><a class="c-subnav__item" href="money.html" aria-current="page" data-part="SectionNav.item">Thu chi và đối chiếu</a><a class="c-subnav__item" href="receivables.html" data-part="SectionNav.item">Công nợ</a><a class="c-subnav__item" href="invoices.html" data-part="SectionNav.item">Hoá đơn</a></nav>
+      <div class="r-page-head" data-component="PageHeader">
+        <div>
+          <h1 class="r-page-head__title" data-part="PageHeader.title">Tiền &amp; đối chiếu</h1>
+          <p class="c-sub" data-component="Subline">Thứ Ba 06/10 · MB 0901 2345 678</p>
+        </div>
+        <div class="r-page-head__acts r-page-head__acts--desk" data-part="PageHeader.acts">
+          <a class="c-btn" href="money--help.html" data-component="Button">Trợ giúp</a>
+          <a class="c-btn" href="money.html" data-component="Button">Đối chiếu tiền</a>
+        </div>
+      </div>
+
+      <div class="r-home" data-component="HomeLayout">
+        <section class="c-stat r-home__hero" aria-labelledby="h-real" data-part="TodayFigure.hero">
+          <div class="c-stat__top" data-part="TodayFigure.top">
+            <h2 class="c-stat__label" id="h-real" data-part="TodayFigure.label">Đã khớp sao kê MB hôm nay</h2>
+            <span class="c-stat__fresh" data-part="TodayFigure.fresh">MB · cập nhật 10:43</span>
+          </div>
+          <div class="c-stat__main m-main" data-part="TodayFigure.main">
+            <div>
+              <p class="c-stat__fig" data-part="TodayFigure.fig">4.745.000<span class="u-cur">₫</span></p>
+              <p class="c-stat__delta" data-part="TodayFigure.delta"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Đã xác minh</span><span class="m-match"><b>2/4</b> khoản đã khớp · 1 chờ · <a href="money--assign.html">1 chưa gán</a></span></p>
+            </div>
+            <ul class="c-debts m-facts" aria-label="Số dư và tiền mặt" data-component="DebtList">
+              <li class="c-debts__row" data-part="DebtList.row"><span class="c-debts__k" data-part="DebtList.k">Số dư MB</span><span class="c-debts__v" data-part="DebtList.v">62.480.000 ₫</span><span class="c-debts__m" data-part="DebtList.m">gồm cả tiền chưa xác minh</span></li>
+              <li class="c-debts__row" data-part="DebtList.row"><span class="c-debts__k" data-part="DebtList.k">Tiền mặt hôm nay</span><span class="c-debts__v" data-part="DebtList.v">1.520.000 ₫</span><span class="c-debts__m" data-part="DebtList.m"><a href="money--cash.html">đếm cuối ngày</a></span></li>
+            </ul>
+          </div>
+          <div class="c-split" data-component="MoneyTruthBar">
+            <div class="c-split__bar" role="img" aria-label="Tiền vào MB hôm nay 5.720.000 ₫: đã xác minh 4.745.000 ₫, chờ xác minh 390.000 ₫, chưa gán 585.000 ₫" data-part="MoneyTruthBar.bar"><i class="c-split__ok" style="flex:4745" data-part="MoneyTruthBar.ok"></i><i class="c-split__pend" style="flex:390" data-part="MoneyTruthBar.pend"></i><i class="c-split__you" style="flex:585" data-part="MoneyTruthBar.you"></i></div>
+            <ul class="c-split__legend" data-part="MoneyTruthBar.legend">
+              <li class="c-split__item c-split__item--ok" data-part="MoneyTruthBar.item"><span class="c-split__k" data-part="MoneyTruthBar.k">Đã xác minh · 2 khoản</span></li>
+              <li class="c-split__item c-split__item--pend c-split__item--quiet" data-part="MoneyTruthBar.item"><a href="#txn"><span class="c-split__k" data-part="MoneyTruthBar.k">Chờ xác minh · 1 khoản</span><b class="c-split__v" data-part="MoneyTruthBar.v">390.000<span class="u-cur">₫</span></b></a></li>
+              <li class="c-split__item c-split__item--you" data-part="MoneyTruthBar.item"><a href="money--assign.html"><span class="c-split__k" data-part="MoneyTruthBar.k">Chưa gán · 1 khoản</span><b class="c-split__v" data-part="MoneyTruthBar.v">585.000<span class="u-cur">₫</span></b></a></li>
+            </ul>
+            <p class="c-split__explain" data-part="MoneyTruthBar.explain"><b>Chờ xác minh</b> = ngân hàng đã báo, chưa khớp sao kê</p>
+          </div>
+        </section>
+
+        <section class="c-card r-home__todo" aria-labelledby="h-todo" data-part="Card.todo">
+          <div class="c-card__head" data-part="Card.head"><h2 class="c-card__title" id="h-todo" data-part="Card.title">Cần xem <span class="c-count" aria-label="4 khoản" data-component="CountBadge">4</span></h2></div>
+          <ol class="c-todo" data-component="TodoList">
+            <li class="c-todo__item c-todo__item--now" data-part="TodoList.item"><span class="c-todo__n" aria-hidden="true" data-part="TodoList.n">1</span>
+              <div><h3 class="c-todo__t" data-part="TodoList.t">Gán 585.000 ₫ vào đơn</h3><p class="c-todo__m" data-part="TodoList.m">NGUYEN VAN NAM · 09:20 · có thể là DH-2050</p></div>
+              <a class="c-btn c-btn--act c-todo__go" href="money--assign.html" data-part="Button.go" data-variant="act">Gán đơn</a></li>
+            <li class="c-todo__item" data-part="TodoList.item"><span class="c-todo__n" aria-hidden="true" data-part="TodoList.n">2</span>
+              <div><h3 class="c-todo__t" data-part="TodoList.t">DH-2045 chờ quá 30 phút</h3><p class="c-todo__m" data-part="TodoList.m">390.000 ₫ · Homestay Mây Ngàn</p></div>
+              <a class="c-btn c-todo__go" href="order-detail.html" data-part="Button.go">Kiểm tra</a></li>
+            <li class="c-todo__item" data-part="TodoList.item"><span class="c-todo__n" aria-hidden="true" data-part="TodoList.n">3</span>
+              <div><h3 class="c-todo__t" data-part="TodoList.t">Sunrise vừa chuyển 8.400.000 ₫</h3><p class="c-todo__m" data-part="TodoList.m">2 hoá đơn tháng 9</p></div>
+              <a class="c-btn c-todo__go" href="money--split.html" data-part="Button.go">Xem đề xuất</a></li>
+            <li class="c-todo__item" data-part="TodoList.item"><span class="c-todo__n" aria-hidden="true" data-part="TodoList.n">4</span>
+              <div><h3 class="c-todo__t" data-part="TodoList.t">195.000 ₫ có thể trùng</h3><p class="c-todo__m" data-part="TodoList.m">DH-2048 · 09:06</p></div>
+              <a class="c-btn c-todo__go" href="money--duplicate.html" data-part="Button.go">Kiểm tra</a></li>
+          </ol>
+        </section>
+
+        <section class="c-card r-home__orders m-ledger" id="txn" aria-labelledby="h-txn" data-part="Card.orders">
+          <div class="c-card__head" data-part="Card.head"><h2 class="c-card__title" id="h-txn" data-part="Card.title">Tiền vào MB hôm nay</h2><span class="u-money">5.720.000 ₫</span></div>
+          <div class="c-tabs" role="tablist" aria-label="Lọc theo trạng thái" data-component="StateTabs">
+            <button class="c-tabs__tab" role="tab" aria-selected="true" type="button" data-part="StateTabs.tab" data-state="selected">Tất cả <span class="c-tabs__count" data-part="StateTabs.count">4</span></button>
+            <button class="c-tabs__tab" role="tab" aria-selected="false" type="button" data-part="StateTabs.tab">Chờ xác minh <span class="c-tabs__count" data-part="StateTabs.count">1</span></button>
+            <button class="c-tabs__tab c-tabs__tab--you" role="tab" aria-selected="false" type="button" data-part="StateTabs.tab">Chưa gán <span class="c-tabs__count" data-part="StateTabs.count">1</span></button>
+            <button class="c-tabs__tab" role="tab" aria-selected="false" type="button" data-part="StateTabs.tab">Đã xác minh <span class="c-tabs__count" data-part="StateTabs.count">2</span></button>
+          </div>
+          <div role="tabpanel" aria-label="Tất cả 4 khoản"><ul class="c-orders" data-component="OrderRows">
+            <li class="c-orders__row" data-part="OrderRows.row"><a href="money--assign.html"><span class="c-orders__who" data-part="OrderRows.who">NGUYEN VAN NAM<small>09:20 · “gui tien bo kho” · chưa có đơn</small></span><span class="c-orders__st" data-part="OrderRows.st"><span class="c-sign c-sign--you" data-component="StatusSign" data-variant="you"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-alert"></use></svg></span>Chưa gán</span></span><span class="c-orders__amt u-money" data-part="OrderRows.amt">585.000 ₫</span></a></li>
+            <li class="c-orders__row" data-part="OrderRows.row"><a href="order-detail.html"><span class="c-orders__who" data-part="OrderRows.who">HOMESTAY MAY NGAN<small>09:52 · “DH2045” · → DH-2045</small></span><span class="c-orders__st" data-part="OrderRows.st"><span class="c-sign c-sign--pend" data-component="StatusSign" data-variant="pend"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-clock"></use></svg></span>Chờ quá 30 phút</span></span><span class="c-orders__amt u-money" data-part="OrderRows.amt">390.000 ₫</span></a></li>
+            <li class="c-orders__row" data-part="OrderRows.row"><a href="order-detail.html"><span class="c-orders__who" data-part="OrderRows.who">LE VAN TOAN<small>09:05 · “DH2048” · → DH-2048</small></span><span class="c-orders__st" data-part="OrderRows.st"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Đã xác minh</span></span><span class="c-orders__amt u-money" data-part="OrderRows.amt">195.000 ₫</span></a></li>
+            <li class="c-orders__row" data-part="OrderRows.row"><a href="receivables.html"><span class="c-orders__who" data-part="OrderRows.who">CONG TY TNHH SUNRISE<small>08:41 · “DH2049 SUNRISE” · → DH-2049</small></span><span class="c-orders__st" data-part="OrderRows.st"><span class="c-sign c-sign--ok" data-component="StatusSign" data-variant="ok"><span class="c-sign__pic" data-part="StatusSign.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>Đã xác minh</span></span><span class="c-orders__amt u-money" data-part="OrderRows.amt">4.550.000 ₫</span></a></li>
+          </ul></div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<nav class="c-tabbar" aria-label="Điều hướng nhanh" data-component="PhoneTabBar">
+  <a class="c-tabbar__item" href="home.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-home"></use></svg>Tổng quan<span class="c-tabbar__count" aria-label="3 việc cần làm" data-part="PhoneTabBar.count">3</span></a>
+  <a class="c-tabbar__item" href="purchases.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-download"></use></svg>Mua</a>
+  <a class="c-tabbar__item" href="orders.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-bag"></use></svg>Bán<span class="c-tabbar__count" aria-label="3 cần xem" data-part="PhoneTabBar.count">3</span></a>
+  <a class="c-tabbar__item" href="stock.html" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-box"></use></svg>Kho</a>
+  <a class="c-tabbar__item" href="home--more.html" aria-current="page" data-part="PhoneTabBar.item"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-menu"></use></svg>Thêm</a>
+</nav>
+
+
+</body></html>

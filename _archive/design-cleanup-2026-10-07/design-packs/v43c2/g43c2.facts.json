@@ -1,0 +1,97 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.3.1",
+ "group": "g43c2",
+ "screens": [
+  {
+   "file": "shift-close.html",
+   "title": "Tiền · Đóng ca sáng (đếm két, lệch cần lý do)",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 34,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "shift-close--cod.html",
+   "title": "Đóng ca · nhận tiền thu hộ từ người giao",
+   "pattern": "form",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 4,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  },
+  {
+   "file": "shift-close--done.html",
+   "title": "Đóng ca · biên bản ca, chị An đã nhận tiền",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 19,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ]
+  }
+ ]
+}

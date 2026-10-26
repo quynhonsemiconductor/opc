@@ -1,0 +1,305 @@
+{
+  "project": "OPC Design System",
+  "phase": "locked",
+  "designVersion": "4.2.2",
+  "direction": "modern-calm",
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "sizes": [
+    "1440x900",
+    "1280x800",
+    "1024x768"
+  ],
+  "minTarget": 44,
+  "minFont": 13,
+  "paths": {
+    "brief": "BRIEF.md",
+    "design": "DESIGN.md",
+    "tokens": "tokens.css",
+    "components": "components/components.css",
+    "catalog": "components/catalog.html",
+    "screens": "screens",
+    "shots": "shots",
+    "handoff": "handoff",
+    "changelog": "CHANGELOG.md",
+    "registry": "components/registry.json",
+    "implementation": null
+  },
+  "screens": [],
+  "notes": "phase: brief → research → directions → locked → screens. Managed by the uiux-studio skill; update on every change.",
+  "budget": {
+    "targets": "references/cost-playbook.md",
+    "log": [
+      {
+        "phase": "research",
+        "agent": "researcher(haiku)",
+        "what": "4 captures + 5 DNA cards",
+        "subagent_tokens": 46980
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) tile a",
+        "subagent_tokens": 55780
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) tile b",
+        "subagent_tokens": 65000
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) tile c",
+        "subagent_tokens": 63948
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) tile d",
+        "subagent_tokens": 63410
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) tile e",
+        "subagent_tokens": 56662
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) tile f",
+        "subagent_tokens": 56511
+      },
+      {
+        "phase": "directions",
+        "agent": "evaluator(sonnet) tiles",
+        "subagent_tokens": 46859
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) final A, 3 rounds",
+        "subagent_tokens": 200503
+      },
+      {
+        "phase": "directions",
+        "agent": "maker(opus) final F, 3 rounds",
+        "subagent_tokens": 240744
+      },
+      {
+        "phase": "directions",
+        "agent": "evaluator(sonnet) A, 3 rounds",
+        "subagent_tokens": 60277
+      },
+      {
+        "phase": "directions",
+        "agent": "evaluator(sonnet) F, 3 rounds",
+        "subagent_tokens": 51102
+      },
+      {
+        "phase": "lock",
+        "agent": "maker(opus) lock ×3 attempts",
+        "what": "stalled/rate-limited before writing; lock then done by Director in main thread",
+        "subagent_tokens": 0
+      },
+      {
+        "phase": "lock",
+        "agent": "evaluator(sonnet) lock v1.0",
+        "score": 7.8,
+        "note": "2 of 5 fixes were downscale misreads (verified by crop); 3 applied",
+        "subagent_tokens": 44434
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "maker(sonnet) counter states ×5",
+        "subagent_tokens": 69274
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "maker(sonnet) phone sheets ×2 + home states ×2",
+        "subagent_tokens": 84951
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "maker(sonnet) money + assign",
+        "subagent_tokens": 90777
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "maker(sonnet) orders + invoices",
+        "subagent_tokens": 92891
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "evaluator(sonnet) lists r1",
+        "score": 7.2,
+        "subagent_tokens": 39754
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "evaluator(sonnet) states r1",
+        "score": 7.9,
+        "subagent_tokens": 44357
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "evaluator(sonnet) r2 lists+states",
+        "score": "lists 7.9 · states 8.0 PASS",
+        "subagent_tokens": 45120
+      },
+      {
+        "phase": "screens v1.1",
+        "agent": "evaluator(sonnet) r3 lists",
+        "score": "8.2 PASS",
+        "subagent_tokens": 39646
+      },
+      {
+        "phase": "onboarding v1.3",
+        "agent": "maker(sonnet) G1 welcome/phone/otp/household/assisted",
+        "subagent_tokens": 88464
+      },
+      {
+        "phase": "onboarding v1.3",
+        "agent": "maker(sonnet) G2 verify/camera/bank/invoice",
+        "subagent_tokens": 59504
+      },
+      {
+        "phase": "onboarding v1.3",
+        "agent": "maker(sonnet) G3 products/review/help/firstsale/done",
+        "subagent_tokens": 84232
+      },
+      {
+        "phase": "onboarding v1.3",
+        "agent": "evaluator(sonnet) onboarding r1",
+        "score": 7.7,
+        "subagent_tokens": 46281
+      },
+      {
+        "phase": "onboarding v1.3",
+        "agent": "maker(sonnet) onboarding fixes r1",
+        "subagent_tokens": 82141
+      },
+      {
+        "phase": "list tools v1.4",
+        "agent": "maker(sonnet) orders/invoices list tools ×7",
+        "subagent_tokens": 99697
+      },
+      {
+        "phase": "onboarding+list tools",
+        "agent": "evaluator(sonnet) onboarding r2 + list r1",
+        "score": "onboarding 8.0 PASS · list tools 7.4",
+        "subagent_tokens": 45205
+      },
+      {
+        "phase": "list tools v1.4",
+        "agent": "evaluator(sonnet) list tools r2",
+        "score": 7.8,
+        "note": "3 fixes applied after, not re-scored",
+        "subagent_tokens": 43821
+      },
+      {
+        "phase": "remaining v1.5",
+        "agent": "maker(sonnet) onboarding errors ×6",
+        "subagent_tokens": 77495
+      },
+      {
+        "phase": "remaining v1.5",
+        "agent": "maker(sonnet) loading ×2 + details ×2",
+        "subagent_tokens": 106306
+      },
+      {
+        "phase": "remaining v1.5",
+        "agent": "evaluator(sonnet) v1.5 r1",
+        "score": 7.7,
+        "note": "content fixes applied after, not re-scored",
+        "subagent_tokens": 46161
+      },
+      {
+        "phase": "IA v2",
+        "agent": "maker(sonnet) approvals + audit",
+        "subagent_tokens": 64359
+      },
+      {
+        "phase": "IA v2",
+        "agent": "maker(sonnet) settings ×2 + more sheet",
+        "subagent_tokens": 83496
+      },
+      {
+        "phase": "IA v2",
+        "agent": "evaluator(sonnet) IA r1",
+        "score": 7.1,
+        "subagent_tokens": 49250
+      },
+      {
+        "phase": "IA v2",
+        "agent": "evaluator(sonnet) IA r2",
+        "score": 7.7,
+        "subagent_tokens": 43223
+      },
+      {
+        "phase": "IA v2",
+        "agent": "evaluator(sonnet) IA r3",
+        "score": 8.3,
+        "subagent_tokens": 39940
+      },
+      {
+        "phase": "restyle A-Pro",
+        "agent": "evaluator(sonnet) F vs A-Pro",
+        "score": "F 7.0 · A-Pro 7.9 (fixes applied after)",
+        "subagent_tokens": 38483
+      },
+      {
+        "phase": "Pro layer v3.1",
+        "agent": "maker(sonnet) support ×5",
+        "subagent_tokens": 114462
+      },
+      {
+        "phase": "Pro layer v3.1",
+        "agent": "maker(sonnet) productivity ×6",
+        "subagent_tokens": 97713
+      },
+      {
+        "phase": "Pro layer v3.1",
+        "agent": "maker(sonnet) trust ×2",
+        "subagent_tokens": 62855
+      },
+      {
+        "phase": "Pro layer v3.1",
+        "agent": "evaluator(sonnet) Pro r1",
+        "score": 7.2,
+        "subagent_tokens": 36256
+      },
+      {
+        "phase": "Pro layer v3.1",
+        "agent": "evaluator(sonnet) Pro r2",
+        "score": 7.8,
+        "note": "4 fixes applied after, not re-scored",
+        "subagent_tokens": 38367
+      },
+      {
+        "date": "2026-10-03",
+        "phase": "v4 modern-calm (Kiro CLI)",
+        "subagent_tokens": "n/a (not reported by Kiro)",
+        "agents": "4 evaluator runs"
+      }
+    ]
+  },
+  "tech": null,
+  "type": "system",
+  "created": "2026-10-01",
+  "consumers": [
+    "../apps/app"
+  ],
+  "techSummary": {
+    "OPC — app (owner, staff, accountant)": "web/headless/shadcn"
+  },
+  "finalists": {
+    "a-so-tay": {
+      "score": 8.0,
+      "rounds": 3
+    },
+    "f-chi-dan": {
+      "score": 8.0,
+      "rounds": 3
+    }
+  },
+  "notes_restyle": "A-Pro candidate in ../design-archive-2026-10-04/system/directions/a-pro (tokens.css + skin.css + preview + motion.html). GATE pending."
+}

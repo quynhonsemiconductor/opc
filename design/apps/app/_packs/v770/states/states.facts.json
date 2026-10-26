@@ -1,0 +1,396 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "7.6.0",
+ "group": "states",
+ "screens": [
+  {
+   "file": "quick-sale--offline.html",
+   "title": "Bán nhanh · mất mạng, tiền mặt lưu trên máy (chưa đồng bộ)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 39,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 124,
+     "block": 16,
+     "icons": 1,
+     "iconRate": 0.8,
+     "rules": 8,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 2,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "purchase-detail--receive--offline.html",
+   "title": "Nhận hàng MH-0118 · mất mạng, số đếm lưu trên máy",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 34,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 169,
+     "block": 20,
+     "icons": 1,
+     "iconRate": 0.6,
+     "rules": 8,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "600",
+      "400",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 0,
+     "tinted": 2
+    }
+   }
+  },
+  {
+   "file": "tax--accountant.html",
+   "title": "Kê khai quý III · góc nhìn kế toán chị Lan (xem, tải)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 23,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 230,
+     "block": 31,
+     "icons": 2,
+     "iconRate": 0.9,
+     "rules": 8,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "600",
+      "400",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 0,
+     "tinted": 2
+    }
+   }
+  },
+  {
+   "file": "quick-sale--staff.html",
+   "title": "Bán nhanh · nhân viên Hạnh (ghi nợ cần chị An)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 22,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 111,
+     "block": 17,
+     "icons": 2,
+     "iconRate": 1.8,
+     "rules": 7,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 2,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "delivery.html",
+   "title": "Bán · Giao hàng hôm nay (bảng 4 chặng)",
+   "pattern": "board",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 31,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 234,
+     "block": 13,
+     "icons": 5,
+     "iconRate": 2.1,
+     "rules": 9,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 4,
+     "chips": 3,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "home--notifications.html",
+   "title": "Thông báo",
+   "pattern": "overview",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 13,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "panel",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 134,
+     "block": 14,
+     "icons": 6,
+     "iconRate": 4.5,
+     "rules": 9,
+     "sizes": 2,
+     "sizeList": [
+      14,
+      16
+     ],
+     "weights": 2,
+     "weightList": [
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  }
+ ]
+}

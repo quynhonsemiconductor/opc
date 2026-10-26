@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bước 6/6 · Hàng hoá — Đăng ký OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../system/tokens.css">
+<link rel="stylesheet" href="../../../system/components/components.css">
+<link rel="stylesheet" href="../../../system/components/recipes.css">
+<link rel="stylesheet" href="../app-tokens.css">
+<style>
+.m-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
+.m-row { display: grid; gap: var(--space-2); padding-bottom: var(--space-4); border-bottom: var(--hairline) solid var(--line); }
+.m-check { display: grid; gap: var(--space-2); }
+.m-act { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.m-amt { display: flex; align-items: center; gap: var(--space-2); justify-content: flex-end; }</style>
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /> <circle cx="9" cy="9" r="2" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></symbol>
+</svg>
+<div class="r-onboard">
+  <header class="r-onboard__top">
+    <a class="c-icon-btn c-icon-btn--outline" href="onboard-opening.html" aria-label="Quay lại bước trước"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+    <div class="c-steps" role="img" aria-label="Bước 6 trên 6: Hàng và số đầu kỳ"><span class="c-steps__label"><b>Bước 6/6</b> · Hàng và số đầu kỳ</span><ol class="c-steps__bar"><li class="c-steps__seg c-steps__seg--done"></li><li class="c-steps__seg c-steps__seg--done"></li><li class="c-steps__seg c-steps__seg--done"></li><li class="c-steps__seg c-steps__seg--done"></li><li class="c-steps__seg c-steps__seg--done"></li><li class="c-steps__seg c-steps__seg--now"></li></ol></div>
+    <a class="r-onboard__help" href="onboard-help.html"><svg class="c-ic" aria-hidden="true"><use href="#i-help"/></svg>Hỏi</a>
+  </header>
+  <main class="r-onboard__body">
+    <h1 class="r-onboard__title">AI đọc được 2 món, 4 giá — chị kiểm tra trước khi lưu</h1>
+    <p class="c-say">Từ ảnh <b>bảng giá viết tay</b> · chụp 10:12 · 01/07/2026 · có 2 cột: giá lẻ và giá khách sạn</p>
+    <p class="c-say" role="status"><b>3 giá chắc chắn · 1 giá cần kiểm tra.</b> Ô vàng nét đứt là chỗ AI chưa chắc. Lưu xong vẫn sửa được.</p>
+    <section aria-labelledby="h-check">
+      <h2 class="c-card__title" id="h-check">1 giá chị cần kiểm tra</h2>
+      <ul class="m-rows" aria-labelledby="h-check">
+        <li class="m-row">
+          <span class="c-list__name">Muối kiến vàng 100g · giá khách sạn</span>
+          <div class="m-check">
+            <label class="c-field" data-check><span class="c-field__label">Giá khách sạn</span><span class="c-field__control"><input class="c-field__input" inputmode="numeric" value="55.000" aria-describedby="h-p3"><span class="c-field__suffix">₫/hũ</span></span><span class="c-field__hint" id="h-p3">Ảnh ghi <b>“5?.000”</b> · AI đoán <b>55.000</b> — chị sửa nếu chưa đúng</span></label>
+            <div class="m-act"><button class="c-btn" type="button">Đúng rồi</button><button class="c-btn c-btn--quiet" type="button">Xem trong ảnh</button></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <details class="r-onboard__recap" open>
+      <summary><span class="c-sign c-sign--ok" id="h-sure"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>3 giá AI đọc chắc chắn</span><span class="u-meta">Thu gọn</span></summary>
+      <ul class="c-list" aria-labelledby="h-sure">
+        <li class="c-list__row"><span class="c-list__name">Bò một nắng 500g · giá lẻ</span><span class="m-amt"><span class="c-list__amt r-sure">260.000 ₫/gói</span><button class="c-btn c-btn--quiet" type="button">Sửa</button></span></li>
+        <li class="c-list__row"><span class="c-list__name">Bò một nắng 500g · giá khách sạn</span><span class="m-amt"><span class="c-list__amt r-sure">230.000 ₫/gói</span><button class="c-btn c-btn--quiet" type="button">Sửa</button></span></li>
+        <li class="c-list__row"><span class="c-list__name">Muối kiến vàng 100g · giá lẻ</span><span class="m-amt"><span class="c-list__amt r-sure">65.000 ₫/hũ</span><button class="c-btn c-btn--quiet" type="button">Sửa</button></span></li>
+      </ul>
+    </details>
+    <p class="c-say">Cột “giá khách sạn” sẽ thành một <b>bảng giá riêng</b>; chị gán khách nào dùng bảng này ở bước Sẵn sàng.</p>
+    <p class="r-onboard__saved">Đã lưu — làm tiếp lúc nào cũng được</p>
+  </main>
+  <aside class="r-onboard__aside r-onboard__aside--compact" aria-label="Các bước đăng ký">
+    <nav class="c-stepmap" aria-label="Tiến độ đăng ký"><p class="c-stepmap__k">Đăng ký · còn khoảng 5 phút · làm dở vẫn lưu</p><ol class="c-stepmap__list"><li class="c-stepmap__s c-stepmap__s--done"><span class="c-stepmap__n" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-stepmap__t">Số điện thoại<span class="u-sr"> — xong</span></span><span class="c-stepmap__m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done"><span class="c-stepmap__n" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-stepmap__t">Hộ kinh doanh<span class="u-sr"> — xong</span></span><span class="c-stepmap__m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done"><span class="c-stepmap__n" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-stepmap__t">Cách bán<span class="u-sr"> — xong</span></span><span class="c-stepmap__m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done"><span class="c-stepmap__n" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-stepmap__t">Thuế và tài khoản<span class="u-sr"> — xong</span></span><span class="c-stepmap__m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done"><span class="c-stepmap__n" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-stepmap__t">Hoá đơn<span class="u-sr"> — xong</span></span><span class="c-stepmap__m">xong</span></li><li class="c-stepmap__s c-stepmap__s--now" aria-current="step"><span class="c-stepmap__n" aria-hidden="true">6</span><span class="c-stepmap__t">Hàng và số đầu kỳ</span><span class="c-stepmap__m">5 phút</span><p class="c-stepmap__why">Thêm hàng và giá, rồi điền tồn đã đếm, tiền và công nợ lúc bắt đầu.</p></li></ol><p class="c-stepmap__end">Xong 6 bước: làm giao dịch đầu tiên, rồi làm dần danh sách Sẵn sàng</p></nav>
+  </aside>
+  <footer class="r-onboard__foot">
+    <button class="c-btn c-btn--act c-btn--block c-btn--wrap" type="button">Lưu 2 món · 1 giá chưa xác nhận</button>
+    <div class="r-onboard__alt"><a href="onboard-products.html">Chụp thêm ảnh</a><a href="onboard-help.html">Gọi chị Thu</a></div>
+  </footer>
+</div>
+</body>
+</html>

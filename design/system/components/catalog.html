@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catalog · OPC Design System v4.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="recipes.css">
+<style>
+/* catalog layout only */
+.cat { max-width: 1280px; margin: 0 auto; padding: var(--space-8) var(--shell-gutter) var(--space-10); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+.cat-h { display: grid; gap: var(--space-2); }
+.cat-h h1 { font: 700 var(--fs-h1)/1.1 var(--font-display); }
+.sec { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); padding-top: var(--space-5); border-top: var(--stroke) solid var(--line-strong); }
+.sec > h2 { font: 700 var(--fs-h2)/1.1 var(--font-display); }
+.sec > p { color: var(--ink-2); max-width: 72ch; }
+.demo { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.demo-col { display: grid; gap: var(--space-3); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+.lbl { font: 600 var(--fs-meta)/1.3 var(--font-body); color: var(--ink-3); }
+.sw-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-3); }
+.swatch { display: grid; gap: 4px; }
+.swatch i { display: block; height: 56px; border-radius: var(--radius); border: var(--hairline) solid var(--line); }
+.narrow { max-width: 420px; }
+.mid { max-width: 640px; }
+.surface { background: var(--surface); padding: var(--space-4); border-radius: var(--radius-l); border: var(--hairline) solid var(--line); }
+@media (max-width: 900px) { .grid2, .grid3 { grid-template-columns: minmax(0, 1fr); } }
+.grid2 > *, .grid3 > *, .demo-col > * { min-width: 0; }
+.cat code { font-family: var(--font-mono); }
+.cat-static { position: static; transform: none; width: auto; justify-items: start; }   /* toasts shown in place */
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /> <line x1="4" x2="20" y1="18" y2="18" /></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.268 21a2 2 0 0 0 3.464 0" /> <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2" /> <circle cx="12" cy="12" r="2" /> <path d="M6 12h.01M18 12h.01" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1" /> <rect width="5" height="5" x="16" y="3" rx="1" /> <rect width="5" height="5" x="3" y="16" rx="1" /> <path d="M21 16h-3a2 2 0 0 0-2 2v3" /> <path d="M21 21v.01" /> <path d="M12 7v3a2 2 0 0 1-2 2H7" /> <path d="M3 12h.01" /> <path d="M12 3h.01" /> <path d="M12 16v.01" /> <path d="M16 12h1" /> <path d="M21 12v.01" /> <path d="M12 21v-1" /></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol>
+  <symbol id="i-invoice" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /> <path d="M14 2v4a2 2 0 0 0 2 2h4" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4" /> <path d="M4 7h16" /> <path d="m16 21 4-4-4-4" /> <path d="M20 17H4" /></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /> <path d="m21 21-4.3-4.3" /></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /> <path d="M3 6h18" /> <path d="M16 10a4 4 0 0 1-8 0" /></symbol>
+  <symbol id="i-counter" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /> <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /> <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /> <path d="M2 7h20" /> <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></symbol>
+  <symbol id="i-orders" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="M12 11h4" /> <path d="M12 16h4" /> <path d="M8 11h.01" /> <path d="M8 16h.01" /></symbol>
+  <symbol id="i-squid" viewBox="0 0 24 24"><path d="M2 16s9-15 20-4C11 23 2 8 2 8" /></symbol>
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8" /> <path d="M10 5H8a2 2 0 0 0 0 4h.68" /> <path d="M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8" /> <path d="M14 5h2a2 2 0 0 1 0 4h-.68" /> <path d="M18 22H6" /> <path d="M9 2h6" /></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /> <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /> <polyline points="16 7 22 7 22 13" /></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" /></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="M7 21h10" /> <path d="M12 3v18" /> <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5" /> <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></symbol>
+<symbol id="i-photo" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /> <circle cx="9" cy="9" r="2" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></symbol></svg>
+<main class="cat">
+  <header class="cat-h">
+    <div class="c-brand"><b class="c-brand__mark">OPC</b><span class="c-brand__by">by QNSC</span></div>
+    <h1>Thư viện thành phần · v4.0 “Modern · Calm”</h1>
+    <p class="c-say">Nền lặng, một điểm nhấn: trang trắng, chia vùng bằng đường kẻ mảnh; <b>xanh biển</b> chỉ cho hành động chính, chỗ đang đứng và hôm nay. Chữ ký là <b>tiền thật</b>: xanh đặc = đã xác minh · hổ phách gạch chéo = đang chờ · xám = tiền mặt. Số thứ tự = việc làm trước.</p>
+  </header>
+
+  <!-- ===== Tokens ===== -->
+  <section class="sec" aria-labelledby="s-color">
+    <h2 id="s-color">Màu theo việc</h2>
+    <p>Mỗi màu một việc. <b>Xanh biển</b> = hành động chính / chỗ đang đứng / hôm nay. Xanh lá = đã xác minh. Hổ phách gạch chéo + viền đứt = đang chờ ngân hàng/CQT. Đỏ chỉ cho lỗi. Tiền mặt luôn xám trung tính.</p>
+    <div class="sw-row">
+      <div class="swatch"><i style="background:var(--ink)"></i><span class="lbl">ink · chữ, viền chính</span></div>
+      <div class="swatch"><i style="background:var(--canvas)"></i><span class="lbl">canvas · nền trang</span></div>
+      <div class="swatch"><i style="background:var(--surface)"></i><span class="lbl">surface · thẻ</span></div>
+      <div class="swatch"><i style="background:var(--act)"></i><span class="lbl">act · hành động chính</span></div>
+      <div class="swatch"><i style="background:var(--ok)"></i><span class="lbl">ok · đã xác minh</span></div>
+      <div class="swatch"><i style="background:var(--pend-hatch);border:var(--stroke) dashed var(--pend)"></i><span class="lbl">pend · chờ xác minh</span></div>
+      <div class="swatch"><i style="background:var(--err)"></i><span class="lbl">err · lỗi</span></div>
+      <div class="swatch"><i style="background:var(--truth-cash)"></i><span class="lbl">truth-cash · tiền mặt</span></div>
+      <div class="swatch"><i style="background:var(--truth-ok)"></i><span class="lbl">truth-ok · thanh tiền thật</span></div>
+      <div class="swatch"><i style="background:var(--truth-hatch);outline:1.5px dashed var(--truth-pend);outline-offset:2px"></i><span class="lbl">truth-hatch · đang chờ</span></div>
+      <div class="swatch"><i style="background:var(--canvas-quiet)"></i><span class="lbl">canvas-quiet · panel phẳng</span></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-type">
+    <h2 id="s-type">Chữ</h2>
+    <div class="grid2">
+      
+      <div class="demo-col">
+        <span class="lbl">Public Sans · đọc (tối thiểu 16px, phụ 14px)</span>
+        <p class="c-say"><b>1.380.000 ₫</b> tiền QR chưa xác minh — đối chiếu trước khi giao hàng lớn.</p>
+        <p>Hoá đơn bán hàng hộ kinh doanh — không có dòng thuế GTGT. Khối lượng 0,5 kg × 1.250.000 ₫.</p>
+        <p class="u-meta">Phụ 14px · cập nhật 2 phút trước · Thứ Sáu 02/10/2026 10:45</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Actions ===== -->
+  <section class="sec" aria-labelledby="s-btn">
+    <h2 id="s-btn">c-btn · c-icon-btn · c-confirm</h2>
+    <p>Mỗi màn chỉ một nút vàng (việc cần làm ngay). Nút khoá có lý do, không bao giờ chỉ xám.</p>
+    <div class="demo">
+      <button class="c-btn c-btn--act" type="button">Đối chiếu<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <button class="c-btn" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg>Tạo đơn</button>
+      <button class="c-btn c-btn--quiet" type="button">Lưu tạm</button>
+      <button class="c-btn c-btn--danger" type="button">Huỷ đơn<span class="c-kbd" aria-hidden="true">Esc</span></button>
+      <button class="c-btn" type="button" disabled>Không khả dụng</button>
+      <button class="c-btn" type="button" aria-busy="true">Đang gửi</button>
+      <button class="c-btn c-btn--wrap" type="button">Tuần này món nào bán chạy nhất?</button>
+    </div>
+    <div class="demo" data-density="touch">
+      <span class="lbl">data-density="touch" (quầy, 56px):</span>
+      <button class="c-btn c-btn--act" type="button">Thu tiền<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <button class="c-btn" type="button">Đóng ca</button>
+      <button class="c-icon-btn c-icon-btn--outline" type="button" aria-label="Menu"><svg class="c-ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+    <div class="demo">
+      <button class="c-icon-btn" type="button" aria-label="Thông báo — 4 chưa đọc"><svg class="c-ic" aria-hidden="true"><use href="#i-bell"/></svg><span class="c-icon-btn__badge" aria-hidden="true">4</span></button>
+      <button class="c-icon-btn c-icon-btn--outline" type="button" aria-label="Đóng"><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+      <button class="c-avatar" type="button" aria-label="Nguyễn Văn Phúc"><span class="c-avatar__face" aria-hidden="true">P</span></button>
+      <span class="c-kbd">F9</span>
+    </div>
+    <div class="grid3" data-density="touch">
+      <div class="demo-col"><span class="lbl">khoá · chờ ngân hàng</span>
+        <button class="c-confirm" type="button" aria-disabled="true"><svg class="c-ic c-confirm__pic" aria-hidden="true"><use href="#i-lock"/></svg><span><strong class="c-confirm__label">Xác nhận đã thu 1.020.000 ₫</strong><span class="c-confirm__reason">Tự xác nhận khi ngân hàng báo</span></span><span class="c-kbd" aria-hidden="true">F9</span></button></div>
+      <div class="demo-col"><span class="lbl">mở · tiền mặt</span>
+        <button class="c-confirm" type="button"><svg class="c-ic c-confirm__pic" aria-hidden="true"><use href="#i-cash"/></svg><span><strong class="c-confirm__label">Đã thu 1.020.000 ₫ tiền mặt</strong><span class="c-confirm__reason">Thối lại 0 ₫</span></span><span class="c-kbd" aria-hidden="true">F9</span></button></div>
+      <div class="demo-col"><span class="lbl">xong</span>
+        <button class="c-confirm c-confirm--done" type="button"><svg class="c-ic c-confirm__pic" aria-hidden="true"><use href="#i-check"/></svg><span><strong class="c-confirm__label">Đã xác minh 1.020.000 ₫</strong><span class="c-confirm__reason">Giao hàng · in phiếu</span></span><span></span></button></div>
+    </div>
+  </section>
+
+  <!-- ===== Money truth ===== -->
+  <section class="sec" aria-labelledby="s-sign">
+    <h2 id="s-sign">c-sign · c-moneyline</h2>
+    <p>Trạng thái luôn có màu + hình + chữ. Dòng tiền 3 điểm: chờ chuyển → đã nhận · chờ xác minh → đã xác minh.</p>
+    <div class="demo">
+      <span class="c-sign c-sign--wait"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg></span>Chờ khách chuyển</span>
+      <span class="c-sign c-sign--pend"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Chờ xác minh</span>
+      <span class="c-sign c-sign--pend"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-invoice"/></svg></span>Chờ mã CQT</span>
+      <span class="c-sign c-sign--ok"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>Đã xác minh</span>
+      <span class="c-sign c-sign--ok"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>Có mã CQT</span>
+      <span class="c-sign c-sign--you"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>Chờ bạn xác nhận</span>
+      <span class="c-sign c-sign--err"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg></span>Lỗi phát hành</span>
+      <span class="c-sign c-sign--unk"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-link"/></svg></span>Mất kết nối</span>
+    </div>
+    <div class="demo">
+      <span class="c-moneyline" data-step="1" role="img" aria-label="Bước 1/3: chờ khách chuyển"><s></s><s></s><s></s></span><span class="lbl">bước 1</span>
+      <span class="c-moneyline" data-step="2" role="img" aria-label="Bước 2/3: đã nhận, chờ xác minh"><s></s><s></s><s></s></span><span class="lbl">bước 2</span>
+      <span class="c-moneyline" data-step="3" role="img" aria-label="Bước 3/3: đã xác minh"><s></s><s></s><s></s></span><span class="lbl">bước 3</span>
+    </div>
+    <div class="grid2">
+      <div class="demo-col">
+        
+        <div class="c-meter">
+          <div class="c-meter__row"><span class="u-meta">Doanh thu 2026</span><span class="u-money">1.284.500.000 ₫</span></div>
+          <div class="c-meter__bar" role="img" aria-label="Đã vượt mốc 1 tỷ"><span class="c-meter__fill" style="width:85.6%"></span><span class="c-meter__mark" style="left:66.7%"><span>1 tỷ</span></span></div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ===== Lanes ===== -->
+  <section class="sec" aria-labelledby="s-lane">
+    <h2 id="s-lane">c-list</h2>
+    <p>Danh sách kẻ mảnh, không đóng khung. Việc được đánh số dùng <code>c-todo</code> (mục Cần làm bên dưới).</p>
+    <div class="grid2">
+      <div class="c-card c-card--tight">
+        
+      </div>
+      <div class="c-card c-card--tight narrow">
+        <span class="lbl">c-list trong cột hẹp (container ≤ 560px)</span>
+        
+        
+        <ul class="c-list">
+          <li class="c-list__row"><span class="c-list__name">Khách sạn Hải Âu</span><span class="c-list__amt">3.420.000 ₫</span><span class="c-list__meta">đơn chờ xác nhận</span></li>
+          <li class="c-list__row"><span class="c-list__name">Nhà hàng Biển Đông</span><span class="c-list__amt">2.150.000 ₫</span><span class="c-list__meta">có thể đã trả — <a href="#">xem việc số 2</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Data ===== -->
+  <section class="sec" aria-labelledby="s-data">
+    <h2 id="s-data">c-table · c-card</h2>
+    <div class="grid2">
+      <div class="c-card">
+        <div class="c-card__head"><h3 class="c-card__title">Đơn gần đây</h3><span class="u-meta">c-table--stack</span></div>
+        <div class="c-table__scroll"><table class="c-table c-table--stack">
+          <thead><tr><th>Mã</th><th>Khách</th><th class="c-table__num">Tổng</th><th>Trạng thái</th></tr></thead>
+          <tbody>
+            <tr class="c-table__row--link"><td class="c-table__code c-table__cell--main">DH-1043</td><td class="c-table__cell--wide">Khách lẻ · Tại quầy</td><td class="c-table__num c-table__cell--end"><span class="c-table__total"><span class="c-moneyline" data-step="2" role="img" aria-label="Bước 2/3"><s></s><s></s><s></s></span><span class="u-money">1.020.000 ₫</span></span></td><td class="c-table__cell--wide"><span class="c-sign c-sign--pend"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Chờ xác minh</span></td></tr>
+            <tr><td class="c-table__code c-table__cell--main">DH-1042</td><td class="c-table__cell--wide">Khách lẻ · Tại quầy</td><td class="c-table__num c-table__cell--end"><span class="u-money">245.000 ₫</span></td><td class="c-table__cell--wide"><span class="c-sign c-sign--ok"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>Hoàn tất · HĐ có mã</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="c-card">
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Inputs ===== -->
+  <section class="sec" aria-labelledby="s-input">
+    <h2 id="s-input">c-search · c-switch · c-seg · c-filter · c-picker · c-stepper</h2>
+    <div class="grid2" data-density="touch">
+      <div class="demo-col">
+        <label class="c-search"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm kiếm</span><input class="c-search__input" type="search" placeholder="Tìm đơn, món, khách…"><span class="c-kbd" aria-hidden="true">/</span></label>
+        <label class="c-search c-search--strong"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm món</span><input class="c-search__input" type="search" value="mực khô"></label>
+        <div class="c-filters" role="toolbar" aria-label="Nhóm hàng"><button class="c-filter" type="button" aria-pressed="true">Tất cả</button><button class="c-filter" type="button" aria-pressed="false">Mực &amp; cá</button><button class="c-filter" type="button" aria-pressed="false">Quà tặng</button></div>
+        <div class="c-seg" role="radiogroup" aria-label="Cách thanh toán"><button class="c-seg__opt" type="button" role="radio" aria-checked="true"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg>QR</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-cash"/></svg>Tiền mặt</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Công nợ</button></div>
+      </div>
+      <div class="demo-col">
+        <button class="c-switch" type="button" role="switch" aria-checked="true"><span class="c-switch__track" aria-hidden="true"></span><span class="c-switch__label">In phiếu<span class="c-switch__sub">bật</span></span></button>
+        <button class="c-switch" type="button" role="switch" aria-checked="false"><span class="c-switch__track" aria-hidden="true"></span><span class="c-switch__label">Khách lấy hoá đơn công ty<span class="c-switch__sub">tắt</span></span></button>
+        <button class="c-switch" type="button" role="switch" aria-checked="false" disabled><span class="c-switch__track" aria-hidden="true"></span><span class="c-switch__label">Gửi hoá đơn qua Zalo<span class="c-switch__sub">chưa kết nối Zalo</span></span></button>
+        <button class="c-picker" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-people"/></svg><span class="c-picker__label">Khách lẻ<span class="c-picker__sub">Đổi · tên / MST</span></span><span class="c-picker__aside">Đổi</span></button>
+        <span class="c-stepper"><button class="c-stepper__btn" type="button" aria-label="Bớt" disabled><svg class="c-ic" aria-hidden="true"><use href="#i-minus"/></svg></button><output class="c-stepper__value">1</output><button class="c-stepper__btn" type="button" aria-label="Thêm"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg></button></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Counter ===== -->
+  <section class="sec" aria-labelledby="s-counter">
+    <h2 id="s-counter">c-qr</h2>
+    <div class="grid3" data-density="touch">
+      
+      <div class="demo-col">
+        <div class="c-qr"><img class="c-qr__img" src="../assets/qr-demo.svg" alt="Mã VietQR MB 1.020.000 ₫"><div class="c-qr__meta"><span class="c-qr__k">VietQR · MB · <b>DH1043</b></span><span class="c-qr__amt">1.020.000 ₫</span></div><p class="c-qr__status"><span class="c-qr__status-pic"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg></span>Đang chờ khách chuyển…</p></div>
+        <p class="c-qr__status c-qr__status--pend"><span class="c-qr__status-pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Đã nhận 1.020.000 ₫ · chờ xác minh</p>
+        <p class="c-qr__status c-qr__status--ok"><span class="c-qr__status-pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>Đã xác minh 10:43</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ===== v1.1 ===== -->
+  <section class="sec" aria-labelledby="s-v11">
+    <h2 id="s-v11">v1.1 · c-banner · c-empty · c-tabs · c-option · c-field · c-change · c-kv · c-dialog</h2>
+    <p>Dùng cho trạng thái lỗi/trống và các màn danh sách. Banner lỗi chỉ khi có việc người dùng làm được; trạng thái trống luôn có một bước tiếp theo.</p>
+    <div class="demo-col">
+      <div class="c-banner c-banner--err" role="alert"><span class="c-banner__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg></span><span class="c-banner__text"><strong class="c-banner__title">Mất kết nối MB (qua Casso) từ 10:30</strong><span class="c-banner__body">Tiền QR sau 10:30 chưa cập nhật. OPC thử lại mỗi phút.</span></span><span class="c-banner__actions"><button class="c-btn" type="button">Thử lại ngay</button></span></div>
+      <div class="c-banner c-banner--pend" role="status"><span class="c-banner__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="c-banner__text"><strong class="c-banner__title">2 hoá đơn đang chờ mã CQT</strong><span class="c-banner__body">Hilo đang chậm. Hoá đơn vẫn hợp lệ để giao cho khách.</span></span><span class="c-banner__actions"></span></div>
+      <div class="c-banner c-banner--ok" role="status"><span class="c-banner__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-banner__text"><strong class="c-banner__title">Đã gán 2.150.000 ₫ vào DH-1038</strong><span class="c-banner__body">Công nợ Nhà hàng Biển Đông còn 0 ₫.</span></span><span class="c-banner__actions"><button class="c-btn c-btn--quiet" type="button">Hoàn tác</button></span></div>
+    </div>
+    <div class="grid2">
+      <div class="c-empty"><span class="c-empty__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><strong class="c-empty__title">Không có việc cần xử lý</strong><p class="c-empty__body">Tất cả tiền đã khớp lúc 10:45. OPC sẽ báo khi có khoản mới.</p></div>
+      <div class="c-empty c-empty--center"><span class="c-empty__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg></span><strong class="c-empty__title">Chưa có món trong giỏ</strong><p class="c-empty__body">Chọn món hoặc quét mã để bắt đầu đơn DH-1044.</p></div>
+    </div>
+    <div class="c-tabs" role="tablist" aria-label="Lọc theo trạng thái">
+      <button class="c-tabs__tab c-tabs__tab--you" role="tab" aria-selected="true" type="button">Cần xem <span class="c-tabs__count">3</span></button>
+      <button class="c-tabs__tab" role="tab" aria-selected="false" type="button">Chờ xác minh <span class="c-tabs__count">2</span></button>
+      <button class="c-tabs__tab" role="tab" aria-selected="false" type="button">Đã khớp <span class="c-tabs__count">4</span></button>
+      <button class="c-tabs__tab" role="tab" aria-selected="false" type="button">Tất cả <span class="c-tabs__count">7</span></button>
+    </div>
+    <div class="grid2">
+      <div class="c-options" role="radiogroup" aria-label="Gán vào">
+        <button class="c-option" type="button" role="radio" aria-checked="true"><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__body"><strong class="c-option__title">DH-1038 · Nhà hàng Biển Đông</strong><span class="c-option__meta">Đơn điện thoại 08:55 · 5 món · chờ gán tiền</span><span class="c-option__why"><span><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>đúng số tiền</span><span><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>đúng tên khách</span></span><span class="c-option__tag">Gợi ý</span></span><b class="c-option__amt">2.150.000 ₫</b></button>
+        <button class="c-option" type="button" role="radio" aria-checked="false"><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__body"><strong class="c-option__title">Tiền khác, không phải bán hàng</strong><span class="c-option__meta">Ghi vào sổ là thu khác</span></span><b class="c-option__amt"></b></button>
+        <button class="c-option" type="button" role="radio" aria-checked="false" disabled><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__body"><strong class="c-option__title">DH-1040 · Khách sạn Hải Âu</strong><span class="c-option__meta">Khác số tiền (3.420.000 ₫)</span><span class="c-option__why"><span class="is-miss"><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg>khác số tiền</span></span></span><b class="c-option__amt">3.420.000 ₫</b></button>
+      </div>
+      <div class="demo-col" data-density="touch">
+        <label class="c-field c-field--money"><span class="c-field__label">Khách đưa</span><span class="c-field__control"><input class="c-field__input" inputmode="numeric" value="1.100.000"><span class="c-field__suffix">₫</span></span><span class="c-field__hint">Gõ số hoặc chọn nhanh bên dưới</span></label>
+        <div class="c-change" role="status"><span class="c-change__k">Tiền thối</span><b class="c-change__v">80.000 ₫</b></div>
+        <label class="c-field c-field--money" data-invalid><span class="c-field__label">Khách đưa</span><span class="c-field__control"><input class="c-field__input" inputmode="numeric" value="1.000.000" aria-invalid="true" aria-describedby="cat-h1"><span class="c-field__suffix">₫</span></span><span class="c-field__hint" id="cat-h1">Thiếu 20.000 ₫</span></label>
+        <div class="c-change c-change--short" role="status"><span class="c-change__k">Còn thiếu</span><b class="c-change__v">20.000 ₫</b></div>
+        <label class="c-field"><span class="c-field__label">Ghi chú</span><span class="c-field__control"><input class="c-field__input" placeholder="Ví dụ: khách hẹn chuyển chiều nay"></span></label>
+      </div>
+    </div>
+    <dl class="c-kv surface">
+      <dt>Ngân hàng</dt><dd>MB · tài khoản 0123 4567 89 (qua Casso)</dd>
+      <dt>Người chuyển</dt><dd class="c-kv__raw">NHA HANG BIEN DONG</dd>
+      <dt>Nội dung</dt><dd class="c-kv__raw">TT HANG KHO T9</dd>
+      <dt>Thời gian</dt><dd>09:15 · 02/10/2026</dd>
+    </dl>
+    <p class="u-meta">c-dialog: xem <code>apps/app/screens/money--assign.html</code> (desktop là hộp thoại, điện thoại là toàn màn hình).</p>
+    <div class="c-dialog" hidden><div class="c-dialog__panel"></div></div>
+    
+    <div class="c-seg" role="radiogroup" aria-label="Cách thanh toán (QR tạm tắt)" data-density="touch"><button class="c-seg__opt" type="button" role="radio" aria-checked="false" aria-disabled="true"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg>QR tạm tắt</button><button class="c-seg__opt" type="button" role="radio" aria-checked="true"><svg class="c-ic" aria-hidden="true"><use href="#i-cash"/></svg>Tiền mặt</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Công nợ</button></div>
+  </section>
+
+  <!-- ===== v1.3 onboarding ===== -->
+  <section class="sec" aria-labelledby="s-v13">
+    <h2 id="s-v13">v1.3 · c-steps · c-otp · c-option--big · c-field[data-check] · c-answer · c-coach · c-camera</h2>
+    <p>Onboarding: mỗi màn một việc, có “Bước n/6”, luôn có “?” Hỏi và đường tới người thật. AI chỉ gợi ý; giá trị AI chưa chắc có khung xanh nét đứt để người dùng kiểm tra.</p>
+    <div class="grid2">
+      <div class="demo-col">
+        <div class="c-steps" role="img" aria-label="Bước 3 trên 6: Xác minh chủ hộ"><span class="c-steps__label"><b>Bước 3/6</b> · Xác minh chủ hộ</span><ol class="c-steps__bar"><li class="c-steps__seg c-steps__seg--done"></li><li class="c-steps__seg c-steps__seg--done"></li><li class="c-steps__seg c-steps__seg--now"></li><li class="c-steps__seg"></li><li class="c-steps__seg"></li><li class="c-steps__seg"></li></ol></div>
+        <div class="c-otp" role="group" aria-label="Mã xác nhận 6 số"><input class="c-otp__box" inputmode="numeric" maxlength="1" value="4" placeholder=" " aria-label="Số 1" autocomplete="one-time-code"><input class="c-otp__box" inputmode="numeric" maxlength="1" value="8" placeholder=" " aria-label="Số 2"><input class="c-otp__box" inputmode="numeric" maxlength="1" value="2" placeholder=" " aria-label="Số 3"><input class="c-otp__box" inputmode="numeric" maxlength="1" value="9" placeholder=" " aria-label="Số 4"><input class="c-otp__box" inputmode="numeric" maxlength="1" value="1" placeholder=" " aria-label="Số 5"><input class="c-otp__box" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Số 6"></div>
+        <label class="c-field" data-check><span class="c-field__label">Cá bò một nắng · giá /kg</span><span class="c-field__control"><input class="c-field__input" inputmode="numeric" value="320.000"><span class="c-field__suffix">₫</span></span><span class="c-field__hint">AI chưa chắc — ảnh ghi “3?0.000”, chị kiểm tra lại</span></label>
+      </div>
+      <div class="c-options" role="radiogroup" aria-label="Cách xác minh">
+        <button class="c-option c-option--big" type="button" role="radio" aria-checked="true"><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__pic" aria-hidden="true"><svg class="c-ic"><use href="#i-people"/></svg></span><span class="c-option__body"><strong class="c-option__title">Chụp CCCD và khuôn mặt</strong><span class="c-option__meta">Khoảng 2 phút, trên điện thoại này</span><span class="c-option__tag">Nhanh nhất</span></span></button>
+        <button class="c-option c-option--big" type="button" role="radio" aria-checked="false"><span class="c-option__radio" aria-hidden="true"></span><span class="c-option__pic" aria-hidden="true"><svg class="c-ic"><use href="#i-counter"/></svg></span><span class="c-option__body"><strong class="c-option__title">Nhân viên OPC xác minh tại quầy</strong><span class="c-option__meta">Hẹn chị Lan · Thứ Bảy 03/10/2026, 8:00</span></span></button>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="c-answer" aria-live="polite"><span class="c-answer__who">Trợ lý OPC · trả lời tự động</span><strong class="c-answer__q">Bảng giá viết tay có đọc được không?</strong><p class="c-answer__text">Đọc được chữ viết tay rõ ràng. Món nào AI chưa chắc sẽ có khung xanh nét đứt để chị kiểm tra.</p><div class="c-answer__foot">Có giúp được không? <button class="c-btn c-btn--quiet" type="button">Có</button><button class="c-btn c-btn--quiet" type="button">Không</button></div></div>
+      
+    </div>
+    <div class="grid2">
+      <div class="c-camera"><div><div class="c-camera__frame" aria-hidden="true"></div><p class="c-camera__hint">Đặt CCCD nằm gọn trong khung</p></div></div>
+      <div class="c-camera c-camera--face"><div style="display:grid;justify-items:center"><div class="c-camera__frame" aria-hidden="true"></div><button class="c-camera__shutter" type="button" aria-label="Chụp"><svg class="c-ic c-ic--l" aria-hidden="true"><use href="#i-check"/></svg></button></div></div>
+    </div>
+  </section>
+
+  <!-- ===== v1.4 list tools ===== -->
+  <section class="sec" aria-labelledby="s-v14">
+    <h2 id="s-v14">v1.4 · r-listbar · c-chip · c-menu · c-cal · c-pager · c-btn__count</h2>
+    <p>Chủ hộ: “Xem thêm” (tải thêm). Kế toán (data-density="compact"): phân trang đánh số. Bộ lọc đang bật luôn hiện thành chip có nút bỏ.</p>
+    <div class="r-listbar">
+      <div class="r-listbar__row">
+        <label class="c-search"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm</span><input class="c-search__input" type="search" placeholder="Tìm mã đơn, khách, MST…"></label>
+        <div class="c-seg" role="radiogroup" aria-label="Thời gian"><button class="c-seg__opt" type="button" role="radio" aria-checked="false">Hôm nay</button><button class="c-seg__opt" type="button" role="radio" aria-checked="true">7 ngày</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false">Tháng này</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false">Tự chọn</button></div>
+        <div class="r-listbar__end"><button class="c-btn" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-menu"/></svg>Lọc<span class="c-btn__count">2</span></button>
+          <div class="c-menu-anchor c-menu-anchor--end"><button class="c-btn c-btn--quiet" type="button" aria-expanded="true">Mới nhất<svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-chev"/></svg></button>
+            <ul class="c-menu" role="menu" aria-label="Sắp xếp"><li role="none"><button class="c-menu__item" role="menuitemradio" aria-checked="true" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>Mới nhất<span></span></button></li><li role="none"><button class="c-menu__item" role="menuitemradio" aria-checked="false" type="button"><span></span>Tổng tiền lớn nhất<span></span></button></li><li role="none"><button class="c-menu__item" role="menuitemradio" aria-checked="false" type="button"><span></span>Cần xem trước<span></span></button></li></ul></div></div>
+      </div>
+      <div class="c-chips" aria-label="Bộ lọc đang bật">
+        <span class="c-chip"><span class="c-chip__k">Thời gian:</span> 26/9 – 02/10<button class="c-chip__x" type="button" aria-label="Bỏ lọc thời gian"><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg></button></span>
+        <span class="c-chip"><span class="c-chip__k">Kênh:</span> Zalo, Shopee<button class="c-chip__x" type="button" aria-label="Bỏ lọc kênh"><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg></button></span>
+        <button class="c-chips__clear" type="button">Xoá lọc</button><span class="c-chips__result">9 đơn · 6.840.000 ₫</span>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:var(--space-10)">
+      <div class="c-cal" role="group" aria-label="Chọn khoảng ngày">
+        <div class="c-cal__head"><button class="c-icon-btn" type="button" aria-label="Tháng trước"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></button>Tháng 9/2026<button class="c-icon-btn" type="button" aria-label="Tháng sau"><svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+        <ol class="c-cal__grid"><li class="c-cal__dow">T2</li><li class="c-cal__dow">T3</li><li class="c-cal__dow">T4</li><li class="c-cal__dow">T5</li><li class="c-cal__dow">T6</li><li class="c-cal__dow">T7</li><li class="c-cal__dow">CN</li>
+          <li><button class="c-cal__day c-cal__day--out" type="button">31</button></li><li><button class="c-cal__day" type="button">1</button></li><li><button class="c-cal__day" type="button">2</button></li><li><button class="c-cal__day" type="button">3</button></li><li><button class="c-cal__day" type="button">4</button></li><li><button class="c-cal__day" type="button">5</button></li><li><button class="c-cal__day" type="button">6</button></li>
+          <li><button class="c-cal__day" type="button">21</button></li><li><button class="c-cal__day" type="button">22</button></li><li><button class="c-cal__day" type="button">23</button></li><li><button class="c-cal__day" type="button">24</button></li><li><button class="c-cal__day" type="button">25</button></li><li><button class="c-cal__day c-cal__day--start" type="button" aria-pressed="true">26</button></li><li><button class="c-cal__day c-cal__day--range" type="button">27</button></li>
+          <li><button class="c-cal__day c-cal__day--range" type="button">28</button></li><li><button class="c-cal__day c-cal__day--range" type="button">29</button></li><li><button class="c-cal__day c-cal__day--range" type="button">30</button></li><li><button class="c-cal__day c-cal__day--out c-cal__day--range" type="button">1</button></li><li><button class="c-cal__day c-cal__day--out c-cal__day--end c-cal__day--today" type="button" aria-pressed="true">2</button></li><li><button class="c-cal__day c-cal__day--out" type="button" disabled>3</button></li><li><button class="c-cal__day c-cal__day--out" type="button" disabled>4</button></li></ol>
+      </div>
+      <div class="demo-col">
+        <div class="c-menu-anchor"><label class="c-search"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm</span><input class="c-search__input" type="search" role="combobox" value="biển" aria-expanded="true" aria-controls="cat-sg" aria-autocomplete="list"></label>
+          <ul class="c-menu" id="cat-sg" role="listbox" aria-label="Gợi ý"><li class="c-menu__group" role="presentation">Khách</li><li role="none"><a class="c-menu__item" role="option" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-people"/></svg><span>Nhà hàng <mark>Biển</mark> Đông<span class="c-menu__sub">5 đơn · công nợ 2.150.000 ₫</span></span><span class="c-menu__aside">DH-1038</span></a></li><li role="none"><a class="c-menu__item" role="option" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-people"/></svg><span>Công ty TNHH Du lịch <mark>Biển</mark> Xanh<span class="c-menu__sub">MST 4101523687</span></span><span class="c-menu__aside">DH-1027</span></a></li></ul></div>
+      </div>
+    </div>
+    <div data-density="compact" style="margin-top:calc(var(--space-10) * 4)"><nav class="c-pager" aria-label="Trang"><span class="c-pager__info">Hiển thị 26–50 / 212 hoá đơn</span><ol class="c-pager__list"><li><a class="c-pager__page c-pager__step" href="#" aria-label="Trang trước"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a></li><li><a class="c-pager__page" href="#">1</a></li><li><a class="c-pager__page" href="#" aria-current="page">2</a></li><li><a class="c-pager__page" href="#">3</a></li><li class="c-pager__gap">…</li><li><a class="c-pager__page" href="#">9</a></li><li><a class="c-pager__page c-pager__step" href="#" aria-label="Trang sau"><svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li></ol></nav></div>
+  </section>
+
+  <!-- ===== v1.5 ===== -->
+  <section class="sec" aria-labelledby="s-v15">
+    <h2 id="s-v15">v1.5 · c-skel · c-timeline · c-doc · r-detail</h2>
+    <div class="grid3">
+      <div class="c-card" aria-busy="true"><div class="demo-col"><span class="c-skel c-skel--title" style="--skel-w:40%"></span><span class="c-skel c-skel--figure"></span><span class="c-skel c-skel--line"></span><span class="c-skel c-skel--line" style="--skel-w:70%"></span><span class="c-skel c-skel--block"></span><p class="c-skel-note">Đang tải… · số liệu trước đó 10:43</p></div></div>
+      <ol class="c-timeline">
+        <li class="c-timeline__item c-timeline__item--ok"><span class="c-timeline__time">10:47</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__what">Đã xác minh 1.020.000 ₫</span><span class="c-timeline__who">MB · khớp sao kê</span></span></li>
+        <li class="c-timeline__item c-timeline__item--pend"><span class="c-timeline__time">10:44</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__what">Đã nhận · chờ xác minh</span><span class="c-timeline__who">Casso báo · NGUYEN VAN HUNG</span></span></li>
+        <li class="c-timeline__item c-timeline__item--you"><span class="c-timeline__time">10:44</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__what">Giao hàng trước</span><span class="c-timeline__who">Phúc · dưới mức 2.000.000 ₫</span></span></li>
+        <li class="c-timeline__item"><span class="c-timeline__time">10:42</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__what">Tạo đơn tại quầy · 4 món</span><span class="c-timeline__who">Phúc</span></span></li>
+        <li class="c-timeline__item c-timeline__item--err"><span class="c-timeline__time">08:34</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__what">Hilo báo lỗi khi cấp mã</span><span class="c-timeline__who">tự động</span></span></li>
+      </ol>
+      <article class="c-doc" aria-label="Xem trước hoá đơn"><header class="c-doc__head"><span class="c-doc__title">Hoá đơn bán hàng</span><span class="c-doc__no">Ký hiệu 2C26MCH<b>Số 00000418</b>02/10/2026</span></header><div class="c-doc__party"><span class="c-doc__party-k">Người bán</span><strong>HỘ KINH DOANH TRẦN THỊ HAI</strong><span>MST 4101678912 · thôn Lý Hưng, Nhơn Lý, Quy Nhơn, Gia Lai</span></div><div class="c-doc__total"><span>Tổng tiền thanh toán</span><b>640.000 ₫</b></div><div class="c-doc__foot"><span>Mã CQT: đang chờ cấp</span></div></article>
+    </div>
+  </section>
+
+  <!-- ===== v2.0 IA ===== -->
+  <section class="sec" aria-labelledby="s-v20">
+    <h2 id="s-v20">v2.0 · c-subnav · c-menulist · c-task</h2>
+    <p>Điều hướng hai tầng: thanh bên chỉ có nhóm; trang trong nhóm nằm ở c-subnav. Mọi việc AI/ngân hàng/hệ thống soạn sẵn đi vào c-task để chủ hộ duyệt.</p>
+    <nav class="c-subnav" aria-label="Ví dụ nhóm Tiền"><a class="c-subnav__item" href="#" aria-current="page">Thu chi &amp; đối soát<span class="c-subnav__count">3</span></a><a class="c-subnav__item" href="#">Công nợ</a><a class="c-subnav__item" href="#">Đóng ca</a></nav>
+    <div class="grid2">
+      <ol class="c-tasks">
+        <li class="c-task c-task--first"><div class="c-task__meta"><span class="c-task__src c-task__src--ai">Trợ lý</span>09:50 · từ tin nhắn Zalo</div><div class="c-task__head"><strong class="c-task__title">Đơn Zalo DH-1040 · Khách sạn Hải Âu</strong><b class="c-task__amt">3.420.000 ₫</b></div><p class="c-task__evidence">Tin nhắn: <q>“3kg cá cơm, 2kg tôm khô, giao 3h chiều”</q><a class="c-btn c-btn--quiet" href="#">Xem tin nhắn</a></p><p class="c-task__after"><b>Sau khi duyệt:</b> giữ hàng, nhắc giao 14:30, công nợ khách thành 6.570.000 ₫.</p><div class="c-task__actions"><button class="c-btn c-btn--act" type="button">Xác nhận đơn</button><button class="c-btn" type="button">Sửa</button><button class="c-btn c-btn--quiet" type="button">Từ chối</button></div></li>
+        <li class="c-task"><div class="c-task__meta"><span class="c-task__src">Ngân hàng</span>09:15 · MB</div><div class="c-task__head"><strong class="c-task__title">Gán vào DH-1038</strong><b class="c-task__amt">2.150.000 ₫</b></div><p class="c-task__evidence">NHA HANG BIEN DONG · “TT HANG KHO T9”</p><div class="c-task__actions"><button class="c-btn" type="button">Gán</button><button class="c-btn c-btn--quiet" type="button">Chọn đơn khác</button></div></li>
+      </ol>
+      <div class="c-menulist">
+        <div><ul class="c-menulist__list"><li><a class="c-menulist__item c-menulist__item--you" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg><span>Cần xử lý<span class="c-menulist__sub">4 chờ duyệt · 2 cảnh báo</span></span><span class="c-menulist__count">6</span><svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-arrow"/></svg></a></li></ul></div>
+        <div><h3 class="c-menulist__h">Tiền</h3><ul class="c-menulist__list"><li><a class="c-menulist__item" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-money"/></svg><span>Thu chi &amp; đối soát</span><span class="c-menulist__count">3</span><svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-arrow"/></svg></a></li><li><a class="c-menulist__item" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-people"/></svg><span>Công nợ</span><span></span><svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-arrow"/></svg></a></li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== v3.1 Pro layer ===== -->
+  <section class="sec" aria-labelledby="s-v31">
+    <h2 id="s-v31">Lớp Pro (từ v3.1): hỗ trợ, năng suất, tin cậy</h2>
+    <p>Chuyển động mẫu: xem DESIGN.md §2 (Motion). Tooltip: rê chuột lên các nút có <code>data-tip</code>. </p>
+    <div class="demo">
+      <span class="c-sync">Đã lưu · 10:45</span><span class="c-sync c-sync--saving">Đang lưu…</span><span class="c-sync c-sync--offline">Mất mạng — đã lưu trên máy</span>
+      
+      
+      
+      <button class="c-icon-btn c-icon-btn--outline" type="button" aria-label="Thông báo" data-tip="Thông báo · 4 chưa đọc"><svg class="c-ic" aria-hidden="true"><use href="#i-bell"/></svg></button>
+    </div>
+    <nav aria-label="Ví dụ breadcrumb"><ol class="c-crumbs"><li><a href="#">Bán</a></li><li><a href="#">Đơn hàng</a></li><li><span aria-current="page">DH-1040</span></li></ol></nav>
+    <div class="grid2">
+      <div class="c-drawer c-drawer--docked" style="height:360px"><div class="c-drawer__panel" role="region" aria-label="Ví dụ ngăn bên"><div class="c-drawer__head"><div><span class="c-drawer__k">Trợ lý OPC</span><h3 class="c-drawer__title">Hỏi về màn này</h3></div><button class="c-icon-btn" type="button" aria-label="Đóng"><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg></button></div><div class="c-drawer__body"><div class="c-answer"><span class="c-answer__who">Trợ lý OPC · trả lời tự động</span><p class="c-answer__text">Doanh thu tăng 1.340.000 ₫ so với hôm qua, chủ yếu từ DH-1027.</p></div></div><div class="c-drawer__foot"><label class="c-search"><span class="u-sr">Hỏi</span><input class="c-search__input" placeholder="Hỏi Trợ lý…"></label></div></div></div>
+      <div class="demo-col">
+        <ul class="c-notices"><li><a class="c-notice c-notice--money c-notice--unread" href="#"><span class="c-notice__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-notice__title">Đã xác minh 1.020.000 ₫</span><span class="c-notice__time">10:47</span><span class="c-notice__text">DH-1043 · khớp sao kê MB</span></a></li><li><a class="c-notice c-notice--warn" href="#"><span class="c-notice__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="c-notice__title">HĐ 00000418 chờ mã CQT</span><span class="c-notice__time">10:20</span><span class="c-notice__text">OPC đã gửi lại lên Hilo</span></a></li></ul>
+        <div class="c-toast" role="status"><svg class="c-ic c-toast__pic" aria-hidden="true"><use href="#i-check"/></svg><span class="c-toast__text"><b>Đã duyệt</b> đơn DH-1040</span><button class="c-btn" type="button">Hoàn tác</button><span class="c-toast__bar"><i></i></span></div>
+        <div class="c-toast c-toast--err" role="alert"><svg class="c-ic c-toast__pic" aria-hidden="true"><use href="#i-alert"/></svg><span class="c-toast__text">Không gửi được tin Zalo — kiểm tra kết nối.</span><button class="c-btn" type="button">Thử lại</button></div>
+        <div class="c-bulkbar" role="toolbar" aria-label="Với 2 đơn đã chọn" style="position:static"><span class="c-bulkbar__count">Đã chọn 2 đơn</span><span class="c-bulkbar__sum">5.570.000 ₫</span><span class="c-bulkbar__actions"><button class="c-btn c-btn--act" type="button">Gửi nhắc nợ</button><button class="c-btn" type="button">In phiếu</button></span></div>
+        <label class="c-check"><input type="checkbox" checked aria-label="Chọn DH-1040"></label>
+      </div>
+    </div>
+    <div class="c-command" style="position:static;padding:0;background:none"><div class="c-command__panel" role="group" aria-label="Ví dụ bảng lệnh"><div class="c-command__input"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><input aria-label="Tìm hoặc gõ lệnh" value="dh-104"></div><div class="c-command__list"><ul class="c-menu" role="listbox" aria-label="Kết quả"><li class="c-menu__group" role="presentation">Đơn</li><li role="none"><a class="c-menu__item" role="option" aria-selected="true" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-orders"/></svg><span><mark>DH-104</mark>3<span class="c-menu__sub">1.020.000 ₫ · chờ xác minh</span></span><span class="c-menu__aside">Enter</span></a></li></ul></div><div class="c-command__foot"><span><span class="c-kbd">↑</span><span class="c-kbd">↓</span>chọn</span><span><span class="c-kbd">Enter</span>mở</span><span><span class="c-kbd">Esc</span>đóng</span></div></div></div>
+    <div class="grid2">
+      <div class="c-receipt"><div class="c-receipt__shop"><strong>Hải sản khô Cô Hai</strong><span>thôn Lý Hưng, Nhơn Lý · MST 4101678912</span></div><ul class="c-receipt__lines"><li class="c-receipt__line"><span>Mực khô loại 1</span><span>625.000</span><small>0,5 kg × 1.250.000</small></li></ul><div class="c-receipt__total"><span>Tổng</span><b>1.020.000 ₫</b></div><div class="c-receipt__foot"><span class="c-receipt__code">M1-26-QN7K2-00000000422</span><span>Cảm ơn quý khách — hẹn gặp lại!</span></div></div>
+      <div class="demo-col"><div class="c-msgcard"><div class="c-msgcard__from"><span class="c-hh__mark">CH</span><span>Hải sản khô Cô Hai<small>qua OPC · Zalo</small></span></div><div class="c-msgcard__body"><p>Cảm ơn anh/chị đã mua hàng. Đơn DH-1043 · 1.020.000 ₫ · đã thanh toán.</p></div><div class="c-msgcard__actions"><a href="#">Xem hoá đơn</a><a href="#">Lưu số cửa hàng</a></div></div>
+        <div class="c-sizepick" role="radiogroup" aria-label="Cỡ chữ"><button class="c-sizepick__opt" type="button" role="radio" aria-checked="false"><b style="font-size:16px">Aa</b>Vừa</button><button class="c-sizepick__opt" type="button" role="radio" aria-checked="true"><b style="font-size:20px">Aa</b>Lớn</button><button class="c-sizepick__opt" type="button" role="radio" aria-checked="false"><b style="font-size:24px">Aa</b>Rất lớn</button></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Shell pieces ===== -->
+  <section class="sec" aria-labelledby="s-shell">
+    <h2 id="s-shell">c-nav · c-hh · c-conn · c-tabbar</h2>
+    <p><code>c-tabbar</code> chỉ hiện dưới 720px — xem apps/app/screens/home.html ở 390px. Giỏ hàng trên điện thoại: <code>r-cartbar</code> (counter.html).</p>
+    <div class="grid3">
+      <nav class="c-nav surface" aria-label="Ví dụ điều hướng">
+        <button class="c-hh" type="button"><span class="c-hh__mark" aria-hidden="true">CH</span><span class="c-hh__text"><strong class="c-hh__name">Cô Hai · Nhơn Lý</strong><span class="c-hh__sub">Xác minh L1</span></span><svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <ul class="c-nav__list">
+          <li><a class="c-nav__item" href="#" aria-current="page"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Tổng quan</a></li>
+          <li><a class="c-nav__item c-nav__item--counter" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy bán hàng<svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a class="c-nav__item" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-orders"/></svg>Đơn hàng<span class="c-nav__count">3</span></a></li>
+        </ul>
+        <div class="c-nav__foot"><span class="c-conn">MB (qua Casso) · 2 phút trước</span><span class="c-conn c-conn--off">Cổng thuế · chưa bật</span><span class="c-conn c-conn--err">Hilo · lỗi kết nối</span></div>
+      </nav>
+      <div class="demo-col surface">
+        <button class="c-hh c-hh--bar" type="button"><span class="c-hh__mark" aria-hidden="true">CH</span><span class="c-hh__text"><strong class="c-hh__name">Hải sản khô Cô Hai</strong><span class="c-hh__sub">Nhơn Lý · OPC</span></span></button>
+        <div class="c-card c-card--tight"><div class="c-card__head"><h3 class="c-card__title">c-card + c-say</h3></div><p class="c-say">Quý III tạm tính <b>6.184.500 ₫</b> — còn 29 ngày, hạn nộp 31/10/2026.</p></div>
+      </div>
+      <nav class="c-tabbar" aria-label="Ví dụ thanh dưới">
+        <a class="c-tabbar__item" href="#" aria-current="page"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Tổng quan</a>
+        <a class="c-tabbar__item c-tabbar__item--counter" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy</a>
+        <a class="c-tabbar__item" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-orders"/></svg>Đơn<span class="c-tabbar__count">3</span></a>
+      </nav>
+      
+    </div>
+  </section>
+
+  <!-- ===================== v4.0 "Modern · Calm" ===================== -->
+  <section class="sec" aria-labelledby="s-v4-stat">
+    <h2 id="s-v4-stat">Số của hôm nay · c-stat, c-bars, c-split</h2>
+    <p>Một con số trả lời “hôm nay thế nào”, biểu đồ 7 ngày (chỉ cột hôm nay mang màu thương hiệu) và thanh <b>tiền thật</b> — chữ ký của OPC: xanh đặc = đã xác minh, hổ phách gạch chéo + viền đứt = chờ xác minh, xám = tiền mặt. Khoản chờ là một liên kết tới việc cần làm.</p>
+    <section class="c-stat" aria-labelledby="cat-rev">
+      <div class="c-stat__top"><h3 class="c-stat__label" id="cat-rev">Doanh thu hôm nay</h3><span class="c-stat__fresh">MB · cập nhật 2 phút trước</span></div>
+      <div class="c-stat__main"><div><p class="c-stat__fig">8.460.000<span class="u-cur">₫</span></p><p class="c-stat__delta"><span class="c-stat__chip"><svg class="c-ic" aria-hidden="true"><use href="#i-trend"/></svg>19%</span>so với hôm qua · 23 đơn</p><a class="c-stat__why" href="#">Vì sao tăng?<svg class="c-ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></div>
+        <ol class="c-bars" aria-label="Doanh thu 7 ngày"><li class="c-bars__d" style="--v:0.87"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T7</span></li><li class="c-bars__d" style="--v:1"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">CN</span></li><li class="c-bars__d" style="--v:0.56"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T2</span></li><li class="c-bars__d" style="--v:0.53"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T3</span></li><li class="c-bars__d" style="--v:0.6"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T4</span></li><li class="c-bars__d" style="--v:0.63"><span class="c-bars__col"><span class="c-bars__bar"></span></span><span class="c-bars__k">T5</span></li><li class="c-bars__d c-bars__d--today" style="--v:0.75"><span class="c-bars__col"><span class="c-bars__bar"></span><span class="c-bars__v" aria-hidden="true">8,46 tr</span></span><span class="c-bars__k">Hôm nay</span></li></ol></div>
+      <div class="c-split"><div class="c-split__bar" role="img" aria-label="Đã xác minh 4.560.000 ₫, chờ 1.380.000 ₫, tiền mặt 2.520.000 ₫"><i class="c-split__ok" style="flex:4560"></i><i class="c-split__pend" style="flex:1380"></i><i class="c-split__cash" style="flex:2520"></i></div>
+        <ul class="c-split__legend"><li class="c-split__item c-split__item--ok"><span class="c-split__k">QR đã xác minh</span><b class="c-split__v">4.560.000<span class="u-cur">₫</span></b></li><li class="c-split__item c-split__item--pend"><a href="#"><span class="c-split__k">Chờ xác minh · 2 khoản</span><b class="c-split__v">1.380.000<span class="u-cur">₫</span></b></a></li><li class="c-split__item c-split__item--cash"><span class="c-split__k">Tiền mặt</span><b class="c-split__v">2.520.000<span class="u-cur">₫</span></b></li></ul></div>
+    </section>
+    <div class="grid2">
+      <div class="demo-col"><span class="lbl">--stale · mất kết nối</span><span class="c-stat__fresh c-stat__fresh--stale">số liệu đến 10:44 · đang chờ MB</span></div>
+      <div class="demo-col"><span class="lbl">--zero · lần đầu</span><p class="c-stat__fig c-stat__fig--zero">0<span class="u-cur">₫</span></p></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-health">
+    <h2 id="s-v4-health">Trạng thái kết nối · c-health · c-off</h2>
+    <p>Mọi kết nối gom vào MỘT viên; chi tiết ở tooltip (máy tính) hoặc khi chạm (điện thoại). Đỏ chỉ khi mất kết nối.</p>
+    <div class="demo"><span class="c-health" tabindex="0" data-tip="MB cập nhật 2 phút trước · Hilo hoạt động">Đã lưu · <b>10:45</b></span><span class="c-health c-health--err" tabindex="0">MB mất kết nối · <b>10:45</b></span><span class="c-off">Cổng thuế chưa bật</span><span class="c-count">6</span><a class="c-link" href="#">Xem tất cả<svg class="c-ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-todo">
+    <h2 id="s-v4-todo">Cần làm · c-todo</h2>
+    <p>Số thứ tự = làm trước. Mỗi việc một nút; chỉ việc số 1 có nút chính. Việc đã xong giữ dấu ✓ (thiết lập lần đầu).</p>
+    <div class="surface mid"><ol class="c-todo">
+      <li class="c-todo__item c-todo__item--done"><span class="c-todo__n" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><div><h3 class="c-todo__t">Xác minh chủ hộ</h3><p class="c-todo__m">Xong 01/10/2026 · mức L1</p></div></li>
+      <li class="c-todo__item c-todo__item--now"><span class="c-todo__n" aria-hidden="true">1</span><div><h3 class="c-todo__t">2 khoản QR chờ xác minh</h3><p class="c-todo__m">DH-1043 lúc 10:42 · DH-1041 lúc 10:05</p></div><a class="c-btn c-btn--act c-todo__go" href="#">Đối chiếu</a></li>
+      <li class="c-todo__item"><span class="c-todo__n" aria-hidden="true">2</span><div><h3 class="c-todo__t">Chuyển khoản chưa có mã đơn</h3><p class="c-todo__m"><span class="u-money">2.150.000 ₫</span> · có thể của Nhà hàng Biển Đông</p></div><a class="c-btn c-todo__go" href="#">Gán đơn</a></li>
+    </ol><a class="c-todo__later" href="#"><span><b>3 việc không gấp</b> · hoá đơn chờ mã CQT, sắp hết hàng</span><svg class="c-ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-orders">
+    <h2 id="s-v4-orders">Danh sách đơn · c-orders · c-debts · c-figure</h2>
+    <p>Dòng thay cho bảng: ai mua trước, số tiền nổi nhất, trạng thái là nhãn màu + chữ + icon.</p>
+    <div class="grid2">
+      <ul class="c-orders surface">
+        <li class="c-orders__row"><a href="#"><span class="c-orders__who">Khách lẻ<small>DH-1043 · Tại quầy · 10:42</small></span><span class="c-orders__st"><span class="c-sign c-sign--pend"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Chờ xác minh</span></span><span class="c-orders__amt u-money">1.020.000 ₫</span></a></li>
+        <li class="c-orders__row"><a href="#"><span class="c-orders__who">Khách lẻ<small>DH-1042 · Tại quầy · 10:31</small></span><span class="c-orders__st"><span class="c-sign c-sign--ok"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>Hoàn tất</span></span><span class="c-orders__amt u-money">245.000 ₫</span></a></li>
+        <li class="c-orders__row"><a href="#"><span class="c-orders__who">Khách sạn Hải Âu<small>DH-1040 · Zalo · 09:48</small></span><span class="c-orders__st"><span class="c-sign c-sign--you"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>Chờ xác nhận</span></span><span class="c-orders__amt u-money">3.420.000 ₫</span></a></li>
+        <li class="c-orders__row"><a href="#"><span class="c-orders__who">Chị Thu<small>DH-1038 · Shopee · 08:55</small></span><span class="c-orders__st"><span class="c-sign c-sign--err"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg></span>Lỗi hoá đơn</span></span><span class="c-orders__amt u-money">360.000 ₫</span></a></li>
+      </ul>
+      <div class="surface"><p class="c-figure">6.184.500<span class="u-cur">₫</span></p><p class="c-sub">tạm tính · hạn nộp 31/10 · còn 29 ngày</p>
+        <ul class="c-debts"><li class="c-debts__row"><span class="c-debts__k">Khách sạn Hải Âu</span><span class="c-debts__v">3.420.000 ₫</span><span class="c-debts__m">đơn Zalo chờ xác nhận · việc số 3</span></li><li class="c-debts__row"><span class="c-debts__k">Nhà hàng Biển Đông</span><span class="c-debts__v">2.150.000 ₫</span><span class="c-debts__m">có thể đã trả · việc số 2</span></li></ul></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-tile">
+    <h2 id="s-v4-tile">Món ở Quầy · c-tiles, c-tile</h2>
+    <p>Chữ trước, ảnh thật khi chủ hộ thêm. Trong đơn = nền xanh nhạt + nhãn số lượng; vừa thêm = nảy một lần; sắp hết = hổ phách + icon.</p>
+    <div class="c-tiles" style="max-width:860px">
+      <button class="c-tile" type="button"><span class="c-tile__name">Cá thu một nắng</span><span class="c-tile__price">380.000 ₫<small>/kg</small></span></button>
+      <button class="c-tile" type="button" data-incart><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>0,5 kg</span><span class="c-tile__name">Mực khô loại 1</span><span class="c-tile__price">1.250.000 ₫<small>/kg</small></span><span class="c-tile__meta c-tile__meta--low"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg>còn 3,2 kg</span></button>
+      <button class="c-tile" type="button" data-incart data-justadded><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>×2</span><span class="c-tile__name">Cá cơm sấy giòn hũ 250 g</span><span class="c-tile__price">95.000 ₫</span></button>
+      <button class="c-tile" type="button"><span class="c-tile__name">Ruốc biển hũ 200 g</span><span class="c-tile__price">65.000 ₫</span><span class="c-tile__meta"><svg class="c-ic" aria-hidden="true"><use href="#i-scale"/></svg>bán theo cân</span></button>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-order">
+    <h2 id="s-v4-order">Đơn đang bán · c-oline, c-stepper, c-seg, c-btn--xl, c-oempty</h2>
+    <p>Dòng món → tổng (số lớn nhất màn) → cách thanh toán → một nút chính. Lựa chọn không dùng được bị gạch kèm lý do; nút khoá luôn nói cần làm gì.</p>
+    <div class="grid2">
+      <div class="surface demo-col">
+        <ul class="r-order__lines" style="padding:0"><li class="c-oline"><span class="c-oline__name">Mực khô loại 1</span><span class="c-oline__amt">625.000 ₫</span><span class="c-oline__calc">0,5 kg × 1.250.000 ₫</span><span class="c-stepper"><button class="c-stepper__btn" type="button" aria-label="Bớt"><svg class="c-ic" aria-hidden="true"><use href="#i-minus"/></svg></button><output class="c-stepper__value">0,5 kg</output><button class="c-stepper__btn" type="button" aria-label="Thêm"><svg class="c-ic" aria-hidden="true"><use href="#i-plus"/></svg></button></span></li></ul>
+        <div class="c-seg" role="radiogroup" aria-label="Cách thanh toán"><button class="c-seg__opt" type="button" role="radio" aria-checked="true"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg>QR</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-cash"/></svg>Tiền mặt</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Công nợ</button></div>
+        <div class="c-seg" role="radiogroup" aria-label="Cách thanh toán, mất kết nối"><button class="c-seg__opt" type="button" role="radio" aria-checked="false" aria-disabled="true"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg>QR tạm tắt</button><button class="c-seg__opt" type="button" role="radio" aria-checked="true"><svg class="c-ic" aria-hidden="true"><use href="#i-cash"/></svg>Tiền mặt</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Công nợ</button></div>
+        <div class="r-order__acts"><button class="c-btn c-btn--xl" type="button">Lưu tạm</button><button class="c-btn c-btn--act c-btn--xl" type="button">Thu tiền<span class="c-kbd" aria-hidden="true">F9</span></button></div>
+        <button class="c-btn c-btn--xl" type="button" aria-disabled="true"><svg class="c-ic" aria-hidden="true"><use href="#i-lock"/></svg>Thêm món để thu tiền</button>
+      </div>
+      <div class="surface"><div class="c-oempty"><span class="c-oempty__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg></span><b>Chưa có món nào</b><span>Chạm món bên trái, gõ <span class="c-kbd">/</span> để tìm, hoặc quét mã vạch</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-pay">
+    <h2 id="s-v4-pay">Thu tiền QR · c-qrcard, c-paysteps, c-waitbar, c-arrived, c-note</h2>
+    <p>Ba bước tiền, chỉ bước hiện tại có màu: <b>xanh biển</b> = đang chờ khách · <b>hổ phách gạch chéo</b> = đã nhận, chờ xác minh · <b>xanh lá</b> = đã xác minh. Lúc tiền về, thẻ QR được thay bằng c-arrived (hoạt ảnh một lần, thông báo cho trình đọc màn hình).</p>
+    <div class="grid3">
+      <div class="surface demo-col"><span class="lbl">Chờ khách chuyển</span><figure class="c-qrcard"><img src="../assets/qr-demo.svg" alt="Mã VietQR mẫu"><figcaption><b class="c-qrcard__amt">1.020.000<span class="u-cur">₫</span></b><span class="u-meta">VietQR · MB · DH1043</span></figcaption></figure><ol class="c-paysteps" aria-label="Trạng thái tiền: wait"><li class="c-paysteps__s c-paysteps__s--now" aria-current="step"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-qr"/></svg></span><span>Chờ khách chuyển<span class="c-paysteps__here">Đang ở đây</span></span></li><li class="c-paysteps__s c-paysteps__s--next"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span>Đã nhận · chờ xác minh</span></li><li class="c-paysteps__s c-paysteps__s--next"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Đã xác minh</span></li></ol><p class="c-waitbar" role="status"><span class="c-waitbar__spin" aria-hidden="true"></span><span><b>Đang chờ khách chuyển</b>OPC tự chuyển bước khi ngân hàng báo</span></p></div>
+      <div class="surface demo-col"><span class="lbl">Đã nhận · chờ xác minh</span><figure class="c-arrived" role="status"><span class="c-arrived__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><figcaption><span class="c-arrived__k">Đã nhận lúc 10:44 · chờ xác minh</span><br><b class="c-arrived__amt">1.020.000<span class="u-cur">₫</span></b><br><span class="c-arrived__m">từ NGUYEN VAN HUNG</span></figcaption></figure><ol class="c-paysteps" aria-label="Trạng thái tiền: pend"><li class="c-paysteps__s c-paysteps__s--done"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Chờ khách chuyển</span></li><li class="c-paysteps__s c-paysteps__s--pendnow" aria-current="step"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span>Đã nhận · chờ xác minh<span class="c-paysteps__here">Đang ở đây</span></span></li><li class="c-paysteps__s c-paysteps__s--next"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Đã xác minh</span></li></ol><p class="c-note"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Giao hàng được</b> — đơn dưới mức 2.000.000 ₫.</span></p></div>
+      <div class="surface demo-col"><span class="lbl">Đã xác minh</span><figure class="c-arrived c-arrived--ok" role="status"><span class="c-arrived__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><figcaption><span class="c-arrived__k">Đã xác minh · 10:47</span><br><b class="c-arrived__amt">1.020.000<span class="u-cur">₫</span></b><br><span class="c-arrived__m">DH-1043 hoàn tất</span></figcaption></figure><ol class="c-paysteps" aria-label="Trạng thái tiền: ok"><li class="c-paysteps__s c-paysteps__s--done"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Chờ khách chuyển</span></li><li class="c-paysteps__s c-paysteps__s--done"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Đã nhận · chờ xác minh</span></li><li class="c-paysteps__s c-paysteps__s--oknow" aria-current="step"><span class="c-paysteps__dot"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span>Đã xác minh<span class="c-paysteps__here">Đang ở đây</span></span></li></ol></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-cash">
+    <h2 id="s-v4-cash">Thu tiền mặt · c-cashpad, c-quick, c-change</h2>
+    <p>Khách đưa → tiền thối (nền tối, số thứ hai quan trọng nhất). Số tiền nhanh có “vừa đủ”. Chưa nhập thì tiền thối là “—”.</p>
+    <div class="grid2">
+      <div class="surface demo-col"><div class="c-cashpad"><div class="c-cashpad__field"><label for="cat-g1">Khách đưa</label><input class="c-cashpad__input" id="cat-g1" inputmode="numeric" value="1.100.000"><span class="u-cur">₫</span></div><div class="c-quick" role="group" aria-label="Số tiền khách đưa"><button class="c-quick__btn" type="button" aria-pressed="false">1.020.000<small>vừa đủ</small></button><button class="c-quick__btn" type="button" aria-pressed="false">1.050.000</button><button class="c-quick__btn" type="button" aria-pressed="true">1.100.000</button></div></div><p class="c-change"><span>Tiền thối cho khách</span><b>80.000<span class="u-cur">₫</span></b></p></div>
+      <div class="surface demo-col"><div class="c-cashpad c-cashpad--empty"><div class="c-cashpad__field"><label for="cat-g2">Khách đưa</label><input class="c-cashpad__input" id="cat-g2" inputmode="numeric" placeholder="0"><span class="u-cur">₫</span></div></div><p class="c-change c-change--none"><span>Tiền thối cho khách</span><b>—</b></p></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v4-toast">
+    <h2 id="s-v4-toast">Phản hồi · c-toasts, c-toast</h2>
+    <p>Viên tối ở giữa dưới vùng làm việc. Tự tắt sau 4 giây, trừ lỗi. Xoá luôn đi kèm “Hoàn tác”. Trên điện thoại khi ngăn thu tiền đang mở thì không hiện (ngăn đã tự báo).</p>
+    <div class="c-toasts cat-static" role="region" aria-label="Ví dụ thông báo">
+      <div class="c-toast c-toast--pend"><span class="c-toast__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="c-toast__text"><b>Đã nhận 1.020.000 ₫</b> · DH-1043 · giao hàng được</span></div>
+      <div class="c-toast c-toast--ok"><span class="c-toast__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-toast__text"><b>Đã xác minh 1.020.000 ₫</b> · DH-1043 hoàn tất</span></div>
+      <div class="c-toast"><span class="c-toast__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg></span><span class="c-toast__text"><b>Đã bỏ Chả cá Quy Nhơn</b> · 85.000 ₫</span><button class="c-btn" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-undo"/></svg>Hoàn tác</button></div>
+    </div>
+  </section>
+
+<!-- v41:start -->
+  <section class="sec" aria-labelledby="s-v41-switch">
+    <h2 id="s-v41-switch">Cài đặt · c-switch--row (Bật · Tắt · Bắt buộc · Sắp có)</h2>
+    <p>Nhãn bên trái, trạng thái bằng chữ, công tắc biển. Bắt buộc: công tắc mờ, không đổi được. Sắp có: không có công tắc.</p>
+    <div class="surface demo-col r-settings"><ul class="c-list">
+      <li class="c-list__row"><button class="c-switch c-switch--row" type="button" role="switch" aria-checked="true"><span class="c-switch__label">Giao hàng<span class="c-switch__sub">Chị có đơn Zalo cần giao tận nơi.</span></span><span class="c-switch__state c-switch__state--on">Bật</span><span class="c-switch__track" aria-hidden="true"></span></button></li>
+      <li class="c-list__row"><button class="c-switch c-switch--row" type="button" role="switch" aria-checked="false"><span class="c-switch__label">Thu mua nông sản<span class="c-switch__sub">Bảng kê mua của nông dân.</span></span><span class="c-switch__state c-switch__state--off">Tắt</span><span class="c-switch__track" aria-hidden="true"></span></button></li>
+      <li class="c-list__row"><button class="c-switch c-switch--row" type="button" role="switch" aria-checked="true" aria-disabled="true"><span class="c-switch__label">Mua hàng &amp; chi phí<span class="c-switch__sub">Không tắt được: doanh thu vượt 1 tỉ.</span></span><span class="c-switch__state c-switch__state--lock"><svg class="c-ic" aria-hidden="true"><use href="#i-lock"/></svg>Bắt buộc</span><span class="c-switch__track" aria-hidden="true"></span></button></li>
+      <li class="c-list__row"><button class="c-switch c-switch--row" type="button" role="switch" aria-checked="false" aria-disabled="true"><span class="c-switch__label">Đặt chỗ<span class="c-switch__sub">Dành cho homestay, tour.</span></span><span class="c-switch__state c-switch__state--soon">Sắp có</span><span class="c-switch__track" aria-hidden="true"></span></button></li>
+    </ul></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v41-head">
+    <h2 id="s-v41-head">Đầu trang danh sách · r-listhead</h2>
+    <p>Một con số, thanh tiền thật, một ô “việc đến hạn” trung tính (liên kết). Trên điện thoại xếp dọc.</p>
+    <section class="r-listhead surface" aria-label="Ví dụ đầu trang">
+      <div class="r-listhead__fig"><span class="c-stat__label">Tháng 10/2026 · 19 hoá đơn</span><b class="c-figure">7.080.000<span class="u-cur">₫</span></b></div>
+      <div class="r-listhead__bar"><div class="c-split__bar" role="img" aria-label="Có mã 18, chờ mã 1"><i class="c-split__ok" style="flex:18"></i><i class="c-split__pend" style="flex:1"></i></div><p class="c-sub">có mã CQT 18 · chờ mã 1</p></div>
+      <a class="r-listhead__due" href="#"><span class="c-stat__label">Chờ mã CQT · 25 phút</span><span class="r-listhead__duev">HĐ 00000418 · 640.000<span class="u-cur">₫</span></span></a>
+    </section>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v41-feed">
+    <h2 id="s-v41-feed">Nhật ký · r-feedbar, c-timeline (--ok · --pend · --ai · --you)</h2>
+    <p>Sự việc đọc trước, giờ là chữ phụ. Chấm gạch = Trợ lý soạn, chờ người duyệt. Chấm mực = chính chị làm (không dùng màu biển).</p>
+    <div class="surface demo-col"><ol class="c-timeline">
+      <li class="c-timeline__item c-timeline__item--ok"><span class="c-timeline__time">10:47</span><span class="c-timeline__dot" aria-hidden="true"></span><div>Đã xác minh 1.020.000 ₫ · DH-1043</div></li>
+      <li class="c-timeline__item c-timeline__item--ai"><span class="c-timeline__time">09:50</span><span class="c-timeline__dot" aria-hidden="true"></span><div>Soạn nháp đơn DH-1040 từ tin nhắn Zalo · chờ chị duyệt</div></li>
+      <li class="c-timeline__item c-timeline__item--you"><span class="c-timeline__time">09:15</span><span class="c-timeline__dot" aria-hidden="true"></span><div>Chị Hai sửa giá Mực khô loại 1</div></li>
+    </ol></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v41-btn">
+    <h2 id="s-v41-btn">Nút phụ · c-btn--quiet, c-btn--danger c-btn--quiet</h2>
+    <p>Nút phụ không có viền. Huỷ cạnh nút chính: chữ đỏ, không viền. Trong onboarding nút phụ là liên kết.</p>
+    <div class="surface demo-col" style="display:flex;gap:var(--space-2);flex-wrap:wrap">
+      <button class="c-btn c-btn--act" type="button">Xác nhận đơn</button><button class="c-btn" type="button">In phiếu</button>
+      <button class="c-btn c-btn--quiet" type="button">Kiểm tra</button><button class="c-btn c-btn--danger c-btn--quiet" type="button">Huỷ đơn</button>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v41-recap">
+    <h2 id="s-v41-recap">Onboarding xong · r-onboard__recap</h2>
+    <p>Các bước đã xong gập thành một dòng đã xác minh; việc nên làm tiếp hiện ngay.</p>
+    <div class="surface demo-col r-onboard__body" style="max-width:none;margin:0"><details class="r-onboard__recap">
+      <summary><span class="c-sign c-sign--ok"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span>6/6 bước đã xong</span><span class="u-meta">Xem lại</span></summary>
+      <p class="c-say">Số điện thoại · Thông tin hộ · Xác minh chủ hộ · Ngân hàng MB · Hàng hoá · Hoá đơn</p>
+    </details></div>
+  </section>
+<!-- v41:end -->
+<!-- v42:start -->
+  <section class="sec" aria-labelledby="s-v42-work">
+    <h2 id="s-v42-work">Control Tower · c-works / c-work · r-tower</h2>
+    <p>Mỗi việc OPC theo dõi: trạng thái (chữ + hình), giờ, tiêu đề, một dòng tình hình, nguồn. Việc đang mở có nền biển nhạt. Trang dùng r-tower: danh sách | chi tiết (≥1024), điện thoại mở chi tiết thành trang riêng.</p>
+    <div class="surface demo-col"><ul class="c-works">
+      <li><a class="c-work" href="#" aria-current="true"><span class="c-work__state"><span class="c-sign c-sign--you"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg></span>Cần chị quyết</span></span><span class="c-work__when">09:03</span><span class="c-work__t">Đơn Sunrise Hotel · 20 gói bò, 30 hũ muối</span><span class="c-work__m">Dừng vì khách nợ quá hạn 12 ngày</span><span class="c-work__src">Zalo OA · Trợ lý đọc tin</span></a></li>
+      <li><a class="c-work" href="#"><span class="c-work__state"><span class="c-sign c-sign--wait"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Đang chạy</span></span><span class="c-work__when">07:30</span><span class="c-work__t">Chế biến 40 gói bò một nắng</span><span class="c-work__m">Đang sấy · xong khoảng 16:00</span><span class="c-work__src">Lệnh LCB-0412</span></a></li>
+      <li><a class="c-work" href="#"><span class="c-work__state"><span class="c-sign c-sign--err"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg></span>Lỗi</span></span><span class="c-work__when">10:12</span><span class="c-work__t">Hoá đơn DH-2047</span><span class="c-work__m">Chưa rõ đã phát hành · OPC hỏi lại lúc 11:15</span><span class="c-work__src">Kết nối X Invoice</span></a></li>
+    </ul></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v42-story">
+    <h2 id="s-v42-story">Câu chuyện của một việc · c-timeline__src (--ai · --ok · --now · --err · --next) · c-rules · c-decide</h2>
+    <p>Mỗi bước nói ai làm: Trợ lý đề xuất · OPC kiểm tra · Chị duyệt · Kết nối. Bước chưa xảy ra nhạt bằng màu, không bằng độ mờ. Khung quyết định: vấn đề, tác động (số lớn), đề xuất, lý do bắt buộc (để trống, có gợi ý), ai được duyệt.</p>
+    <div class="surface demo-col"><ol class="c-timeline">
+      <li class="c-timeline__item c-timeline__item--ai"><span class="c-timeline__time">09:02</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__src">Trợ lý đề xuất</span><span class="c-timeline__what">Đọc tin của chị Mai (Sunrise Hotel)</span><span class="c-timeline__who">20 gói bò · 30 hũ muối · giao trước 15:00 mai</span></span></li>
+      <li class="c-timeline__item c-timeline__item--ok"><span class="c-timeline__time">09:02</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__src">OPC kiểm tra</span><span class="c-timeline__what">Giá · tồn · công nợ</span><ul class="c-rules" aria-label="Kết quả kiểm tra"><li class="c-rules__r"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>Giá</li><li class="c-rules__r"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>Tồn</li><li class="c-rules__r c-rules__r--fail"><svg class="c-ic" aria-hidden="true"><use href="#i-x"/></svg>Công nợ</li></ul></span></li>
+      <li class="c-timeline__item c-timeline__item--now"><span class="c-timeline__time">Bây giờ</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__src">Chờ chị duyệt</span><span class="c-timeline__what">Đơn dừng lại — chưa giữ hàng</span><div class="c-decide"><p class="c-decide__q">Duyệt đơn dù khách đang nợ quá hạn?</p><dl class="c-kv"><dt>Tác động</dt><dd><b class="c-decide__fig">14.650.000 ₫</b> công nợ sau đơn này</dd></dl><label class="c-field"><span class="c-field__label">Lý do của chị (bắt buộc)</span><span class="c-field__control"><input class="c-field__input" id="cat-rs" placeholder="Ví dụ: khách quen, hẹn trả khi nhận hàng"></span></label><div class="c-decide__acts"><button class="c-btn c-btn--act" type="button">Duyệt đơn</button><button class="c-btn" type="button">Từ chối</button></div></div></span></li>
+      <li class="c-timeline__item c-timeline__item--err"><span class="c-timeline__time">10:12</span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__src">Kết nối · X Invoice</span><span class="c-timeline__what">Không trả lời sau 30 giây</span><span class="c-timeline__who">OPC không tự gửi lại</span></span></li>
+      <li class="c-timeline__item c-timeline__item--next"><span class="c-timeline__time"></span><span class="c-timeline__dot" aria-hidden="true"></span><span class="c-timeline__body"><span class="c-timeline__src">Sau khi chị duyệt</span><span class="c-timeline__what">OPC kiểm tra lại → giữ hàng</span></span></li>
+    </ol>
+    <p class="c-decide__auto"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg>OPC không tự gửi lại · đang tự hỏi lại, lần sau 11:15</p>
+    <div class="c-decide__acts"><button class="c-btn" type="button" aria-disabled="true"><svg class="c-ic" aria-hidden="true"><use href="#i-lock"/></svg>Phát hành lại</button></div></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v42-quote">
+    <h2 id="s-v42-quote">Yêu cầu bán · c-quote · c-match (--unsure)</h2>
+    <p>Tin gốc giữ nguyên như khách gửi (chữ, ảnh, ghi âm, file); chỗ Trợ lý chưa chắc được tô. Mỗi dòng: khách viết gì → khớp món nào.</p>
+    <div class="surface demo-col"><figure class="c-quote"><figcaption class="c-quote__from"><b>Ảnh đơn viết tay</b> chị An chụp lúc 10:40</figcaption>
+      <div class="c-quote__media"><svg class="c-ic" aria-hidden="true"><use href="#i-photo"/></svg><span>“Gió Núi — bò 1 nắng 10 gói, muối kiến <mark>1? 7?</mark> hũ”</span></div></figure>
+      <p class="c-match"><b>“bò 1 nắng 10 gói”</b><small>Khớp: Bò một nắng 500g</small></p>
+      <p class="c-match c-match--unsure"><b>“muối kiến 1? 7? hũ”</b><small>Chưa rõ: 1 hay 7 hũ</small></p></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s-v42-journey">
+    <h2 id="s-v42-journey">Order 360 · c-journey (--done · --now · --warn)</h2>
+    <p>Một đơn đang ở đâu trong cả vòng đời. Chặng hiện tại màu biển, chặng xong biển nhạt; điện thoại xếp 3 cột.</p>
+    <div class="surface demo-col"><ol class="c-journey" aria-label="Đơn đang ở đâu">
+      <li class="c-journey__s c-journey__s--done">Nhận yêu cầu</li><li class="c-journey__s c-journey__s--done">Kiểm tra</li><li class="c-journey__s c-journey__s--done">Chị duyệt</li>
+      <li class="c-journey__s c-journey__s--done">Giữ hàng</li><li class="c-journey__s c-journey__s--now" aria-current="step">Soạn</li><li class="c-journey__s">Giao</li>
+      <li class="c-journey__s">Hoá đơn</li><li class="c-journey__s c-journey__s--warn">Tiền</li><li class="c-journey__s">Đóng đơn</li></ol></div>
+  </section>
+<!-- v42:end -->
+<!-- v42b:start -->
+  <section class="sec" aria-labelledby="s-v42-board">
+    <h2 id="s-v42-board">Giao hàng · r-board (skin OPC) · r-board__card (--you) · r-board__sum · c-sim</h2>
+    <p>Pattern board của skill, đổi sang token OPC. Đầu cột: tên · số đơn · tiền thu hộ (luôn có chỗ). Thẻ cần chủ hộ được nâng (viền đỏ). Trạng thái mô phỏng có nhãn “Mô phỏng” riêng.</p>
+    <div class="r-board" aria-label="Ví dụ bảng"><section class="r-board__col" aria-labelledby="cb1"><h3 class="r-board__head" id="cb1">Đang giao <span class="r-board__count">2</span><span class="r-board__sum">thu hộ 1.150.000 ₫</span></h3><ul class="r-board__list">
+      <li><article class="r-board__card r-board__card--you" aria-labelledby="cbx"><span class="r-board__meta"><b>DH-2045</b><span>09:40</span></span><h4 class="r-board__t" id="cbx">Homestay Mây Ngàn</h4><span class="r-board__lines">6 hũ muối</span><span class="c-sign c-sign--err"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-alert"/></svg></span>Không giao được · khách đóng cửa</span><span class="r-board__acts"><a class="c-btn" href="#">Giao lại</a></span></article></li>
+      <li><article class="r-board__card" aria-labelledby="cby"><span class="r-board__meta"><b>DH-2050</b><span>hẹn mai</span></span><h4 class="r-board__t" id="cby">Anh Nam</h4><span class="r-board__how"><svg class="c-ic" aria-hidden="true"><use href="#i-link"/></svg>Đơn vị vận chuyển · GHTK</span><span class="c-sign c-sign--wait"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Đang trung chuyển</span><span class="c-sim">Mô phỏng</span></article></li>
+    </ul></section></div>
+  </section>
+  <section class="sec" aria-labelledby="s-v42-pick">
+    <h2 id="s-v42-pick">Soạn hàng · r-pick · nút chính bị khoá kèm lý do</h2>
+    <div class="surface demo-col"><ul class="r-pick"><li class="r-pick__l"><span class="r-pick__chk r-pick__chk--ok" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="r-pick__name"><b>Bò một nắng 500g</b><small>Lô BMN-0405</small></span><span class="r-pick__qty"><b>20</b>/20 gói</span></li>
+      <li class="r-pick__l"><span class="r-pick__chk" aria-hidden="true"></span><span class="r-pick__name"><b>Muối kiến vàng 100g</b><small>Lô MKV-0921</small></span><span class="r-pick__qty"><b>18</b>/30 hũ</span></li></ul>
+      <div class="c-decide__acts"><button class="c-btn c-btn--act" type="button" aria-disabled="true"><svg class="c-ic" aria-hidden="true"><use href="#i-lock"/></svg>Bàn giao · còn thiếu 12 hũ</button></div></div>
+  </section>
+<!-- v42b:end -->
+<!-- v42c:start -->
+  <section class="sec" aria-labelledby="s-v42-alloc">
+    <h2 id="s-v42-alloc">Công nợ · r-alloc (gán một khoản cho nhiều hoá đơn) · c-tag · r-upcoming</h2>
+    <p>“Đủ” là phép cộng; tiền có thật hay chưa vẫn theo trạng thái tiền. Khoản chưa vào công nợ ghi “Chưa tính”. Tiền đơn vị vận chuyển giữ hộ gắn nhãn “thu hộ”.</p>
+    <div class="surface demo-col"><div class="r-alloc" role="group" aria-label="Ví dụ chọn hoá đơn">
+      <label class="r-alloc__row"><span class="c-check"><input type="checkbox" checked></span><span class="r-alloc__body"><b>HĐ 00000187</b><small>quá 12 ngày</small><small class="r-alloc__why">Đúng tên khách</small></span><span class="r-alloc__amt">5.200.000 ₫</span></label>
+      <label class="r-alloc__row"><span class="c-check"><input type="checkbox"></span><span class="r-alloc__body"><b>HĐ 00000193</b><small>quá 6 ngày</small></span><span class="r-alloc__amt">3.200.000 ₫</span></label></div>
+      <p class="r-alloc__sum">Cộng: <b>5.200.000 ₫</b> / 8.400.000 ₫</p>
+      <p>GHTK <span class="c-tag">thu hộ</span></p></div>
+  </section>
+<!-- v42c:end -->
+<!-- v42d:start -->
+  <section class="sec" aria-labelledby="s-v42-recv">
+    <h2 id="s-v42-recv">Nhập hàng · c-decide__result · r-capture · c-table__row--you / --muted</h2>
+    <p>Kết quả không đảo ngược được nói ngay trên nút chính. Chứng từ Trợ lý đọc hiện kèm ảnh thu nhỏ và độ chắc chắn; điều Trợ lý đoán là một nút sửa được. Dòng cần chủ hộ có nền nhạt + vạch trái; dòng chưa tính thì nhạt chữ.</p>
+    <div class="surface demo-col"><p class="c-decide__result">Xác nhận = nhập kho một lần · phải trả <b>11.200.000 ₫</b> hạn 05/11</p>
+      <div class="r-capture"><figure class="r-capture__thumb" role="img" aria-label="Ảnh hoá đơn mẫu"><span class="r-capture__logo" aria-hidden="true">EVN</span><i></i><i></i><i class="s"></i><b aria-hidden="true">1.250.000</b></figure><p class="c-quote__from"><b>Ảnh chị An chụp</b> · Trợ lý đã đọc · chắc chắn</p></div>
+      <table class="c-table"><tbody><tr class="c-table__row--you"><td>MH-0118 · thiếu 5 kg</td><td class="c-table__num">12.600.000 ₫</td></tr><tr class="c-table__row--muted"><td>MH-0118 · chưa tính</td><td class="c-table__num">11.200.000 ₫</td></tr></tbody></table></div>
+  </section>
+<!-- v42d:end -->
+<!-- v42e:start -->
+  <section class="sec" aria-labelledby="s-v42-stock">
+    <h2 id="s-v42-stock">Tồn kho · r-trace · r-count · r-lock</h2>
+    <p>Truy xuất hai chiều: dòng cân đối của OPC đứng đầu, rồi "Từ đâu" (chuỗi) và "Tới đâu". Kiểm kê: dòng khớp lùi lại, số lệch là thứ nổi nhất, lý do bắt buộc trước khi gửi duyệt. Khoá lô: hậu quả nặng nhất đi trước.</p>
+    <div class="surface demo-col">
+      <div class="r-trace"><p class="r-trace__sum"><span class="c-tag">OPC kiểm tra</span><span>40 gói làm ra = 14 đã tới khách + 26 trong kho</span></p>
+        <div class="r-trace__col"><h3 class="r-trace__h">Từ đâu</h3><ol class="r-trace__list r-trace__list--chain"><li class="r-trace__i"><span class="r-trace__pic"></span><span class="r-trace__b"><b>HTX Cao Nguyên</b><small>MH-0105 · 15/09</small></span></li><li class="r-trace__i"><span class="r-trace__pic"></span><span class="r-trace__b"><b>Lệnh LCB-0405</b><small>16/09</small></span><span class="r-trace__q">40 gói</span></li></ol></div>
+        <div class="r-trace__col"><h3 class="r-trace__h">Tới đâu</h3><ul class="r-trace__list"><li class="r-trace__i"><span class="r-trace__pic"></span><span class="r-trace__b"><b>Sunrise Hotel · DH-2052</b><small>đã giữ</small></span><span class="r-trace__q">20 gói</span></li></ul></div></div>
+      <ul class="r-count"><li class="r-count__l r-count__l--off"><span class="r-pick__chk r-pick__chk--warn" aria-hidden="true"></span><span class="r-pick__name"><b>Thịt bò tươi</b><small>Lô TB-0998 · sổ 6 kg</small></span><label class="r-count__in"><span class="u-sr">Đếm được</span><input class="c-field__input" inputmode="decimal" value="5,6"><span class="r-count__u">kg</span></label><span class="r-count__d r-count__d--off">−0,4 kg</span></li></ul>
+      <p class="r-lock__lead">14 gói của lô này đã tới khách</p></div>
+  </section>
+<!-- v42e:end -->
+<!-- v42f:start -->
+  <section class="sec" aria-labelledby="s-v42-prod">
+    <h2 id="s-v42-prod">Chế biến · r-mat · r-dash · r-rail--quiet · r-count (thực tế ↔ dự kiến)</h2>
+    <p>OPC tính nguyên liệu theo các lần trước; thiếu thì chặn "Bắt đầu" (nút chính bị khoá kèm lý do) và đường gỡ nằm ngay dưới dòng thiếu. Số chưa có hiện gạch xám. Ghi kết quả dùng lại r-count: sản lượng thấp hơn mức thường cần lý do.</p>
+    <div class="surface demo-col">
+      <table class="c-table r-mat"><tbody><tr class="c-table__row--you"><td class="c-table__cell--main c-table__who"><b>Thịt bò tươi</b><small>lô TB-0998</small></td><td class="c-table__num"><b>34 kg</b></td><td class="c-table__num r-mat__have">6 kg</td><td><span class="c-sign c-sign--err"><span class="c-sign__pic"></span><b>Thiếu 28 kg</b></span><a class="r-mat__cure" href="#">35 kg đã về · MH-0118</a></td></tr></tbody></table>
+      <p class="c-table__num"><span class="r-dash">–</span> / 40</p>
+      <aside class="r-rail--quiet"><p class="r-rail__lot">Lô mới <b>BMN-0413</b></p></aside>
+      <button class="c-btn c-btn--act" type="button" aria-disabled="true">Bắt đầu · thiếu 28 kg</button></div>
+  </section>
+<!-- v42f:end -->
+<!-- v42g:start -->
+  <section class="sec" aria-labelledby="s-v42-period">
+    <h2 id="s-v42-period">Đối chiếu kỳ · r-gate · r-recon · r-book</h2>
+    <p>Việc trước khi khoá kỳ: màu + biểu tượng loại việc mang trạng thái, chữ trạng thái đứng đầu dòng phụ, mỗi việc một nút. Ba nguồn so với doanh thu gốc; mỗi chỗ lệch dẫn tới việc gỡ nó. Sổ dựng từ chứng từ gốc; dòng sạch ghi lặng "có mã".</p>
+    <div class="surface demo-col">
+      <ul class="r-gate"><li class="r-gate__i r-gate__i--you"><span class="r-gate__pic"></span><span class="r-gate__b"><b>DH-2036 · Homestay Mây Ngàn</b><small><span class="r-gate__st">Thiếu hoá đơn</span> · giao 28/09</small></span><span class="r-gate__amt">1.300.000 ₫</span><span class="r-gate__act"><a class="c-btn" href="#">Tìm hoá đơn</a></span></li>
+        <li class="r-gate__i r-gate__i--unk"><span class="r-gate__pic"></span><span class="r-gate__b"><b>HĐ quầy 00001172</b><small><span class="r-gate__st">Chưa rõ kết quả</span> · OPC không tự gửi lại</small></span><span class="r-gate__amt">640.000 ₫</span><span class="r-gate__act"><a class="c-btn" href="#">Hỏi lại Hilo</a></span></li></ul>
+      <ul class="r-recon"><li class="r-recon__r r-recon__r--base"><span class="r-recon__k"><b>Doanh thu theo đơn đã giao</b><small>gốc để so</small></span><span class="r-recon__v">338.400.000 ₫</span><span class="r-recon__d"></span></li>
+        <li class="r-recon__r"><span class="r-recon__k"><b>Hoá đơn bán ra trong OPC</b><small>Hilo + X Invoice</small></span><span class="r-recon__v">337.100.000 ₫</span><span class="r-recon__d"><span class="c-sign c-sign--err"><span class="c-sign__pic"></span>Thiếu 1.300.000 ₫</span> <a class="r-recon__go" href="#">việc 1</a></span></li></ul>
+      <p class="r-book__ok">có mã</p></div>
+  </section>
+<!-- v42g:end -->
+<!-- v42h:start -->
+  <section class="sec" aria-labelledby="s-v42-tax">
+    <h2 id="s-v42-tax">Thuế · r-trust · r-howto · r-return · r-gate__i--match</h2>
+    <p>Mọi số thuế có nhãn Mô phỏng; điều chưa xác nhận / chưa nộp nói bằng một dòng r-trust (một dòng vàng mỗi màn). Gửi tay trên eTax là các bước r-howto; OPC không gửi, không nộp thay chủ hộ. Dòng tiền ra khớp biên nhận là bằng chứng mạnh nhất.</p>
+    <div class="surface demo-col">
+      <p class="r-trust"><span><b>Chưa ai xác nhận bộ quy tắc này.</b> Kế toán đối chiếu văn bản trước khi dùng thật.</span></p>
+      <p class="r-trust r-trust--gate"><span><b>Kỳ chỉ đóng khi đủ 3 thứ này.</b></span></p>
+      <ol class="r-howto"><li><b>Tải tờ khai</b><span>file XML đã duyệt</span><a class="c-btn" href="#">Tải file</a></li><li><b>Mở eTax và đăng nhập</b><span>OPC không giữ mật khẩu</span></li></ol>
+      <ul class="r-gate"><li class="r-gate__i r-gate__i--match"><span class="r-gate__pic"></span><span class="r-gate__b"><b>Tiền ra trên sao kê MB</b><small><span class="r-gate__st">Khớp biên nhận</span> · 11:24</small></span><span class="r-gate__amt">13.068.000 ₫</span><span class="r-gate__act"></span></li></ul>
+      <span class="c-sim">Mô phỏng</span></div>
+  </section>
+<!-- v42h:end -->
+<!-- v42i:start -->
+  <section class="sec" aria-labelledby="s-v42-setup">
+    <h2 id="s-v42-setup">Thiết lập · c-sign--pass · r-model · r-conn · r-policy</h2>
+    <p>Trạng thái khoẻ nói lặng (dấu tích + chữ, không viên thuốc) để ngoại lệ thắng lần đọc đầu. Mô hình kinh doanh: mỗi lựa chọn nói hậu quả lên kế hoạch. Kết nối: mỗi nhóm có đường làm tay. Quy tắc duyệt: dòng khoá không giao quyền được.</p>
+    <div class="surface demo-col">
+      <span class="c-sign c-sign--pass"><span class="c-sign__pic"></span>Hoạt động</span> <span class="c-sign c-sign--err"><span class="c-sign__pic"></span>X Invoice lỗi</span>
+      <div class="c-options r-model" role="group" aria-label="Mẫu"><button class="c-option c-option--on" type="button" role="checkbox" aria-checked="true"><span class="c-option__box" aria-hidden="true"></span><span class="c-option__body"><strong class="c-option__title">Tự chế biến</strong><span class="c-option__meta">bò một nắng</span><span class="r-model__plan">kế hoạch: tồn theo lô, chế biến, truy xuất</span></span></button></div>
+      <ul class="r-policy"><li class="r-policy__r"><span class="r-policy__t"><b>Giảm giá</b></span><span class="r-policy__who">trên ngưỡng → chị An duyệt</span><span class="r-policy__v">10 %</span></li>
+        <li class="r-policy__r r-policy__r--lock"><span class="r-policy__t"><b>Khoá kỳ · duyệt thuế · chuyển tiền</b></span><span class="r-policy__who">chỉ chị An</span><span class="r-policy__v">không đổi được</span></li></ul></div>
+  </section>
+<!-- v42i:end -->
+<!-- v42j:start -->
+  <section class="sec" aria-labelledby="s-v42-prices">
+    <h2 id="s-v42-prices">Hàng hoá & bảng giá · r-prices · r-plist</h2>
+    <p>Bảng giá là cột; cột mặc định có nhãn; quy tắc "giá nào cho đơn nào" nằm trên lưới; chênh lệch so với giá lẻ là số được nhấn. Đổi giá: nhân viên đề nghị, chủ hộ duyệt, đơn đã xác nhận giữ giá cũ.</p>
+    <div class="surface demo-col">
+      <p class="r-trust r-trust--gate r-prices__rule"><span><b>Giá nào cho đơn nào:</b> quầy và khách chưa gán → giá lẻ · khách gán bảng riêng → giá bảng đó</span></p>
+      <table class="c-table r-prices"><thead><tr><th>Món</th><th class="c-table__num">Giá lẻ <span class="r-prices__def">mặc định</span></th><th class="c-table__num">Khách sạn</th><th class="c-table__num">So với lẻ</th></tr></thead>
+        <tbody><tr><td>Bò một nắng 500g</td><td class="c-table__num"><b>260.000</b></td><td class="c-table__num"><b>230.000</b></td><td class="c-table__num"><span class="r-prices__delta">−11,5%</span></td></tr></tbody></table>
+      <ul class="r-plist"><li class="r-plist__main"><span class="r-plist__k"><b>Giá lẻ</b><small>quầy và khách chưa gán</small></span><b class="r-plist__v">260.000 ₫</b></li></ul></div>
+  </section>
+<!-- v42j:end -->
+<!-- v42k:start -->
+  <section class="sec" aria-labelledby="s-v42-program">
+    <h2 id="s-v42-program">Chương trình · r-funnel · r-adopt · r-pstats</h2>
+    <p>Người xem chương trình chỉ thấy bước và cờ của từng hộ, không thấy tiền, đơn, khách. Phễu dùng một gốc; bước tính trên gốc nhỏ hơn nằm nhóm riêng, thanh gạch chéo, ngắn hơn.</p>
+    <div class="surface demo-col">
+      <dl class="r-pstats"><div><dt>Hoạt động 7 ngày qua</dt><dd><b>7</b>/8 hộ<small>tuần trước 6/8</small></dd></div></dl>
+      <ol class="r-funnel"><li class="r-funnel__s"><span class="r-funnel__k"><b>Có giao dịch bán thật</b><small>đơn đầu tiên đã giao và thu tiền</small></span><span class="r-funnel__bar" aria-hidden="true"><i style="width:75%"></i></span><span class="r-funnel__v"><b>6</b>/8</span></li></ol>
+      <h3 class="r-funnel__h">Chỉ tính hộ đã đủ thời gian · 2 hộ sớm</h3>
+      <ol class="r-funnel r-funnel--part"><li class="r-funnel__s r-funnel__s--part"><span class="r-funnel__k"><b>Còn dùng sau 90 ngày</b></span><span class="r-funnel__bar" aria-hidden="true"><i style="width:100%"></i></span><span class="r-funnel__v"><b>2</b>/2</span></li></ol>
+      <ul class="r-adopt"><li class="r-adopt__r"><span>Đơn từ Zalo OA</span><span class="r-adopt__bar" aria-hidden="true"><i style="width:71%"></i></span><span class="r-adopt__v">5/7</span></li></ul></div>
+  </section>
+<!-- v42k:end -->
+<!-- v42l:start -->
+  <section class="sec" aria-labelledby="s-v42-offline">
+    <h2 id="s-v42-offline">Mất mạng · c-health--off · r-offbar · r-qchip · r-queue</h2>
+    <p>Mất mạng là trạng thái làm việc, không phải lỗi: tông chờ (vàng), làm tiếp và lưu trên máy. Việc chỉ cần gửi thì xếp hàng theo thứ tự, không gửi trùng; việc cần máy chủ để đúng (trừ kho, QR, hoá đơn có mã, duyệt, chuyển tiền) thì khoá kèm lý do. Đỏ chỉ dành cho xung đột khi có mạng lại.</p>
+    <div class="surface demo-col">
+      <span class="c-health c-health--off" role="status">Mất mạng · <b>2 việc chờ</b></span>
+      <div class="c-banner r-offbar" role="status"><span class="c-banner__pic"></span><span class="c-banner__text"><strong class="c-banner__title">Không có mạng từ 10:51 — vẫn làm tiếp được</strong><span>Việc cần gửi xếp hàng chờ, gửi theo thứ tự khi có mạng.</span></span></div>
+      <p class="r-qchip"><span><b>Soạn xong</b> · đã ghi trên máy 10:56 · <b>chờ gửi</b></span></p>
+      <ol class="r-queue"><li class="r-queue__i"><span class="r-queue__n">1</span><span class="r-queue__b"><b>Soạn xong DH-2052</b><small>20 gói bò · 30 hũ muối</small></span><span class="r-queue__t">10:56</span><span class="r-queue__a"><button class="c-btn c-btn--quiet" type="button">Huỷ</button></span></li></ol></div>
+  </section>
+<!-- v42l:end -->
+<!-- v43a:start -->
+  <section class="sec" aria-labelledby="s-v43">
+    <h2 id="s-v43">v4.3 · Quầy ít món · khách quen · dòng "OPC đang chạy" · trạng thái tiền bằng chữ · nhật ký</h2>
+    <p>Quầy của hộ ít món: ô lớn ghi "còn · đã giữ"; ô chưa chọn là đường mảnh, ô trong giỏ nổi lên. Chọn khách quen thì đổi sang bảng giá của khách. Trang chủ tóm tắt tiền bằng chữ, số tiền nằm ở trang Tiền. Nhật ký ghi trước → sau, nguồn, mã sự kiện.</p>
+    <div class="surface demo-col">
+      <div class="c-tiles c-tiles--few"><button class="c-tile c-tile--big" type="button" data-incart><span class="c-tile__name">Bò một nắng 500g</span><span class="c-tile__price">260.000 ₫</span><span class="c-tile__meta">còn 26 · đã giữ 20</span></button><button class="c-tile c-tile--big" type="button"><span class="c-tile__name">Muối kiến vàng 100g</span><span class="c-tile__price">65.000 ₫</span><span class="c-tile__meta">còn 50 · đã giữ 30</span></button></div>
+      <div class="r-pos__known" role="group" aria-label="Khách quen"><span class="u-meta">Khách quen:</span><button class="c-chip r-pos__kc" type="button" aria-pressed="true">Sunrise Hotel</button><button class="c-chip r-pos__kc" type="button">Nhà hàng Phố Núi</button></div>
+      <a class="r-home__run" href="#"><span>OPC đang chạy <b>3 việc</b></span><span class="r-home__err">1 lỗi</span></a>
+      <p class="r-home__moneyline"><span class="r-home__mk r-home__mk--ok">phần lớn đã khớp sao kê</span><a class="r-home__mk r-home__mk--pend" href="#">1 khoản chờ xác minh</a><a class="r-home__mk r-home__mk--you" href="#">2 đơn chưa thu</a></p></div>
+  </section>
+<!-- v43a:end -->
+<!-- v43b:start -->
+  <section class="sec" aria-labelledby="s-v43-shift">
+    <h2 id="s-v43-shift">Đóng ca · r-den · r-shift</h2>
+    <p>Tiền phải có (OPC tính) so với tiền đếm được theo mệnh giá; chênh cần lý do; dưới ngưỡng thì chủ hộ được báo, từ ngưỡng thì chủ hộ duyệt.</p>
+    <div class="surface demo-col">
+      <ul class="r-recon r-shift__exp"><li class="r-recon__r"><span class="r-recon__k"><b>− Chi tiền mặt</b><small>có biên lai</small></span><span class="r-recon__v"><span class="r-shift__minus">−50.000 ₫</span></span><span class="r-recon__d"></span></li>
+        <li class="r-recon__r r-recon__r--base"><span class="r-recon__k"><b>Phải có trong két</b></span><span class="r-recon__v"><span class="r-shift__big">2.445.000 ₫</span></span><span class="r-recon__d"></span></li></ul>
+      <ul class="r-den"><li class="r-den__i"><span class="r-den__v">500.000</span><label class="r-den__n"><span class="u-sr">Số tờ</span><input class="c-field__input" value="4"></label><span class="r-den__t">2.000.000</span></li><li class="r-den__i r-den__i--zero"><span class="r-den__v">100.000</span><label class="r-den__n"><span class="u-sr">Số tờ</span><input class="c-field__input" value="0"></label><span class="r-den__t">—</span></li></ul></div>
+  </section>
+<!-- v43b:end -->
+<!-- v44:start -->
+  <section class="sec" aria-labelledby="s-v44-nav">
+    <h2 id="s-v44-nav">Menu trái mở rộng · c-nav__grp · c-nav__peek · c-nav__sub</h2>
+    <p>Mục đang mở luôn hiện các trang con (số việc nằm ở trang con giữ việc); mục khác thu gọn, hiện tổng số và nút xem nhanh 44px. Thu ngân và kế toán thấy menu theo vai trò.</p>
+    <div class="demo-row"><div class="surface" style="width:252px"><nav class="c-nav" aria-label="Ví dụ chủ hộ"><ul class="c-nav__list"><li><a class="c-nav__item" href="home.html"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Hôm nay</a></li><li><a class="c-nav__item c-nav__item--counter" href="counter.html"><svg class="c-ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy bán hàng<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li><li><a class="c-nav__item" href="approvals.html"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>Cần xử lý<span class="c-nav__count" aria-label="3 việc: 2 cần chị quyết, 1 lỗi">3</span></a></li><li class="c-nav__grp c-nav__grp--open"><div class="c-nav__row"><a class="c-nav__item c-nav__item--here" href="orders.html"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg>Bán</a><button class="c-nav__peek" type="button" aria-expanded="true" aria-controls="cat-nav-orders" aria-label="Thu gọn Bán"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="cat-nav-orders"><li><a class="c-nav__subitem" href="sales-inbox.html">Yêu cầu<span class="c-nav__count" aria-label="3 việc cần xem">3</span></a></li><li><a class="c-nav__subitem" href="orders.html">Đơn hàng</a></li><li><a class="c-nav__subitem" href="delivery.html">Giao hàng</a></li><li><a class="c-nav__subitem" href="customers.html" aria-current="page">Khách hàng</a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="products.html"><svg class="c-ic" aria-hidden="true"><use href="#i-box"/></svg>Hàng hoá</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="cat-nav-goods" aria-label="Xem mục con của Hàng hoá"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="cat-nav-goods" hidden><li><a class="c-nav__subitem" href="products.html">Danh sách & giá</a></li><li><a class="c-nav__subitem" href="stock.html">Tồn kho</a></li><li><a class="c-nav__subitem" href="production.html">Chế biến</a></li><li><a class="c-nav__subitem" href="purchases.html">Nhập hàng & chi phí</a></li><li><a class="c-nav__subitem" href="suppliers.html">Nhà cung cấp</a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="money.html"><svg class="c-ic" aria-hidden="true"><use href="#i-money"/></svg>Tiền<span class="c-nav__count" aria-label="2 việc cần xem">2</span></a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="cat-nav-money" aria-label="Xem mục con của Tiền"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="cat-nav-money" hidden><li><a class="c-nav__subitem" href="money.html">Thu chi & đối chiếu<span class="c-nav__count" aria-label="2 việc cần xem">2</span></a></li><li><a class="c-nav__subitem" href="receivables.html">Công nợ</a></li><li><a class="c-nav__subitem" href="shift-close.html">Đóng ca</a></li></ul></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="period.html"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Sổ & thuế</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="cat-nav-books" aria-label="Xem mục con của Sổ & thuế"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="cat-nav-books" hidden><li><a class="c-nav__subitem" href="period.html">Kỳ thuế</a></li><li><a class="c-nav__subitem" href="books.html">Sổ sách</a></li><li><a class="c-nav__subitem" href="invoices.html">Hoá đơn</a></li><li><a class="c-nav__subitem" href="audit.html">Nhật ký</a></li></ul></li></ul>
+    <ul class="c-nav__list c-nav__list--foot"><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="readiness.html"><svg class="c-ic" aria-hidden="true"><use href="#i-gear"/></svg>Cài đặt</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="cat-nav-settings" aria-label="Xem mục con của Cài đặt"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="cat-nav-settings" hidden><li><a class="c-nav__subitem" href="readiness.html">Sẵn sàng</a></li><li><a class="c-nav__subitem" href="setup-business.html">Hộ & mô hình</a></li><li><a class="c-nav__subitem" href="setup-data.html">Dữ liệu nền</a></li><li><a class="c-nav__subitem" href="connections.html">Kết nối</a></li><li><a class="c-nav__subitem" href="setup-policy.html">Vai trò & duyệt</a></li><li><a class="c-nav__subitem" href="settings-features.html">Tính năng</a></li><li><a class="c-nav__subitem" href="settings-display.html">Hiển thị</a></li></ul></li><li><a class="c-nav__item" href="help.html"><svg class="c-ic" aria-hidden="true"><use href="#i-chat"/></svg>Trợ giúp & hỗ trợ</a></li></ul></nav></div><div class="surface" style="width:252px"><nav class="c-nav" aria-label="Ví dụ thu ngân"><ul class="c-nav__list"><li><a class="c-nav__item" href="home.html"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Hôm nay</a></li><li><a class="c-nav__item c-nav__item--counter" href="counter.html"><svg class="c-ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy bán hàng<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li><li class="c-nav__grp"><div class="c-nav__row"><a class="c-nav__item" href="orders.html"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg>Bán</a><button class="c-nav__peek" type="button" aria-expanded="false" aria-controls="cat2-nav-orders" aria-label="Xem mục con của Bán"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="cat2-nav-orders" hidden><li><a class="c-nav__subitem" href="orders.html">Đơn hàng</a></li></ul></li><li class="c-nav__grp c-nav__grp--open"><div class="c-nav__row"><a class="c-nav__item c-nav__item--here" href="shift-close.html"><svg class="c-ic" aria-hidden="true"><use href="#i-money"/></svg>Tiền</a><button class="c-nav__peek" type="button" aria-expanded="true" aria-controls="cat2-nav-money" aria-label="Thu gọn Tiền"><svg class="c-ic" aria-hidden="true"><use href="#i-chev"/></svg></button></div><ul class="c-nav__sub" id="cat2-nav-money"><li><a class="c-nav__subitem" href="shift-close.html" aria-current="page">Đóng ca</a></li></ul></li></ul>
+    <ul class="c-nav__list c-nav__list--foot"><li><a class="c-nav__item" href="help.html"><svg class="c-ic" aria-hidden="true"><use href="#i-chat"/></svg>Trợ giúp & hỗ trợ</a></li></ul></nav></div></div>
+  </section>
+<!-- v44:end -->
+<!-- v441:start -->
+  <section class="sec" aria-labelledby="s-v441">
+    <h2 id="s-v441">Bảng · mức độ dòng, 0 ₫, dòng tổng</h2>
+    <p>Dòng cần chị xử lý màu xanh; nếu là lỗi hoặc quá hạn thì màu đỏ. Không nợ ghi "0 ₫". Tổng nằm ở dòng cuối bảng.</p>
+    <div class="surface"><table class="c-table"><thead><tr><th scope="col">Khách</th><th scope="col" class="c-table__num">Đang nợ</th><th scope="col">Tình trạng</th></tr></thead><tbody>
+      <tr class="c-table__row--err"><td class="c-table__cell--main c-table__who"><b><a href="#">Sunrise Hotel</a></b><small>trả 15 ngày</small></td><td class="c-table__num">8.400.000 ₫</td><td><span class="c-sign c-sign--err">Quá hạn 12 ngày</span></td></tr>
+      <tr class="c-table__row--you"><td class="c-table__cell--main c-table__who"><b><a href="#">Homestay Mây Ngàn</a></b><small>trả 15 ngày</small></td><td class="c-table__num">2.400.000 ₫</td><td><span class="c-sign c-sign--you">Thiếu email nhận hoá đơn</span></td></tr>
+      <tr><td class="c-table__cell--main c-table__who"><b><a href="#">Chị Thảo</a></b><small>trả khi nhận</small></td><td class="c-table__num"><span class="c-table__zero">0 ₫</span></td><td><span class="c-sign c-sign--pass">Không nợ</span></td></tr></tbody>
+      <tfoot><tr><td>Tổng đang nợ</td><td class="c-table__num"><b>10.800.000 ₫</b></td><td></td></tr></tfoot></table></div>
+  </section>
+<!-- v441:end -->
+</main>
+</body>
+</html>

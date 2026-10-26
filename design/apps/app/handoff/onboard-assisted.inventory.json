@@ -1,0 +1,1045 @@
+{
+  "screen": "onboard-assisted.html",
+  "title": "Hỗ trợ đăng ký · Đặc sản An Nhiên — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        69
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        0,
+        69,
+        1440,
+        695
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "main",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        764
+      ]
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        69
+      ]
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-brand",
+      "component": "BrandMark",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        32,
+        22,
+        132,
+        24
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC",
+      "box": [
+        40,
+        22,
+        47,
+        24
+      ]
+    },
+    {
+      "id": 4,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "by",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "by QNSC",
+      "box": [
+        95,
+        27,
+        61,
+        14
+      ]
+    },
+    {
+      "id": 5,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "spacer",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        176,
+        34,
+        1056,
+        0
+      ]
+    },
+    {
+      "id": 6,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Thoát hỗ trợ",
+      "box": [
+        1243,
+        12,
+        165,
+        44
+      ]
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-x",
+      "box": [
+        1260,
+        23,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 8,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "content",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        0,
+        69,
+        1440,
+        695
+      ]
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": "PageHeader",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        32,
+        101,
+        1376,
+        61
+      ]
+    },
+    {
+      "id": 10,
+      "parent": 9,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hỗ trợ đăng ký · Đặc sản An Nhiên",
+      "box": [
+        32,
+        101,
+        513,
+        36
+      ]
+    },
+    {
+      "id": 11,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-conn",
+      "component": null,
+      "of": "ConnectionStatus",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhân viên Trần Thị Thu · OPC Gia Lai, Pleiku · mọi thao tác được ghi lại",
+      "box": [
+        32,
+        143,
+        513,
+        20
+      ]
+    },
+    {
+      "id": 12,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [
+        "tight"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        32,
+        186,
+        678,
+        537
+      ]
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bước 4/6 · làm theo thứ tự số",
+      "box": [
+        57,
+        211,
+        628,
+        24
+      ]
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Các bước đăng ký",
+      "box": [
+        57,
+        211,
+        159,
+        24
+      ]
+    },
+    {
+      "id": 15,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-todo",
+      "component": "TodoList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        45,
+        252,
+        652,
+        447
+      ]
+    },
+    {
+      "id": 16,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        45,
+        252,
+        652,
+        71
+      ]
+    },
+    {
+      "id": 17,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        269,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 18,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        66,
+        278,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 19,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Số điện thoại",
+      "box": [
+        105,
+        266,
+        568,
+        22
+      ]
+    },
+    {
+      "id": 20,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 10:01 · chị An đồng ý dữ liệu",
+      "box": [
+        105,
+        289,
+        568,
+        20
+      ]
+    },
+    {
+      "id": 21,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        45,
+        327,
+        652,
+        71
+      ]
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        345,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 23,
+      "parent": 22,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        66,
+        354,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 24,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hộ kinh doanh",
+      "box": [
+        105,
+        341,
+        568,
+        22
+      ]
+    },
+    {
+      "id": 25,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 10:03 · đọc từ ảnh giấy đăng ký",
+      "box": [
+        105,
+        365,
+        568,
+        20
+      ]
+    },
+    {
+      "id": 26,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        45,
+        402,
+        652,
+        71
+      ]
+    },
+    {
+      "id": 27,
+      "parent": 26,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        420,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-check",
+      "box": [
+        66,
+        429,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 29,
+      "parent": 26,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Cách bán",
+      "box": [
+        105,
+        416,
+        568,
+        22
+      ]
+    },
+    {
+      "id": 30,
+      "parent": 26,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 10:05",
+      "box": [
+        105,
+        440,
+        568,
+        20
+      ]
+    },
+    {
+      "id": 31,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        45,
+        477,
+        652,
+        71
+      ]
+    },
+    {
+      "id": 32,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        57,
+        495,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 33,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Thuế và tài khoản",
+      "box": [
+        105,
+        491,
+        568,
+        22
+      ]
+    },
+    {
+      "id": 34,
+      "parent": 31,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị An chưa có tài khoản eTax · hướng dẫn đăng ký bằng VNeID",
+      "box": [
+        105,
+        515,
+        568,
+        20
+      ]
+    },
+    {
+      "id": 35,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        45,
+        552,
+        652,
+        71
+      ]
+    },
+    {
+      "id": 36,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5",
+      "box": [
+        57,
+        570,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 37,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hoá đơn",
+      "box": [
+        105,
+        566,
+        568,
+        22
+      ]
+    },
+    {
+      "id": 38,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tiếp theo",
+      "box": [
+        105,
+        590,
+        568,
+        20
+      ]
+    },
+    {
+      "id": 39,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        45,
+        628,
+        652,
+        71
+      ]
+    },
+    {
+      "id": 40,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6",
+      "box": [
+        57,
+        645,
+        36,
+        36
+      ]
+    },
+    {
+      "id": 41,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Số đầu kỳ",
+      "box": [
+        105,
+        642,
+        568,
+        22
+      ]
+    },
+    {
+      "id": 42,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-todo",
+      "component": null,
+      "of": "TodoList",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tiếp theo · đếm tồn cùng chị An",
+      "box": [
+        105,
+        665,
+        568,
+        20
+      ]
+    },
+    {
+      "id": 43,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        730,
+        186,
+        678,
+        280
+      ]
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Đăng ký eTax cho chị An",
+      "box": [
+        755,
+        211,
+        628,
+        24
+      ]
+    },
+    {
+      "id": 45,
+      "parent": 43,
+      "kind": "recipe",
+      "class": "r-guide",
+      "component": null,
+      "of": "Guide",
+      "part": "mini",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Mở eTax Mobile trên điện thoại chị AnChọn đăng nhập bằng VNeID, chị An xác nhận ",
+      "box": [
+        755,
+        252,
+        628,
+        88
+      ]
+    },
+    {
+      "id": 46,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-say",
+      "component": "OwnerSentence",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nói với chị An: OPC không cần mật khẩu eTax của chị.",
+      "box": [
+        755,
+        356,
+        628,
+        26
+      ]
+    },
+    {
+      "id": 47,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Đánh dấu đã có eTax",
+      "box": [
+        755,
+        398,
+        199,
+        44
+      ]
+    },
+    {
+      "id": 48,
+      "parent": 43,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Làm sau",
+      "box": [
+        962,
+        398,
+        100,
+        44
+      ]
+    },
+    {
+      "id": 49,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [
+        "tight"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        730,
+        483,
+        678,
+        146
+      ]
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        755,
+        508,
+        628,
+        24
+      ]
+    },
+    {
+      "id": 51,
+      "parent": 50,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Trên điện thoại chị An",
+      "box": [
+        755,
+        508,
+        188,
+        24
+      ]
+    },
+    {
+      "id": 52,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-kv",
+      "component": "FactList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "BướcBước 4/6 · Thuế và tài khoảnSố điện thoại0935 112 418",
+      "box": [
+        755,
+        548,
+        628,
+        56
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Style tile — Trò Chuyện</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{ /* Direction E — Trò Chuyện: draft tokens */
+  --bg:#ffffff; --surface:#f3f4ef; --surface-2:#e9ebe3; --ink:#111410; --ink-2:#4b5147; --line:#dfe2d8;
+  --accent:#9fe870; --on-accent:#111410; --accent-deep:#163300; /* lime = money only */
+  --ok:#1d6b31; --ok-bg:#e3f3d8; --warn:#8a5300; --warn-bg:#fff0cc; --danger:#b42318; --danger-bg:#fde7e4;
+  --wait:#3f4a5a; --wait-bg:#e8ecf1;
+  --font-display:"Bricolage Grotesque",sans-serif; --font-body:"Plus Jakarta Sans",sans-serif;
+  --r:18px; --r-sm:12px; --r-bubble:6px; --s:8px; }
+*{box-sizing:border-box}
+body{margin:0;width:1200px;height:800px;overflow:hidden;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-body)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.tile{display:grid;grid-template-columns:300px 1fr 330px;height:100%}
+.lbl{font:600 13px/1.3 var(--font-body);color:var(--ink-2);margin-bottom:8px}
+svg.i{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* column 1 — meta */
+.meta{padding:28px 24px;border-right:1px solid var(--line);display:grid;align-content:start;gap:22px;background:var(--surface)}
+.name{font:800 40px/1 var(--font-display);letter-spacing:-.02em}
+.kw{color:var(--ink-2);font-size:15px;margin-top:8px}
+.refs{font-size:14px;line-height:1.5}
+.refs b{font-weight:600}
+.spec-d{font:800 28px/1.08 var(--font-display);letter-spacing:-.02em}
+.spec-b{font-size:16px;margin-top:8px}
+.spec-n{font:800 40px/1 var(--font-display);letter-spacing:-.02em;margin-top:10px}
+.spec-cap{font-size:13px;color:var(--ink-2);margin-top:4px}
+.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.sw div{height:52px;border-radius:var(--r-sm);border:1px solid var(--line);font:600 13px/1.2 var(--font-body);display:flex;align-items:end;padding:6px}
+.sw-note{font-size:13px;color:var(--ink-2);margin-top:8px;line-height:1.4}
+
+/* column 2 — slice + signature */
+.work{padding:20px 22px;display:grid;align-content:start}
+.sig{border:2px dashed var(--ink);border-radius:22px;padding:14px 16px 16px;position:relative}
+.sig-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.sig-h .lbl{margin:0}
+.sig-tag{font:700 13px/1 var(--font-body);background:var(--ink);color:var(--accent);padding:6px 10px;border-radius:999px}
+.mk{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--accent);font:700 13px/1 var(--font-body);flex:none}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.card-t{display:flex;align-items:center;gap:8px;font:700 15px/1.2 var(--font-body);color:var(--ink-2)}
+.say{font:700 23px/1.22 var(--font-display);letter-spacing:-.01em;margin:8px 0 0;display:flex;gap:10px;align-items:flex-start}
+.say mark{white-space:nowrap;background:var(--accent);color:var(--on-accent);padding:0 6px;border-radius:8px}
+.big{display:flex;flex-wrap:wrap;align-items:center;column-gap:10px;row-gap:4px;margin-top:10px}
+.big .n{font:800 52px/1 var(--font-display);letter-spacing:-.03em;white-space:nowrap}
+.big .side{flex-basis:100%;padding-left:32px;font-size:15px;color:var(--ink-2);line-height:1.35}
+.up{color:var(--ok);font-weight:700}
+.bar{display:flex;height:10px;border-radius:999px;overflow:hidden;margin:14px 0 10px;gap:2px}
+.bar i{display:block}
+.split{display:grid;grid-template-columns:1fr auto;row-gap:4px;column-gap:12px;font-size:16px}
+.split .v{font-weight:700;text-align:right}
+.split .sub{grid-column:1/-1;font-size:14px;color:var(--ink-2);margin:-2px 0 4px 18px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:0}
+.todo-h{display:flex;align-items:center;gap:8px;margin:14px 0 8px;font:700 15px/1.2 var(--font-body)}
+.todo-h .count{background:var(--warn-bg);color:var(--warn);padding:3px 9px;border-radius:999px;font-size:13px}
+.msg{display:grid;grid-template-columns:34px 1fr;gap:10px;margin-bottom:10px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--accent);font:800 13px/34px var(--font-display);text-align:center}
+.bubble{background:var(--surface);border-radius:var(--r-bubble) var(--r) var(--r) var(--r);padding:11px 14px}
+.bubble p{margin:0;font-size:16px;line-height:1.4}
+.bubble p b{font-weight:700}
+.bubble .det{font-size:14px;color:var(--ink-2);margin-top:4px;line-height:1.45}
+.chips{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:999px;font:600 15px/1 var(--font-body);border:1.5px solid var(--ink);background:var(--bg);color:var(--ink)}
+.chip.go{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
+
+/* column 3 — components */
+.comp{padding:28px 24px;border-left:1px solid var(--line);display:grid;align-content:start;gap:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 18px;border-radius:16px;font:700 16px/1 var(--font-body);border:0;width:100%}
+.btn.p{background:var(--accent);color:var(--on-accent)}
+.btn.s{background:var(--bg);color:var(--ink);border:1.5px solid var(--ink)}
+.btn.d{background:var(--surface-2);color:#6b7066;cursor:not-allowed}
+.btns{display:grid;gap:8px}
+.state{font-size:13px;color:var(--ink-2);margin-top:2px}
+.field label{display:block;font:600 14px/1.3 var(--font-body);margin-bottom:6px}
+.inp{height:52px;border-radius:14px;border:2px solid var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 14px;font:700 20px/1 var(--font-display);box-shadow:0 0 0 4px rgba(159,232,112,.55)}
+.inp span{font:500 14px/1 var(--font-body);color:var(--ink-2)}
+.hint{font-size:14px;color:var(--ink-2);margin-top:6px}
+.hint b{color:var(--ink)}
+.st{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.s{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:12px;font:700 14px/1.15 var(--font-body)}
+.s.w{background:var(--warn-bg);color:var(--warn)}
+.s.o{background:var(--ok-bg);color:var(--ok)}
+.s.q{background:var(--wait-bg);color:var(--wait)}
+.s.e{background:var(--danger-bg);color:var(--danger)}
+.flow{font-size:13px;color:var(--ink-2);margin-top:8px;line-height:1.4}
+.voice{background:var(--surface);border-radius:var(--r);padding:12px 14px;font-size:14px;line-height:1.45}
+.voice b{font-weight:700}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+</svg>
+<div class="tile">
+
+<section class="meta">
+  <div><div class="name">Trò Chuyện</div><div class="kw">ân cần · nói thẳng · câu trước, số sau</div></div>
+  <div><div class="lbl">Neo tham chiếu</div>
+    <div class="refs"><b>wise.com/vn</b> — số rất to, xanh lime chỉ cho tiền<br><b>payos.vn</b> — tiếng Việt thân, nút bo tròn mềm</div></div>
+  <div><div class="lbl">Chữ · Bricolage Grotesque + Plus Jakarta Sans</div>
+    <div class="spec-d">Hôm nay nhà mình bán khá đấy</div>
+    <div class="spec-b">Khách chuyển khoản rồi, mình kiểm tra giúp cho chắc nhé — ặ ườ ễ ỡ ự</div>
+    <div class="spec-n num">1.020.000 ₫</div>
+    <div class="spec-cap num">Số dạng bảng · 0,5 kg · 10:42</div></div>
+  <div><div class="lbl">Vai trò màu</div><div class="sw">
+    <div style="background:var(--bg)">nền</div>
+    <div style="background:var(--surface)">lớp</div>
+    <div style="background:var(--ink);color:#fff">chữ</div>
+    <div style="background:var(--accent);color:var(--on-accent);border-color:var(--accent)">tiền</div>
+    <div style="background:var(--ok);color:#fff;border-color:var(--ok)">đã xác minh</div>
+    <div style="background:var(--warn-bg);color:var(--warn)">chờ</div>
+    <div style="background:var(--wait-bg);color:var(--wait)">CQT</div>
+    <div style="background:var(--danger);color:#fff;border-color:var(--danger)">lỗi</div></div>
+    <div class="sw-note">Đen trên trắng là chính. Lime chỉ dùng cho tiền và việc chính — không có vàng, không xanh ngân hàng.</div></div>
+</section>
+
+<section class="work">
+  <div class="sig">
+    <div class="sig-h"><div class="lbl">Lát cắt thật · Trang chủ</div><span class="sig-tag">Nét riêng: câu trước, số sau</span></div>
+
+    <div class="card">
+      <div class="card-t">Tiền hôm nay</div>
+      <p class="say"><span class="mk">1</span><span>Hôm nay nhà mình bán được <mark class="num">8,46 triệu</mark>, hơn hôm qua 1,34 triệu.</span></p>
+      <div class="big"><span class="mk" style="align-self:center">2</span><span class="n num">8.460.000 ₫</span>
+        <span class="side num">23 đơn · <span class="up">+19%</span> so với hôm qua (7.120.000 ₫)</span></div>
+      <div class="bar" aria-hidden="true">
+        <i style="flex:4560;background:var(--ok)"></i>
+        <i style="flex:1380;background:repeating-linear-gradient(135deg,#e0a422 0 5px,#f5d27a 5px 10px)"></i>
+        <i style="flex:2520;background:var(--ink)"></i></div>
+      <div class="split num">
+        <span><span class="dot" style="background:var(--ok)"></span>QR/chuyển khoản</span><span class="v">5.940.000 ₫</span>
+        <span class="sub">đã xác minh 4.560.000 ₫ · chờ xác minh 1.380.000 ₫</span>
+        <span><span class="dot" style="background:var(--ink)"></span>Tiền mặt</span><span class="v">2.520.000 ₫</span>
+      </div>
+    </div>
+
+    <div class="todo-h"><svg class="i"><use href="#i-chat"/></svg>Cần xử lý <span class="count">2 việc</span></div>
+
+    <div class="msg"><div class="av">OPC</div><div>
+      <div class="bubble">
+        <p><b>2 khoản QR chờ xác minh</b> — khách báo đã chuyển, mình xem lại giúp cho chắc nhé.</p>
+        <div class="det num">DH-1043 · 1.020.000 ₫ (10:42) &nbsp;·&nbsp; DH-1041 · 360.000 ₫ (10:05)</div></div>
+      <div class="chips"><span class="mk" style="align-self:center">3</span>
+        <span class="chip go"><svg class="i"><use href="#i-check"/></svg>Đối chiếu</span><span class="chip">Để sau</span></div>
+    </div></div>
+
+    <div class="msg" style="margin-bottom:0"><div class="av">OPC</div><div>
+      <div class="bubble">
+        <p><b>Chuyển khoản không có mã đơn</b> — 2.150.000 ₫ từ NHA HANG BIEN DONG, 09:15.</p>
+        <div class="det">Gợi ý: có thể là công nợ Nhà hàng Biển Đông.</div></div>
+      <div class="chips">
+        <span class="chip go"><svg class="i"><use href="#i-link"/></svg>Gán vào đơn</span><span class="chip">Không phải</span></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="comp">
+  <div><div class="lbl">Nút · chính / phụ / tắt</div><div class="btns">
+    <button class="btn p"><svg class="i"><use href="#i-check"/></svg>Xác nhận đã nhận tiền</button>
+    <button class="btn s">Để sau</button>
+    <button class="btn d" disabled>Xuất hoá đơn · chờ xác minh</button></div></div>
+
+  <div class="field"><label>Khách đưa tiền mặt</label>
+    <div class="inp num">500.000 ₫<span>đang nhập</span></div>
+    <div class="hint num">Trả lại khách <b>140.000 ₫</b></div></div>
+
+  <div><div class="lbl">Trạng thái · màu + chữ + biểu tượng</div><div class="st">
+    <span class="s w"><svg class="i"><use href="#i-clock"/></svg>Chờ xác minh</span>
+    <span class="s o"><svg class="i"><use href="#i-check"/></svg>Đã xác minh</span>
+    <span class="s q"><svg class="i"><use href="#i-doc"/></svg>Chờ mã CQT</span>
+    <span class="s e"><svg class="i"><use href="#i-alert"/></svg>Lỗi</span></div>
+    <div class="flow">Chờ khách chuyển → Đã nhận · chờ xác minh → Đã xác minh</div></div>
+
+  <div><div class="lbl">Trả lời nhanh · chip</div><div class="chips" style="margin-top:0">
+    <span class="chip go"><svg class="i"><use href="#i-arrow"/></svg>Xem đơn</span><span class="chip">Nhắc lại sau 1 giờ</span></div></div>
+
+  <div class="voice"><div class="lbl" style="margin-bottom:4px">Giữ cho nghiêm túc khi nói về thuế</div>
+    Câu nói được làm tròn (<b class="num">8,46 triệu</b>), nhưng số chính xác luôn nằm ngay dưới. Trạng thái tiền và hoá đơn không bao giờ chỉ nằm trong câu.</div>
+</section>
+</div></body></html>

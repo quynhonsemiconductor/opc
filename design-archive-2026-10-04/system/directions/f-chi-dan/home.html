@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tổng quan · Hải sản khô Cô Hai — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<style>
+.page-h { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+.page-h h1 { font: 700 var(--fs-h1)/1.1 var(--font-display); letter-spacing: -.005em; }
+.page-h .shift { margin-top: 6px; display: flex; align-items: center; gap: 8px; color: var(--ink-2); }
+.page-h .shift i { width: 10px; height: 10px; background: var(--ok); border-radius: 1px; }
+.acts { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+.grid {
+  display: grid; gap: var(--space-5);
+  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 1fr);
+  grid-template-areas: "money money" "todo tax" "todo debt" "orders orders" "week ai";
+  align-items: start;
+}
+.a-todo { grid-area: todo; container-type: inline-size; }
+.a-money { grid-area: money; container-type: inline-size; } .a-tax { grid-area: tax; } .a-orders { grid-area: orders; }
+.a-week { grid-area: week; align-self: stretch; } .a-debt { grid-area: debt; } .a-ai { grid-area: ai; }
+.a-todo.card { padding: var(--space-4); }
+.a-todo .card-h { padding: 4px 4px 0; }
+
+/* lanes 1–3 full; 4–6 compact "Việc khác" group */
+.lane-amt { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-size: 16px; color: var(--ink-2); min-width: 0; }
+.lane-amt .hint { min-width: 0; }
+.lane-amt .money { font-size: 22px; color: var(--ink); }
+.lane-more { display: none; }
+.a-todo .lane-k { display: none; }
+.a-todo .lane-list { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.others { margin-top: var(--space-3); border: var(--stroke) solid var(--line); border-radius: var(--radius-l); }
+.others summary { list-style: none; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 var(--space-4); font: 700 18px/1.2 var(--font-display); cursor: pointer; }
+.others summary::-webkit-details-marker { display: none; }
+.others summary .meta { font-family: var(--font-body); font-weight: 400; margin-left: auto; }
+.others summary .ic { transition: none; }
+.others[open] summary .ic { transform: rotate(180deg); }
+.oth { list-style: none; margin: 0; padding: 0; }
+.oth li { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 2px var(--space-3); align-items: center; padding: 10px var(--space-4); border-top: var(--hairline) solid var(--line); }
+.oth .n { width: 32px; height: 32px; display: grid; place-items: center; border: var(--stroke) solid var(--line-strong); border-radius: var(--radius); font: 800 19px/1 var(--font-display); }
+.oth .t { font: 600 16px/1.35 var(--font-body); }
+.oth .t .meta { display: block; font-weight: 400; }
+.oth .go { --btn-h: 44px; font-size: 16px; padding: 0 12px; border-color: var(--line-quiet); }
+.lane-list { display: grid; gap: 2px; margin-top: 2px; }
+.lane-list .pair { gap: 4px 10px; flex-wrap: wrap; white-space: normal; }
+@container (max-width: 560px) {
+  .lane { grid-template-columns: var(--lane-num-w) minmax(0, 1fr); }
+  .lane-a { grid-column: 2; padding: 0 var(--space-4) var(--space-4); }
+  .lane-n { align-self: start; height: 56px; margin: 12px 0 0 12px; border-radius: var(--radius); width: calc(var(--lane-num-w) - 12px); font-size: 34px; }
+}
+@container (max-width: 380px) {
+  .ledger .ind { padding-left: 0; gap: 6px; }
+  .ledger .ind .ml { display: none; }
+  .ledger .grp { font-size: 15px; }
+}
+
+/* money today — the page's largest answer */
+.hero { padding: var(--space-4) var(--space-5); }
+.hero-in { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-6); align-items: stretch; }
+.hero-tag { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin-bottom: 6px; }
+.hero-tag h2 { font: 700 var(--fs-h3)/1.2 var(--font-display); display: flex; align-items: center; gap: 10px; }
+.hero-tag h2::before { content: ""; width: 12px; height: 12px; background: var(--ink); border-radius: 1px; }
+.hero .say { font-size: 18px; }
+.big-row { display: flex; align-items: flex-end; gap: var(--space-3); margin-top: 6px; }
+.big { font: 700 72px/0.95 var(--font-display); letter-spacing: -.015em; white-space: nowrap; }
+.big-row .lbl { font: 500 15px/1.3 var(--font-body); color: var(--ink-2); padding-bottom: 2px; }
+.big-row .lbl b { font-family: var(--font-display); color: var(--ink); }
+.hero-pend { margin-top: 6px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 18px; color: var(--ink-2); }
+.hero-pend .money { font-size: 28px; color: var(--pend); }
+.hero .truth { margin: var(--space-3) 0 6px; }
+.hero .sub { font-size: 16px; color: var(--ink-2); }
+.hero .sub b { font-family: var(--font-display); color: var(--ink); }
+.hero-r { border-left: var(--stroke) solid var(--line-strong); padding-left: var(--space-6); container-type: inline-size; min-width: 0; display: grid; align-content: center; gap: 8px; }
+/* money signs — wayfinding panels: pictogram block + word + amount (+ arrow when it needs you) */
+.signs-h { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); font: 600 16px/1.3 var(--font-body); }
+.signs-h .money { font-size: 20px; }
+.signs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.sign { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto auto; align-items: center; min-height: 56px; border: var(--stroke) solid var(--line); border-radius: var(--radius-l); overflow: hidden; background: var(--surface); }
+.sign-p { align-self: stretch; display: grid; place-items: center; }
+.sign-p .ic { width: 26px; height: 26px; stroke-width: 2.8; }
+.sign-w { padding: 6px 12px; font: 700 18px/1.2 var(--font-display); }
+.sign-w small { display: block; font: 400 14px/1.3 var(--font-body); color: var(--ink-3); }
+.sign > .money { font-size: 22px; padding-right: 14px; }
+.sign.is-ok .sign-p { background: var(--ok); color: var(--on-ok); }
+.sign.is-pend { border: var(--stroke) dashed var(--pend); background: var(--pend-soft); }
+.sign.is-pend .sign-p { background: var(--pend-hatch); color: var(--pend); box-shadow: inset -2px 0 0 var(--pend); }
+.sign.is-pend .sign-w, .sign.is-pend > .money { color: var(--pend); }
+.sign.is-cash .sign-p { background: var(--surface-sunk); color: var(--ink); box-shadow: inset -2px 0 0 var(--line); }
+.sign-go { align-self: stretch; width: 52px; display: grid; place-items: center; background: var(--act); color: var(--on-act); border-left: var(--stroke) solid var(--line-strong); }
+.sign-go .ic { width: 24px; height: 24px; stroke-width: 3; }
+.m-total { margin-top: var(--space-4); padding-top: var(--space-4); border-top: var(--hairline) solid var(--line); }
+.m-total .lbl { font: 600 15px/1.3 var(--font-body); color: var(--ink-2); margin-bottom: 6px; }
+.m-total .sub { margin-top: 10px; color: var(--ink-2); font-size: 16px; }
+.m-total .sub b { font-family: var(--font-display); color: var(--ink); }
+.truth { display: flex; height: 14px; gap: 2px; margin: var(--space-4) 0 var(--space-3); }
+.truth span { border-radius: 1px; }
+.truth .t-ok { background: var(--ok); }
+.truth .t-pend { background: var(--pend-hatch); box-shadow: inset 0 0 0 2px var(--pend); }
+.truth .t-cash { background: var(--p-ink-400); }
+.ledger { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--space-3); row-gap: 8px; align-items: center; }
+.ledger .grp { display: flex; align-items: center; gap: 10px; font: 600 16px/1.3 var(--font-body); }
+.ledger .grp .pic { width: 26px; height: 26px; border-radius: var(--radius-s); display: grid; place-items: center; background: var(--surface-sunk); }
+.ledger .grp .pic .ic { width: 18px; height: 18px; }
+.ledger .amt { font: 700 19px/1 var(--font-display); text-align: right; white-space: nowrap; }
+.ledger .ind { padding-left: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ledger .amt-s { font: 700 17px/1 var(--font-display); text-align: right; display: inline-flex; align-items: center; gap: 10px; justify-content: flex-end; white-space: nowrap; }
+.ledger .amt-s.pend { color: var(--pend); }
+.ledger hr { grid-column: 1 / -1; border: 0; border-top: var(--hairline) solid var(--line); margin: 2px 0; width: 100%; }
+.legend-note { margin-top: var(--space-3); }
+
+/* tax */
+.a-tax .meta, .a-debt .meta, .oth .t .meta { font-size: 15px; }
+.tax-l { display: grid; gap: var(--space-4); margin-top: var(--space-4); }
+.thr { display: grid; gap: 6px; }
+.thr-row { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+.thr-row .money { font-size: 24px; }
+.thr-bar { position: relative; height: 12px; background: var(--surface-sunk); border-radius: 1px; margin: 22px 0 4px; }
+.thr-bar .fill { position: absolute; inset: 0 auto 0 0; background: var(--ink); border-radius: 1px; }
+.thr-bar .mark { position: absolute; top: -22px; bottom: -4px; width: 2px; background: var(--ink); }
+.thr-bar .mark span { position: absolute; top: -2px; left: 6px; font: 700 14px/1 var(--font-display); white-space: nowrap; }
+.due { border: var(--stroke) solid var(--line); border-radius: var(--radius-l); padding: var(--space-3) var(--space-4); display: grid; gap: 4px; }
+.due-h { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; }
+.due-h strong { font: 700 18px/1.25 var(--font-display); }
+.due .money { font-size: 24px; }
+
+/* 7 days — departures-board rows */
+.days { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.day { display: grid; grid-template-columns: 76px minmax(0, 1fr) 112px; align-items: center; gap: var(--space-3); min-height: 36px; }
+.day .d { font: 600 15px/1.2 var(--font-body); color: var(--ink-2); }
+.day .bar { height: 20px; background: var(--ink); border-radius: 1px; }
+.day .v { font: 700 17px/1 var(--font-display); text-align: right; white-space: nowrap; }
+.day.today .d { color: var(--ink); font-weight: 700; }
+.day.today .bar { background: var(--surface); border: var(--stroke) solid var(--ink); border-right-style: dashed; }
+.day.today .v small { display: block; font: 500 14px/1.3 var(--font-body); color: var(--ink-3); margin-top: 3px; }
+
+/* debt */
+.debt-l { display: grid; gap: 10px; margin-top: var(--space-3); }
+.debt-r { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px var(--space-3); padding-top: 10px; border-top: var(--hairline) solid var(--line); }
+.debt-r .n { font-weight: 600; }
+.debt-r .money { font-size: 18px; text-align: right; }
+.debt-r .meta { grid-column: 1 / -1; }
+.debt-r .meta a { color: var(--ink); font-weight: 600; text-underline-offset: 3px; }
+
+/* assistant */
+.ask { display: flex; gap: var(--space-2); }
+.ask .search { max-width: none; }
+.sugg { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.sugg .btn { font: 500 16px/1.25 var(--font-body); white-space: normal; text-align: left; padding: 8px 14px; border-color: var(--line-quiet); }
+
+/* orders */
+.tbl-wrap { overflow-x: auto; margin: 0 calc(-1 * var(--space-2)); }
+.table td .sub { display: block; font-size: 14px; color: var(--ink-3); }
+.tot { display: inline-flex; align-items: center; gap: 10px; justify-content: flex-end; }
+
+.m-only, .m-hh { display: none; }
+/* ---------- 1024 ---------- */
+@media (max-width: 1180px) {
+  .nav { --nav-w: 224px; }
+  .top, .content { padding-left: var(--space-6); padding-right: var(--space-6); }
+  .grid { grid-template-columns: minmax(0, 1.25fr) minmax(290px, 1fr); }
+  .big { font-size: 56px; }
+  .hero-in { gap: var(--space-4); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .hero-r { padding-left: var(--space-4); }
+  .sign { grid-template-columns: 44px minmax(0, 1fr) auto auto; }
+  .sign > .money { font-size: 19px; padding-right: 10px; }
+  .sign-w { padding: 6px 10px; font-size: 17px; }
+  .sign-go { width: 44px; }
+  .big-row { flex-wrap: wrap; gap: 4px var(--space-3); }
+  .big-row .lbl br { display: none; }
+  .big-row .lbl { width: 100%; }
+  .sign-w small { display: none; }
+  .top .btn-quiet .lbl-long { display: none; }
+}
+/* ---------- phone browser ---------- */
+@media (max-width: 720px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .nav { display: none; }
+  .top { padding: 8px var(--space-4); gap: 4px; position: sticky; top: 0; z-index: 5; min-height: 60px; }
+  .top .search, .top .btn-quiet { display: none; }
+  .top .m-only { display: grid; }
+  .m-hh { display: flex !important; align-items: center; gap: 10px; min-height: 48px; flex: 1; min-width: 0; text-align: left; }
+  .m-hh .hh-mark { width: 36px; height: 36px; background: var(--ink); color: var(--act); }
+  .top-sp { display: none; }
+  .m-hh .hh-t strong { font: 700 16px/1.2 var(--font-body); white-space: nowrap; }
+  .m-hh .hh-t span { white-space: nowrap; }
+  .m-hh .hh-t span { font-size: 14px; }
+  .top .icon-btn, .avatar-btn { width: 44px; height: 44px; }
+  .avatar { width: 40px; height: 40px; font-size: 17px; }
+  .content { padding: var(--space-4) var(--space-4) 128px; gap: var(--space-4); }
+  .lane-d, .lane-k, .a-todo .lane-d { display: none; }
+  .lane-more { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; font: 600 15px/1 var(--font-body); color: var(--ink-2); text-decoration: none; }
+  .lane-a { flex-wrap: nowrap; gap: var(--space-2); }
+  .lane-a .go { width: auto; flex: 1; }
+  .lane-amt { flex-wrap: nowrap; }
+  .lane-amt .hint { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+  .lane-t { line-height: 1.2; }
+  .lane-b { gap: 2px; padding: 10px var(--space-3) 8px; }
+  .page-h h1 { font-size: 24px; }
+  .page-h .shift { margin-top: 2px; }
+  .content { padding-top: var(--space-3); gap: var(--space-3); }
+  .grid { gap: var(--space-3); }
+  .lane-t { font-size: 18px; }
+  .lane-a { padding: 0 var(--space-3) 8px; }
+  .lanes { gap: 6px; }
+  .a-todo .card-h { margin-bottom: var(--space-2); }
+  .acts .btn { min-height: 44px; }
+  .hero-in { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .hero-r { border-left: 0; padding-left: 0; border-top: var(--hairline) solid var(--line); padding-top: var(--space-3); }
+  .hero { padding: var(--space-4); }
+  .big-row { flex-wrap: wrap; }
+  .oth li { grid-template-columns: 32px minmax(0, 1fr); padding: 10px var(--space-3); }
+  .oth li .go { grid-column: 2; justify-self: start; }
+  .others summary { padding: 0 var(--space-3); }
+  .page-h h1 { font-size: 26px; }
+  .acts { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+  .acts .btn-act { grid-column: 1 / -1; min-height: 52px; }
+  .grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "todo" "money" "tax" "debt" "week" "orders" "ai"; gap: var(--space-4); }
+  .card { --card-pad: var(--space-4); }
+  .a-todo.card { padding: var(--space-3); }
+  .lane { --lane-num-w: 48px; min-height: 0; }
+  .lane-b { padding: var(--space-3); }
+  .lane-a { padding: 0 var(--space-3) var(--space-3); }
+  .lane-a .go { justify-content: space-between; }
+  .lane-t { font-size: 19px; }
+  .big { font-size: 52px; }
+  .day { grid-template-columns: 64px minmax(0, 1fr) 100px; gap: var(--space-2); }
+  .day .v { font-size: 16px; }
+  .tbl-wrap { margin: 0; overflow: visible; }
+  .table thead { display: none; }
+  .table, .table tbody, .table tr, .table td { display: block; }
+  .table tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px var(--space-3); padding: 12px 0; border-bottom: var(--hairline) solid var(--line); }
+  .table td { padding: 0; height: auto; border: 0; }
+  .table td.c-code { grid-column: 1; }
+  .table td.c-tot { grid-column: 2; grid-row: 1; }
+  .table td.c-hide { display: none; }
+  .table td.c-who { grid-column: 1 / -1; color: var(--ink-2); font-size: 15px; }
+  .table td.c-st { grid-column: 1 / -1; }
+  .tabbar {
+    display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
+    background: var(--surface); border-top: var(--stroke) solid var(--line-strong); padding: 4px 4px calc(4px + env(safe-area-inset-bottom));
+  }
+  .tabbar a { display: grid; justify-items: center; align-content: center; gap: 2px; min-height: 56px; text-decoration: none; font: 600 14px/1.15 var(--font-body); color: var(--ink-2); position: relative; text-align: center; }
+  .tabbar a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+  .tabbar a[aria-current="page"]::before { content: ""; position: absolute; top: -4px; left: 22%; right: 22%; height: 4px; background: var(--ink); }
+  .tabbar a.is-counter .ic { background: var(--act); border-radius: var(--radius-s); box-shadow: 0 0 0 4px var(--act); }
+  .tabbar .count { position: absolute; top: 4px; left: calc(50% + 8px); min-width: 20px; height: 20px; border-radius: 10px; background: var(--ink); color: var(--on-panel); font: 700 14px/20px var(--font-display); }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5.5 9.5V20h13V9.5M10 20v-6h4v6"/></symbol>
+  <symbol id="i-counter" viewBox="0 0 24 24"><path d="M3 10h18v10H3zM6 10V4h12v6M7 14h4M14 14h3M7 17h10"/></symbol>
+  <symbol id="i-orders" viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><circle cx="12" cy="12" r="2.8"/><path d="M6 9v.5M18 14.5v.5"/></symbol>
+  <symbol id="i-invoice" viewBox="0 0 24 24"><path d="M6 3h8.5L18 6.5V21H6zM9 11h6M9 15h6M9 7h3"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5zM3 7.5l9 4.5 9-4.5M12 12v9"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-4 3-6 6.5-6s6 2 6.5 6M15.5 4.8a3.4 3.4 0 010 6.4M18 14.5c2 .8 3.2 2.6 3.5 5.5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h7v16H4zM13 4h7v16h-7M7 8h1M16 8h1"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14l4-4M8.5 11.5L6 14a3.5 3.5 0 005 5l2.5-2.5M15.5 12.5L18 10a3.5 3.5 0 00-5-5l-2.5 2.5"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4h16v12H10l-5 4v-4H4z"/><path d="M8 9h8M8 12h5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l1.5 2h-15zM10 21h4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><path d="M3.5 3.5h6.5v6.5H3.5zM14 3.5h6.5v6.5H14zM3.5 14h6.5v6.5H3.5zM14 14h2.5v2.5H14zM18 18h2.5v2.5H18zM14 18.5v2M18.5 14h2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5.2l3.4 2.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5L2.5 20h19z"/><path d="M12 10v4.5M12 17v.5"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><path d="M2.5 6.5h19v11h-19z"/><circle cx="12" cy="12" r="2.6"/></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4.5 8h15l-1 13h-13zM8.5 8V6a3.5 3.5 0 017 0v2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M4 12h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V8a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M4 20h16l-2-9H6zM12 11V6M8 6h8M12 15.5l2-2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"/></symbol>
+</svg>
+<div class="app">
+  <nav class="nav" aria-label="Điều hướng chính">
+    <div class="brand"><b>OPC</b><span>by QNSC</span></div>
+    <button class="hh" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai">
+      <span class="hh-mark" aria-hidden="true">CH</span>
+      <span class="hh-t"><strong>Hải sản khô Cô Hai</strong><span>Nhơn Lý · Xác minh L1</span></span>
+      <svg class="ic ic-s" aria-hidden="true"><use href="#i-chev"/></svg>
+    </button>
+    <ul class="nav-list">
+      <li><a class="nav-a" href="#" aria-current="page"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg>Tổng quan</a></li>
+      <li><a class="nav-a is-counter" href="counter.html"><svg class="ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy bán hàng<svg class="ic ic-s go-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-orders"/></svg>Đơn hàng<span class="count" aria-label="3 đơn cần xem">3</span></a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-money"/></svg>Tiền &amp; đối soát<span class="count" aria-label="3 khoản cần xem">3</span></a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-invoice"/></svg>Hoá đơn</a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-box"/></svg>Hàng hoá &amp; kho</a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>Khách hàng &amp; công nợ</a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Sổ sách &amp; thuế</a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Kết nối</a></li>
+      <li><a class="nav-a" href="#"><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg>Cài đặt</a></li>
+    </ul>
+    <div class="nav-foot" aria-label="Tình trạng kết nối">
+      <div class="conn"><i class="on" aria-hidden="true"></i>MB (qua Casso) · cập nhật 2 phút trước</div>
+      <div class="conn"><i class="on" aria-hidden="true"></i>Hoá đơn Hilo · hoạt động</div>
+      <div class="conn"><i class="off" aria-hidden="true"></i>Cổng thuế · chưa bật</div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <header class="top">
+      <button class="m-hh" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai"><span class="hh-mark" aria-hidden="true">CH</span><span class="hh-t"><strong>Hải sản khô Cô Hai</strong><span>Nhơn Lý · OPC</span></span></button>
+      <label class="search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><span class="sr">Tìm kiếm</span><input type="search" placeholder="Tìm đơn, món, khách…"><span class="kbd" aria-hidden="true">/</span></label>
+      <div class="top-sp"></div>
+      <button class="icon-btn m-only" type="button" aria-label="Tìm đơn, món, khách"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+      <button class="btn btn-quiet" type="button"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Trợ lý</button>
+      <button class="icon-btn" type="button" aria-label="Thông báo — 4 chưa đọc"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg><span class="dot" aria-hidden="true">4</span></button>
+      <button class="avatar-btn" type="button" aria-label="Nguyễn Văn Phúc · Quản lý"><span class="avatar" aria-hidden="true">P</span></button>
+    </header>
+
+    <main class="content">
+      <div class="page-h">
+        <div>
+          <h1>Thứ Sáu, 02/10/2026</h1>
+          <p class="shift"><i aria-hidden="true"></i>Ca sáng đang mở từ 07:00 · Phúc</p>
+        </div>
+        <div class="acts">
+          <a class="btn btn-act" href="counter.html">Mở quầy bán hàng<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <button class="btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Tạo đơn</button>
+          <button class="btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-minus"/></svg>Ghi khoản chi</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- ===== Tiền hôm nay (the answer) ===== -->
+        <section class="card a-money hero" aria-labelledby="h-money">
+          <div class="hero-in">
+            <div class="hero-l">
+              <div class="hero-tag"><h2 id="h-money">Tiền hôm nay</h2><span class="conn"><i class="on" aria-hidden="true"></i>MB (qua Casso) · cập nhật 2 phút trước</span></div>
+              <p class="say"><b>1.380.000 ₫</b> tiền QR chưa xác minh — đối chiếu trước khi giao hàng lớn.</p>
+              <div class="big-row"><span class="big">8.460.000 ₫</span><span class="lbl">doanh thu · 23 đơn <br><b>↑ +19%</b> so với hôm qua <br>(7.120.000 ₫)</span></div>
+              <p class="hero-pend">trong đó <span class="money">1.380.000 ₫</span> <span class="sg sg--pend"><i><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></i>Chờ xác minh</span></p>
+              <div class="truth" role="img" aria-label="Đã xác minh 4.560.000 ₫, chờ xác minh 1.380.000 ₫, tiền mặt 2.520.000 ₫">
+                <span class="t-ok" style="flex:4560"></span><span class="t-pend" style="flex:1380"></span><span class="t-cash" style="flex:2520"></span>
+              </div>
+            </div>
+            <div class="hero-r">
+              <p class="signs-h"><span>QR / chuyển khoản</span><b class="money">5.940.000 ₫</b></p>
+              <ul class="signs" aria-label="Tiền theo trạng thái">
+                <li class="sign is-ok"><span class="sign-p"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="sign-w">Đã xác minh<small>QR · ngân hàng đã xác nhận</small></span><b class="money">4.560.000 ₫</b></li>
+                <li class="sign is-pend"><span class="sign-p"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="sign-w">Chờ xác minh<small>2 khoản · DH-1043, DH-1041</small></span><b class="money">1.380.000 ₫</b><a class="sign-go" href="#lane-1" aria-label="Đối chiếu 2 khoản — việc số 1"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+                <li class="sign is-cash"><span class="sign-p"><svg class="ic" aria-hidden="true"><use href="#i-cash"/></svg></span><span class="sign-w">Tiền mặt<small>trong ca sáng</small></span><b class="money">2.520.000 ₫</b></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Cần xử lý ===== -->
+        <section class="card a-todo" aria-labelledby="h-todo">
+          <div class="card-h"><h2 id="h-todo">Cần xử lý</h2><span class="meta">6 việc · làm theo thứ tự số</span></div>
+          <ol class="lanes">
+            <li class="lane" data-now id="lane-1">
+              <div class="lane-n" aria-hidden="true">1</div>
+              <div class="lane-b">
+                <div class="lane-k"><svg class="ic" aria-hidden="true"><use href="#i-qr"/></svg>Tiền · QR · làm ngay</div>
+                <h3 class="lane-t">2 khoản QR chờ xác minh</h3>
+                <p class="lane-amt"><span class="money">1.380.000 ₫</span><span class="hint">2 khoản</span></p>
+                <div class="lane-d lane-list">
+                  <span class="pair"><span class="ml" data-step="2" role="img" aria-label="Bước 2/3: đã nhận, chờ xác minh"><s></s><s></s><s></s></span><b>DH-1043</b><span style="white-space:nowrap"><span class="money">1.020.000 ₫</span> (10:42)</span></span>
+                  <span class="pair"><span class="ml" data-step="2" role="img" aria-label="Bước 2/3: đã nhận, chờ xác minh"><s></s><s></s><s></s></span><b>DH-1041</b><span style="white-space:nowrap"><span class="money">360.000 ₫</span> (10:05)</span></span>
+                </div>
+              </div>
+              <div class="lane-a"><a class="go is-act" href="#">Đối chiếu<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="lane-more" href="#">Chi tiết<svg class="ic ic-s" aria-hidden="true"><use href="#i-chev"/></svg></a></div>
+            </li>
+            <li class="lane" id="lane-2">
+              <div class="lane-n" aria-hidden="true">2</div>
+              <div class="lane-b">
+                <div class="lane-k"><svg class="ic" aria-hidden="true"><use href="#i-transfer"/></svg>Tiền · chuyển khoản</div>
+                <h3 class="lane-t">Chuyển khoản không có mã đơn</h3>
+                <p class="lane-amt"><span class="money">2.150.000 ₫</span><span class="hint">09:15 · gợi ý: khớp công nợ Nhà hàng Biển Đông 2.150.000 ₫</span></p>
+                <p class="lane-d">Từ <b>NHA HANG BIEN DONG</b>, nội dung “TT HANG KHO T9” · OPC không tự gán, bạn chọn.</p>
+              </div>
+              <div class="lane-a"><a class="go" href="#">Gán vào đơn<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="lane-more" href="#">Chi tiết<svg class="ic ic-s" aria-hidden="true"><use href="#i-chev"/></svg></a></div>
+            </li>
+            <li class="lane">
+              <div class="lane-n" aria-hidden="true">3</div>
+              <div class="lane-b">
+                <div class="lane-k"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Đơn Zalo</div>
+                <h3 class="lane-t">Đơn Zalo chờ xác nhận</h3>
+                <p class="lane-amt"><span class="money">3.420.000 ₫</span><span class="hint">Khách sạn Hải Âu · giao 15:00</span></p>
+                <p class="lane-d">3 kg cá cơm sấy, 2 kg tôm khô loại 1</p>
+              </div>
+              <div class="lane-a"><a class="go" href="#">Xác nhận<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="lane-more" href="#">Chi tiết<svg class="ic ic-s" aria-hidden="true"><use href="#i-chev"/></svg></a></div>
+            </li>
+          </ol>
+          <details class="others" open>
+            <summary>Việc khác (3)<span class="meta">không gấp hôm nay</span><svg class="ic ic-s" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+            <ol class="oth" start="4">
+              <li><span class="n" aria-hidden="true">4</span><span class="t">Hoá đơn 00000418 chưa có mã CQT sau 25 phút<span class="meta">640.000 ₫ · Hilo chậm · chờ mã CQT</span></span><a class="go" href="#">Kiểm tra<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+              <li><span class="n" aria-hidden="true">5</span><span class="t">Sắp hết: Mực khô loại 1, Tôm khô loại 1 hũ 500 g<span class="meta">còn 3,2 kg (ngưỡng 5 kg) · còn 6 hũ</span></span><a class="go" href="#">Tạo phiếu nhập<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+              <li><span class="n" aria-hidden="true">6</span><span class="t">Liên kết MB cần đồng ý lại trước 17/10/2026<span class="meta">quy định 180 ngày · còn 15 ngày</span></span><a class="go" href="#">Gia hạn<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            </ol>
+          </details>
+        </section>
+
+        <!-- ===== Thuế & ngưỡng ===== -->
+        <section class="card a-tax" aria-labelledby="h-tax">
+          <div class="card-h"><h2 id="h-tax">Thuế &amp; ngưỡng</h2><span class="conn"><i class="off" aria-hidden="true"></i>Cổng thuế · chưa bật</span></div>
+          <p class="say">Quý III tạm tính <b>6.184.500 ₫</b> — còn 29 ngày, hạn nộp 31/10/2026.</p>
+          <div class="tax-l">
+            <div class="thr">
+              <div class="thr-row"><span class="meta">Doanh thu 2026</span><span class="money">1.284.500.000 ₫</span></div>
+              <div class="thr-bar" role="img" aria-label="Doanh thu 2026 đã vượt mốc 1 tỷ">
+                <span class="fill" style="width:85.6%"></span><span class="mark" style="left:66.7%"><span>1 tỷ</span></span>
+              </div>
+              <p class="meta">Đã vượt 1 tỷ ngày 14/08/2026 → đang dùng hoá đơn máy tính tiền (Hilo).</p>
+            </div>
+            <div class="due">
+              <div class="due-h"><strong>Khai thuế quý III/2026</strong><span class="meta">hạn <b>31/10/2026</b> (còn 29 ngày)</span></div>
+              <div><span class="meta">tạm tính</span> <span class="money">6.184.500 ₫</span></div>
+              <p class="meta">Doanh thu quý 412.300.000 ₫ × 1,5% — GTGT 1% + TNCN 0,5%, nhóm phân phối hàng hoá.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Đơn gần đây ===== -->
+        <section class="card a-orders" aria-labelledby="h-orders">
+          <div class="card-h"><h2 id="h-orders">Đơn gần đây</h2><a class="btn btn-quiet" href="#">Xem tất cả đơn<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+          <div class="tbl-wrap">
+            <table class="table">
+              <thead><tr><th>Mã</th><th>Giờ</th><th>Khách</th><th>Kênh</th><th class="r">Món</th><th class="r">Tổng</th><th>Thanh toán</th><th>Trạng thái</th></tr></thead>
+              <tbody>
+                <tr><td class="code c-code">DH-1043</td><td class="c-hide">10:42</td><td class="c-who">Khách lẻ · Tại quầy<span class="sr"> · 10:42 · 4 món · QR</span></td><td class="c-hide">Tại quầy</td><td class="r c-hide">4</td>
+                  <td class="r c-tot"><span class="tot"><span class="ml" data-step="2" role="img" aria-label="Bước 2/3: đã nhận, chờ xác minh"><s></s><s></s><s></s></span><span class="money">1.020.000 ₫</span></span></td><td class="c-hide">QR</td>
+                  <td class="c-st"><span class="sg sg--pend"><i><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></i>Chờ xác minh</span></td></tr>
+                <tr><td class="code c-code">DH-1042</td><td class="c-hide">10:31</td><td class="c-who">Khách lẻ · Tại quầy</td><td class="c-hide">Tại quầy</td><td class="r c-hide">2</td>
+                  <td class="r c-tot"><span class="money">245.000 ₫</span></td><td class="c-hide">Tiền mặt</td>
+                  <td class="c-st"><span class="sg sg--ok"><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>Hoàn tất · HĐ có mã</span></td></tr>
+                <tr><td class="code c-code">DH-1041</td><td class="c-hide">10:05</td><td class="c-who">Chị Thu · Shopee</td><td class="c-hide">Shopee</td><td class="r c-hide">3</td>
+                  <td class="r c-tot"><span class="tot"><span class="ml" data-step="2" role="img" aria-label="Bước 2/3: đã nhận, chờ xác minh"><s></s><s></s><s></s></span><span class="money">360.000 ₫</span></span></td><td class="c-hide">QR</td>
+                  <td class="c-st"><span class="sg sg--pend"><i><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></i>Chờ xác minh</span></td></tr>
+                <tr><td class="code c-code">DH-1040</td><td class="c-hide">09:48</td><td class="c-who">Khách sạn Hải Âu · Zalo</td><td class="c-hide">Zalo</td><td class="r c-hide">2</td>
+                  <td class="r c-tot"><span class="money">3.420.000 ₫</span></td><td class="c-hide">Công nợ</td>
+                  <td class="c-st"><span class="sg sg--you"><i><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></i>Chờ xác nhận</span></td></tr>
+                <tr><td class="code c-code">DH-1039</td><td class="c-hide">09:20</td><td class="c-who">Khách lẻ · Tại quầy</td><td class="c-hide">Tại quầy</td><td class="r c-hide">1</td>
+                  <td class="r c-tot"><span class="money">95.000 ₫</span></td><td class="c-hide">Tiền mặt</td>
+                  <td class="c-st"><span class="sg sg--ok"><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>Hoàn tất · HĐ có mã</span></td></tr>
+                <tr><td class="code c-code">DH-1038</td><td class="c-hide">08:55</td><td class="c-who">Nhà hàng Biển Đông · Điện thoại</td><td class="c-hide">Điện thoại</td><td class="r c-hide">5</td>
+                  <td class="r c-tot"><span class="money">2.150.000 ₫</span></td><td class="c-hide">Chuyển khoản</td>
+                  <td class="c-st"><span class="sg sg--you"><i><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></i>Chờ gán tiền</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===== Doanh thu 7 ngày ===== -->
+        <section class="card a-week" aria-labelledby="h-week">
+          <div class="card-h"><h2 id="h-week">Doanh thu 7 ngày</h2><span class="meta">Tổng <b class="money">55.680.000 ₫</b></span></div>
+          <ol class="days">
+            <li class="day"><span class="d">T7 26/9</span><span class="bar" style="width:87.4%"></span><span class="v">9.820.000 ₫</span></li>
+            <li class="day"><span class="d">CN 27/9</span><span class="bar" style="width:100%"></span><span class="v">11.240.000 ₫</span></li>
+            <li class="day"><span class="d">T2 28/9</span><span class="bar" style="width:56.1%"></span><span class="v">6.310.000 ₫</span></li>
+            <li class="day"><span class="d">T3 29/9</span><span class="bar" style="width:53.2%"></span><span class="v">5.980.000 ₫</span></li>
+            <li class="day"><span class="d">T4 30/9</span><span class="bar" style="width:60.1%"></span><span class="v">6.750.000 ₫</span></li>
+            <li class="day"><span class="d">T5 01/10</span><span class="bar" style="width:63.3%"></span><span class="v">7.120.000 ₫</span></li>
+            <li class="day today"><span class="d">T6 02/10</span><span class="bar" style="width:75.3%"></span><span class="v">8.460.000 ₫<small>đang bán</small></span></li>
+          </ol>
+        </section>
+
+        <!-- ===== Công nợ ===== -->
+        <section class="card a-debt" aria-labelledby="h-debt">
+          <div class="card-h"><h2 id="h-debt">Công nợ phải thu</h2><span class="money" style="font-size:22px">5.570.000 ₫</span></div>
+          <div class="debt-l">
+            <div class="debt-r"><span class="n">Khách sạn Hải Âu</span><span class="money">3.420.000 ₫</span><span class="meta">đơn chờ xác nhận (việc số 3)</span></div>
+            <div class="debt-r"><span class="n">Nhà hàng Biển Đông</span><span class="money">2.150.000 ₫</span><span class="meta">có thể đã trả — <a href="#lane-2">xem việc số 2</a></span></div>
+          </div>
+        </section>
+
+        <!-- ===== Trợ lý ===== -->
+        <section class="card a-ai" aria-labelledby="h-ai">
+          <div class="card-h"><h2 id="h-ai">Trợ lý</h2><span class="meta">hỏi bằng lời thường</span></div>
+          <div class="ask"><label class="search"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><span class="sr">Hỏi Trợ lý</span><input type="text" placeholder="Hỏi về đơn, tiền, thuế…"></label></div>
+          <div class="sugg">
+            <button class="btn" type="button">Tuần này món nào bán chạy nhất?</button>
+            <button class="btn" type="button">Quý III phải nộp thuế bao nhiêu?</button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<nav class="tabbar" aria-label="Điều hướng nhanh">
+  <a href="#" aria-current="page"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg>Tổng quan</a>
+  <a href="counter.html" class="is-counter"><svg class="ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy</a>
+  <a href="#"><svg class="ic" aria-hidden="true"><use href="#i-orders"/></svg>Đơn hàng<span class="count" aria-label="3 cần xem">3</span></a>
+  <a href="#"><svg class="ic" aria-hidden="true"><use href="#i-money"/></svg>Tiền<span class="count" aria-label="3 cần xem">3</span></a>
+  <a href="#"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>Thêm</a>
+</nav>
+</body>
+</html>

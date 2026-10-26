@@ -1,0 +1,34 @@
+{
+  "$description": "uiux-studio export of tokens.css — set \"platform-android\" (overrides base)",
+  "semantic": {
+    "font-body": {
+      "$type": "fontFamily",
+      "$value": [
+        "Roboto",
+        "system-ui",
+        "sans-serif"
+      ]
+    },
+    "target": {
+      "$type": "dimension",
+      "$value": {
+        "value": 48,
+        "unit": "px"
+      }
+    },
+    "safe-top": {
+      "$type": "dimension",
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "safe-bottom": {
+      "$type": "dimension",
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    }
+  }
+}

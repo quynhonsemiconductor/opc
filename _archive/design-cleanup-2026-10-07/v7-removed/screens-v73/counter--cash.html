@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quầy · Thu tiền mặt · DH-2053 — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../system/tokens.css">
+<link rel="stylesheet" href="../../../system/components/components.css">
+<link rel="stylesheet" href="../../../system/components/recipes.css">
+<link rel="stylesheet" href="../app-tokens.css">
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /> <path d="m21 21-4.3-4.3" /></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /> <path d="M12 22V12" /> <path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /> <path d="m7.5 4.27 9 5.15" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol>
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8" /> <path d="M10 5H8a2 2 0 0 0 0 4h.68" /> <path d="M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8" /> <path d="M14 5h2a2 2 0 0 1 0 4h-.68" /> <path d="M18 22H6" /> <path d="M9 2h6" /></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></symbol>
+</svg>
+<div class="r-pos">
+  <header class="r-pos__top">
+    <a class="c-icon-btn c-icon-btn--outline" href="home.html" aria-label="Về Tổng quan" data-tip="Về Tổng quan"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+    <div class="r-pos__title"><h1><span class="r-pos__desk">Quầy bán hàng</span><span class="r-pos__phone">Quầy</span></h1><span>Ca sáng · từ 07:00 · Hạnh</span></div>
+    <span class="c-health" role="status" tabindex="0" data-tip="Ngân hàng cập nhật 2 phút trước · Hoá đơn hoạt động" data-tip-end><span class="r-pos__desk">MB · Hilo hoạt động · <b>2 phút trước</b></span><span class="r-pos__phone">MB · <b>2 phút</b></span></span>
+    <a class="c-btn r-pos__desk" href="shift-close.html">Đóng ca</a>
+    <button class="c-icon-btn r-pos__phone" type="button" aria-label="Thêm: đóng ca, đơn đã lưu tạm"><svg class="c-ic" aria-hidden="true"><use href="#i-more"/></svg></button>
+  </header>
+
+  <div class="r-pos__body">
+    <section class="r-pos__products" aria-label="Chọn món">
+      <label class="c-search"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm món</span><input class="c-search__input" type="search" placeholder="Tìm món hoặc quét mã vạch…"><span class="c-kbd r-pos__desk" aria-hidden="true">/</span></label>
+      <div class="r-pos__known" role="group" aria-label="Khách quen"><span class="u-meta">Khách quen:</span><button class="c-chip r-pos__kc" type="button">Sunrise Hotel</button><button class="c-chip r-pos__kc" type="button">Nhà hàng Phố Núi</button><button class="c-chip r-pos__kc" type="button">Homestay Mây Ngàn</button></div>
+      <div class="c-tiles c-tiles--few"><button class="c-tile c-tile--big" type="button" data-incart aria-label="Bò một nắng 500g, 260.000 ₫, trong đơn 2, còn 26 · đã giữ 20"><span class="c-tile__pic c-tile__pic--warm" aria-hidden="true"><svg class="c-ic"><use href="#i-box"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>×2</span><span class="c-tile__name">Bò một nắng 500g</span><span class="c-tile__price">260.000 ₫</span><span class="c-tile__meta">còn 26 · đã giữ 20</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button><button class="c-tile c-tile--big" type="button" data-incart aria-label="Muối kiến vàng 100g, 65.000 ₫, trong đơn 3, còn 50 · đã giữ 30"><span class="c-tile__pic c-tile__pic--leaf" aria-hidden="true"><svg class="c-ic"><use href="#i-jar"/></svg></span><span class="c-tile__qty" aria-hidden="true"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>×3</span><span class="c-tile__name">Muối kiến vàng 100g</span><span class="c-tile__price">65.000 ₫</span><span class="c-tile__meta">còn 50 · đã giữ 30</span><span class="c-tile__add" aria-hidden="true"><svg class="c-ic"><use href="#i-plus"/></svg></span></button></div>
+      <div class="r-pos__keys" aria-label="Phím tắt">
+        <span><span class="c-kbd">/</span>Tìm món</span>
+        <span><span class="c-kbd">+</span><span class="c-kbd">−</span>Số lượng</span>
+        <span><span class="c-kbd">F9</span>Thu tiền</span>
+        <span><span class="c-kbd">Esc</span>Huỷ đơn</span>
+      </div>
+    </section>
+
+    <aside class="r-order r-order--pay" aria-labelledby="h-order">
+      <div class="r-order__head">
+        <a class="c-icon-btn c-icon-btn--outline" href="counter.html" aria-label="Quay lại đơn để sửa món" data-tip="Sửa đơn"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+        <div class="r-order__id"><h2 class="r-order__code" id="h-order">Thu tiền mặt · DH-2053</h2><span class="u-meta">2 món · Khách lẻ</span></div>
+      </div>
+      <div class="r-order__body">
+        <div class="c-seg" role="radiogroup" aria-label="Cách thanh toán"><button class="c-seg__opt" type="button" role="radio" aria-checked="false">QR</button><button class="c-seg__opt" type="button" role="radio" aria-checked="true">Tiền mặt</button><button class="c-seg__opt" type="button" role="radio" aria-checked="false">Công nợ</button></div>
+        <div class="c-cashpad">
+          <div class="c-cashpad__field"><label for="given">Khách đưa</label><input class="c-cashpad__input" id="given" inputmode="numeric" value="1.000.000"><span class="u-cur">₫</span></div>
+          <div class="c-quick" role="group" aria-label="Số tiền khách đưa"><button class="c-quick__btn" type="button" aria-pressed="false">715.000<small>vừa đủ</small></button><button class="c-quick__btn" type="button" aria-pressed="false">720.000</button><button class="c-quick__btn" type="button" aria-pressed="false">750.000</button><button class="c-quick__btn" type="button" aria-pressed="false">800.000</button><button class="c-quick__btn" type="button" aria-pressed="true">1.000.000</button><button class="c-quick__btn" type="button" aria-pressed="false">2.000.000</button></div>
+        </div>
+        <p class="c-change" role="status"><span>Tiền thối cho khách</span><b>285.000<span class="u-cur">₫</span></b></p>
+        <div class="r-order__opts">
+          <button class="c-switch" type="button" role="switch" aria-checked="true"><span class="c-switch__track" aria-hidden="true"></span><span class="c-switch__label">In phiếu</span></button>
+          <button class="c-switch" type="button" role="switch" aria-checked="false"><span class="c-switch__track" aria-hidden="true"></span><span class="c-switch__label">Hoá đơn công ty<span class="c-switch__sub">nhập MST của khách</span></span></button>
+        </div>
+      </div>
+      <div class="r-order__foot">
+        <button class="c-btn c-btn--act c-btn--xl" type="button">Đã thu tiền mặt · thối 285.000 ₫<span class="c-kbd" aria-hidden="true">F9</span></button>
+        <p class="r-order__note">Bấm Thu tiền = phát hành hoá đơn máy tính tiền (Hilo)</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<a class="r-cartbar" href="#">
+  <span class="r-cartbar__t"><span>DH-2053 · 2 món · xem giỏ</span><strong>715.000<span class="u-cur">₫</span></strong></span>
+  <span class="c-btn c-btn--act">Thu tiền<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+</a>
+</body>
+</html>

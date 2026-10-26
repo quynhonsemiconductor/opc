@@ -1,0 +1,334 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "5.0.0",
+ "group": "j1",
+ "screens": [
+  {
+   "file": "connections--add.html",
+   "title": "Kết nối · Thêm kết nối (thư viện)",
+   "pattern": "connector flow",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 104,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 109,
+     "block": 12,
+     "icons": 2,
+     "iconRate": 1.8,
+     "rules": 2,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "connections--casso.html",
+   "title": "Kết nối · Nối qua Casso (S-Invoice)",
+   "pattern": "connector flow",
+   "note": "Hộ nhập mật khẩu ở trang Cas Link; OPC không giữ.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 25,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 138,
+     "block": 15,
+     "icons": 1,
+     "iconRate": 0.7,
+     "rules": 8,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "connections--key.html",
+   "title": "Kết nối · Dán khoá (payOS)",
+   "pattern": "connector flow",
+   "note": "Khoá cất kín, chỉ 4 số cuối, địa chỉ nhận báo tiền.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 32,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "form",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 141,
+     "block": 11,
+     "icons": 1,
+     "iconRate": 0.7,
+     "rules": 7,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 2,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "connections--key--error.html",
+   "title": "Kết nối · Khoá sai (payOS)",
+   "pattern": "connector flow",
+   "note": "Checksum Key sai; chưa lưu gì.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 33,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "form",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 157,
+     "block": 17,
+     "icons": 2,
+     "iconRate": 1.3,
+     "rules": 7,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "connections--manage.html",
+   "title": "Kết nối · Quản lý payOS",
+   "pattern": "connector flow",
+   "note": "Khoá che, địa chỉ nhận báo tiền, thử lại, đổi khoá, gỡ.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 27,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 131,
+     "block": 15,
+     "icons": 1,
+     "iconRate": 0.8,
+     "rules": 6,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 2,
+     "hues": 2,
+     "chips": 0,
+     "tinted": 0
+    }
+   }
+  }
+ ]
+}

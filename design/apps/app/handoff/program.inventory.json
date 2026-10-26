@@ -1,0 +1,2807 @@
+{
+  "screen": "program.html",
+  "title": "Chương trình · Pilot — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "Điều hướng chính",
+      "box": [
+        0,
+        0,
+        252,
+        900
+      ]
+    },
+    {
+      "region": "header",
+      "box": [
+        252,
+        0,
+        1188,
+        73
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        252,
+        73,
+        1188,
+        1064
+      ]
+    },
+    {
+      "region": "aside",
+      "box": [
+        966,
+        414,
+        442,
+        525
+      ]
+    },
+    {
+      "region": "Điều hướng nhanh",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": "AppShell",
+      "of": null,
+      "part": null,
+      "variants": [
+        "program"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        1137
+      ]
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "nav",
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Điều hướng chính",
+      "box": [
+        0,
+        0,
+        252,
+        900
+      ]
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-brand",
+      "component": "BrandMark",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        16,
+        227,
+        24
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC",
+      "box": [
+        20,
+        16,
+        47,
+        24
+      ]
+    },
+    {
+      "id": 4,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "by",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "by QNSC",
+      "box": [
+        75,
+        21,
+        61,
+        14
+      ]
+    },
+    {
+      "id": 5,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-hh",
+      "component": "HouseholdSwitcher",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Chương trình Kế nghiệp số Gia Lai, pilot đợt 1",
+      "box": [
+        12,
+        56,
+        227,
+        56
+      ]
+    },
+    {
+      "id": 6,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "KN",
+      "box": [
+        23,
+        67,
+        34,
+        34
+      ]
+    },
+    {
+      "id": 7,
+      "parent": 5,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        67,
+        67,
+        149,
+        35
+      ]
+    },
+    {
+      "id": 8,
+      "parent": 7,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kế nghiệp số · Gia Lai",
+      "box": [
+        67,
+        67,
+        149,
+        18
+      ]
+    },
+    {
+      "id": 9,
+      "parent": 7,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Pilot đợt 1 · 8 hộ",
+      "box": [
+        67,
+        84,
+        149,
+        18
+      ]
+    },
+    {
+      "id": 10,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        128,
+        227,
+        136
+      ]
+    },
+    {
+      "id": 11,
+      "parent": 10,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tổng quan pilot",
+      "box": [
+        12,
+        128,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-trend",
+      "box": [
+        24,
+        139,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 13,
+      "parent": 10,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hộ tham gia",
+      "box": [
+        12,
+        174,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-people",
+      "box": [
+        24,
+        185,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 15,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        157,
+        184,
+        26,
+        24
+      ]
+    },
+    {
+      "id": 16,
+      "parent": 10,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Báo cáo",
+      "box": [
+        12,
+        220,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 17,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-file",
+      "box": [
+        24,
+        231,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 18,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "list",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        12,
+        280,
+        227,
+        90
+      ]
+    },
+    {
+      "id": 19,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Dữ liệu được xem",
+      "box": [
+        12,
+        280,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-shield",
+      "box": [
+        24,
+        291,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 21,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-nav",
+      "component": null,
+      "of": "SidebarNav",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Trợ giúp",
+      "box": [
+        12,
+        326,
+        227,
+        44
+      ]
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-help",
+      "box": [
+        24,
+        337,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 23,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "main",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        252,
+        0,
+        1188,
+        1137
+      ]
+    },
+    {
+      "id": 24,
+      "parent": 23,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        252,
+        0,
+        1188,
+        73
+      ]
+    },
+    {
+      "id": 25,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "phone",
+      "variants": [
+        "bar"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Chương trình Kế nghiệp số Gia Lai",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 26,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "KN",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 27,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "text",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Kế nghiệp số · Gia Lai",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 29,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-hh",
+      "component": null,
+      "of": "HouseholdSwitcher",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Pilot đợt 1 · 8 hộ",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 30,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tìm kiếm",
+      "box": [
+        284,
+        12,
+        423,
+        48
+      ]
+    },
+    {
+      "id": 31,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-search",
+      "box": [
+        297,
+        25,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 32,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-search",
+      "component": null,
+      "of": "SearchField",
+      "part": "input",
+      "variants": [],
+      "state": [],
+      "role": "textbox",
+      "text": "",
+      "box": [
+        329,
+        13,
+        325,
+        46
+      ]
+    },
+    {
+      "id": 33,
+      "parent": 30,
+      "kind": "component",
+      "class": "c-kbd",
+      "component": "Kbd",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "⌘K",
+      "box": [
+        664,
+        24,
+        35,
+        24
+      ]
+    },
+    {
+      "id": 34,
+      "parent": 24,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "spacer",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        719,
+        36,
+        401,
+        0
+      ]
+    },
+    {
+      "id": 35,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": null,
+      "of": "IconButton",
+      "part": "phone",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Tìm hộ tham gia",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 36,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-search",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 37,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-health",
+      "component": null,
+      "of": "ConnectionPill",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": "status",
+      "text": "Cập nhật · 02:00",
+      "box": [
+        1132,
+        14,
+        164,
+        44
+      ]
+    },
+    {
+      "id": 38,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Thông báo — 4 chưa đọc",
+      "box": [
+        1308,
+        14,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 39,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-bell",
+      "box": [
+        1319,
+        25,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 40,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": null,
+      "of": "IconButton",
+      "part": "badge",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        1328,
+        18,
+        22,
+        20
+      ]
+    },
+    {
+      "id": 41,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-avatar",
+      "component": null,
+      "of": "AccountButton",
+      "part": "desk",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "PM Quang · Xem chương trình — tài khoản",
+      "box": [
+        1364,
+        14,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 42,
+      "parent": 41,
+      "kind": "component",
+      "class": "c-avatar",
+      "component": null,
+      "of": "AccountButton",
+      "part": "face",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Q",
+      "box": [
+        1366,
+        16,
+        40,
+        40
+      ]
+    },
+    {
+      "id": 43,
+      "parent": 23,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "content",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        252,
+        73,
+        1188,
+        1064
+      ]
+    },
+    {
+      "id": 44,
+      "parent": 43,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": "PageHeader",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        105,
+        1124,
+        66
+      ]
+    },
+    {
+      "id": 45,
+      "parent": 44,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Pilot Kế nghiệp số · đợt 1",
+      "box": [
+        284,
+        105,
+        384,
+        36
+      ]
+    },
+    {
+      "id": 46,
+      "parent": 44,
+      "kind": "component",
+      "class": "c-sub",
+      "component": "Subline",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Ngày 6 của Quý IV/2026 · 8 hộ · cập nhật mỗi đêm",
+      "box": [
+        284,
+        147,
+        384,
+        24
+      ]
+    },
+    {
+      "id": 47,
+      "parent": 44,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "acts",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1267,
+        101,
+        141,
+        44
+      ]
+    },
+    {
+      "id": 48,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Xuất báo cáo",
+      "box": [
+        1267,
+        101,
+        141,
+        44
+      ]
+    },
+    {
+      "id": 49,
+      "parent": 43,
+      "kind": "recipe",
+      "class": "r-trust",
+      "component": "TrustLine",
+      "of": null,
+      "part": null,
+      "variants": [
+        "gate"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Chỉ thấy tiến độ theo bước · không thấy dữ liệu kinh doanh của từng hộ, nhóm dướ",
+      "box": [
+        284,
+        207,
+        1124,
+        38
+      ]
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-shield",
+      "box": [
+        297,
+        218,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 51,
+      "parent": 43,
+      "kind": "recipe",
+      "class": "r-pstats",
+      "component": "ProgramStats",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoạt động 7 ngày qua7/8 hộtuần trước 6/8Đơn qua OPC · 30 ngày1.426 đơn30 ngày tr",
+      "box": [
+        284,
+        281,
+        1124,
+        97
+      ]
+    },
+    {
+      "id": 52,
+      "parent": 43,
+      "kind": "recipe",
+      "class": "r-detail",
+      "component": null,
+      "of": "DetailPage",
+      "part": "grid",
+      "variants": [
+        "calm"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        414,
+        1124,
+        683
+      ]
+    },
+    {
+      "id": 53,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        414,
+        662,
+        394
+      ]
+    },
+    {
+      "id": 54,
+      "parent": 53,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        439,
+        662,
+        44
+      ]
+    },
+    {
+      "id": 55,
+      "parent": 54,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hộ qua từng bước",
+      "box": [
+        284,
+        449,
+        154,
+        24
+      ]
+    },
+    {
+      "id": 56,
+      "parent": 54,
+      "kind": "component",
+      "class": "c-link",
+      "component": "TextLink",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Cách tính từng bước",
+      "box": [
+        779,
+        439,
+        167,
+        44
+      ]
+    },
+    {
+      "id": 57,
+      "parent": 53,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": "Funnel",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hộ qua từng bước của pilot",
+      "box": [
+        284,
+        499,
+        662,
+        163
+      ]
+    },
+    {
+      "id": 58,
+      "parent": 57,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        499,
+        662,
+        46
+      ]
+    },
+    {
+      "id": 59,
+      "parent": 58,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tham gia2 hộ sớm · 6 hộ đợt 1",
+      "box": [
+        284,
+        499,
+        318,
+        46
+      ]
+    },
+    {
+      "id": 60,
+      "parent": 58,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        614,
+        517,
+        265,
+        10
+      ]
+    },
+    {
+      "id": 61,
+      "parent": 58,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "8/8",
+      "box": [
+        890,
+        508,
+        56,
+        27
+      ]
+    },
+    {
+      "id": 62,
+      "parent": 57,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        556,
+        662,
+        27
+      ]
+    },
+    {
+      "id": 63,
+      "parent": 62,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Thiết lập xong",
+      "box": [
+        284,
+        558,
+        318,
+        24
+      ]
+    },
+    {
+      "id": 64,
+      "parent": 62,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        614,
+        565,
+        265,
+        10
+      ]
+    },
+    {
+      "id": 65,
+      "parent": 62,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6/8",
+      "box": [
+        890,
+        556,
+        56,
+        27
+      ]
+    },
+    {
+      "id": 66,
+      "parent": 57,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        595,
+        662,
+        27
+      ]
+    },
+    {
+      "id": 67,
+      "parent": 66,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Có giao dịch bán thật",
+      "box": [
+        284,
+        597,
+        318,
+        24
+      ]
+    },
+    {
+      "id": 68,
+      "parent": 66,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        614,
+        604,
+        265,
+        10
+      ]
+    },
+    {
+      "id": 69,
+      "parent": 66,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6/8",
+      "box": [
+        890,
+        595,
+        56,
+        27
+      ]
+    },
+    {
+      "id": 70,
+      "parent": 57,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        634,
+        662,
+        27
+      ]
+    },
+    {
+      "id": 71,
+      "parent": 70,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đã phát hành hoá đơn",
+      "box": [
+        284,
+        636,
+        318,
+        24
+      ]
+    },
+    {
+      "id": 72,
+      "parent": 70,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        614,
+        643,
+        265,
+        10
+      ]
+    },
+    {
+      "id": 73,
+      "parent": 70,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5/8",
+      "box": [
+        890,
+        634,
+        56,
+        27
+      ]
+    },
+    {
+      "id": 74,
+      "parent": 53,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "h",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Trên 2 hộ đã đủ thời gian (hộ sớm)",
+      "box": [
+        284,
+        681,
+        662,
+        30
+      ]
+    },
+    {
+      "id": 75,
+      "parent": 53,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": "Funnel",
+      "of": null,
+      "part": null,
+      "variants": [
+        "part"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Các bước chỉ tính trên hộ đủ thời gian",
+      "box": [
+        284,
+        723,
+        662,
+        85
+      ]
+    },
+    {
+      "id": 76,
+      "parent": 75,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        723,
+        662,
+        27
+      ]
+    },
+    {
+      "id": 77,
+      "parent": 76,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoàn thành một kỳ thuế",
+      "box": [
+        284,
+        725,
+        318,
+        24
+      ]
+    },
+    {
+      "id": 78,
+      "parent": 76,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        614,
+        732,
+        159,
+        10
+      ]
+    },
+    {
+      "id": 79,
+      "parent": 76,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1/2",
+      "box": [
+        890,
+        723,
+        56,
+        27
+      ]
+    },
+    {
+      "id": 80,
+      "parent": 75,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "s",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        762,
+        662,
+        46
+      ]
+    },
+    {
+      "id": 81,
+      "parent": 80,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Còn dùng sau 90 ngàyđợt 1 tính từ 14/12",
+      "box": [
+        284,
+        762,
+        318,
+        46
+      ]
+    },
+    {
+      "id": 82,
+      "parent": 80,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        614,
+        780,
+        159,
+        10
+      ]
+    },
+    {
+      "id": 83,
+      "parent": 80,
+      "kind": "recipe",
+      "class": "r-funnel",
+      "component": null,
+      "of": "Funnel",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2/2",
+      "box": [
+        890,
+        771,
+        56,
+        27
+      ]
+    },
+    {
+      "id": 84,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        284,
+        808,
+        662,
+        289
+      ]
+    },
+    {
+      "id": 85,
+      "parent": 84,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "trên 7 hộ đang hoạt động",
+      "box": [
+        284,
+        833,
+        662,
+        24
+      ]
+    },
+    {
+      "id": 86,
+      "parent": 85,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Đang dùng gì · 30 ngày",
+      "box": [
+        284,
+        833,
+        199,
+        24
+      ]
+    },
+    {
+      "id": 87,
+      "parent": 84,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": "AdoptionBars",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Số hộ dùng từng nhóm tính năng trong 30 ngày, trên 7 hộ đang hoạt động",
+      "box": [
+        284,
+        873,
+        662,
+        224
+      ]
+    },
+    {
+      "id": 88,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bán nhanh",
+      "box": [
+        284,
+        873,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 89,
+      "parent": 88,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        879,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 90,
+      "parent": 88,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "7/7",
+      "box": [
+        902,
+        873,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 91,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhập hàng",
+      "box": [
+        284,
+        902,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 92,
+      "parent": 91,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        908,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 93,
+      "parent": 91,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6/7",
+      "box": [
+        902,
+        902,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 94,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Trợ lý đọc tin, chứng từ",
+      "box": [
+        284,
+        931,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 95,
+      "parent": 94,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        937,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 96,
+      "parent": 94,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6/7",
+      "box": [
+        902,
+        931,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 97,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đơn từ Zalo OA",
+      "box": [
+        284,
+        960,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 98,
+      "parent": 97,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        966,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 99,
+      "parent": 97,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5/7",
+      "box": [
+        902,
+        960,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 100,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Giữ hàng & giao",
+      "box": [
+        284,
+        989,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 101,
+      "parent": 100,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        995,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 102,
+      "parent": 100,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5/7",
+      "box": [
+        902,
+        989,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 103,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hoá đơn có mã",
+      "box": [
+        284,
+        1018,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 104,
+      "parent": 103,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        1024,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 105,
+      "parent": 103,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4/7",
+      "box": [
+        902,
+        1018,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 106,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Trả tiền nhà cung cấp",
+      "box": [
+        284,
+        1047,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 107,
+      "parent": 106,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        1053,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 108,
+      "parent": 106,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3/7",
+      "box": [
+        902,
+        1047,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 109,
+      "parent": 87,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "r",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đối chiếu kỳ",
+      "box": [
+        284,
+        1076,
+        662,
+        21
+      ]
+    },
+    {
+      "id": 110,
+      "parent": 109,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "bar",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        566,
+        1082,
+        324,
+        10
+      ]
+    },
+    {
+      "id": 111,
+      "parent": 109,
+      "kind": "recipe",
+      "class": "r-adopt",
+      "component": null,
+      "of": "AdoptionBars",
+      "part": "v",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2/7",
+      "box": [
+        902,
+        1076,
+        44,
+        21
+      ]
+    },
+    {
+      "id": 112,
+      "parent": 52,
+      "kind": "recipe",
+      "class": "r-tower",
+      "component": null,
+      "of": "ListDetailSplit",
+      "part": "detail",
+      "variants": [],
+      "state": [],
+      "role": "complementary",
+      "text": "",
+      "box": [
+        966,
+        414,
+        442,
+        525
+      ]
+    },
+    {
+      "id": 113,
+      "parent": 112,
+      "kind": "recipe",
+      "class": "r-tower",
+      "component": null,
+      "of": "ListDetailSplit",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Cần hỗ trợ · 4 hộ",
+      "box": [
+        987,
+        437,
+        400,
+        23
+      ]
+    },
+    {
+      "id": 114,
+      "parent": 112,
+      "kind": "component",
+      "class": "c-works",
+      "component": "WorkList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cần hỗ trợ theo loại vấn đề",
+      "box": [
+        987,
+        475,
+        400,
+        399
+      ]
+    },
+    {
+      "id": 115,
+      "parent": 114,
+      "kind": "component",
+      "class": "c-work",
+      "component": "WorkItem",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "",
+      "box": [
+        987,
+        475,
+        400,
+        98
+      ]
+    },
+    {
+      "id": 116,
+      "parent": 115,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "state",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        487,
+        43,
+        25
+      ]
+    },
+    {
+      "id": 117,
+      "parent": 116,
+      "kind": "recipe",
+      "class": "r-issue",
+      "component": null,
+      "of": "Issue",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1 hộ",
+      "box": [
+        999,
+        489,
+        43,
+        23
+      ]
+    },
+    {
+      "id": 118,
+      "parent": 115,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bị chặn khi thiết lập",
+      "box": [
+        999,
+        516,
+        376,
+        22
+      ]
+    },
+    {
+      "id": 119,
+      "parent": 115,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "thiếu bảng giá 6 ngày",
+      "box": [
+        999,
+        542,
+        376,
+        20
+      ]
+    },
+    {
+      "id": 120,
+      "parent": 114,
+      "kind": "component",
+      "class": "c-work",
+      "component": "WorkItem",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "",
+      "box": [
+        987,
+        575,
+        400,
+        98
+      ]
+    },
+    {
+      "id": 121,
+      "parent": 120,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "state",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        587,
+        43,
+        25
+      ]
+    },
+    {
+      "id": 122,
+      "parent": 121,
+      "kind": "recipe",
+      "class": "r-issue",
+      "component": null,
+      "of": "Issue",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1 hộ",
+      "box": [
+        999,
+        589,
+        43,
+        23
+      ]
+    },
+    {
+      "id": 123,
+      "parent": 120,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chưa liên kết tài khoản tên hộ",
+      "box": [
+        999,
+        616,
+        376,
+        22
+      ]
+    },
+    {
+      "id": 124,
+      "parent": 120,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "đang thu vào tài khoản cá nhân",
+      "box": [
+        999,
+        642,
+        376,
+        20
+      ]
+    },
+    {
+      "id": 125,
+      "parent": 114,
+      "kind": "component",
+      "class": "c-work",
+      "component": "WorkItem",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "",
+      "box": [
+        987,
+        676,
+        400,
+        98
+      ]
+    },
+    {
+      "id": 126,
+      "parent": 125,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "state",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        688,
+        43,
+        25
+      ]
+    },
+    {
+      "id": 127,
+      "parent": 126,
+      "kind": "recipe",
+      "class": "r-issue",
+      "component": null,
+      "of": "Issue",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1 hộ",
+      "box": [
+        999,
+        690,
+        43,
+        23
+      ]
+    },
+    {
+      "id": 128,
+      "parent": 125,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chưa có chữ ký số",
+      "box": [
+        999,
+        717,
+        376,
+        22
+      ]
+    },
+    {
+      "id": 129,
+      "parent": 125,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "chờ chương trình chọn nhà cung cấp",
+      "box": [
+        999,
+        742,
+        376,
+        20
+      ]
+    },
+    {
+      "id": 130,
+      "parent": 114,
+      "kind": "component",
+      "class": "c-work",
+      "component": "WorkItem",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "",
+      "box": [
+        987,
+        776,
+        400,
+        98
+      ]
+    },
+    {
+      "id": 131,
+      "parent": 130,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "state",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        999,
+        788,
+        43,
+        25
+      ]
+    },
+    {
+      "id": 132,
+      "parent": 131,
+      "kind": "recipe",
+      "class": "r-issue",
+      "component": null,
+      "of": "Issue",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1 hộ",
+      "box": [
+        999,
+        790,
+        43,
+        23
+      ]
+    },
+    {
+      "id": 133,
+      "parent": 130,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "t",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Quý III còn 2 việc",
+      "box": [
+        999,
+        817,
+        376,
+        22
+      ]
+    },
+    {
+      "id": 134,
+      "parent": 130,
+      "kind": "component",
+      "class": "c-work",
+      "component": null,
+      "of": "WorkItem",
+      "part": "m",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "hạn 31/10",
+      "box": [
+        999,
+        842,
+        376,
+        20
+      ]
+    },
+    {
+      "id": 135,
+      "parent": 112,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Xem 4 hộ",
+      "box": [
+        987,
+        874,
+        108,
+        44
+      ]
+    },
+    {
+      "id": 136,
+      "parent": null,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": "PhoneTabBar",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "navigation",
+      "text": "Điều hướng nhanh",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 137,
+      "parent": 136,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Tổng quan",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 138,
+      "parent": 137,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-trend",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 139,
+      "parent": 136,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Hộ",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 140,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-people",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 141,
+      "parent": 139,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "count",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 142,
+      "parent": 136,
+      "kind": "component",
+      "class": "c-tabbar",
+      "component": null,
+      "of": "PhoneTabBar",
+      "part": "item",
+      "variants": [],
+      "state": [],
+      "role": "link",
+      "text": "Báo cáo",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 143,
+      "parent": 142,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "#i-file",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

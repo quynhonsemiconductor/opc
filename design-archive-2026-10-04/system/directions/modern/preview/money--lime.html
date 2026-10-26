@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="vi" data-brand="lime">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tiền &amp; đối chiếu · Hải sản khô Cô Hai — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../tokens.css">
+<link rel="stylesheet" href="../tokens-override.css">
+<link rel="stylesheet" href="../../../components/components.css">
+<link rel="stylesheet" href="../../../components/recipes.css">
+<link rel="stylesheet" href="../skin-modern.css">
+<link rel="stylesheet" href="../../../../apps/app/app-tokens.css">
+<style>
+/* layout only */
+@media (max-width: 720px) { .hide-phone { display: none; } }
+.money-top { display: grid; gap: var(--page-gap); align-items: stretch; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr); grid-template-areas: "bank state" "cash state"; }
+.m-bank { grid-area: bank; } .m-state { grid-area: state; } .m-cash { grid-area: cash; }
+.money-cash { font: 700 var(--fs-total)/1 var(--font-display); }
+.mt-3 { margin-top: var(--space-3); }
+.money-more { display: flex; justify-content: center; margin-top: var(--space-3); }
+@media (max-width: 720px) { .money-top { grid-template-columns: minmax(0, 1fr); grid-template-areas: "state" "bank" "cash"; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /> <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+  <symbol id="i-counter" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /> <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /> <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /> <path d="M2 7h20" /> <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></symbol>
+  <symbol id="i-orders" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="M12 11h4" /> <path d="M12 16h4" /> <path d="M8 11h.01" /> <path d="M8 16h.01" /></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></symbol>
+  <symbol id="i-invoice" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /> <path d="M14 2v4a2 2 0 0 0 2 2h4" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /> <path d="M12 22V12" /> <path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /> <path d="m7.5 4.27 9 5.15" /></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /> <circle cx="12" cy="12" r="3" /></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /> <path d="m21 21-4.3-4.3" /></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.268 21a2 2 0 0 0 3.464 0" /> <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1" /> <rect width="5" height="5" x="16" y="3" rx="1" /> <rect width="5" height="5" x="3" y="16" rx="1" /> <path d="M21 16h-3a2 2 0 0 0-2 2v3" /> <path d="M21 21v.01" /> <path d="M12 7v3a2 2 0 0 1-2 2H7" /> <path d="M3 12h.01" /> <path d="M12 3h.01" /> <path d="M12 16v.01" /> <path d="M16 12h1" /> <path d="M21 12v.01" /> <path d="M12 21v-1" /></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2" /> <circle cx="12" cy="12" r="2" /> <path d="M6 12h.01M18 12h.01" /></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4" /> <path d="M4 7h16" /> <path d="m16 21 4-4-4-4" /> <path d="M20 17H4" /></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /> <path d="M3 6h18" /> <path d="M16 10a4 4 0 0 1-8 0" /></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="M7 21h10" /> <path d="M12 3v18" /> <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /> <line x1="4" x2="20" y1="18" y2="18" /></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /> <path d="M12 18h.01" /></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" /> <circle cx="12" cy="13" r="3" /></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><path d="M16 10h2" /> <path d="M16 14h2" /> <path d="M6.17 15a3 3 0 0 1 5.66 0" /> <circle cx="9" cy="11" r="2" /> <rect x="2" y="5" width="20" height="14" rx="2" /></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><line x1="3" x2="21" y1="22" y2="22" /> <line x1="6" x2="6" y1="18" y2="11" /> <line x1="10" x2="10" y1="18" y2="11" /> <line x1="14" x2="14" y1="18" y2="11" /> <line x1="18" x2="18" y1="18" y2="11" /> <polygon points="12 2 20 7 4 7" /></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /> <path d="M19 10v2a7 7 0 0 1-14 0v-2" /> <line x1="12" x2="12" y1="19" y2="22" /></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /> <circle cx="9" cy="9" r="2" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /> <path d="M14 2v4a2 2 0 0 0 2 2h4" /> <path d="M8 13h2" /> <path d="M14 13h2" /> <path d="M8 17h2" /> <path d="M14 17h2" /></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></symbol>
+  <symbol id="i-family" viewBox="0 0 24 24"><path d="M18 21a8 8 0 0 0-16 0" /> <circle cx="10" cy="8" r="5" /> <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" /></symbol>
+  <symbol id="i-fish" viewBox="0 0 24 24"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" /> <path d="M18 12v.5" /> <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" /> <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" /> <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4" /> <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98" /></symbol>
+  <symbol id="i-squid" viewBox="0 0 24 24"><path d="M2 16s9-15 20-4C11 23 2 8 2 8" /></symbol>
+  <symbol id="i-shrimp" viewBox="0 0 24 24"><path d="M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44" /></symbol>
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8" /> <path d="M10 5H8a2 2 0 0 0 0 4h.68" /> <path d="M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8" /> <path d="M14 5h2a2 2 0 0 1 0 4h-.68" /> <path d="M18 22H6" /> <path d="M9 2h6" /></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /> <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" /> <rect x="6" y="14" width="12" height="8" rx="1" /></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <polyline points="7 10 12 15 17 10" /> <line x1="12" x2="12" y1="15" y2="3" /></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3" /></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></symbol>
+</svg>
+<div class="r-shell">
+  <nav class="c-nav r-shell__nav" aria-label="Điều hướng chính">
+    <div class="c-brand"><b class="c-brand__mark">OPC</b><span class="c-brand__by">by QNSC</span></div>
+    <button class="c-hh" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai, Nhơn Lý">
+      <span class="c-hh__mark" aria-hidden="true">CH</span>
+      <span class="c-hh__text"><strong class="c-hh__name">Cô Hai · Nhơn Lý</strong><span class="c-hh__sub">Xác minh L1</span></span>
+      <svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-chev"/></svg>
+    </button>
+    <ul class="c-nav__list">
+      <li><a class="c-nav__item" href="home.html"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Hôm nay</a></li>
+      <li><a class="c-nav__item c-nav__item--counter" href="counter.html"><svg class="c-ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy bán hàng<svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a class="c-nav__item" href="orders.html"><svg class="c-ic" aria-hidden="true"><use href="#i-bag"/></svg>Bán<span class="c-nav__count" aria-label="3 việc cần xem">3</span></a></li>
+      <li><a class="c-nav__item" href="money.html" aria-current="page"><svg class="c-ic" aria-hidden="true"><use href="#i-money"/></svg>Tiền<span class="c-nav__count" aria-label="3 việc cần xem">3</span></a></li>
+      <li><a class="c-nav__item" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-box"/></svg>Hàng hoá</a></li>
+      <li><a class="c-nav__item" href="invoices.html"><svg class="c-ic" aria-hidden="true"><use href="#i-book"/></svg>Sổ &amp; thuế</a></li>
+      <li><a class="c-nav__item" href="approvals.html"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg>Cần xử lý<span class="c-nav__count" aria-label="6 việc cần xem">6</span></a></li>
+    </ul>
+    <ul class="c-nav__list">
+      <li><a class="c-nav__item" href="settings-users.html"><svg class="c-ic" aria-hidden="true"><use href="#i-gear"/></svg>Cài đặt</a></li>
+      <li><a class="c-nav__item" href="#"><svg class="c-ic" aria-hidden="true"><use href="#i-chat"/></svg>Trợ giúp &amp; hỗ trợ</a></li>
+    </ul>
+    <div class="c-nav__foot" aria-label="Tình trạng kết nối">
+      <span class="c-conn">MB (qua Casso) · cập nhật 2 phút trước</span>
+      <span class="c-conn">Hoá đơn Hilo · hoạt động</span>
+      <span class="c-conn c-conn--off">Cổng thuế · chưa bật</span>
+    </div>
+  </nav>
+
+  <div class="r-shell__main">
+    <header class="r-shell__top">
+      <button class="c-hh c-hh--bar r-shell__phone" type="button" aria-label="Đổi hộ kinh doanh — đang chọn Hải sản khô Cô Hai"><span class="c-hh__mark" aria-hidden="true">CH</span><span class="c-hh__text"><strong class="c-hh__name">Hải sản khô Cô Hai</strong><span class="c-hh__sub">Nhơn Lý · OPC</span></span></button>
+      <label class="c-search r-shell__desk"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg><span class="u-sr">Tìm kiếm</span><input class="c-search__input" type="search" placeholder="Tìm đơn, món, khách…"><button class="c-search__mic" type="button" aria-label="Tìm bằng giọng nói" data-tip="Tìm bằng giọng nói"><svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-mic"/></svg></button><span class="c-kbd u-pro" aria-hidden="true">⌘K</span></label>
+      <div class="r-shell__spacer"></div>
+      <button class="c-icon-btn r-shell__phone" type="button" aria-label="Tìm đơn, món, khách"><svg class="c-ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+      <span class="c-sync r-shell__desk" role="status" data-tip="Mọi thay đổi đã lưu lên máy chủ">Đã lưu · 10:45</span>
+      <a class="c-btn c-btn--quiet r-shell__desk" href="home--assistant.html" data-tip="Hỏi về màn này"><svg class="c-ic" aria-hidden="true"><use href="#i-chat"/></svg>Trợ lý</a>
+      <a class="c-icon-btn r-shell__desk" href="home--notifications.html" aria-label="Thông báo — 4 chưa đọc" data-tip="Thông báo · 4 chưa đọc"><svg class="c-ic" aria-hidden="true"><use href="#i-bell"/></svg><span class="c-icon-btn__badge" aria-hidden="true">4</span></a>
+      <button class="c-avatar" type="button" aria-label="Nguyễn Văn Phúc · Quản lý — tài khoản, thông báo (4)"><span class="c-avatar__face" aria-hidden="true">P</span></button>
+    </header>
+
+    <main class="r-shell__content">
+      <nav class="c-subnav" aria-label="Tiền"><a class="c-subnav__item" href="money.html" aria-current="page">Thu chi &amp; đối chiếu</a><a class="c-subnav__item" href="#">Công nợ</a><a class="c-subnav__item" href="#">Đóng ca</a></nav>
+      
+      <div class="r-page-head">
+        <div>
+          <h1 class="r-page-head__title">Tiền &amp; đối chiếu</h1>
+          <p class="r-page-head__sub c-conn">MB (qua Casso) · cập nhật 10:43 · hôm nay 02/10/2026</p>
+        </div>
+        <div class="r-page-head__acts">
+          <button class="c-btn" type="button"><svg class="c-ic" aria-hidden="true"><use href="#i-cash"/></svg>Đếm tiền cuối ca</button>
+        </div>
+      </div>
+
+      <div class="money-top">
+        <section class="c-card m-bank" aria-labelledby="h-bank">
+          <div class="c-card__head"><h2 class="c-card__title" id="h-bank">Số dư MB</h2><span class="c-conn">cập nhật 10:43</span></div>
+          <p class="c-say"><b>48.215.000 ₫</b> trong tài khoản — gồm cả tiền chưa xác minh.</p>
+          <dl class="c-kv mt-3 hide-phone">
+            <dt>Tài khoản</dt><dd>MB · 0123 4567 89</dd>
+            <dt>Chủ tài khoản</dt><dd>HO KINH DOANH TRAN THI HAI</dd>
+            <dt>Nguồn</dt><dd>Casso · cập nhật 10:43</dd>
+          </dl>
+        </section>
+
+        <section class="c-card m-state" aria-labelledby="h-state">
+          <div class="c-card__head"><h2 class="c-card__title" id="h-state">Tiền vào MB hôm nay · 7 khoản</h2><span class="u-money">8.090.000 ₫</span></div>
+          <ul class="c-msigns" aria-label="Tiền theo trạng thái">
+            <li class="c-msign c-msign--ok"><span class="c-msign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-check"/></svg></span><span class="c-msign__word">Đã xác minh<small class="c-msign__sub">4 khoản · khớp sao kê MB</small></span><b class="c-msign__amt">4.560.000 ₫</b></li>
+            <li class="c-msign c-msign--pend"><span class="c-msign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="c-msign__word">Chờ xác minh<small class="c-msign__sub">DH-1043 · 1 phút · DH-1041 quá 30 phút</small></span><b class="c-msign__amt">1.380.000 ₫</b><a class="c-msign__go c-msign__go--quiet" href="#cho-xac-minh" aria-label="Xem 2 khoản chờ xác minh"><svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li class="c-msign"><span class="c-msign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-transfer"/></svg></span><span class="c-msign__word">Chưa gán<small class="c-msign__sub">1 khoản · không có mã đơn</small></span><b class="c-msign__amt">2.150.000 ₫</b><a class="c-msign__go c-msign__go--quiet" href="#chua-gan" aria-label="Gán khoản 2.150.000 ₫ chưa gán"><svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          </ul>
+        </section>
+
+        <section class="c-card m-cash" aria-labelledby="h-cash">
+          <div class="c-card__head"><h2 class="c-card__title" id="h-cash">Tiền mặt trong ca</h2><span class="u-meta">ca sáng · Phúc</span></div>
+          <p class="u-money money-cash">2.520.000 ₫</p>
+          <p class="u-meta">15 đơn tiền mặt · chưa tính vào số dư MB</p>
+        </section>
+      </div>
+
+      <p class="c-say"><b>Chờ xác minh</b> = Casso đã báo có tiền; OPC đang đối chiếu với sao kê MB. <b>Đã xác minh</b> = khớp sao kê.</p>
+
+      <section class="c-card c-card--tight" aria-labelledby="h-credits">
+        <div class="c-card__head"><h2 class="c-card__title" id="h-credits">Tiền vào tài khoản hôm nay</h2><span class="u-meta">7 khoản · 02/10/2026</span></div>
+        <div class="c-tabs" role="tablist" aria-label="Lọc theo trạng thái">
+          <button class="c-tabs__tab c-tabs__tab--you" role="tab" aria-selected="true" type="button">Cần xem <span class="c-tabs__count">3</span></button>
+          <button class="c-tabs__tab" role="tab" aria-selected="false" type="button">Chờ xác minh <span class="c-tabs__count">2</span></button>
+          <button class="c-tabs__tab" role="tab" aria-selected="false" type="button">Chưa gán <span class="c-tabs__count">1</span></button>
+          <button class="c-tabs__tab" role="tab" aria-selected="false" type="button">Đã khớp <span class="c-tabs__count">4</span></button>
+          <button class="c-tabs__tab" role="tab" aria-selected="false" type="button">Tất cả <span class="c-tabs__count">7</span></button>
+        </div>
+        <div class="c-table__scroll" role="tabpanel" aria-label="Cần xem"><table class="c-table c-table--stack">
+          <thead><tr><th>Giờ</th><th>Người chuyển / nội dung</th><th class="c-table__num">Số tiền</th><th>Khớp với</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+          <tbody>
+            <tr id="cho-xac-minh"><td class="c-table__code c-table__cell--main">10:44</td>
+              <td class="c-table__cell--wide">NGUYEN VAN HUNG · DH1043</td>
+              <td class="c-table__num c-table__cell--end"><span class="c-table__total"><span class="c-moneyline" data-step="2" role="img" aria-label="Bước 2/3: đã nhận, chờ xác minh"><s></s><s></s><s></s></span><span class="u-money">1.020.000 ₫</span></span></td>
+              <td class="c-table__cell--hide u-nowrap">DH-1043</td>
+              <td class="c-table__cell--wide"><span class="c-sign c-sign--pend"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Chờ xác minh</span><span class="u-meta"> Casso báo 10:44, đang đối chiếu sao kê · thường 1–3 phút</span></td>
+              <td class="c-table__cell--hide"></td></tr>
+            <tr class="c-table__row--you"><td class="c-table__code c-table__cell--main">10:05</td>
+              <td class="c-table__cell--wide">TRAN THI THU · DH1041 SHOPEE</td>
+              <td class="c-table__num c-table__cell--end"><span class="c-table__total"><span class="c-moneyline" data-step="2" role="img" aria-label="Bước 2/3: đã nhận, chờ xác minh"><s></s><s></s><s></s></span><span class="u-money">360.000 ₫</span></span></td>
+              <td class="c-table__cell--hide u-nowrap">DH-1041</td>
+              <td class="c-table__cell--wide"><span class="c-sign c-sign--pend"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Chờ xác minh quá 30 phút</span><span class="u-meta"> Kiểm tra trong app MB</span></td>
+              <td class="c-table__cell--wide"><a class="c-btn" href="#">Kiểm tra<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></td></tr>
+            <tr class="c-table__row--you" id="chua-gan"><td class="c-table__code c-table__cell--main">09:15</td>
+              <td class="c-table__cell--wide">NHA HANG BIEN DONG · TT HANG KHO T9</td>
+              <td class="c-table__num c-table__cell--end"><span class="u-money">2.150.000 ₫</span></td>
+              <td class="c-table__cell--hide">—</td>
+              <td class="c-table__cell--wide"><span class="c-sign c-sign--you"><span class="c-sign__pic"><svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>Chưa gán</span><span class="u-meta"> Không có mã đơn</span></td>
+              <td class="c-table__cell--wide"><button class="c-btn c-btn--act" type="button">Gán vào đơn<svg class="c-ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></td></tr>
+          </tbody>
+        </table></div>
+        <div class="money-more"><button class="c-btn c-btn--quiet" type="button">Xem tất cả 7 khoản<svg class="c-ic c-ic--s" aria-hidden="true"><use href="#i-chev"/></svg></button></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<nav class="c-tabbar" aria-label="Điều hướng nhanh">
+  <a class="c-tabbar__item" href="home.html"><svg class="c-ic" aria-hidden="true"><use href="#i-home"/></svg>Hôm nay<span class="c-tabbar__count" aria-label="6 việc cần xử lý">6</span></a>
+  <a class="c-tabbar__item c-tabbar__item--counter" href="counter.html"><svg class="c-ic" aria-hidden="true"><use href="#i-counter"/></svg>Quầy</a>
+  <a class="c-tabbar__item" href="orders.html"><svg class="c-ic" aria-hidden="true"><use href="#i-orders"/></svg>Bán<span class="c-tabbar__count" aria-label="3 cần xem">3</span></a>
+  <a class="c-tabbar__item" href="money.html" aria-current="page"><svg class="c-ic" aria-hidden="true"><use href="#i-money"/></svg>Tiền<span class="c-tabbar__count" aria-label="3 cần xem">3</span></a>
+  <a class="c-tabbar__item" href="home--more.html"><svg class="c-ic" aria-hidden="true"><use href="#i-menu"/></svg>Thêm</a>
+</nav>
+</body>
+</html>

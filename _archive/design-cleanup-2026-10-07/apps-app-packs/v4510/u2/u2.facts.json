@@ -1,0 +1,70 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.5.6",
+ "group": "u2",
+ "screens": [
+  {
+   "file": "home--more.html",
+   "title": "Phone · Thêm (tất cả)",
+   "pattern": "overview",
+   "note": "Known soft spot: Identity 7 (generic menu tree); tick on the active row added, not re-scored.",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 33,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "panel",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 45,
+     "block": 4,
+     "icons": 7,
+     "iconRate": 15.6,
+     "rules": 1,
+     "sizes": 2,
+     "sizeList": [
+      14,
+      16
+     ],
+     "weights": 2,
+     "weightList": [
+      "600",
+      "400"
+     ],
+     "greys": 2,
+     "hues": 1,
+     "chips": 0,
+     "tinted": 2
+    }
+   }
+  }
+ ]
+}

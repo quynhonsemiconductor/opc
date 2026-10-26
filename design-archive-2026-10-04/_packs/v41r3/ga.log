@@ -1,0 +1,9 @@
+/Users/benq/Desktop/qnsc/opc/design/_packs/v41r3/ga.png  1600x3044
+  money.html                     pattern:matching   1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  orders.html                    pattern:data-table 1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  invoices.html                  pattern:data-table 1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  receipt.html                   pattern:detail     1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+  settings-features.html         pattern:settings   1440x900: probe 0 · stress 0 · a11y 0 · keys 0 | 390x844: probe 0 · stress 0 · a11y 0
+facts → /Users/benq/Desktop/qnsc/opc/design/_packs/v41r3/ga.facts.json
+machine pass clean — hand the sheet + facts + context pack to ONE evaluator (group mode)
+EXIT 0

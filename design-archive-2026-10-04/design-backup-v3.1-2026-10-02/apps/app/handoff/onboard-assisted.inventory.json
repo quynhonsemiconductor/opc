@@ -1,0 +1,1632 @@
+{
+  "screen": "onboard-assisted.html",
+  "title": "Hỗ trợ đăng ký · Hải sản khô Cô Hai — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        69
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        0,
+        69,
+        1440,
+        938
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "main",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        1007
+      ]
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        69
+      ]
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-brand",
+      "component": "BrandMark",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        32,
+        22,
+        135,
+        25
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "mark",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "OPC",
+      "box": [
+        40,
+        22,
+        49,
+        25
+      ]
+    },
+    {
+      "id": 4,
+      "parent": 2,
+      "kind": "component",
+      "class": "c-brand",
+      "component": null,
+      "of": "BrandMark",
+      "part": "by",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "by QNSC",
+      "box": [
+        97,
+        27,
+        62,
+        14
+      ]
+    },
+    {
+      "id": 5,
+      "parent": 1,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "spacer",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        179,
+        34,
+        1046,
+        0
+      ]
+    },
+    {
+      "id": 6,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Thoát hỗ trợ",
+      "box": [
+        1237,
+        12,
+        171,
+        44
+      ]
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1254,
+        23,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 8,
+      "parent": 0,
+      "kind": "recipe",
+      "class": "r-shell",
+      "component": null,
+      "of": "AppShell",
+      "part": "content",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "",
+      "box": [
+        0,
+        69,
+        1440,
+        938
+      ]
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": "PageHeader",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        32,
+        93,
+        1376,
+        62
+      ]
+    },
+    {
+      "id": 10,
+      "parent": 9,
+      "kind": "recipe",
+      "class": "r-page-head",
+      "component": null,
+      "of": "PageHeader",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hỗ trợ đăng ký · Hải sản khô Cô Hai",
+      "box": [
+        32,
+        93,
+        534,
+        37
+      ]
+    },
+    {
+      "id": 11,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-conn",
+      "component": null,
+      "of": "ConnectionStatus",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nhân viên Nguyễn Thị Lan · Tổ hỗ trợ OPC Nhơn Lý · mọi thao tác được ghi lại",
+      "box": [
+        32,
+        136,
+        534,
+        19
+      ]
+    },
+    {
+      "id": 12,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [
+        "tight"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        32,
+        179,
+        678,
+        705
+      ]
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bước 3/6 · làm theo thứ tự số",
+      "box": [
+        57,
+        204,
+        628,
+        37
+      ]
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Các bước đăng ký",
+      "box": [
+        57,
+        204,
+        147,
+        24
+      ]
+    },
+    {
+      "id": 15,
+      "parent": 12,
+      "kind": "component",
+      "class": "c-lanes",
+      "component": "LaneList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        257,
+        628,
+        602
+      ]
+    },
+    {
+      "id": 16,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        257,
+        628,
+        92
+      ]
+    },
+    {
+      "id": 17,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        74,
+        274,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 18,
+      "parent": 17,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        83,
+        283,
+        26,
+        26
+      ]
+    },
+    {
+      "id": 19,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        122,
+        258,
+        546,
+        90
+      ]
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Số điện thoại",
+      "box": [
+        138,
+        277,
+        514,
+        25
+      ]
+    },
+    {
+      "id": 21,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        138,
+        306,
+        514,
+        24
+      ]
+    },
+    {
+      "id": 22,
+      "parent": 21,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 10:01",
+      "box": [
+        138,
+        306,
+        82,
+        24
+      ]
+    },
+    {
+      "id": 23,
+      "parent": 16,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        668,
+        258,
+        16,
+        90
+      ]
+    },
+    {
+      "id": 24,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "done"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        357,
+        628,
+        92
+      ]
+    },
+    {
+      "id": 25,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        74,
+        374,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 26,
+      "parent": 25,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "l"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        83,
+        383,
+        26,
+        26
+      ]
+    },
+    {
+      "id": 27,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        122,
+        358,
+        546,
+        90
+      ]
+    },
+    {
+      "id": 28,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Thông tin hộ",
+      "box": [
+        138,
+        377,
+        514,
+        25
+      ]
+    },
+    {
+      "id": 29,
+      "parent": 27,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        138,
+        406,
+        514,
+        24
+      ]
+    },
+    {
+      "id": 30,
+      "parent": 29,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Xong 10:02",
+      "box": [
+        138,
+        406,
+        87,
+        24
+      ]
+    },
+    {
+      "id": 31,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        668,
+        358,
+        16,
+        90
+      ]
+    },
+    {
+      "id": 32,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [
+        "now"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        457,
+        628,
+        102
+      ]
+    },
+    {
+      "id": 33,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        74,
+        474,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 34,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        122,
+        458,
+        546,
+        100
+      ]
+    },
+    {
+      "id": 35,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "kicker",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đang làm",
+      "box": [
+        138,
+        470,
+        514,
+        20
+      ]
+    },
+    {
+      "id": 36,
+      "parent": 35,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [
+        "s"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        138,
+        471,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 37,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Xác minh chủ hộ",
+      "box": [
+        138,
+        494,
+        514,
+        25
+      ]
+    },
+    {
+      "id": 38,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "detail",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chị Hai quét mã bên phải bằng app Cas ID.",
+      "box": [
+        138,
+        523,
+        514,
+        23
+      ]
+    },
+    {
+      "id": 39,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        668,
+        458,
+        16,
+        100
+      ]
+    },
+    {
+      "id": 40,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        567,
+        628,
+        92
+      ]
+    },
+    {
+      "id": 41,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4",
+      "box": [
+        74,
+        584,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 42,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        122,
+        568,
+        546,
+        90
+      ]
+    },
+    {
+      "id": 43,
+      "parent": 42,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Ngân hàng",
+      "box": [
+        138,
+        586,
+        514,
+        25
+      ]
+    },
+    {
+      "id": 44,
+      "parent": 42,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        138,
+        615,
+        514,
+        24
+      ]
+    },
+    {
+      "id": 45,
+      "parent": 44,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tiếp theo",
+      "box": [
+        138,
+        615,
+        74,
+        24
+      ]
+    },
+    {
+      "id": 46,
+      "parent": 40,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        668,
+        568,
+        16,
+        90
+      ]
+    },
+    {
+      "id": 47,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        667,
+        628,
+        92
+      ]
+    },
+    {
+      "id": 48,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "5",
+      "box": [
+        74,
+        684,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 49,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        122,
+        668,
+        546,
+        90
+      ]
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hàng hoá",
+      "box": [
+        138,
+        686,
+        514,
+        25
+      ]
+    },
+    {
+      "id": 51,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        138,
+        715,
+        514,
+        24
+      ]
+    },
+    {
+      "id": 52,
+      "parent": 51,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tiếp theo",
+      "box": [
+        138,
+        715,
+        74,
+        24
+      ]
+    },
+    {
+      "id": 53,
+      "parent": 47,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        668,
+        668,
+        16,
+        90
+      ]
+    },
+    {
+      "id": 54,
+      "parent": 15,
+      "kind": "component",
+      "class": "c-lane",
+      "component": "Lane",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        57,
+        767,
+        628,
+        92
+      ]
+    },
+    {
+      "id": 55,
+      "parent": 54,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "n",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "6",
+      "box": [
+        74,
+        784,
+        44,
+        44
+      ]
+    },
+    {
+      "id": 56,
+      "parent": 54,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        122,
+        768,
+        546,
+        90
+      ]
+    },
+    {
+      "id": 57,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Hoá đơn",
+      "box": [
+        138,
+        786,
+        514,
+        25
+      ]
+    },
+    {
+      "id": 58,
+      "parent": 56,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        138,
+        815,
+        514,
+        24
+      ]
+    },
+    {
+      "id": 59,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "hint",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Tiếp theo",
+      "box": [
+        138,
+        815,
+        74,
+        24
+      ]
+    },
+    {
+      "id": 60,
+      "parent": 54,
+      "kind": "component",
+      "class": "c-lane",
+      "component": null,
+      "of": "Lane",
+      "part": "actions",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        668,
+        768,
+        16,
+        90
+      ]
+    },
+    {
+      "id": 61,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Hết hạn thì tạo mã mới, không mất dữ liệu đã nhập.",
+      "box": [
+        730,
+        179,
+        678,
+        606
+      ]
+    },
+    {
+      "id": 62,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Xác minh chủ hộ bằng chip CCCD",
+      "box": [
+        755,
+        204,
+        628,
+        24
+      ]
+    },
+    {
+      "id": 63,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-qr",
+      "component": "QrPayment",
+      "of": null,
+      "part": null,
+      "variants": [
+        "large"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        755,
+        244,
+        628,
+        326
+      ]
+    },
+    {
+      "id": 64,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "img",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        768,
+        257,
+        240,
+        240
+      ]
+    },
+    {
+      "id": 65,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "meta",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1024,
+        344,
+        346,
+        67
+      ]
+    },
+    {
+      "id": 66,
+      "parent": 65,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cas ID · Trần Thị Hai · 0905 812 347 · mã hết hạn sau",
+      "box": [
+        1024,
+        344,
+        346,
+        35
+      ]
+    },
+    {
+      "id": 67,
+      "parent": 65,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "4:32",
+      "box": [
+        1024,
+        383,
+        66,
+        28
+      ]
+    },
+    {
+      "id": 68,
+      "parent": 63,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "status",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đang chờ chị Hai quét…",
+      "box": [
+        768,
+        513,
+        602,
+        44
+      ]
+    },
+    {
+      "id": 69,
+      "parent": 68,
+      "kind": "component",
+      "class": "c-qr",
+      "component": null,
+      "of": "QrPayment",
+      "part": "status-pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        779,
+        521,
+        28,
+        28
+      ]
+    },
+    {
+      "id": 70,
+      "parent": 69,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        784,
+        526,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 71,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-say",
+      "component": "OwnerSentence",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Nói với chị Hai: Mở app Cas ID → Quét mã → Đặt CCCD sau điện thoại",
+      "box": [
+        755,
+        586,
+        628,
+        26
+      ]
+    },
+    {
+      "id": 72,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Tạo mã mới",
+      "box": [
+        755,
+        628,
+        164,
+        44
+      ]
+    },
+    {
+      "id": 73,
+      "parent": 72,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        772,
+        639,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 74,
+      "parent": 61,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet",
+        "wrap"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Chuyển sang xác minh bằng giấy tờ (sẽ hỏi xác nhận)",
+      "box": [
+        755,
+        680,
+        483,
+        44
+      ]
+    },
+    {
+      "id": 75,
+      "parent": 74,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        770,
+        691,
+        22,
+        22
+      ]
+    },
+    {
+      "id": 76,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-card",
+      "component": "Card",
+      "of": null,
+      "part": null,
+      "variants": [
+        "tight"
+      ],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        730,
+        802,
+        678,
+        165
+      ]
+    },
+    {
+      "id": 77,
+      "parent": 76,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        755,
+        827,
+        628,
+        43
+      ]
+    },
+    {
+      "id": 78,
+      "parent": 77,
+      "kind": "component",
+      "class": "c-card",
+      "component": null,
+      "of": "Card",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "Trên điện thoại chị Hai",
+      "box": [
+        755,
+        833,
+        191,
+        24
+      ]
+    },
+    {
+      "id": 79,
+      "parent": 77,
+      "kind": "component",
+      "class": "c-sign",
+      "component": "StatusSign",
+      "of": null,
+      "part": null,
+      "variants": [
+        "wait"
+      ],
+      "state": [],
+      "role": null,
+      "text": "Đang chờ quét mã",
+      "box": [
+        1202,
+        827,
+        181,
+        30
+      ]
+    },
+    {
+      "id": 80,
+      "parent": 79,
+      "kind": "component",
+      "class": "c-sign",
+      "component": null,
+      "of": "StatusSign",
+      "part": "pic",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1211,
+        833,
+        18,
+        18
+      ]
+    },
+    {
+      "id": 81,
+      "parent": 80,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1212,
+        834,
+        16,
+        16
+      ]
+    },
+    {
+      "id": 82,
+      "parent": 76,
+      "kind": "component",
+      "class": "c-kv",
+      "component": "FactList",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "BướcBước 3/6 · đang chờ quét mã Số điện thoại0905 812 347",
+      "box": [
+        755,
+        886,
+        628,
+        56
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1390 @@
+{
+  "screen": "counter--cart.html",
+  "title": "Giỏ · DH-1043 — OPC",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "regions": [
+    {
+      "region": "header",
+      "box": [
+        0,
+        0,
+        1440,
+        77
+      ]
+    },
+    {
+      "region": "main",
+      "box": [
+        0,
+        77,
+        1440,
+        682
+      ]
+    },
+    {
+      "region": "footer",
+      "box": [
+        0,
+        759,
+        1440,
+        141
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 0,
+      "parent": null,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": "BottomSheet",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "dialog",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "top",
+      "variants": [],
+      "state": [],
+      "role": "banner",
+      "text": "",
+      "box": [
+        0,
+        0,
+        1440,
+        77
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "grip",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        698,
+        4,
+        44,
+        4
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 3,
+      "parent": 1,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "head",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        12,
+        1408,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 4,
+      "parent": 3,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "k",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Giỏ · DH-1043 · 4 món",
+      "box": [
+        16,
+        16,
+        162,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 5,
+      "parent": 3,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "title",
+      "variants": [],
+      "state": [],
+      "role": "heading",
+      "text": "1.020.000 ₫",
+      "box": [
+        16,
+        33,
+        162,
+        32
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 6,
+      "parent": 3,
+      "kind": "component",
+      "class": "c-icon-btn",
+      "component": "IconButton",
+      "of": null,
+      "part": null,
+      "variants": [
+        "outline"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Đóng, quay lại chọn món",
+      "box": [
+        1368,
+        12,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 7,
+      "parent": 6,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1385,
+        29,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 8,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "body",
+      "variants": [],
+      "state": [],
+      "role": "main",
+      "text": "Hoá đơn bán hàng hộ kinh doanh — không có dòng thuế GTGT",
+      "box": [
+        0,
+        77,
+        1440,
+        682
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "kind": "component",
+      "class": "c-picker",
+      "component": "Picker",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "",
+      "box": [
+        16,
+        87,
+        1408,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 10,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        29,
+        104,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 11,
+      "parent": 9,
+      "kind": "component",
+      "class": "c-picker",
+      "component": null,
+      "of": "Picker",
+      "part": "label",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Khách lẻ",
+      "box": [
+        63,
+        97,
+        99,
+        36
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "kind": "component",
+      "class": "c-picker",
+      "component": null,
+      "of": "Picker",
+      "part": "sub",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Đổi · tên / MST",
+      "box": [
+        63,
+        116,
+        99,
+        17
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 13,
+      "parent": 8,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "lines",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        151,
+        1408,
+        450
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "line",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        151,
+        1408,
+        112
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Mực khô loại 1",
+      "box": [
+        16,
+        163,
+        1209,
+        23
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 16,
+      "parent": 14,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "625.000 ₫",
+      "box": [
+        1237,
+        165,
+        187,
+        19
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 17,
+      "parent": 14,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "calc",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "0,5 kg × 1.250.000 ₫",
+      "box": [
+        16,
+        211,
+        1209,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 18,
+      "parent": 14,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": "QuantityStepper",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1237,
+        192,
+        187,
+        58
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 19,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Bớt mực khô",
+      "box": [
+        1238,
+        193,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 20,
+      "parent": 19,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1255,
+        210,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 21,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "value",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "0,5 kg",
+      "box": [
+        1294,
+        193,
+        73,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 22,
+      "parent": 18,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Thêm mực khô",
+      "box": [
+        1367,
+        193,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 23,
+      "parent": 22,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1384,
+        210,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 24,
+      "parent": 13,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "line",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        263,
+        1408,
+        112
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 25,
+      "parent": 24,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Cá cơm sấy giòn",
+      "box": [
+        16,
+        275,
+        1218,
+        23
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 26,
+      "parent": 24,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "190.000 ₫",
+      "box": [
+        1246,
+        278,
+        178,
+        19
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 27,
+      "parent": 24,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "calc",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2 × 95.000 ₫",
+      "box": [
+        16,
+        323,
+        1218,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 28,
+      "parent": 24,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": "QuantityStepper",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1246,
+        305,
+        178,
+        58
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 29,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Bớt cá cơm sấy giòn",
+      "box": [
+        1247,
+        306,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 30,
+      "parent": 29,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1264,
+        323,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 31,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "value",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "2",
+      "box": [
+        1303,
+        306,
+        64,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 32,
+      "parent": 28,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Thêm cá cơm sấy giòn",
+      "box": [
+        1367,
+        306,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 33,
+      "parent": 32,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1384,
+        323,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 34,
+      "parent": 13,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "line",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        376,
+        1408,
+        112
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 35,
+      "parent": 34,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Bánh tráng nước dừa",
+      "box": [
+        16,
+        388,
+        1218,
+        23
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 36,
+      "parent": 34,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "120.000 ₫",
+      "box": [
+        1246,
+        390,
+        178,
+        19
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 37,
+      "parent": 34,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "calc",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3 × 40.000 ₫",
+      "box": [
+        16,
+        436,
+        1218,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 38,
+      "parent": 34,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": "QuantityStepper",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1246,
+        417,
+        178,
+        58
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 39,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Bớt bánh tráng nước dừa",
+      "box": [
+        1247,
+        418,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 40,
+      "parent": 39,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1264,
+        435,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 41,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "value",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "3",
+      "box": [
+        1303,
+        418,
+        64,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 42,
+      "parent": 38,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Thêm bánh tráng nước dừa",
+      "box": [
+        1367,
+        418,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 43,
+      "parent": 42,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1384,
+        435,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 44,
+      "parent": 13,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "line",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        488,
+        1408,
+        112
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 45,
+      "parent": 44,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "name",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "Chả cá Quy Nhơn",
+      "box": [
+        16,
+        500,
+        1218,
+        23
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 46,
+      "parent": 44,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "amt",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "85.000 ₫",
+      "box": [
+        1246,
+        502,
+        178,
+        19
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 47,
+      "parent": 44,
+      "kind": "recipe",
+      "class": "r-ticket",
+      "component": null,
+      "of": "OrderTicket",
+      "part": "calc",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1 × 85.000 ₫",
+      "box": [
+        16,
+        548,
+        1218,
+        21
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 48,
+      "parent": 44,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": "QuantityStepper",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1246,
+        530,
+        178,
+        58
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 49,
+      "parent": 48,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Bớt chả cá Quy Nhơn",
+      "box": [
+        1247,
+        531,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 50,
+      "parent": 49,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1264,
+        548,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 51,
+      "parent": 48,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "value",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "1",
+      "box": [
+        1303,
+        531,
+        64,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 52,
+      "parent": 48,
+      "kind": "component",
+      "class": "c-stepper",
+      "component": null,
+      "of": "QuantityStepper",
+      "part": "btn",
+      "variants": [],
+      "state": [],
+      "role": "button",
+      "text": "Thêm chả cá Quy Nhơn",
+      "box": [
+        1367,
+        531,
+        56,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 53,
+      "parent": 52,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        1384,
+        548,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 54,
+      "parent": 0,
+      "kind": "component",
+      "class": "c-sheet",
+      "component": null,
+      "of": "BottomSheet",
+      "part": "foot",
+      "variants": [],
+      "state": [],
+      "role": "contentinfo",
+      "text": "",
+      "box": [
+        0,
+        759,
+        1440,
+        141
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 55,
+      "parent": 54,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "act",
+        "block"
+      ],
+      "state": [],
+      "role": "link",
+      "text": "Thu tiền 1.020.000 ₫",
+      "box": [
+        16,
+        770,
+        1408,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 56,
+      "parent": 55,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        805,
+        787,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 57,
+      "parent": 54,
+      "kind": "recipe",
+      "class": "r-pay-sheet",
+      "component": null,
+      "of": "PhonePaymentSheet",
+      "part": "two",
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        16,
+        834,
+        1408,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 58,
+      "parent": 57,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "danger"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Huỷ đơn",
+      "box": [
+        16,
+        834,
+        648,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 59,
+      "parent": 58,
+      "kind": "component",
+      "class": "c-ic",
+      "component": "Icon",
+      "of": null,
+      "part": null,
+      "variants": [],
+      "state": [],
+      "role": null,
+      "text": "",
+      "box": [
+        288,
+        851,
+        22,
+        22
+      ],
+      "context": {
+        "density": "touch"
+      }
+    },
+    {
+      "id": 60,
+      "parent": 57,
+      "kind": "component",
+      "class": "c-btn",
+      "component": "Button",
+      "of": null,
+      "part": null,
+      "variants": [
+        "quiet"
+      ],
+      "state": [],
+      "role": "button",
+      "text": "Lưu tạm",
+      "box": [
+        776,
+        834,
+        648,
+        56
+      ],
+      "context": {
+        "density": "touch"
+      }
+    }
+  ]
+}

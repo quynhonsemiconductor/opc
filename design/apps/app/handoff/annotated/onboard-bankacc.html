@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đăng ký · Tài khoản kinh doanh — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../../../../system/tokens.css">
+<link rel="stylesheet" href="../../../../system/components/components.css">
+<link rel="stylesheet" href="../../../../system/components/recipes.css">
+<link rel="stylesheet" href="../../app-tokens.css">
+<style>
+/* layout only */
+.r-onboard__body > * { min-width: 0; }
+</style>
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path> <path d="m12 5 7 7-7 7"></path></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"></path> <path d="M19 12H5"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path> <path d="M12 17h.01"></path></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path> <path d="m9 12 2 2 4-4"></path></symbol>
+</svg>
+<div class="r-onboard" data-component="OnboardingStep">
+  <header class="r-onboard__top" data-part="OnboardingStep.top">
+    <a class="c-icon-btn c-icon-btn--outline" href="onboard-tax.html" aria-label="Quay lại bước trước" data-component="IconButton" data-variant="outline"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-back"></use></svg></a>
+    <div class="c-steps" role="img" aria-label="Bước 4 trên 6: Thuế và tài khoản" data-component="StepProgress"><span class="c-steps__label" data-part="StepProgress.label"><b>Bước 4/6</b> · Thuế và tài khoản</span><ol class="c-steps__bar" data-part="StepProgress.bar"><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--now" data-part="StepProgress.seg"></li><li class="c-steps__seg " data-part="StepProgress.seg"></li><li class="c-steps__seg " data-part="StepProgress.seg"></li></ol></div>
+    <a class="r-onboard__help" href="onboard-help.html" data-part="OnboardingStep.help"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-help"></use></svg>Hỏi</a>
+  </header>
+  <main class="r-onboard__body" data-part="OnboardingStep.body">
+    <h1 class="r-onboard__title" data-part="OnboardingStep.title">Tài khoản dùng cho kinh doanh</h1>
+    <ul class="r-gate" data-component="CloseGate"><li class="r-gate__i r-gate__i--ok" data-part="CloseGate.i"><span class="r-gate__b" data-part="CloseGate.b"><b><span class="r-gate__ic r-gate__ic--ok" aria-hidden="true" data-part="CloseGate.ic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span>MB 0901 2345 678</b><small><span class="r-gate__st" data-part="CloseGate.st">Đã báo cơ quan thuế</span> · chủ hộ Phạm Thị An</small></span><span class="r-gate__amt" data-part="CloseGate.amt"></span><span class="r-gate__act" data-part="CloseGate.act"><button class="c-btn" type="button" aria-label="Sửa tài khoản MB 0901 2345 678" data-component="Button">Sửa</button><button class="c-btn c-btn--quiet" type="button" aria-label="Bỏ tài khoản MB 0901 2345 678" data-component="Button" data-variant="quiet">Bỏ</button></span></li></ul>
+    <a class="c-btn c-btn--block" href="tax-notice-bank.html" data-component="Button" data-variant="block">Thêm tài khoản hoặc ví điện tử</a>
+    <div class="c-banner c-banner--pend" role="note" data-component="Banner" data-variant="pend"><span class="c-banner__pic" data-part="Banner.pic"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-shield"></use></svg></span><span class="c-banner__text" data-part="Banner.text"><strong class="c-banner__title" data-part="Banner.title">Mọi tài khoản, ví nhận tiền bán hàng phải báo cơ quan thuế</strong><span class="c-banner__body" data-part="Banner.body">Không bắt buộc tài khoản đứng tên hộ.</span></span></div>
+    <section class="c-card c-card--tight" aria-labelledby="ba-o" data-component="Card" data-variant="tight"><div class="c-card__head" data-part="Card.head"><h2 class="c-card__title" id="ba-o" data-part="Card.title">Tuỳ chọn: nối để tiền về tự khớp</h2></div><p class="c-sub" data-component="Subline">Làm tay vẫn được: chị xác nhận tiền theo sao kê.</p><div class="c-decide__acts" data-part="DecisionPanel.acts"><a class="c-btn" href="onboard-bank.html" data-component="Button">Nối ngân hàng</a><a class="r-skip" href="onboard-invoice.html" data-component="Skip">Bỏ qua, làm tay</a></div></section>
+    <p class="r-onboard__saved" data-part="OnboardingStep.saved">Đã lưu — làm tiếp lúc nào cũng được</p>
+  </main>
+  <aside class="r-onboard__aside r-onboard__aside--compact" aria-label="Các bước đăng ký" data-part="OnboardingStep.aside">
+    <nav class="c-stepmap" aria-label="Tiến độ đăng ký" data-component="StepMap"><p class="c-stepmap__k" data-part="StepMap.k">Đăng ký · còn khoảng 11 phút · làm dở vẫn lưu</p><ol class="c-stepmap__list" data-part="StepMap.list"><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Số điện thoại<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Hộ kinh doanh<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Cách bán<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--now" aria-current="step" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n">4</span><span class="c-stepmap__t" data-part="StepMap.t">Thuế và tài khoản</span><span class="c-stepmap__m" data-part="StepMap.m">3 phút</span><p class="c-stepmap__why" data-part="StepMap.why">VNeID, eTax, cách khai thuế và tài khoản ngân hàng dùng kinh doanh.</p></li><li class="c-stepmap__s c-stepmap__s--next" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n">5</span><span class="c-stepmap__t" data-part="StepMap.t">Hoá đơn</span><span class="c-stepmap__m" data-part="StepMap.m">3 phút</span></li><li class="c-stepmap__s c-stepmap__s--next" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n">6</span><span class="c-stepmap__t" data-part="StepMap.t">Hàng và số đầu kỳ</span><span class="c-stepmap__m" data-part="StepMap.m">5 phút</span></li></ol><p class="c-stepmap__end" data-part="StepMap.end">Xong 6 bước: làm giao dịch đầu tiên, rồi làm dần danh sách Sẵn sàng</p></nav>
+  </aside>
+  <footer class="r-onboard__foot" data-part="OnboardingStep.foot">
+    <a class="c-btn c-btn--act c-btn--block" href="onboard-invoice.html" data-component="Button" data-variant="act block">Tiếp tục</a>
+    <div class="r-onboard__alt" data-part="OnboardingStep.alt"><a href="tax-notice-bank.html">Cách báo tài khoản cho cơ quan thuế</a></div>
+  </footer>
+</div>
+
+
+</body></html>

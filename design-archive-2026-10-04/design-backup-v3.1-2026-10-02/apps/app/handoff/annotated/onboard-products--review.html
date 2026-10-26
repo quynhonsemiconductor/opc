@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bước 5/6 · Hàng hoá — Đăng ký OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../../../../system/tokens.css">
+<link rel="stylesheet" href="../../../../system/components/components.css">
+<link rel="stylesheet" href="../../../../system/components/recipes.css">
+<link rel="stylesheet" href="../../app-tokens.css">
+<style>
+.m-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
+.m-row { display: grid; gap: var(--space-2); padding-bottom: var(--space-4); border-bottom: var(--hairline) solid var(--line); }
+.m-check { display: grid; gap: var(--space-2); }
+.m-act { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.m-amt { display: flex; align-items: center; gap: var(--space-2); justify-content: flex-end; }</style>
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5.5 9.5V20h13V9.5M10 20v-6h4v6"></path></symbol>
+  <symbol id="i-counter" viewBox="0 0 24 24"><path d="M3 10h18v10H3zM6 10V4h12v6M7 14h4M14 14h3M7 17h10"></path></symbol>
+  <symbol id="i-orders" viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h3"></path></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><path d="M3 6h18v12H3z"></path><circle cx="12" cy="12" r="2.8"></circle><path d="M6 9v.5M18 14.5v.5"></path></symbol>
+  <symbol id="i-invoice" viewBox="0 0 24 24"><path d="M6 3h8.5L18 6.5V21H6zM9 11h6M9 15h6M9 7h3"></path></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5zM3 7.5l9 4.5 9-4.5M12 12v9"></path></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c.5-4 3-6 6.5-6s6 2 6.5 6M15.5 4.8a3.4 3.4 0 010 6.4M18 14.5c2 .8 3.2 2.6 3.5 5.5"></path></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h7v16H4zM13 4h7v16h-7M7 8h1M16 8h1"></path></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14l4-4M8.5 11.5L6 14a3.5 3.5 0 005 5l2.5-2.5M15.5 12.5L18 10a3.5 3.5 0 00-5-5l-2.5 2.5"></path></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"></path></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4h16v12H10l-5 4v-4H4z"></path><path d="M8 9h8M8 12h5"></path></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l1.5 2h-15zM10 21h4"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"></path></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><path d="M3.5 3.5h6.5v6.5H3.5zM14 3.5h6.5v6.5H14zM3.5 14h6.5v6.5H3.5zM14 14h2.5v2.5H14zM18 18h2.5v2.5H18zM14 18.5v2M18.5 14h2"></path></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5.2l3.4 2.3"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"></path></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5L2.5 20h19z"></path><path d="M12 10v4.5M12 17v.5"></path></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><path d="M2.5 6.5h19v11h-19z"></path><circle cx="12" cy="12" r="2.6"></circle></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"></path></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4.5 8h15l-1 13h-13zM8.5 8V6a3.5 3.5 0 017 0v2"></path></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"></path></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M4 12h16"></path></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"></path></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V8a4 4 0 018 0v3"></path></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M4 20h16l-2-9H6zM12 11V6M8 6h8M12 15.5l2-2"></path></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"></path></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 2.5h10v19H7zM10.5 18.5h3"></path></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7.5h4l2-3h6l2 3h4V19H3z"></path><circle cx="12" cy="13" r="3.5"></circle></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><path d="M2.5 5.5h19v13h-19z"></path><circle cx="8" cy="11" r="2.2"></circle><path d="M4.8 16c.6-1.8 1.8-2.6 3.2-2.6s2.6.8 3.2 2.6M14 9.5h5M14 12.5h5M14 15.5h3"></path></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9.5L12 4l9 5.5M4.5 10v8M9.5 10v8M14.5 10v8M19.5 10v8M3 20h18"></path></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M9 3.5h6v10H9zM5.5 11.5a6.5 6.5 0 0013 0M12 18v3"></path></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><path d="M3 4.5h18v15H3z"></path><path d="M3 16l5-5 4 4 3-3 6 6"></path><circle cx="16" cy="8.5" r="1.5"></circle></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8.5L18 6.5V21H6z"></path><path d="M9 11l6 6M15 11l-6 6"></path></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.5"></path></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></symbol>
+  <symbol id="i-family" viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M2.5 20c.4-4 2.6-6 5.5-6s5.1 2 5.5 6M13.5 20c.3-3 1.6-4.5 3.5-4.5s3.2 1.5 3.5 4.5"></path></symbol>
+
+  <symbol id="i-fish" viewBox="0 0 24 24"><path d="M3 12c3-5 9-6 13-3l5-3v12l-5-3c-4 3-10 2-13-3z"></path><circle cx="8.5" cy="11" r=".8"></circle></symbol>
+  <symbol id="i-squid" viewBox="0 0 24 24"><path d="M12 3c3 2 4 5 4 8v2H8v-2c0-3 1-6 4-8zM9 13v6M12 13v8M15 13v6"></path></symbol>
+  <symbol id="i-shrimp" viewBox="0 0 24 24"><path d="M5 9c2-4 8-5 12-2 3 2 3 6 0 8-2 1.5-5 1-6-1l3-2M5 9l-2-3M6 8L4 4"></path></symbol>
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M8 3h8v3H8zM7 6h10l1 3v10a2 2 0 01-2 2H8a2 2 0 01-2-2V9z"></path><path d="M6.5 12h11"></path></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9M7 17H4.5V9h15v8H17M7 14h10v6.5H7z"></path></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"></path></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"></path></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-3-6z"></path></symbol>
+</svg>
+<div class="r-onboard" data-component="OnboardingStep">
+  <header class="r-onboard__top" data-part="OnboardingStep.top">
+    <a class="c-icon-btn c-icon-btn--outline" href="#" aria-label="Quay lại bước trước" data-component="IconButton" data-variant="outline"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-back"></use></svg></a>
+    <div class="c-steps" role="img" aria-label="Bước 5 trên 6: Hàng hoá" data-component="StepProgress"><span class="c-steps__label" data-part="StepProgress.label"><b>Bước 5/6</b> · Hàng hoá</span><ol class="c-steps__bar" data-part="StepProgress.bar"><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--now" data-part="StepProgress.seg"></li><li class="c-steps__seg" data-part="StepProgress.seg"></li></ol></div>
+    <a class="r-onboard__help" href="onboard-help.html" data-part="OnboardingStep.help"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-help"></use></svg>Hỏi</a>
+  </header>
+  <main class="r-onboard__body" data-part="OnboardingStep.body">
+    <h1 class="r-onboard__title" data-part="OnboardingStep.title">AI đọc được 9 món — chị kiểm tra giá trước khi lưu</h1>
+    <section class="c-card" aria-labelledby="h-photo" data-component="Card">
+      <div class="c-card__head" data-part="Card.head"><h2 class="c-card__title" id="h-photo" data-part="Card.title">Ảnh đã chụp</h2></div>
+      <dl class="c-kv" data-component="FactList">
+        <dt><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-photo"></use></svg><span class="u-sr">Ảnh</span></dt><dd>Bảng giá viết tay</dd>
+        <dt>Chụp lúc</dt><dd>10:12 · 02/10/2026</dd>
+      </dl>
+    </section>
+    <p class="c-say" role="status" data-component="OwnerSentence"><b>7 món chắc chắn · 2 món cần kiểm tra.</b> Ô viền xanh nét đứt là món AI chưa chắc. Lưu xong vẫn sửa được.</p>
+    <section aria-labelledby="h-check">
+      <h2 class="c-card__title" id="h-check" data-part="Card.title">2 món chị cần kiểm tra</h2>
+      <ul class="m-rows" aria-labelledby="h-check">
+        <li class="m-row">
+          <span class="c-list__name" data-part="LedgerList.name">Cá bò một nắng</span>
+          <div class="m-check">
+            <label class="c-field" data-check="" data-component="Field"><span class="c-field__label" data-part="Field.label">Giá bán</span><span class="c-field__control" data-part="Field.control"><input class="c-field__input" inputmode="numeric" value="320.000" aria-describedby="h-p3" data-part="Field.input"><span class="c-field__suffix" data-part="Field.suffix">₫/kg</span></span><span class="c-field__hint" id="h-p3" data-part="Field.hint">AI chưa chắc — ảnh ghi “3?0.000”, chị kiểm tra lại</span></label>
+            <div class="m-act"><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Đúng rồi</button><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-photo"></use></svg>Xem trong ảnh</button></div>
+          </div>
+        </li>
+        <li class="m-row">
+          <span class="c-list__name" data-part="LedgerList.name">Nem chợ Huyện</span>
+          <div class="m-check">
+            <label class="c-field" data-check="" data-component="Field"><span class="c-field__label" data-part="Field.label">Giá bán</span><span class="c-field__control" data-part="Field.control"><input class="c-field__input" inputmode="numeric" value="50.000" aria-describedby="h-p9" data-part="Field.input"><span class="c-field__suffix" data-part="Field.suffix">₫/chục?</span></span><span class="c-field__hint" id="h-p9" data-part="Field.hint">AI chưa chắc — đơn vị ghi “chục?”, chị kiểm tra lại</span></label>
+            <div class="m-act"><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Đúng rồi</button><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-photo"></use></svg>Xem trong ảnh</button></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section aria-labelledby="h-sure">
+      <h2 class="c-card__title" id="h-sure" data-part="Card.title">7 món AI đọc chắc chắn</h2>
+      <ul class="c-list" aria-labelledby="h-sure" data-component="LedgerList">
+        <li class="c-list__row" data-part="LedgerList.row"><span class="c-list__name" data-part="LedgerList.name">Mực khô loại 1</span><span class="m-amt"><span class="c-list__amt" data-part="LedgerList.amt">1.250.000 ₫/kg</span><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Sửa</button></span></li>
+        <li class="c-list__row" data-part="LedgerList.row"><span class="c-list__name" data-part="LedgerList.name">Cá thu một nắng</span><span class="m-amt"><span class="c-list__amt" data-part="LedgerList.amt">380.000 ₫/kg</span><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Sửa</button></span></li>
+        <li class="c-list__row" data-part="LedgerList.row"><span class="c-list__name" data-part="LedgerList.name">Cá cơm sấy giòn hũ 250 g</span><span class="m-amt"><span class="c-list__amt" data-part="LedgerList.amt">95.000 ₫/hũ</span><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Sửa</button></span></li>
+        <li class="c-list__row" data-part="LedgerList.row"><span class="c-list__name" data-part="LedgerList.name">Tôm khô loại 1 hũ 500 g</span><span class="m-amt"><span class="c-list__amt" data-part="LedgerList.amt">420.000 ₫/hũ</span><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Sửa</button></span></li>
+        <li class="c-list__row" data-part="LedgerList.row"><span class="c-list__name" data-part="LedgerList.name">Ruốc biển hũ 200 g</span><span class="m-amt"><span class="c-list__amt" data-part="LedgerList.amt">65.000 ₫/hũ</span><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Sửa</button></span></li>
+        <li class="c-list__row" data-part="LedgerList.row"><span class="c-list__name" data-part="LedgerList.name">Mực rim me hũ 300 g</span><span class="m-amt"><span class="c-list__amt" data-part="LedgerList.amt">120.000 ₫/hũ</span><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Sửa</button></span></li>
+        <li class="c-list__row" data-part="LedgerList.row"><span class="c-list__name" data-part="LedgerList.name">Chả cá Quy Nhơn 500 g</span><span class="m-amt"><span class="c-list__amt" data-part="LedgerList.amt">85.000 ₫/cái</span><button class="c-btn c-btn--quiet" type="button" data-component="Button" data-variant="quiet">Sửa</button></span></li>
+      </ul>
+    </section>
+    <p class="r-onboard__saved" data-part="OnboardingStep.saved">Đã lưu — làm tiếp lúc nào cũng được</p>
+  </main>
+  <footer class="r-onboard__foot" data-part="OnboardingStep.foot">
+    <button class="c-btn c-btn--act c-btn--block c-btn--wrap" type="button" data-component="Button" data-variant="act block wrap">Lưu 9 món · còn 2 món chưa kiểm tra<svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-arrow"></use></svg></button>
+    <div class="r-onboard__alt" data-part="OnboardingStep.alt"><a href="#">Chụp thêm ảnh</a><a href="onboard-help.html">Gọi chị Lan</a></div>
+  </footer>
+</div>
+
+
+</body></html>

@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page patterns — specimen</title>
+<!-- Specimen of the page-pattern recipes (references/page-patterns.md), rendered with THIS project's tokens and components.
+     pattern.mjs copies it next to recipes.css; sections for patterns not added are removed. Neutral sample content —
+     screens use the brief's real content. Review at desktop and 390px: every recipe has its phone behaviour. -->
+<link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../apps/app/app-tokens.css"><link rel="stylesheet" href="components.css"><link rel="stylesheet" href="recipes.css">
+<style>/* specimen layout only */
+body{margin:0;background:var(--color-bg);color:var(--color-text);font:var(--fs-body)/var(--lh-body) var(--font-ui)}
+main{max-width:1280px;margin:0 auto;padding:var(--s-6) var(--s-4);display:grid;gap:var(--s-7)}
+section{display:grid;gap:var(--s-3);min-width:0} h1,h2{margin:0} h2{font-size:var(--fs-title)} .why{margin:0;color:var(--color-text-2);max-width:75ch}
+body { font-family: var(--font-body); color: var(--ink); background: var(--canvas); }
+</style></head><body><main>
+<h1>Page patterns</h1>
+
+
+
+<!-- @pattern board -->
+<section><h2>Board</h2><p class="why">Items move through stages. Drag, or "Move to…" from the keyboard. Phone: one stage at a time.</p>
+  <div class="r-board__tabs" role="tablist" aria-label="Stages"><button class="c-btn" role="tab" aria-selected="true" type="button">New 3</button><button class="c-btn" role="tab" aria-selected="false" type="button">Packing 1</button><button class="c-btn" role="tab" aria-selected="false" type="button">Shipped 0</button></div>
+  <div class="r-board">
+    <section class="r-board__col" aria-label="New, 3 orders"><div class="r-board__head">New <span class="r-board__count">3</span></div><ul class="r-board__list">
+      <li><button class="r-board__card" type="button" aria-describedby="mv"><b>#1043 · Anna Nguyen</b><span class="r-board__meta"><span>4 items</span><span>1,020.00</span></span></button></li>
+      <li><button class="r-board__card" type="button" aria-grabbed="true"><b>#1042 · Bao Le</b><span class="r-board__meta"><span>1 item</span><span>85.00</span></span></button></li>
+      <li><button class="r-board__card" type="button"><b>#1039 · Hoa Vu</b><span class="r-board__meta"><span>2 items</span><span>410.00</span></span></button></li></ul></section>
+    <section class="r-board__col" aria-label="Packing, 1 order, limit 3"><div class="r-board__head">Packing <span class="r-board__count">1</span><span class="r-board__limit">limit 3</span></div>
+      <div class="r-board__drop" aria-hidden="true"></div><ul class="r-board__list">
+      <li><button class="r-board__card" type="button"><b>#1037 · Quang Do</b><span class="r-board__meta"><span>6 items</span><span>2,150.00</span></span></button></li></ul></section>
+    <section class="r-board__col" aria-label="Shipped, empty"><div class="r-board__head">Shipped <span class="r-board__count">0</span></div><p class="r-board__empty">Nothing shipped today yet.</p></section>
+  </div><p id="mv" class="why">Keyboard: Space to pick up, arrows to move, Enter to drop — or "Move to…" in the card menu.</p></section>
+<!-- @end board -->
+
+
+<!-- @pattern split -->
+<section><h2>List + detail</h2><p class="why">Triage one item at a time. Phone: the list, then the detail as its own page.</p>
+  <div class="r-split"><ul class="r-split__list" aria-label="Requests">
+      <li><button class="r-split__item r-split__item--unread" type="button" aria-current="true"><span class="r-split__title">Refund request · #1031</span><span class="r-split__sub">Anna Nguyen · 10:42</span></button></li>
+      <li><button class="r-split__item" type="button"><span class="r-split__title">Address change · #1029</span><span class="r-split__sub">Minh Tran · 09:15</span></button></li>
+      <li><button class="r-split__item" type="button"><span class="r-split__title">Invoice copy · #1020</span><span class="r-split__sub">Lan Pham · yesterday</span></button></li></ul>
+    <div class="r-split__detail"><h3 style="margin:0">Refund request · #1031</h3><p style="margin:0">One jar arrived broken. Customer sent a photo and asks for a refund of 120.00.</p><div style="display:flex;gap:var(--s-2);flex-wrap:wrap"><button class="c-btn c-btn--primary" type="button">Approve refund</button><button class="c-btn" type="button">Reply</button></div></div></div></section>
+<!-- @end split -->
+
+
+</main></body></html>

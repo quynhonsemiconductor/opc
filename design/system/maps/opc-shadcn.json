@@ -1,0 +1,1133 @@
+{
+  "library": "shadcn/ui (OPC extension)",
+  "platform": "web-react",
+  "docs": "https://ui.shadcn.com/docs/components",
+  "extends": "references/component-maps/shadcn.json",
+  "components": {
+    "Button": {
+      "use": "Button",
+      "import": "import { Button } from \"@/components/ui/button\"",
+      "variants": {
+        "_default": {
+          "variant": "outline"
+        },
+        "act": {
+          "variant": "default",
+          "note": "sea --act (primary action, current place); ONE per view"
+        },
+        "quiet": {
+          "variant": "outline",
+          "className": "border-line-quiet"
+        },
+        "danger": {
+          "variant": "outline",
+          "className": "text-err border-err"
+        },
+        "wrap": {
+          "variant": "outline",
+          "className": "h-auto whitespace-normal text-left font-body font-medium"
+        },
+        "block": {
+          "className": "w-full"
+        },
+        "xl": {
+          "size": "lg",
+          "className": "h-16 rounded-2xl text-lg"
+        }
+      },
+      "states": {
+        "disabled": {
+          "disabled": true,
+          "note": "dashed border, never opacity only"
+        },
+        "aria-busy": {
+          "disabled": true,
+          "note": "spinner after label"
+        }
+      },
+      "parts": {
+        "icon": "lucide icon child",
+        "kbd": "<Kbd> child"
+      },
+      "notes": "add variant act to buttonVariants (cva); min-h from --target via theme"
+    },
+    "IconButton": {
+      "use": "Button size=icon",
+      "import": "import { Button } from \"@/components/ui/button\"",
+      "variants": {
+        "outline": {
+          "variant": "outline"
+        },
+        "_default": {
+          "variant": "ghost"
+        }
+      },
+      "parts": {
+        "badge": "absolute count badge (aria-hidden; count in aria-label)"
+      }
+    },
+    "Icon": {
+      "use": "lucide-react icon",
+      "import": "import { House, Store, ReceiptText, … } from \"lucide-react\"",
+      "notes": "sprite ids map 1:1 to lucide icons; strokeWidth 2.4, square caps; size 22/18/26",
+      "variants": {
+        "s": {
+          "size": 18
+        },
+        "l": {
+          "size": 26
+        },
+        "_default": {
+          "size": 22
+        }
+      }
+    },
+    "Kbd": {
+      "use": "Kbd",
+      "import": "import { Kbd } from \"@/components/ui/kbd\"",
+      "notes": "shadcn Kbd (2025) or a <kbd> with tokens"
+    },
+    "SearchField": {
+      "use": "Input with leading icon",
+      "import": "import { Input } from \"@/components/ui/input\"",
+      "variants": {
+        "strong": {
+          "className": "border-line-strong"
+        }
+      },
+      "parts": {
+        "input": "Input type=search"
+      }
+    },
+    "Card": {
+      "use": "Card",
+      "import": "import { Card } from \"@/components/ui/card\"",
+      "variants": {
+        "tight": {
+          "className": "p-4"
+        }
+      },
+      "parts": {
+        "head": "CardHeader (flex, baseline)",
+        "title": "CardTitle (with 12px ink square)"
+      }
+    },
+    "Table": {
+      "use": "Table",
+      "import": "import { Table } from \"@/components/ui/table\"",
+      "variants": {
+        "stack": {
+          "note": "below 720px render rows as 2-line items (cell roles main/end/wide/hide)"
+        },
+        "row--err": {
+          "className": "bg-destructive/5 [&>td:first-child]:shadow-[inset_3px_0_0_var(--destructive)]",
+          "note": "row needing the owner whose sign is err; also derive from status"
+        },
+        "zero": {
+          "className": "text-muted-foreground font-normal",
+          "note": "\"0 ₫\" for no balance, never \"—\""
+        }
+      },
+      "parts": {
+        "scroll": "overflow-x-auto wrapper",
+        "num": "TableCell text-right",
+        "code": "TableCell font-display"
+      }
+    },
+    "Switch": {
+      "use": "Switch + Label",
+      "import": "import { Switch } from \"@/components/ui/switch\"\nimport { Label } from \"@/components/ui/label\"",
+      "states": {
+        "aria-checked": {
+          "checked": true
+        },
+        "disabled": {
+          "disabled": true
+        }
+      },
+      "variants": {
+        "row": {
+          "note": "settings row: Label left, state Badge (Bật / Tắt / Bắt buộc / Sắp có); lock = disabled; soon = Badge only, no Switch"
+        }
+      }
+    },
+    "SegmentedChoice": {
+      "use": "ToggleGroup type=single",
+      "import": "import { ToggleGroup } from \"@/components/ui/toggle-group\"",
+      "notes": "role radiogroup semantics; selected = ink fill"
+    },
+    "FilterBar": {
+      "use": "ToggleGroup type=multiple or single",
+      "import": "import { ToggleGroup } from \"@/components/ui/toggle-group\"",
+      "notes": "horizontal scroll on phone"
+    },
+    "FilterChip": {
+      "use": "ToggleGroupItem",
+      "import": "import { ToggleGroup } from \"@/components/ui/toggle-group\"",
+      "states": {
+        "aria-pressed": {
+          "data-state": "on"
+        }
+      }
+    },
+    "ThresholdMeter": {
+      "use": "Progress + marker",
+      "import": "import { Progress } from \"@/components/ui/progress\"",
+      "notes": "add the 1 tỷ marker as an absolutely positioned child",
+      "variants": {
+        "quiet": {
+          "className": "h-1.5 [&>div]:bg-ink-3",
+          "note": "neutral fill + warning line below (crossing 1 tỷ is not a goal)"
+        }
+      }
+    },
+    "HouseholdSwitcher": {
+      "use": "DropdownMenu trigger",
+      "import": "import { DropdownMenu } from \"@/components/ui/dropdown-menu\"",
+      "variants": {
+        "bar": {
+          "note": "phone header version"
+        }
+      }
+    },
+    "AccountButton": {
+      "use": "DropdownMenu trigger + Avatar",
+      "import": "import { Avatar, AvatarFallback } from \"@/components/ui/avatar\""
+    },
+    "Picker": {
+      "use": "Button opening Command in Dialog/Drawer",
+      "import": "import { Command } from \"@/components/ui/command\"",
+      "notes": "customer search by name / MST"
+    },
+    "SidebarNav": {
+      "use": "Sidebar",
+      "import": "import { Sidebar, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton, SidebarMenuBadge, SidebarMenuAction } from \"@/components/ui/sidebar\"; import { Collapsible, CollapsibleTrigger, CollapsibleContent } from \"@/components/ui/collapsible\"",
+      "parts": {
+        "item--counter": "SidebarMenuButton with outline, trailing arrow",
+        "count": "SidebarMenuBadge (on the child that owns the work; summed on a collapsed parent)",
+        "grp": "Collapsible > SidebarMenuItem (open = route is inside the section)",
+        "peek": "SidebarMenuAction asChild > CollapsibleTrigger (44px, aria-expanded)",
+        "sub": "CollapsibleContent > SidebarMenuSub",
+        "subitem": "SidebarMenuSubButton asChild > Link (isActive = aria-current)",
+        "item--here": "SidebarMenuButton isActive={false} font-semibold (section of current page)",
+        "list--foot": "SidebarFooter"
+      },
+      "notes": "Tree from one NAV config filtered by business model (features) and role; same config renders the phone \"Thêm\" sheet (variant sheet: all open, no peek). Hide SectionNav ≥721px.",
+      "variants": {
+        "sheet": {
+          "note": "Drawer on phone; every section open, no disclosure buttons"
+        }
+      }
+    },
+    "BrandMark": {
+      "use": "BrandMark",
+      "import": "import { BrandMark } from \"@/components/opc/brand-mark\"",
+      "custom": true,
+      "notes": "OPC mark + by QNSC"
+    },
+    "ConnectionStatus": {
+      "use": "ConnectionStatus",
+      "import": "import { ConnectionStatus } from \"@/components/opc/connection-status\"",
+      "custom": true,
+      "notes": "dot + words; off = hollow, err = red"
+    },
+    "OwnerSentence": {
+      "use": "OwnerSentence",
+      "import": "import { OwnerSentence } from \"@/components/opc/owner-sentence\"",
+      "custom": true,
+      "notes": "plain sentence above a figure"
+    },
+    "StatusSign": {
+      "use": "StatusSign",
+      "import": "import { StatusSign } from \"@/components/opc/status-sign\"",
+      "custom": true,
+      "notes": "pictogram + word; variants wait/pend/ok/you/err/unk; build on Badge if wanted"
+    },
+    "MoneyLine": {
+      "use": "MoneyLine",
+      "import": "import { MoneyLine } from \"@/components/opc/money-line\"",
+      "custom": true,
+      "notes": "3 squares, data-step 1–3, role=img + aria-label"
+    },
+    "LedgerList": {
+      "use": "LedgerList",
+      "import": "import { LedgerList } from \"@/components/opc/ledger-list\"",
+      "custom": true,
+      "notes": "hairline rows"
+    },
+    "QuantityStepper": {
+      "use": "QuantityStepper",
+      "import": "import { QuantityStepper } from \"@/components/opc/quantity-stepper\"",
+      "custom": true,
+      "notes": "spinbutton semantics; −/value/+"
+    },
+    "QrPayment": {
+      "use": "QrPayment",
+      "import": "import { QrPayment } from \"@/components/opc/qr-payment\"",
+      "custom": true,
+      "notes": "VietQR + aria-live status"
+    },
+    "MoneyConfirm": {
+      "use": "MoneyConfirm",
+      "import": "import { MoneyConfirm } from \"@/components/opc/money-confirm\"",
+      "custom": true,
+      "notes": "locked until bank reports (aria-disabled + reason); --done"
+    },
+    "PhoneTabBar": {
+      "use": "PhoneTabBar",
+      "import": "import { PhoneTabBar } from \"@/components/opc/phone-tab-bar\"",
+      "custom": true,
+      "notes": "fixed bottom nav ≤720px"
+    },
+    "AppShell": {
+      "use": "AppShell",
+      "import": "import { AppShell } from \"@/components/opc/app-shell\"",
+      "custom": true,
+      "notes": "recipe: composition of the components it uses (registry.json → uses)"
+    },
+    "PageHeader": {
+      "use": "PageHeader",
+      "import": "import { PageHeader } from \"@/components/opc/page-header\"",
+      "custom": true,
+      "notes": "recipe: composition of the components it uses (registry.json → uses)"
+    },
+    "PhonePaymentSheet": {
+      "use": "PhonePaymentSheet",
+      "import": "import { PhonePaymentSheet } from \"@/components/opc/phone-payment-sheet\"",
+      "custom": true,
+      "notes": "recipe: composition of the components it uses (registry.json → uses)"
+    },
+    "Banner": {
+      "use": "Alert",
+      "import": "import { Alert, AlertTitle, AlertDescription } from \"@/components/ui/alert\"",
+      "variants": {
+        "err": {
+          "variant": "destructive",
+          "role": "alert"
+        },
+        "pend": {
+          "className": "border-dashed border-pend bg-pend-soft"
+        },
+        "ok": {
+          "className": "border-ok bg-ok-soft"
+        }
+      },
+      "notes": "pictogram + title + body + actions; --err uses role=alert"
+    },
+    "StateTabs": {
+      "use": "Tabs > TabsList > TabsTrigger",
+      "import": "import { Tabs, TabsList, TabsTrigger } from \"@/components/ui/tabs\"",
+      "variants": {
+        "tab--you": {
+          "note": "dark count badge"
+        }
+      },
+      "notes": "count badge inside each trigger; horizontal scroll + edge fade on phone"
+    },
+    "Dialog": {
+      "use": "Dialog (≥721px) / Drawer (≤720px)",
+      "import": "import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from \"@/components/ui/dialog\"\nimport { Drawer } from \"@/components/ui/drawer\"",
+      "notes": "focus to title, trap, Esc, return focus; footer note = result preview; primary names the result"
+    },
+    "OptionList": {
+      "use": "RadioGroup",
+      "import": "import { RadioGroup } from \"@/components/ui/radio-group\""
+    },
+    "OptionCard": {
+      "use": "RadioGroupItem rendered as a card (label wraps title/meta/why/amount)",
+      "import": "import { RadioGroupItem } from \"@/components/ui/radio-group\"",
+      "states": {
+        "aria-checked": {
+          "checked": true
+        },
+        "disabled": {
+          "disabled": true
+        }
+      },
+      "variants": {
+        "big": {
+          "note": "pictogram + bigger title"
+        },
+        "action": {
+          "note": "no radio; a card that performs an action (render as Button/Link)"
+        },
+        "best": {
+          "note": "the recommended choice + Badge 'Nên chọn'; alternatives in Collapsible 'Cách khác'"
+        },
+        "on": {
+          "data-state": "checked",
+          "note": "checkbox card in a multi-select group (r-model)"
+        }
+      }
+    },
+    "Field": {
+      "use": "Label + Input (+ FormMessage)",
+      "import": "import { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"",
+      "variants": {
+        "money": {
+          "inputMode": "numeric",
+          "className": "text-right font-display text-amount-l"
+        }
+      },
+      "states": {
+        "data-invalid": {
+          "aria-invalid": true
+        }
+      }
+    },
+    "EmptyState": {
+      "use": "EmptyState",
+      "import": "import { EmptyState } from \"@/components/opc/empty-state\"",
+      "custom": true,
+      "notes": "pic + title + body (+ one action)"
+    },
+    "ChangeDue": {
+      "use": "ChangeDue",
+      "import": "import { ChangeDue } from \"@/components/opc/change-due\"",
+      "custom": true,
+      "notes": "high-contrast change-due panel; --short = customer short of money"
+    },
+    "FactList": {
+      "use": "FactList",
+      "import": "import { FactList } from \"@/components/opc/fact-list\"",
+      "custom": true,
+      "notes": "<dl> of facts; raw bank strings verbatim"
+    },
+    "CodeInput": {
+      "use": "InputOTP > InputOTPGroup > InputOTPSlot ×6",
+      "import": "import { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/components/ui/input-otp\"",
+      "notes": "autocomplete one-time-code, paste fills all"
+    },
+    "Menu": {
+      "use": "DropdownMenu (sort, DropdownMenuRadioGroup) / Command in Popover (search suggestions)",
+      "import": "import { DropdownMenu } from \"@/components/ui/dropdown-menu\"\nimport { Command } from \"@/components/ui/command\""
+    },
+    "Calendar": {
+      "use": "Calendar mode=\"range\" in Dialog/Drawer",
+      "import": "import { Calendar } from \"@/components/ui/calendar\"",
+      "notes": "locale vi, weekStartsOn 1, disable future"
+    },
+    "Pagination": {
+      "use": "Pagination",
+      "import": "import { Pagination } from \"@/components/ui/pagination\"",
+      "notes": "compact (accountant) only; owners use load-more"
+    },
+    "FilterChipRemovable": {
+      "use": "Badge + Button size=icon",
+      "import": "import { Badge } from \"@/components/ui/badge\""
+    },
+    "StepProgress": {
+      "use": "StepProgress",
+      "import": "import { StepProgress } from \"@/components/opc/step-progress\"",
+      "custom": true,
+      "notes": "Bước n/6 + segments"
+    },
+    "AssistantAnswer": {
+      "use": "AssistantAnswer",
+      "import": "import { AssistantAnswer } from \"@/components/opc/assistant-answer\"",
+      "custom": true,
+      "notes": "automatic answer; aria-live; next to human help"
+    },
+    "CoachMark": {
+      "use": "CoachMark",
+      "import": "import { CoachMark } from \"@/components/opc/coach-mark\"",
+      "custom": true,
+      "notes": "guided first sale bubble; non-modal dialog"
+    },
+    "CaptureFrame": {
+      "use": "CaptureFrame",
+      "import": "import { CaptureFrame } from \"@/components/opc/capture-frame\"",
+      "custom": true,
+      "notes": "frame around vendor capture SDK"
+    },
+    "ActiveFilters": {
+      "use": "ActiveFilters",
+      "import": "import { ActiveFilters } from \"@/components/opc/active-filters\"",
+      "custom": true,
+      "notes": "chips row + clear + result"
+    },
+    "MenuAnchor": {
+      "use": "MenuAnchor",
+      "import": "import { MenuAnchor } from \"@/components/opc/menu-anchor\"",
+      "custom": true,
+      "notes": "positions a Menu"
+    },
+    "OnboardingStep": {
+      "use": "OnboardingStep",
+      "import": "import { OnboardingStep } from \"@/components/opc/onboarding-step\"",
+      "custom": true,
+      "notes": "recipe"
+    },
+    "HelpSheet": {
+      "use": "HelpSheet",
+      "import": "import { HelpSheet } from \"@/components/opc/help-sheet\"",
+      "custom": true,
+      "notes": "recipe"
+    },
+    "ListToolbar": {
+      "use": "ListToolbar",
+      "import": "import { ListToolbar } from \"@/components/opc/list-toolbar\"",
+      "custom": true,
+      "notes": "recipe"
+    },
+    "FilterPanel": {
+      "use": "FilterPanel",
+      "import": "import { FilterPanel } from \"@/components/opc/filter-panel\"",
+      "custom": true,
+      "notes": "recipe"
+    },
+    "Skeleton": {
+      "use": "Skeleton",
+      "import": "import { Skeleton } from \"@/components/ui/skeleton\"",
+      "variants": {
+        "line": {
+          "className": "h-4"
+        },
+        "title": {
+          "className": "h-7"
+        },
+        "figure": {
+          "className": "h-14"
+        },
+        "block": {
+          "className": "h-24 rounded-md"
+        },
+        "bar": {
+          "className": "h-5 w-full rounded-md"
+        },
+        "row": {
+          "className": "h-[72px] w-full rounded-2xl"
+        }
+      }
+    },
+    "LoadingNote": {
+      "use": "LoadingNote",
+      "import": "import { LoadingNote } from \"@/components/opc/loading-note\"",
+      "custom": true,
+      "notes": "'Đang tải… · số liệu trước đó hh:mm'"
+    },
+    "DocumentPreview": {
+      "use": "DocumentPreview",
+      "import": "import { DocumentPreview } from \"@/components/opc/document-preview\"",
+      "custom": true,
+      "notes": "paper-like e-invoice preview"
+    },
+    "Timeline": {
+      "use": "Timeline",
+      "import": "import { Timeline } from \"@/components/opc/timeline\"",
+      "custom": true,
+      "notes": "order/invoice history"
+    },
+    "SectionNav": {
+      "use": "nav with Link items (aria-current)",
+      "import": "import { Link } from \"@tanstack/react-router\"",
+      "notes": "one route per item; feature switches filter items",
+      "variants": {
+        "wrap": {
+          "className": "flex-wrap",
+          "note": "short lists: wrap instead of scrolling on phone"
+        }
+      }
+    },
+    "DestinationList": {
+      "use": "DestinationList",
+      "import": "import { DestinationList } from \"@/components/opc/destination-list\"",
+      "custom": true,
+      "notes": "phone Thêm sheet / settings index"
+    },
+    "ApprovalList": {
+      "use": "ApprovalList",
+      "import": "import { ApprovalList } from \"@/components/opc/approval-list\"",
+      "custom": true,
+      "notes": "approval inbox list"
+    },
+    "ApprovalCard": {
+      "use": "ApprovalCard",
+      "import": "import { ApprovalCard } from \"@/components/opc/approval-card\"",
+      "custom": true,
+      "notes": "evidence + consequence before approve; audit on action"
+    },
+    "SidePanel": {
+      "use": "Sheet side=right (desktop) / Drawer (phone)",
+      "import": "import { Sheet, SheetContent } from \"@/components/ui/sheet\"",
+      "variants": {
+        "wide": {
+          "className": "sm:max-w-[560px]"
+        },
+        "docked": {
+          "note": "render inline in a 3-column shell"
+        }
+      }
+    },
+    "CommandPalette": {
+      "use": "CommandDialog",
+      "import": "import { CommandDialog, CommandInput, CommandList, CommandGroup, CommandItem } from \"@/components/ui/command\"",
+      "notes": "⌘K and '/'; groups Đơn · Hành động · Đi tới"
+    },
+    "Toast": {
+      "use": "toast() from sonner",
+      "import": "import { toast } from \"sonner\"",
+      "variants": {
+        "err": {
+          "note": "duration: Infinity"
+        },
+        "pend": {
+          "note": "icon on truth-hatch"
+        },
+        "ok": {
+          "note": "icon on truth-ok"
+        },
+        "undo": {
+          "note": "toast(text, { action: { label: \"Hoàn tác\", onClick } }), duration 6000"
+        }
+      }
+    },
+    "ToastRegion": {
+      "use": "<Toaster position=\"bottom-center\"/>",
+      "import": "import { Toaster } from \"@/components/ui/sonner\"",
+      "note": "dark pill (bg-panel); pend/ok icons use truth colours; undo = toast(..., {action:{label:\"Hoàn tác\"}}); hide while phone payment sheet is open"
+    },
+    "Checkbox": {
+      "use": "Checkbox",
+      "import": "import { Checkbox } from \"@/components/ui/checkbox\""
+    },
+    "Breadcrumb": {
+      "use": "Breadcrumb",
+      "import": "import { Breadcrumb } from \"@/components/ui/breadcrumb\""
+    },
+    "SyncStatus": {
+      "use": "SyncStatus",
+      "import": "import { SyncStatus } from \"@/components/opc/sync-status\"",
+      "custom": true,
+      "notes": "save/sync state"
+    },
+    "NotificationList": {
+      "use": "NotificationList",
+      "import": "import { NotificationList } from \"@/components/opc/notification-list\"",
+      "custom": true,
+      "notes": "notification centre"
+    },
+    "Notification": {
+      "use": "Notification",
+      "import": "import { Notification } from \"@/components/opc/notification\"",
+      "custom": true,
+      "notes": "row"
+    },
+    "BulkActionBar": {
+      "use": "BulkActionBar",
+      "import": "import { BulkActionBar } from \"@/components/opc/bulk-action-bar\"",
+      "custom": true,
+      "notes": "selection toolbar"
+    },
+    "Receipt": {
+      "use": "Receipt",
+      "import": "import { Receipt } from \"@/components/opc/receipt\"",
+      "custom": true,
+      "notes": "customer slip / PDF"
+    },
+    "ZaloMessagePreview": {
+      "use": "ZaloMessagePreview",
+      "import": "import { ZaloMessagePreview } from \"@/components/opc/zalo-message-preview\"",
+      "custom": true,
+      "notes": "ZNS template preview"
+    },
+    "TextSizePicker": {
+      "use": "TextSizePicker",
+      "import": "import { TextSizePicker } from \"@/components/opc/text-size-picker\"",
+      "custom": true,
+      "notes": "display pref"
+    },
+    "TodayFigure": {
+      "use": "<TodayFigure/> (opc)",
+      "import": "import { TodayFigure } from \"@/components/opc/today-figure\"",
+      "note": "plain region, no Card chrome; fig = text-[72px] font-bold tracking-[-.045em] tabular-nums; ₫ via <Cur/>"
+    },
+    "DayColumns": {
+      "use": "<DayColumns days={7}/> (opc, CSS grid)",
+      "import": "import { DayColumns } from \"@/components/opc/day-columns\"",
+      "note": "today bar bg-primary; others bg-neutral-fill; values via Tooltip (desktop) / Popover (touch); every bar has sr-only text"
+    },
+    "MoneyTruthBar": {
+      "use": "<MoneyTruthBar ok pend cash/> (opc)",
+      "import": "import { MoneyTruthBar } from \"@/components/opc/money-truth-bar\"",
+      "note": "SIGNATURE. ok=bg-truth-ok solid · pend=bg-[image:var(--truth-hatch)] + dashed outline · cash=bg-truth-cash; pending legend item is a Link to the to-do",
+      "variants": {
+        "legend-only": {
+          "note": "first run: explains the three colours, no bar"
+        }
+      }
+    },
+    "ConnectionPill": {
+      "use": "Badge variant=\"outline\" + Tooltip",
+      "import": "import { Badge } from \"@/components/ui/badge\"",
+      "variants": {
+        "err": {
+          "className": "bg-err-soft text-err-ink border-err/35"
+        },
+        "off": {
+          "note": "device offline = pending tone"
+        }
+      },
+      "note": "ONE pill for all connections; on touch open Popover instead of Tooltip"
+    },
+    "OffLabel": {
+      "use": "span",
+      "note": "hollow dot + ink-3 text"
+    },
+    "CountBadge": {
+      "use": "Badge variant=\"secondary\"",
+      "import": "import { Badge } from \"@/components/ui/badge\"",
+      "className": "rounded-full"
+    },
+    "TextLink": {
+      "use": "Button variant=\"link\"",
+      "import": "import { Button } from \"@/components/ui/button\"",
+      "className": "text-act-ink min-h-11"
+    },
+    "Subline": {
+      "use": "p",
+      "className": "text-base text-ink-3"
+    },
+    "Figure": {
+      "use": "span",
+      "className": "text-4xl font-bold tracking-tight tabular-nums"
+    },
+    "TodoList": {
+      "use": "<ol> of rows + Button",
+      "import": "import { Button } from \"@/components/ui/button\"",
+      "note": "row--now: bg-act-soft + Button variant=default; others Button variant=outline; --done: check icon in ok-soft circle; max 3 + \"n việc không gấp\" link"
+    },
+    "OrderRows": {
+      "use": "<ul> of <Link> rows (NOT <Table>)",
+      "note": "who (name + code·channel·time) | StatusSign | amount text-lg font-semibold; two-line on phone and with large text ≤1180px"
+    },
+    "DebtList": {
+      "use": "<ul> key/value rows",
+      "note": "hairline between rows"
+    },
+    "TileGrid": {
+      "use": "div grid auto-fill minmax(196px,1fr)",
+      "variants": {
+        "few": {
+          "note": "2-up grid for a small catalogue"
+        }
+      }
+    },
+    "ProductTile": {
+      "use": "<button> (opc ProductTile)",
+      "import": "import { ProductTile } from \"@/components/opc/product-tile\"",
+      "variants": {
+        "incart": {
+          "className": "bg-act-soft border-act ring-1 ring-act"
+        },
+        "justadded": {
+          "note": "one-shot scale pop 320ms spring; respect prefers-reduced-motion"
+        },
+        "big": {
+          "note": "idle hairline / in-cart raised; còn · đã giữ"
+        }
+      },
+      "note": "text-first; photo slot when owner adds one; phone = row with 44px round add button"
+    },
+    "OrderLine": {
+      "use": "li grid + QuantityStepper",
+      "note": "amount text-lg font-bold; calc text-sm ink-2"
+    },
+    "OrderEmpty": {
+      "use": "EmptyState (centered)",
+      "note": "\"Chưa có món nào\" + kbd hint; Thu tiền button stays disabled with reason"
+    },
+    "QrCard": {
+      "use": "figure + img",
+      "note": "QR 196px on white, amount 36px bold below"
+    },
+    "PaymentSteps": {
+      "use": "<ol aria-label> with aria-current=\"step\"",
+      "import": "import { PaymentSteps } from \"@/components/opc/payment-steps\"",
+      "variants": {
+        "now": {
+          "className": "dot bg-primary ring-6 ring-act-ring (pulse)"
+        },
+        "pendnow": {
+          "className": "dot bg-[image:var(--truth-hatch)] border-dashed border-truth-pend"
+        },
+        "oknow": {
+          "className": "dot bg-truth-ok text-white"
+        },
+        "done": {
+          "className": "dot bg-ok-soft text-ok"
+        },
+        "next": {
+          "className": "dot border-dashed border-line-quiet"
+        }
+      }
+    },
+    "WaitBar": {
+      "use": "div role=status aria-live=polite",
+      "note": "spinner + \"OPC tự chuyển bước khi ngân hàng báo — không cần bấm\""
+    },
+    "MoneyArrived": {
+      "use": "<MoneyArrived state=\"pend|ok\"/> (opc)",
+      "import": "import { MoneyArrived } from \"@/components/opc/money-arrived\"",
+      "note": "replaces QrCard when the bank reports; role=status aria-live=assertive; enter 480ms spring; ok draws the check (stroke-dashoffset); optional sound/vibration (setting)",
+      "variants": {
+        "ok": {
+          "note": "verified: green, check draws in"
+        }
+      }
+    },
+    "InlineNote": {
+      "use": "Alert (subtle, no border)",
+      "import": "import { Alert } from \"@/components/ui/alert\"",
+      "className": "bg-pend-soft border-0"
+    },
+    "CashPad": {
+      "use": "Input inputMode=\"numeric\" (large) + ToggleGroup",
+      "import": "import { Input } from \"@/components/ui/input\"",
+      "note": "field 64px, focus ring act-ring; value right-aligned tabular",
+      "variants": {
+        "empty": {
+          "note": "no value yet: quiet border, change due shows \"—\""
+        }
+      }
+    },
+    "QuickAmounts": {
+      "use": "ToggleGroup type=\"single\"",
+      "import": "import { ToggleGroup } from \"@/components/ui/toggle-group\"",
+      "note": "first item labelled \"vừa đủ\""
+    },
+    "HomeLayout": {
+      "use": "grid 1.55fr / minmax(380px,1fr); regions divided by hairlines (no Card chrome) except the to-do panel (flat canvas-quiet)"
+    },
+    "CounterLayout": {
+      "use": "grid 1fr / 440px order panel; variant sheet = phone",
+      "variants": {
+        "sheet": {
+          "note": "phone: OrderPanel opens as Sheet side=\"bottom\" over the products, scrim behind"
+        }
+      }
+    },
+    "OrderPanel": {
+      "use": "aside (desktop) · Sheet side=\"bottom\" (phone)",
+      "import": "import { Sheet } from \"@/components/ui/sheet\"",
+      "variants": {
+        "pay": {
+          "note": "payment is step 2 in the same panel, back button returns to lines"
+        }
+      }
+    },
+    "PhoneCartPill": {
+      "use": "fixed dark pill: total + Thu tiền",
+      "note": "opens OrderPanel sheet"
+    },
+    "SettingRow": {
+      "use": "Switch + Label + Badge (state)",
+      "note": "lock = disabled + Badge 'Bắt buộc'; soon = Badge only, no Switch"
+    },
+    "ListHead": {
+      "use": "custom flex: figure + MoneyTruthBar + Link panel"
+    },
+    "FeedFilterBar": {
+      "use": "ToggleGroup (single) + labelled ToggleGroup rows"
+    },
+    "SettingsGroups": {
+      "use": "section + Separator (no Card border)"
+    },
+    "OptionRecommended": {
+      "use": "RadioGroupItem + Badge 'Nên chọn'",
+      "note": "alternatives in Collapsible 'Cách khác'"
+    },
+    "TableWhoCell": {
+      "use": "TableCell with two lines (b + small)"
+    },
+    "DetailHead": {
+      "use": "custom header; Button default + Button outline + Button ghost destructive"
+    },
+    "WizardRecap": {
+      "use": "Collapsible (trigger = verified Badge + 'Xem lại')"
+    },
+    "StepMap": {
+      "use": "custom <ol> in src/components/opc/StepMap.tsx",
+      "custom": true,
+      "note": "aria-current=step on the current item; compact variant <1180 shows only the current step + minutes left"
+    },
+    "WorkList": {
+      "use": "custom shared component src/components/opc/WorkList.tsx",
+      "custom": true
+    },
+    "WorkItem": {
+      "use": "custom shared component src/components/opc/WorkItem.tsx",
+      "custom": true
+    },
+    "ListDetailSplit": {
+      "use": "custom shared component src/components/opc/ListDetailSplit.tsx",
+      "custom": true
+    },
+    "RuleChecks": {
+      "use": "custom shared component src/components/opc/RuleChecks.tsx",
+      "custom": true
+    },
+    "DecisionPanel": {
+      "use": "custom shared component src/components/opc/DecisionPanel.tsx",
+      "custom": true
+    },
+    "SourceQuote": {
+      "use": "custom shared component src/components/opc/SourceQuote.tsx",
+      "custom": true
+    },
+    "MatchLine": {
+      "use": "custom shared component src/components/opc/MatchLine.tsx",
+      "custom": true
+    },
+    "OrderJourney": {
+      "use": "custom shared component src/components/opc/OrderJourney.tsx",
+      "custom": true
+    },
+    "Board": {
+      "use": "custom shared component src/components/opc/Board.tsx",
+      "custom": true
+    },
+    "PickList": {
+      "use": "custom shared component src/components/opc/PickList.tsx",
+      "custom": true
+    },
+    "SimulatedTag": {
+      "use": "custom shared component src/components/opc/SimulatedTag.tsx",
+      "custom": true
+    },
+    "CourierLink": {
+      "use": "custom shared component src/components/opc/CourierLink.tsx",
+      "custom": true
+    },
+    "AllocationList": {
+      "use": "custom shared component src/components/opc/AllocationList.tsx",
+      "custom": true
+    },
+    "Tag": {
+      "use": "custom shared component src/components/opc/Tag.tsx",
+      "custom": true
+    },
+    "NotCountedYet": {
+      "use": "custom shared component src/components/opc/NotCountedYet.tsx",
+      "custom": true
+    },
+    "FoldedHistory": {
+      "use": "custom shared component src/components/opc/FoldedHistory.tsx",
+      "custom": true
+    },
+    "ResultPreview": {
+      "use": "custom shared component src/components/opc/ResultPreview.tsx",
+      "custom": true
+    },
+    "CaptureRead": {
+      "use": "custom shared component src/components/opc/CaptureRead.tsx",
+      "custom": true
+    },
+    "StockTable": {
+      "use": "custom shared component src/components/opc/StockTable.tsx",
+      "custom": true
+    },
+    "Trace": {
+      "use": "custom shared component src/components/opc/Trace.tsx",
+      "custom": true
+    },
+    "LockConsequences": {
+      "use": "custom shared component src/components/opc/LockConsequences.tsx",
+      "custom": true
+    },
+    "CountSheet": {
+      "use": "custom shared component src/components/opc/CountSheet.tsx",
+      "custom": true
+    },
+    "MaterialsCheck": {
+      "use": "custom shared component src/components/opc/MaterialsCheck.tsx",
+      "custom": true
+    },
+    "QuietRail": {
+      "use": "custom shared component src/components/opc/QuietRail.tsx",
+      "custom": true
+    },
+    "Reconcile": {
+      "use": "custom shared component src/components/opc/Reconcile.tsx",
+      "custom": true
+    },
+    "CloseGate": {
+      "use": "custom shared component src/components/opc/CloseGate.tsx",
+      "custom": true
+    },
+    "LedgerTable": {
+      "use": "custom shared component src/components/opc/LedgerTable.tsx",
+      "custom": true
+    },
+    "TaxCalc": {
+      "use": "custom shared component src/components/opc/TaxCalc.tsx",
+      "custom": true
+    },
+    "TrustLine": {
+      "use": "custom shared component src/components/opc/TrustLine.tsx",
+      "custom": true
+    },
+    "DraftDocument": {
+      "use": "custom shared component src/components/opc/DraftDocument.tsx",
+      "custom": true
+    },
+    "HowToSteps": {
+      "use": "custom shared component src/components/opc/HowToSteps.tsx",
+      "custom": true
+    },
+    "PayFacts": {
+      "use": "custom shared component src/components/opc/PayFacts.tsx",
+      "custom": true
+    },
+    "ReadinessArea": {
+      "use": "custom shared component src/components/opc/ReadinessArea.tsx",
+      "custom": true
+    },
+    "ModelChoice": {
+      "use": "custom shared component src/components/opc/ModelChoice.tsx",
+      "custom": true
+    },
+    "ImportPaths": {
+      "use": "custom shared component src/components/opc/ImportPaths.tsx",
+      "custom": true
+    },
+    "ConnectorTable": {
+      "use": "custom shared component src/components/opc/ConnectorTable.tsx",
+      "custom": true
+    },
+    "ApprovalPolicy": {
+      "use": "custom shared component src/components/opc/ApprovalPolicy.tsx",
+      "custom": true
+    },
+    "RolesExplainer": {
+      "use": "custom shared component src/components/opc/RolesExplainer.tsx",
+      "custom": true
+    },
+    "PriceTable": {
+      "use": "custom shared component src/components/opc/PriceTable.tsx",
+      "custom": true
+    },
+    "PriceList": {
+      "use": "custom shared component src/components/opc/PriceList.tsx",
+      "custom": true
+    },
+    "ProgramShell": {
+      "use": "custom shared component src/components/opc/ProgramShell.tsx",
+      "custom": true
+    },
+    "ProgramStats": {
+      "use": "custom shared component src/components/opc/ProgramStats.tsx",
+      "custom": true
+    },
+    "Funnel": {
+      "use": "custom shared component src/components/opc/Funnel.tsx",
+      "custom": true
+    },
+    "AdoptionBars": {
+      "use": "custom shared component src/components/opc/AdoptionBars.tsx",
+      "custom": true
+    },
+    "ProgramReport": {
+      "use": "custom shared component src/components/opc/ProgramReport.tsx",
+      "custom": true
+    },
+    "OfflineBanner": {
+      "use": "custom shared component src/components/opc/OfflineBanner.tsx",
+      "custom": true
+    },
+    "QueuedChip": {
+      "use": "custom shared component src/components/opc/QueuedChip.tsx",
+      "custom": true
+    },
+    "OfflineRules": {
+      "use": "custom shared component src/components/opc/OfflineRules.tsx",
+      "custom": true
+    },
+    "SendQueue": {
+      "use": "custom shared component src/components/opc/SendQueue.tsx",
+      "custom": true
+    },
+    "DemoConsole": {
+      "use": "custom shared component src/components/opc/DemoConsole.tsx",
+      "custom": true
+    },
+    "KnownCustomerChips": {
+      "use": "custom shared component src/components/opc/KnownCustomerChips.tsx",
+      "custom": true
+    },
+    "CounterCustomer": {
+      "use": "custom shared component src/components/opc/CounterCustomer.tsx",
+      "custom": true
+    },
+    "RunLine": {
+      "use": "custom shared component src/components/opc/RunLine.tsx",
+      "custom": true
+    },
+    "MoneyStatesInWords": {
+      "use": "custom shared component src/components/opc/MoneyStatesInWords.tsx",
+      "custom": true
+    },
+    "AuditLog": {
+      "use": "custom shared component src/components/opc/AuditLog.tsx",
+      "custom": true
+    },
+    "PlanSummary": {
+      "use": "custom shared component src/components/opc/PlanSummary.tsx",
+      "custom": true
+    },
+    "SureValue": {
+      "use": "custom shared component src/components/opc/SureValue.tsx",
+      "custom": true
+    },
+    "DenominationCount": {
+      "use": "custom shared component src/components/opc/DenominationCount.tsx",
+      "custom": true
+    },
+    "ShiftClose": {
+      "use": "custom shared component src/components/opc/ShiftClose.tsx",
+      "custom": true
+    },
+    "HelpCenter": {
+      "use": "custom page src/routes/help.tsx",
+      "custom": true
+    }
+  },
+  "theme": {
+    "file": "theme.css",
+    "format": "css-vars",
+    "selector": ":root",
+    "vars": {
+      "--background": "canvas",
+      "--foreground": "ink",
+      "--card": "surface",
+      "--card-foreground": "ink",
+      "--popover": "surface",
+      "--popover-foreground": "ink",
+      "--primary": "act",
+      "--primary-foreground": "on-act",
+      "--secondary": "surface-sunk",
+      "--secondary-foreground": "ink",
+      "--muted": "surface-sunk",
+      "--muted-foreground": "ink-3",
+      "--accent": "surface-sunk",
+      "--accent-foreground": "ink",
+      "--destructive": "err",
+      "--border": "line",
+      "--input": "line-strong",
+      "--ring": "focus",
+      "--radius": "radius",
+      "--truth-ok": "truth-ok",
+      "--truth-pend": "truth-pend",
+      "--truth-cash": "truth-cash",
+      "--canvas-quiet": "canvas-quiet",
+      "--act-soft": "act-soft",
+      "--act-ring": "act-ring",
+      "--act-ink": "act-ink",
+      "--pend-ink": "pend-ink",
+      "--err-ink": "err-ink",
+      "--ok-soft": "ok-soft",
+      "--pend-soft": "pend-soft",
+      "--err-soft": "err-soft"
+    }
+  }
+}

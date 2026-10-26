@@ -1,0 +1,3426 @@
+{
+  "project": "OPC — app (owner, staff, accountant)",
+  "phase": "locked",
+  "designVersion": "7.7.0",
+  "direction": "modern-calm",
+  "platforms": [
+    "web"
+  ],
+  "sizes": [
+    "1440x900",
+    "1280x800",
+    "1024x768",
+    "390x844"
+  ],
+  "minTarget": 44,
+  "minFont": 13,
+  "paths": {
+    "brief": "BRIEF.md",
+    "design": "DESIGN.md",
+    "tokens": "tokens.css",
+    "components": "components/components.css",
+    "catalog": "components/catalog.html",
+    "screens": "screens",
+    "shots": "shots",
+    "handoff": "handoff",
+    "changelog": "CHANGELOG.md",
+    "registry": "components/registry.json",
+    "implementation": null
+  },
+  "screens": [
+    {
+      "file": "home.html",
+      "title": "Tổng quan",
+      "status": "v7-v4-calm",
+      "states": [
+        "home--offline.html",
+        "home--firstrun.html",
+        "home--loading.html",
+        "home--more.html",
+        "home--assistant.html",
+        "home--notifications.html",
+        "home--command.html",
+        "home--simple.html"
+      ],
+      "statesStatus": "v4-calm",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.83,
+        "round": "v760",
+        "pack": "_packs/v760",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budgetEval": {
+        "v45": 7.2
+      }
+    },
+    {
+      "file": "home--offline.html",
+      "title": "Tổng quan · mất kết nối",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.2,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "home--firstrun.html",
+      "title": "Tổng quan · lần đầu",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.0,
+        "round": 1,
+        "pack": "_packs/v454",
+        "budget": "pass"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "money--assign.html",
+      "title": "Gán khoản tiền vào đơn (dialog)",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "money.html",
+      "pattern": "matching",
+      "patternWhy": "transfers ↔ orders · match with reasons, never auto-assign",
+      "eval": {
+        "score": 8.4,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "money--split.html",
+      "title": "Tiền · một lần trả cho 2 hoá đơn (Sunrise 8.400.000)",
+      "status": "v7-money",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "decision on one money event",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.7,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "money--overpay.html",
+      "title": "Tiền · khách trả dư → trả trước",
+      "status": "v7-money",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "decision on one money event",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.7,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "money--duplicate.html",
+      "title": "Tiền · có thể trùng",
+      "status": "v7-money",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "decision on one money event",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.3,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "money--cash.html",
+      "title": "Tiền · đếm tiền mặt cuối ngày",
+      "status": "v7-money",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "decision on one money event",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "money.html",
+      "title": "Tiền & đối soát",
+      "status": "v4-calm",
+      "states": [
+        "money--assign.html",
+        "money--help.html"
+      ],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "matching",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.3,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders.html",
+      "title": "Đơn hàng",
+      "status": "v7-v4-calm",
+      "states": [
+        "orders--filtered.html",
+        "orders--filters.html",
+        "orders--daterange.html",
+        "orders--search.html",
+        "orders--noresult.html",
+        "orders--loading.html",
+        "orders--peek.html",
+        "orders--bulk.html",
+        "orders--bulk--preview.html"
+      ],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.67,
+        "round": "v760",
+        "pack": "_packs/v760",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budgetEval": {
+        "v45": 7.6
+      }
+    },
+    {
+      "file": "invoices.html",
+      "title": "Hoá đơn",
+      "status": "v4-calm",
+      "states": [
+        "invoices--accountant.html"
+      ],
+      "todoStates": [
+        "error",
+        "detail"
+      ],
+      "pattern": "data-table",
+      "patternWhy": "invoices to scan and fix by state",
+      "eval": {
+        "score": 8.0,
+        "round": 1,
+        "pack": "_packs/v455",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-welcome.html",
+      "title": "Onboarding · chào mừng",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.2,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-phone.html",
+      "title": "Onboarding 1/6 · số điện thoại",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-otp.html",
+      "title": "Onboarding 1/6 · mã xác nhận",
+      "status": "v4-calm",
+      "states": [
+        "onboard-otp--wrong.html"
+      ],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-household.html",
+      "title": "Đăng ký · Hộ kinh doanh (2/6)",
+      "status": "v4-calm",
+      "states": [
+        "onboard-household--notfound.html"
+      ],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v7.0.0",
+        "pack": "_packs/v700",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "note": "Chụp giấy đăng ký hoặc nhập mã; không giả định tra cổng thuế chắc chắn."
+    },
+    {
+      "file": "onboard-household--read.html",
+      "title": "Đăng ký · Kiểm tra thông tin hộ (bước 2/5)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Xác nhận thông tin OPC đọc từ ảnh giấy đăng ký; địa chỉ có ô \"chưa chắc\"; nói thẳng chưa tra được cổng thuế.",
+      "budget": {
+        "kind": "form",
+        "waive": {
+          "tinted": "the one dashed cell is the single thing the owner must check (AI unsure)"
+        }
+      },
+      "eval": {
+        "score": 8.1,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-household--unregistered.html",
+      "title": "Đăng ký · Chưa có giấy đăng ký (2/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Hướng dẫn đăng ký ở xã (NĐ 168/2025), nhân viên OPC hỗ trợ; chỉ mở phần chuẩn bị.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.2,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-verify.html",
+      "title": "Sẵn sàng · Xác minh chủ hộ (tuỳ chọn)",
+      "status": "v4-calm",
+      "states": [
+        "onboard-verify--failed.html"
+      ],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.5,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "note": "Ba cách: app Cas ID, nhân viên OPC, để sau."
+    },
+    {
+      "file": "onboard-verify--app.html",
+      "title": "Sẵn sàng · Quét mã Cas ID",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "QR và đếm ngược 5 phút; không tự quét trên cùng điện thoại.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-bank.html",
+      "title": "Onboarding 4/6 · liên kết MB",
+      "status": "v4-calm",
+      "states": [
+        "onboard-bank--mismatch.html"
+      ],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 7.6,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0; small fixes after, not re-scored"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-bank--done.html",
+      "title": "Onboarding 4/6 · đã liên kết",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": 1,
+        "pack": "_packs/v453",
+        "budget": "pass"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-products.html",
+      "title": "Onboarding 5/6 · thêm hàng",
+      "status": "v4-calm",
+      "states": [
+        "onboard-products--unreadable.html"
+      ],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 7.8,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0; small fixes after, not re-scored"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-products--review.html",
+      "title": "Onboarding 5/6 · duyệt hàng AI đọc",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-help.html",
+      "title": "Onboarding · hỏi về bước này",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-invoice.html",
+      "title": "Đăng ký · Hoá đơn điện tử (5/6)",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v7.0.0",
+        "pack": "_packs/v700",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-firstsale.html",
+      "title": "Onboarding · bán thử",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.8,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-done.html",
+      "title": "Onboarding · xong",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.5,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-assisted.html",
+      "title": "Onboarding · nhân viên hỗ trợ (desktop)",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--filtered.html",
+      "title": "Đơn hàng · đang lọc",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.67,
+        "round": "v760",
+        "pack": "_packs/v760",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--filters.html",
+      "title": "Đơn hàng · bảng lọc",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--daterange.html",
+      "title": "Đơn hàng · chọn khoảng ngày",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--search.html",
+      "title": "Đơn hàng · gợi ý tìm kiếm",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--noresult.html",
+      "title": "Đơn hàng · không có kết quả",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.2,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "invoices--accountant.html",
+      "title": "Hoá đơn · kế toán (compact, phân trang)",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "invoices.html",
+      "pattern": "data-table",
+      "patternWhy": "invoices to scan and fix by state",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-otp--wrong.html",
+      "title": "Onboarding · mã sai",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "onboard-otp.html",
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-consent.html",
+      "title": "Đăng ký · Đồng ý dữ liệu (1/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Đồng ý rõ ràng theo Luật 91/2025; quyền xuất/xoá.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.4,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-household--notfound.html",
+      "title": "Onboarding · không tìm thấy MST",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "onboard-household.html",
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.1,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-verify--failed.html",
+      "title": "Sẵn sàng · Chưa xác minh được",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "onboard-verify.html",
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-bank--mismatch.html",
+      "title": "Onboarding · tên tài khoản không khớp",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "onboard-bank.html",
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-products--unreadable.html",
+      "title": "Onboarding · AI chưa đọc được ảnh",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "onboard-products.html",
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-opening.html",
+      "title": "Đăng ký · Hàng và số đầu kỳ (6/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Tồn đã đếm, tiền mặt, tiền gửi, công nợ hoặc bắt đầu từ 0.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.2,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-opening--empty.html",
+      "title": "Đăng ký · Số đầu kỳ, chưa có hàng (6/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Chị bỏ qua thêm hàng: thêm hàng hoặc bắt đầu từ 0.",
+      "budget": {
+        "kind": "form"
+      }
+    },
+    {
+      "file": "home--loading.html",
+      "title": "Tổng quan · đang tải",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--loading.html",
+      "title": "Đơn hàng · đang tải",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "order-detail.html",
+      "title": "Đơn bán DH-2052 · đã xác nhận, giữ hàng, chờ giao",
+      "status": "v7-sell",
+      "states": [],
+      "pattern": "detail",
+      "patternWhy": "one record with history · understand, act",
+      "data": "annhien",
+      "budgetEval": {
+        "v45": 7.4
+      },
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "order-detail--split.html",
+      "title": "Đơn bán DH-2052 · xác nhận giao thiếu, tách đơn",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v753",
+        "pack": "_packs/v753",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "order-detail--delivering.html",
+      "title": "Đơn bán DH-2052 · đang giao",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.75,
+        "round": "v753",
+        "pack": "_packs/v753",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "order-detail--invoice-error.html",
+      "title": "Đơn bán DH-2052 · hoá đơn bị từ chối cấp mã (MST sai)",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "order-detail--return.html",
+      "title": "Đơn bán DH-2052 · khách trả 2 gói",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.7,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "quick-sale.html",
+      "title": "Bán nhanh · giỏ hàng khách lẻ",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.7,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "quick-sale--qr.html",
+      "title": "Bán nhanh · chờ chuyển khoản QR",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "quick-sale--done.html",
+      "title": "Bán nhanh · xong, 4 việc đóng cùng lúc",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "quick-sale--offline.html",
+      "title": "Bán nhanh · mất mạng, tiền mặt lưu trên máy (chưa đồng bộ)",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [],
+      "pattern": "detail",
+      "patternWhy": "state of an existing screen",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.8,
+        "round": "v770",
+        "pack": "_packs/v770",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "quick-sale--staff.html",
+      "title": "Bán nhanh · nhân viên Hạnh (ghi nợ cần chị An)",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [],
+      "pattern": "detail",
+      "patternWhy": "state of an existing screen",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.7,
+        "round": "v770",
+        "pack": "_packs/v770",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "invoice-detail.html",
+      "title": "Chi tiết hoá đơn 00000418",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "detail",
+      "patternWhy": "one record with history · understand, act",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      }
+    },
+    {
+      "file": "approvals.html",
+      "title": "Cần xử lý · Control Tower (Cần chị quyết)",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "split",
+      "patternWhy": "items needing a decision · clear the queue, with evidence + undo",
+      "eval": {
+        "score": 8.2,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      }
+    },
+    {
+      "file": "audit.html",
+      "title": "Cần xử lý · nhật ký",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "feed",
+      "patternWhy": "events over time · stay aware, find who did what",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "settings-users.html",
+      "title": "Cài đặt · người dùng & quyền",
+      "status": "v4-calm",
+      "states": [
+        "settings-users--otp.html"
+      ],
+      "pattern": "settings",
+      "patternWhy": "low-frequency options · find, change once",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "recheck_v458": 7.9
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "settings-features.html",
+      "title": "Cài đặt · tính năng",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "settings",
+      "patternWhy": "low-frequency options · find, change once",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "home--more.html",
+      "title": "Phone · Thêm (tất cả)",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6b",
+        "pack": "_packs/v4510/u2",
+        "budget": "pass",
+        "sizes": "390",
+        "recheck_v458": 7.5
+      },
+      "data": "annhien",
+      "note": "Known soft spot: Identity 7 (generic menu tree); tick on the active row added, not re-scored."
+    },
+    {
+      "file": "home--assistant.html",
+      "title": "Trợ lý bên cạnh",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "home--notifications.html",
+      "title": "Thông báo",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.7,
+        "round": "v770",
+        "pack": "_packs/v770",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "home--command.html",
+      "title": "Bảng lệnh ⌘K",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.5,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "home--simple.html",
+      "title": "Hôm nay · chế độ Gọn, chữ lớn",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "home.html",
+      "pattern": "overview",
+      "patternWhy": "mixed money signals + to-dos · glance daily, decide what first",
+      "eval": {
+        "score": 8.2,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "money--help.html",
+      "title": "Trợ giúp theo ngữ cảnh",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "money.html",
+      "pattern": "matching",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--peek.html",
+      "title": "Đơn hàng · xem nhanh",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--bulk.html",
+      "title": "Đơn hàng · chọn nhiều + chế độ xem",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "settings-users--otp.html",
+      "title": "Mời kế toán · xác nhận OTP",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "settings-users.html",
+      "pattern": "settings",
+      "patternWhy": "low-frequency options · find, change once",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "settings-display.html",
+      "title": "Cài đặt · hiển thị",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "settings",
+      "patternWhy": "low-frequency options · find, change once",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "receipt.html",
+      "title": "Phiếu in & tin Zalo cho khách",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "detail",
+      "patternWhy": "one record with history · understand, act",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "orders--bulk--preview.html",
+      "title": "Xem trước nhắc nợ hàng loạt",
+      "status": "v4-calm",
+      "states": [],
+      "stateOf": "orders.html",
+      "pattern": "data-table",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "approvals--running.html",
+      "title": "Cần xử lý · Đang chạy",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "split",
+      "patternWhy": "items needing a decision · clear the queue, with evidence + undo",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      }
+    },
+    {
+      "file": "approvals--error.html",
+      "title": "Cần xử lý · Lỗi (chưa rõ kết quả)",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "split",
+      "patternWhy": "items needing a decision · clear the queue, with evidence + undo",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      }
+    },
+    {
+      "file": "approvals--detail.html",
+      "title": "Cần xử lý · chi tiết một việc (điện thoại)",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "split",
+      "patternWhy": "items needing a decision · clear the queue, with evidence + undo",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      }
+    },
+    {
+      "file": "sales-inbox.html",
+      "title": "Bán · Yêu cầu (hộp yêu cầu mọi nguồn)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "split",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.2,
+        "round": 1,
+        "pack": "_packs/v452",
+        "budget": "pass"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "sales-inbox--unclear.html",
+      "title": "Bán · Yêu cầu cần làm rõ",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "split",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "sales-inbox--add.html",
+      "title": "Bán · Thêm yêu cầu (thủ công)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "split",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.2,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "order-detail--invoice.html",
+      "title": "Đơn bán DH-2052 · đã giao đủ, đã lập hoá đơn",
+      "status": "v7-sell",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "detail",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.7,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "delivery.html",
+      "title": "Bán · Giao hàng hôm nay (bảng 4 chặng)",
+      "status": "v7-v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "board",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.7,
+        "round": "v770",
+        "pack": "_packs/v770",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "delivery--pick.html",
+      "title": "Giao hàng · Soạn DH-2052 → bàn giao",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "detail",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.5,
+        "round": "v730",
+        "pack": "_packs/v730",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "delivery--courier.html",
+      "title": "Link giao hàng cho người giao (không cần tài khoản)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "detail"
+      ],
+      "pattern": "wizard",
+      "patternWhy": "many orders to scan, filter, bulk-act",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "receivables.html",
+      "title": "Tiền · Công nợ phải thu",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "receivables--payables.html",
+      "title": "Tiền · Công nợ phải trả",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "receivable-detail.html",
+      "title": "Công nợ · Sunrise Hotel (bảng kê, nhắc nợ)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.2,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail",
+        "waive": {
+          "block": "The 50-word block is the reminder message the Trợ lý drafted — the artifact chị An reads and approves before it is sent; shortening it here would change what the customer receives."
+        }
+      }
+    },
+    {
+      "file": "receivable-detail--assign.html",
+      "title": "Công nợ · gán một khoản tiền cho nhiều hoá đơn",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "match",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.2,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "customer-statement.html",
+      "title": "Công nợ · bảng kê Sunrise",
+      "status": "v7-money",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "decision on one money event",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.2,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchases.html",
+      "title": "Mua hàng · Đơn mua (nhận hàng, chứng từ, tiền tách riêng)",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "purchase list with independent tracks",
+      "data": "annhien",
+      "eval": {
+        "score": 8.2,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-detail.html",
+      "title": "Đơn mua MH-0121 · đã đặt, trả trước một nửa",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.8,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-detail--receive.html",
+      "title": "Đơn mua MH-0118 · nhận 45/50, hoá đơn ghi 50",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-detail--receive--offline.html",
+      "title": "Nhận hàng MH-0118 · mất mạng, số đếm lưu trên máy",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [],
+      "pattern": "detail",
+      "patternWhy": "state of an existing screen",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v770",
+        "pack": "_packs/v770",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-detail--received.html",
+      "title": "Đơn mua MH-0118 · đã nhập kho 45, chờ bù 5",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-detail--pay.html",
+      "title": "Đơn mua MH-0109 · ghi lần trả 2",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.3,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-detail--doc.html",
+      "title": "Đơn mua MH-0114 · ảnh phiếu viết tay + nhập tay",
+      "status": "v7-money",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "decision on one money event",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.2,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-new.html",
+      "title": "Đơn mua mới · Agent đề xuất MH-0122",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-detail--placed.html",
+      "title": "Đơn mua MH-0122 · đã gửi nhà cung cấp",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v753",
+        "pack": "_packs/v753",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchase-return.html",
+      "title": "Trả hàng TH-0003 cho Cơ sở Krông Pa",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "purchases--expense.html",
+      "title": "Mua hàng · Chi phí không qua kho",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "form",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.3,
+        "round": "v720",
+        "pack": "_packs/v720",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "stock.html",
+      "title": "Hàng hoá · Tồn kho (thực · giữ · khả dụng)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "stock-count.html",
+      "title": "Tồn kho · Kiểm kê (lệch → gửi duyệt)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "form",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "period.html",
+      "title": "Sổ & thuế · Đối chiếu Quý III/2026 (ba nguồn + việc trước khi khoá)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v750",
+        "pack": "_packs/v750",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budgetEval": {
+        "v45": 7.0
+      }
+    },
+    {
+      "file": "period--item.html",
+      "title": "Đối chiếu kỳ · xử lý một việc (drawer)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.4,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "period--ready.html",
+      "title": "Đối chiếu kỳ · Sẵn sàng tính",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.7,
+        "round": "v750",
+        "pack": "_packs/v750",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "period--locked.html",
+      "title": "Kỳ quý III · đã khoá",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v753",
+        "pack": "_packs/v753",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "books.html",
+      "title": "Sổ & thuế · Sổ doanh thu",
+      "status": "v7-v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.5,
+        "round": "v760",
+        "pack": "_packs/v760",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "books--cost.html",
+      "title": "Sổ sách · sổ chi phí tháng 10",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [],
+      "pattern": "datatable",
+      "patternWhy": "ledger rows",
+      "data": "annhien",
+      "eval": {
+        "score": 8.83,
+        "round": "v760",
+        "pack": "_packs/v760",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "books--stock.html",
+      "title": "Sổ sách · sổ kho bò một nắng (số lượng + giá trị)",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [],
+      "pattern": "datatable",
+      "patternWhy": "ledger rows",
+      "data": "annhien",
+      "eval": {
+        "score": 9.0,
+        "round": "v760",
+        "pack": "_packs/v760",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax.html",
+      "title": "Kê khai · Quý III/2026 (doanh thu, luỹ kế so với mốc, thông báo; không tính thuế)",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "data": "annhien",
+      "eval": {
+        "score": 8.7,
+        "round": "v750",
+        "pack": "_packs/v750",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax--accountant.html",
+      "title": "Kê khai quý III · góc nhìn kế toán chị Lan (xem, tải)",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [],
+      "pattern": "detail",
+      "patternWhy": "state of an existing screen",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.7,
+        "round": "v770",
+        "pack": "_packs/v770",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax--return.html",
+      "title": "Kê khai · hướng dẫn 6 bước trên eTax",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "data": "annhien",
+      "eval": {
+        "score": 8.8,
+        "round": "v750",
+        "pack": "_packs/v750",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax-file.html",
+      "title": "Kê khai · đã gửi, có thông báo tiếp nhận, chờ chấp nhận",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "form",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "data": "annhien",
+      "eval": {
+        "score": 8.8,
+        "round": "v750",
+        "pack": "_packs/v750",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax-file--signed.html",
+      "title": "Kê khai · đã được chấp nhận",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "form",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "data": "annhien",
+      "eval": {
+        "score": 8.7,
+        "round": "v750",
+        "pack": "_packs/v750",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax-evidence.html",
+      "title": "Kê khai · bộ chứng từ quý III (lưu 10 năm)",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "data": "annhien",
+      "eval": {
+        "score": 8.8,
+        "round": "v750",
+        "pack": "_packs/v750",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax-notice-year.html",
+      "title": "Kê khai · thông báo doanh thu năm",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 9.0,
+        "round": "v753",
+        "pack": "_packs/v753",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "tax-notice-bank.html",
+      "title": "Kê khai · thông báo tài khoản ngân hàng",
+      "status": "v7-books",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.75,
+        "round": "v753",
+        "pack": "_packs/v753",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "readiness.html",
+      "title": "Cài đặt · Sẵn sàng (readiness theo mô hình)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "checklist",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v6.0.0",
+        "pack": "_packs/v600",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "setup-business.html",
+      "title": "Cài đặt · Hộ & mô hình kinh doanh",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "form",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "setup-data.html",
+      "title": "Cài đặt · Dữ liệu nền",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "connections.html",
+      "title": "Cài đặt · Kết nối (17 nhóm)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 7.2,
+        "round": "v5.1.1",
+        "pack": "_packs/v510",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0: Identity 7 across the group; connections, manage, readiness--new, onboard-bank were scored 8.0+ by earlier evaluators and barely changed"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "list",
+        "waive": {
+          "words": "Reference table of all 17 connector categories (owner + support staff): the first view fills with rows by design; every cell is ≤ 5 words and healthy rows carry no extra line."
+        }
+      }
+    },
+    {
+      "file": "setup-policy.html",
+      "title": "Cài đặt · Vai trò & ngưỡng duyệt",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "form",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": 2,
+        "pack": "_packs/v452b",
+        "budget": "pass",
+        "recheck_v458": 7.9
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "products.html",
+      "title": "Hàng hoá · Danh sách & giá",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.2,
+        "round": 1,
+        "pack": "_packs/v455",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "product-detail.html",
+      "title": "Hàng hoá · Bò một nắng 500g (giá, thông tin, lịch sử giá)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "pricelist.html",
+      "title": "Hàng hoá · Bảng giá khách sạn & nhà hàng",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.2,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "pricelist--edit.html",
+      "title": "Bảng giá · đổi giá từ ngày (chị An duyệt)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "form",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "program.html",
+      "title": "Chương trình · Pilot dashboard (Program Viewer)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "dashboard",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": 2,
+        "pack": "_packs/v452b",
+        "budget": "pass"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "overview",
+        "waive": {
+          "words": "Programme dashboard for PM Quang (not a household owner): 4 KPIs + 6-step funnel + support queue answer one question — which households need help — on one screen; stage definitions moved to the report (Cách tính từng bước)."
+        }
+      }
+    },
+    {
+      "file": "program--help.html",
+      "title": "Chương trình · Hộ tham gia (bước + vấn đề)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "datatable",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "program-report.html",
+      "title": "Chương trình · Báo cáo pilot tổng hợp",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "delivery--pick--offline.html",
+      "title": "Offline · soạn hàng khi mất mạng",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.6,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "delivery--pick--queue.html",
+      "title": "Offline · việc chờ gửi (drawer)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "delivery--pick--back.html",
+      "title": "Offline · có mạng lại, một việc dừng (lô bị khoá)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "demo.html",
+      "title": "Demo · bảng điều khiển (không thuộc sản phẩm)",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "dashboard",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail",
+        "waive": {
+          "rules": "Demo console for presenters (not shipped, header says so): a grid of boxed scenario links is the tool; quieting it buys nothing for the household.",
+          "iconRate": "Demo console for presenters (not shipped): each scenario link carries its UC icon so the presenter finds it while talking."
+        }
+      }
+    },
+    {
+      "file": "demo--reset.html",
+      "title": "Demo · đặt lại dữ liệu",
+      "status": "v4-calm",
+      "states": [],
+      "todoStates": [
+        "empty",
+        "offline"
+      ],
+      "pattern": "dashboard",
+      "patternWhy": "bank transactions vs orders · reconcile",
+      "eval": {
+        "score": 8.0,
+        "round": "v456",
+        "pack": "_packs/v456",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien",
+      "budget": {
+        "kind": "detail",
+        "waive": {
+          "rules": "Demo console for presenters (not shipped, header says so): a grid of boxed scenario links is the tool; quieting it buys nothing for the household."
+        }
+      }
+    },
+    {
+      "file": "onboard-model.html",
+      "title": "Đăng ký · Cách bán (3/6)",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "wizard",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.0,
+        "round": "v7.0.0",
+        "pack": "_packs/v700",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "onboard-features.html",
+      "title": "Đăng ký · Việc OPC làm (3/6)",
+      "pattern": "onboarding step",
+      "data": "annhien",
+      "note": "Features first: 11 việc OPC làm, 4 cần nối để bắt đầu; cách nối gợi ý sẵn, Đổi được.",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-gov.html",
+      "title": "Đăng ký · VNeID và eTax (4/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Chỉ hỏi đã có chưa, OPC không giữ mật khẩu.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.5,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-tax.html",
+      "title": "Đăng ký · Cách khai thuế (4/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Doanh thu đến trước ngày dùng OPC, gợi ý kỳ khai chờ kế toán xác nhận.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v7.0.0",
+        "pack": "_packs/v700",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-bankacc.html",
+      "title": "Đăng ký · Tài khoản kinh doanh (4/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Tài khoản/ví dùng kinh doanh và đã báo cơ quan thuế; nối ngân hàng tuỳ chọn.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.2,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-invoice--register.html",
+      "title": "Đăng ký · Đăng ký hoá đơn (5/6)",
+      "pattern": "wizard",
+      "data": "annhien",
+      "note": "Chữ ký số, nối nhà cung cấp, 01/ĐKTĐ-HĐĐT, ký hiệu.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "onboard-feature.html",
+      "title": "Đăng ký · Chọn nhà cung cấp hoá đơn (3/6)",
+      "pattern": "onboarding step",
+      "data": "annhien",
+      "note": "Chọn một cách cho một việc cần để bắt đầu; Sắp có gấp lại; có nhân viên OPC nối giúp.",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 7.9,
+        "round": "v5.1.1",
+        "pack": "_packs/v510",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0: Identity 7 across the group; connections, manage, readiness--new, onboard-bank were scored 8.0+ by earlier evaluators and barely changed"
+      }
+    },
+    {
+      "file": "readiness--new.html",
+      "title": "Sẵn sàng · hộ mới sau đăng ký (Đang thiết lập)",
+      "status": "v4-calm",
+      "states": [],
+      "pattern": "checklist",
+      "patternWhy": "rare, consequential setup · finish correctly, one step per screen",
+      "eval": {
+        "score": 8.2,
+        "round": "v751",
+        "pack": "_packs/v751",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "data": "annhien"
+    },
+    {
+      "file": "customers.html",
+      "title": "Bán · Khách hàng",
+      "pattern": "v4.4 rail destinations",
+      "data": "annhien",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "customer-detail.html",
+      "title": "Khách hàng · Sunrise Hotel",
+      "pattern": "v4.4 rail destinations",
+      "data": "annhien",
+      "eval": {
+        "score": 8.0,
+        "round": "v740",
+        "pack": "_packs/v740",
+        "budget": "pass",
+        "sizes": "1440+390"
+      },
+      "budgetEval": {
+        "v45": 7.8
+      },
+      "budget": {
+        "kind": "detail"
+      }
+    },
+    {
+      "file": "suppliers.html",
+      "title": "Hàng hoá · Nhà cung cấp",
+      "pattern": "v4.4 rail destinations",
+      "data": "annhien",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "supplier-new.html",
+      "title": "Thêm nhà cung cấp",
+      "status": "v7-buy",
+      "states": [],
+      "todoStates": [
+        "offline"
+      ],
+      "pattern": "detail",
+      "patternWhy": "one record, independent tracks + timeline",
+      "data": "annhien",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.75,
+        "round": "v753",
+        "pack": "_packs/v753",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "help.html",
+      "title": "Trợ giúp & hỗ trợ",
+      "pattern": "v4.4 rail destinations",
+      "data": "annhien",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.5.6",
+        "pack": "_packs/v457",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--detail.html",
+      "title": "Kết nối · Hoá đơn bán ra (X Invoice lỗi)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.8.0",
+        "pack": "_packs/v480..v483",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--provider.html",
+      "title": "Kết nối · Chọn nhà cung cấp",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.8.0",
+        "pack": "_packs/v480..v483",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--consent.html",
+      "title": "Kết nối · Đồng ý (chủ hộ)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.2,
+        "round": "v4.8.0",
+        "pack": "_packs/v480..v483",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--testing.html",
+      "title": "Kết nối · Đang kiểm tra",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.2,
+        "round": 1,
+        "pack": "_packs/v4510b",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--unknown.html",
+      "title": "Kết nối · Chưa rõ kết quả",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.4,
+        "round": 1,
+        "pack": "_packs/v4510b",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--log.html",
+      "title": "Kết nối · Nhật ký",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.0,
+        "round": 2,
+        "pack": "_packs/v4510b",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--category.html",
+      "title": "Kết nối · Việc OPC làm",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 7.8,
+        "round": "v5.1.1",
+        "pack": "_packs/v510",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0: Identity 7 across the group; connections, manage, readiness--new, onboard-bank were scored 8.0+ by earlier evaluators and barely changed"
+      },
+      "note": "Front door theo việc: 11 việc chia Cần để bắt đầu / Nên có / Khi cần, cách đang dùng và trạng thái."
+    },
+    {
+      "file": "connections--feature.html",
+      "title": "Kết nối · Nhận tiền chuyển khoản",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Một việc: các cách đang dùng + thêm cách nữa + nếu không có cách nào.",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 7.8,
+        "round": "v5.1.1",
+        "pack": "_packs/v510",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0: Identity 7 across the group; connections, manage, readiness--new, onboard-bank were scored 8.0+ by earlier evaluators and barely changed"
+      }
+    },
+    {
+      "file": "connections--add.html",
+      "title": "Kết nối · Thêm kết nối (thư viện)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 7.6,
+        "round": "v5.1.1",
+        "pack": "_packs/v510",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0: Identity 7 across the group; connections, manage, readiness--new, onboard-bank were scored 8.0+ by earlier evaluators and barely changed"
+      }
+    },
+    {
+      "file": "connections--use.html",
+      "title": "Kết nối · Dùng để làm gì",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.8.0",
+        "pack": "_packs/v480..v483",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--account.html",
+      "title": "Kết nối · Tài khoản Zalo OA",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.2,
+        "round": "v4.8.0",
+        "pack": "_packs/v480..v483",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--disconnect.html",
+      "title": "Kết nối · Ngắt kết nối (hộp xác nhận)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.8.0",
+        "pack": "_packs/v480..v483",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--info.html",
+      "title": "Kết nối · Giới thiệu nhà cung cấp (GHTK)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.9.0",
+        "pack": "_packs/v490..v492",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--request.html",
+      "title": "Kết nối · Yêu cầu nhà cung cấp mới",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "",
+      "eval": {
+        "score": 8.0,
+        "round": "v4.9.0",
+        "pack": "_packs/v490..v492",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--delivery.html",
+      "title": "Kết nối · Nhóm Giao hàng (cách chọn hãng)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.9.0",
+        "pack": "_packs/v490..v492",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--many.html",
+      "title": "Kết nối · Đã nối khi nối nhiều (14)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Scale state: hộ nối 14 tài khoản (tương lai), kiểm tra bố cục khi nhiều nhà cung cấp.",
+      "eval": {
+        "score": 8.4,
+        "round": "v4.9.0",
+        "pack": "_packs/v490..v492",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--casso.html",
+      "title": "Kết nối · Nối qua Casso (S-Invoice)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Hộ nhập mật khẩu ở trang Cas Link; OPC không giữ.",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--key.html",
+      "title": "Kết nối · Dán khoá (payOS)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Khoá cất kín, chỉ 4 số cuối, địa chỉ nhận báo tiền.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--key--error.html",
+      "title": "Kết nối · Khoá sai (payOS)",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Checksum Key sai; chưa lưu gì.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--guide.html",
+      "title": "Kết nối · Hướng dẫn lấy khoá payOS",
+      "pattern": "guide",
+      "data": "annhien",
+      "note": "Các bước Ở payOS / Ở OPC, lỗi thường gặp. Nội dung cổng bên thứ ba cần kiểm lại.",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 7.9,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "tweaked after the last score (not re-scored)"
+      }
+    },
+    {
+      "file": "connections--guide-casso.html",
+      "title": "Kết nối · Hướng dẫn nối S-Invoice qua Casso",
+      "pattern": "guide",
+      "data": "annhien",
+      "note": "Các bước Ở Casso, lỗi thường gặp (từ BA).",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 7.7,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "tweaked after the last score (not re-scored)"
+      }
+    },
+    {
+      "file": "connections--manage.html",
+      "title": "Kết nối · Quản lý payOS",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Khoá che, địa chỉ nhận báo tiền, thử lại, đổi khoá, gỡ.",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 7.2,
+        "round": "v5.1.1",
+        "pack": "_packs/v510",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "below 8.0: Identity 7 across the group; connections, manage, readiness--new, onboard-bank were scored 8.0+ by earlier evaluators and barely changed"
+      }
+    },
+    {
+      "file": "connections--rotate.html",
+      "title": "Kết nối · Đổi khoá payOS",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Khoá cũ chạy tới khi khoá mới qua thử.",
+      "budget": {
+        "kind": "dialog"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "connections--remove.html",
+      "title": "Kết nối · Gỡ payOS",
+      "pattern": "connector flow",
+      "data": "annhien",
+      "note": "Hậu quả rõ; nhắc xoá khoá ở payOS.",
+      "budget": {
+        "kind": "dialog"
+      },
+      "eval": {
+        "score": 8.1,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "platform-providers.html",
+      "title": "Nền tảng · Nhà cung cấp",
+      "pattern": "platform console",
+      "data": "platform",
+      "note": "Sổ đăng ký nhà cung cấp của QNSC (chỉ số hộ).",
+      "budget": {
+        "kind": "list"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "platform-provider.html",
+      "title": "Nền tảng · Casso",
+      "pattern": "platform console",
+      "data": "platform",
+      "note": "Khoá nền tảng, webhook, nhà cung cấp đi qua, hậu quả nếu gỡ.",
+      "budget": {
+        "kind": "detail"
+      },
+      "eval": {
+        "score": 8.0,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "platform-provider--remove.html",
+      "title": "Nền tảng · Ẩn hoặc gỡ Casso",
+      "pattern": "platform console",
+      "data": "platform",
+      "note": "Ẩn hay gỡ hẳn, lý do bắt buộc.",
+      "budget": {
+        "kind": "dialog"
+      },
+      "eval": {
+        "score": 8.3,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390"
+      }
+    },
+    {
+      "file": "platform-provider--new.html",
+      "title": "Nền tảng · Thêm nhà cung cấp",
+      "pattern": "platform console",
+      "data": "platform",
+      "note": "Thêm một dòng vào danh mục; chọn cách nối và ô hộ phải nhập.",
+      "budget": {
+        "kind": "form"
+      },
+      "eval": {
+        "score": 7.8,
+        "round": "v5.0.0",
+        "pack": "_packs/v500",
+        "budget": "pass",
+        "sizes": "1440+390",
+        "note": "tweaked after the last score (not re-scored)"
+      }
+    }
+  ],
+  "notes": "phase: brief → research → directions → locked → screens. Managed by the uiux-studio skill; update on every change.",
+  "budget": {
+    "targets": "references/cost-playbook.md",
+    "log": [
+      {
+        "date": "2026-10-03",
+        "phase": "v4 modern-calm (Kiro CLI)",
+        "subagent_tokens": "n/a (not reported by Kiro)",
+        "agents": "4 evaluator runs"
+      }
+    ]
+  },
+  "implementation": {
+    "maps": [
+      "../../system/maps/opc-shadcn.json"
+    ],
+    "baseUrl": null,
+    "routes": {},
+    "masks": [],
+    "threshold": 2,
+    "note": "OPC extension of the shadcn map (system/maps/opc-shadcn.json); custom components live in @/components/opc",
+    "prototypeArtifact": "https://claude.ai/artifact/E1Ra9kckq4tzv29oHPLyGh"
+  },
+  "tech": {
+    "platforms": [
+      "web"
+    ],
+    "ui": "headless",
+    "libs": [
+      "shadcn"
+    ],
+    "reason": "ADR 0007: React 19 + Vite SPA, Tailwind v4, shadcn/ui headless; distinctive brand; owner on laptop and phone browser",
+    "revisitWhen": null,
+    "decided": "2026-10-01"
+  },
+  "type": "app",
+  "created": "2026-10-01",
+  "extends": "../../system",
+  "flows": [
+    {
+      "name": "Đăng ký lần đầu (6 bước)",
+      "steps": [
+        "onboard-welcome.html",
+        "onboard-phone.html",
+        "onboard-otp.html",
+        "onboard-consent.html",
+        "onboard-household.html",
+        "onboard-household--read.html",
+        "onboard-model.html",
+        "onboard-features.html",
+        "onboard-gov.html",
+        "onboard-tax.html",
+        "onboard-bankacc.html",
+        "onboard-invoice.html",
+        "onboard-invoice--register.html",
+        "onboard-products.html",
+        "onboard-products--review.html",
+        "onboard-opening.html",
+        "onboard-done.html",
+        "onboard-firstsale.html",
+        "readiness--new.html"
+      ]
+    },
+    {
+      "name": "Mua hàng: đặt → nhận → trả tiền → trả hàng",
+      "steps": [
+        "purchases.html",
+        "purchase-new.html",
+        "purchase-detail--placed.html",
+        "purchase-detail.html",
+        "purchase-detail--receive.html",
+        "purchase-detail--received.html",
+        "purchase-detail--pay.html",
+        "purchase-detail--doc.html",
+        "purchase-return.html",
+        "suppliers.html",
+        "supplier-new.html"
+      ]
+    },
+    {
+      "name": "Bán sỉ: yêu cầu → giao → hoá đơn → tiền",
+      "steps": [
+        "sales-inbox.html",
+        "order-detail.html",
+        "delivery--pick.html",
+        "order-detail--split.html",
+        "order-detail--delivering.html",
+        "order-detail--invoice.html",
+        "order-detail--return.html",
+        "money.html",
+        "money--split.html",
+        "receivables.html",
+        "receivable-detail.html",
+        "customer-statement.html"
+      ]
+    },
+    {
+      "name": "Bán nhanh tại chỗ",
+      "steps": [
+        "orders.html",
+        "quick-sale.html",
+        "quick-sale--qr.html",
+        "quick-sale--done.html"
+      ]
+    },
+    {
+      "name": "Tiền trong ngày",
+      "steps": [
+        "money.html",
+        "money--split.html",
+        "receivables.html",
+        "money--overpay.html",
+        "money--duplicate.html",
+        "money--cash.html"
+      ]
+    },
+    {
+      "name": "Khoá kỳ và kê khai",
+      "steps": [
+        "period.html",
+        "period--item.html",
+        "period--ready.html",
+        "period--locked.html",
+        "tax.html",
+        "tax--return.html",
+        "tax-file.html",
+        "tax-file--signed.html",
+        "tax-evidence.html",
+        "tax-notice-bank.html",
+        "tax-notice-year.html"
+      ]
+    },
+    {
+      "name": "Đối soát: gán tiền chưa có mã đơn",
+      "steps": [
+        "home.html",
+        "money.html",
+        "money--assign.html"
+      ]
+    },
+    {
+      "name": "Tìm và lọc đơn",
+      "steps": [
+        "orders.html",
+        "orders--search.html",
+        "orders--noresult.html",
+        "orders--filters.html",
+        "orders--daterange.html",
+        "orders--filtered.html"
+      ]
+    },
+    {
+      "name": "Điều hướng mới: tìm mọi thứ",
+      "steps": [
+        "home.html",
+        "home--more.html",
+        "approvals.html",
+        "audit.html",
+        "settings-features.html",
+        "settings-users.html"
+      ]
+    },
+    {
+      "name": "Lớp Pro: hỗ trợ & năng suất",
+      "steps": [
+        "home.html",
+        "home--assistant.html",
+        "home--notifications.html",
+        "home--command.html",
+        "orders--peek.html",
+        "orders--bulk.html",
+        "orders--bulk--preview.html",
+        "money--help.html",
+        "settings-display.html",
+        "home--simple.html",
+        "receipt.html",
+        "settings-users--otp.html"
+      ]
+    },
+    {
+      "name": "Tổng quan: các trạng thái (v4)",
+      "steps": [
+        "home--firstrun.html",
+        "home--loading.html",
+        "home.html",
+        "home--offline.html",
+        "home--simple.html"
+      ]
+    }
+  ]
+}

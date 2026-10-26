@@ -1,0 +1,75 @@
+{
+  "$description": "uiux-studio export of tokens.css — set \"textsize-xl\" (overrides base)",
+  "semantic": {
+    "fs-meta": {
+      "$type": "dimension",
+      "$value": {
+        "value": 17,
+        "unit": "px"
+      }
+    },
+    "fs-note": {
+      "$type": "dimension",
+      "$value": {
+        "value": 18,
+        "unit": "px"
+      }
+    },
+    "fs-body": {
+      "$type": "dimension",
+      "$value": {
+        "value": 20,
+        "unit": "px"
+      }
+    },
+    "fs-control": {
+      "$type": "dimension",
+      "$value": {
+        "value": 21,
+        "unit": "px"
+      }
+    },
+    "fs-lead": {
+      "$type": "dimension",
+      "$value": {
+        "value": 22,
+        "unit": "px"
+      }
+    },
+    "fs-amount-s": {
+      "$type": "dimension",
+      "$value": {
+        "value": 23,
+        "unit": "px"
+      }
+    },
+    "fs-h3": {
+      "$type": "dimension",
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "fs-amount": {
+      "$type": "dimension",
+      "$value": {
+        "value": 26,
+        "unit": "px"
+      }
+    },
+    "fs-h2": {
+      "$type": "dimension",
+      "$value": {
+        "value": 28,
+        "unit": "px"
+      }
+    },
+    "target": {
+      "$type": "dimension",
+      "$value": {
+        "value": 56,
+        "unit": "px"
+      }
+    }
+  }
+}

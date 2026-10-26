@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sẵn sàng · Quét mã Cas ID — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../system/tokens.css">
+<link rel="stylesheet" href="../../../system/components/components.css">
+<link rel="stylesheet" href="../../../system/components/recipes.css">
+<link rel="stylesheet" href="../app-tokens.css">
+<style>
+/* layout only */
+.r-onboard__body > * { min-width: 0; }
+</style>
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></symbol>
+</svg>
+<div class="r-onboard">
+  <header class="r-onboard__top">
+    <a class="c-icon-btn c-icon-btn--outline" href="readiness--new.html" aria-label="Quay lại Sẵn sàng"><svg class="c-ic" aria-hidden="true"><use href="#i-back"/></svg></a>
+    <div class="c-steps" role="img" aria-label="Sẵn sàng: Xác minh chủ hộ"><span class="c-steps__label"><b>Sẵn sàng</b> · Xác minh chủ hộ</span></div>
+    <a class="r-onboard__help" href="onboard-help.html"><svg class="c-ic" aria-hidden="true"><use href="#i-help"/></svg>Hỏi</a>
+  </header>
+  <main class="r-onboard__body">
+    <h1 class="r-onboard__title">Quét mã bằng app Cas ID</h1>
+    <p class="c-say">Đang dùng chính điện thoại này? Nó không tự quét mã trên màn hình của nó được. Nhờ người thân quét giúp, hoặc chọn nhân viên OPC.</p>
+    <ol class="r-guide__mini"><li>Mở app Cas ID trên một điện thoại khác</li><li>Quét mã này, đặt căn cước gắn chip sau điện thoại</li><li>Bấm đồng ý chia sẻ họ tên và số căn cước cho OPC</li></ol>
+    <div class="c-qr c-qr--large"><img class="c-qr__img" src="../../../system/assets/qr-demo.svg" alt="Mã QR để quét bằng app Cas ID"><div class="c-qr__meta"><span class="c-qr__k">Mã hết hạn sau</span><span class="c-qr__amt">4:32</span></div><p class="c-qr__status" aria-live="polite"><span class="c-qr__status-pic"><svg class="c-ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Đang chờ chị quét…</p></div>
+    <p class="r-onboard__saved">Đã lưu — làm tiếp lúc nào cũng được</p>
+  </main>
+  <footer class="r-onboard__foot">
+    <a class="c-btn c-btn--block" href="onboard-verify--failed.html">Tạo mã mới</a>
+    <div class="r-onboard__alt"><a href="onboard-help.html">Nhân viên OPC xác minh cùng chị</a></div>
+  </footer>
+</div>
+</body>
+</html>

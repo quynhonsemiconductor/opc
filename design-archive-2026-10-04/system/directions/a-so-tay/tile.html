@@ -1,0 +1,158 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Style tile — Sổ Tay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{ /* Sổ Tay — draft tokens */
+  --bg:#faf8f3;          /* giấy: near-white paper */
+  --surface:#ffffff;     /* chỉ dùng cho ô nhập */
+  --ink:#172033;         /* mực xanh-đen */
+  --ink-2:#4e5563;       /* mực nhạt: meta, pending */
+  --line:#d8d2c4;        /* dòng kẻ sổ */
+  --line-strong:#172033;
+  --accent:#b8321a;      /* son con dấu — ONLY for the verification seal */
+  --on-accent:#ffffff;
+  --ok:#b8321a;          /* "đã xác minh" = the seal, same vermilion */
+  --warn:#4e5563;        /* pending = ink-2 + dashed */
+  --danger:#8f4a0e;      /* lỗi: nâu đất, distinct from seal */
+  --danger-bg:#f5e8d4;
+  --font-display:"Source Serif 4",Georgia,serif; --font-body:"Public Sans",sans-serif;
+  --r:2px; --s:8px; }
+*{box-sizing:border-box}
+body{margin:0;width:1200px;height:800px;overflow:hidden;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-body)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.tile{display:grid;grid-template-columns:360px 1fr;height:100%}
+.meta{padding:28px 28px 24px;border-right:1px solid var(--line);display:grid;align-content:start;gap:18px}
+.work{padding:28px 32px 24px;display:grid;gap:20px;align-content:start}
+.name{font:600 34px/1.1 var(--font-display);letter-spacing:-.01em}
+.kw{color:var(--ink-2);font-size:16px}
+.lbl{font-size:13px;line-height:1.3;color:var(--ink-2);font-weight:600;margin-bottom:6px;letter-spacing:.01em}
+.sw{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.sw figure{margin:0;font-size:13px;line-height:1.2;color:var(--ink-2)}
+.sw figure i{display:block;height:40px;border:1px solid var(--line);border-radius:var(--r);margin-bottom:4px}
+
+/* components */
+.btn{height:44px;padding:0 18px;font:600 16px/1 var(--font-body);border-radius:var(--r);border:1px solid var(--ink);display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.btn-p{background:var(--ink);color:#fff}
+.btn-s{background:transparent;color:var(--ink)}
+.btn-d{background:transparent;color:#8a8f99;border-color:var(--line);border-style:dashed;cursor:not-allowed}
+.field{display:grid;gap:2px}
+.field label{font-size:14px;color:var(--ink-2)}
+.input{height:44px;width:200px;border:0;border-bottom:1.5px solid var(--ink);background:transparent;font:600 20px/44px var(--font-display);color:var(--ink);padding:0 2px;display:flex;justify-content:space-between}
+.input small{font:400 14px/44px var(--font-body);color:var(--ink-2)}
+.row{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+.st{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;font:600 14px/1 var(--font-body);border-radius:var(--r)}
+.st svg{width:14px;height:14px;flex:none}
+.st-pend{border:1.5px dashed var(--ink-2);color:var(--ink-2)}
+.st-ok{border:1.5px solid var(--accent);color:var(--accent);box-shadow:inset 0 0 0 2px var(--bg),inset 0 0 0 3px var(--accent)}
+.st-cqt{border:1.5px dashed var(--ink-2);color:var(--ink-2)}
+.st-cqt-ok{border:1.5px solid var(--ink);color:var(--ink)}
+.st-err{background:var(--danger-bg);color:var(--danger);border:1.5px solid var(--danger)}
+
+/* ledger slice */
+.ledger-h{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1.5px solid var(--ink);padding-bottom:6px}
+.ledger-h h2{margin:0;font:600 24px/1.2 var(--font-display)}
+.ledger-h span{font-size:14px;color:var(--ink-2)}
+.hero{display:flex;align-items:baseline;gap:20px;padding:18px 0 14px;border-bottom:1px solid var(--line)}
+.hero .k{font-size:14px;color:var(--ink-2);width:120px}
+.hero .v{font:600 44px/1 var(--font-display);letter-spacing:-.01em;border-bottom:4px double var(--ink);padding-bottom:4px}
+.hero .d{font-size:16px;color:var(--ink)}
+.hero .d b{font-weight:600}
+.lines{display:grid}
+.ln{display:grid;grid-template-columns:240px 1fr 150px 170px;align-items:center;min-height:50px;border-bottom:1px solid var(--line)}
+.ln .a{font:600 20px/1 var(--font-display);text-align:right}
+.ln.sub .t{padding-left:22px;color:var(--ink-2);position:relative}
+.ln.sub .t::before{content:"";position:absolute;left:6px;top:-2px;width:10px;height:13px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ln.sub .a{font-size:18px;font-weight:400}
+.ln .s{display:flex;justify-content:flex-end}
+
+.todo-h{display:flex;align-items:baseline;gap:10px;margin-top:6px;border-bottom:1.5px solid var(--ink);padding-bottom:4px}
+.todo-h h3{margin:0;font:600 20px/1.2 var(--font-display)}
+.todo-h span{font-size:14px;color:var(--ink-2)}
+.todo{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.todo .t{font-weight:600}
+.todo .m{font-size:14px;color:var(--ink-2);line-height:1.45}
+.todo .m b{font:600 16px/1 var(--font-display);color:var(--ink)}
+
+/* the stamp */
+.stamp{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;font:700 13px/1 var(--font-body);letter-spacing:.06em;text-transform:uppercase;border-radius:3px}
+.stamp svg{width:14px;height:14px}
+.stamp-ok{color:var(--accent);border:2px solid var(--accent);box-shadow:inset 0 0 0 2px var(--bg),inset 0 0 0 3px var(--accent);transform:rotate(-3deg)}
+.stamp-pend{color:var(--ink-2);border:1.5px dashed var(--ink-2);font-weight:600;letter-spacing:.02em;text-transform:none;font-size:14px}
+.sig{border-top:1.5px solid var(--ink);padding-top:12px;margin-top:6px}
+.sig .pair{display:flex;align-items:center;gap:10px;margin:14px 0 14px}
+.sig .big{padding:9px 12px;font-size:15px}
+.sig .stamp-pend.big{font-size:15px}
+.sig .big svg{width:16px;height:16px}
+.sig p{margin:0;font-size:14px;line-height:1.45;color:var(--ink-2)}
+.arrow{color:var(--ink-2);font-size:18px}
+</style></head><body><div class="tile">
+<section class="meta">
+  <div><div class="name">Sổ Tay</div><div class="kw">ngay ngắn · chắc chắn · quen thuộc</div></div>
+  <div><div class="lbl">Anchors</div><div style="font-size:14px;line-height:1.45">refs/square-retail.png — serif cho con số<br>refs/stripe.png — đường kẻ, không thẻ</div></div>
+  <div><div class="lbl">Type · Source Serif 4 / Public Sans</div>
+    <div style="font:600 34px/1.1 var(--font-display);letter-spacing:-.01em">Tiền đã khớp sổ</div>
+    <div style="margin-top:6px">Đối chiếu từng khoản với sao kê — ặ ườ ễ ỹ</div>
+    <div class="num" style="display:flex;align-items:baseline;gap:14px;margin-top:4px">
+      <span style="font:600 30px/1.2 var(--font-display)">1.020.000 ₫</span>
+      <span style="font:400 16px/1.2 var(--font-display)">1.020.000 ₫ · 0,5 kg</span></div></div>
+  <div><div class="lbl">Colour roles</div><div class="sw">
+    <figure><i style="background:var(--bg)"></i>giấy</figure>
+    <figure><i style="background:var(--ink)"></i>mực</figure>
+    <figure><i style="background:var(--ink-2)"></i>mực nhạt</figure>
+    <figure><i style="background:var(--line)"></i>dòng kẻ</figure>
+    <figure><i style="background:var(--accent)"></i>con dấu</figure>
+    <figure><i style="background:var(--danger)"></i>lỗi</figure></div></div>
+  <div class="sig"><div class="lbl" style="color:var(--accent)">Signature move · Con dấu xác minh</div>
+    <div class="pair">
+      <span class="stamp stamp-pend big">chờ xác minh</span><span class="arrow">→</span>
+      <span class="stamp stamp-ok big"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Đã xác minh</span></div>
+    <p>Chỉ khi tiền khớp sao kê ngân hàng, dòng sổ mới được đóng dấu son. Chưa khớp thì ô dấu còn trống, nét đứt.</p></div>
+</section>
+<section class="work">
+  <div><div class="lbl">Components</div>
+    <div class="row">
+      <button class="btn btn-p">Đối chiếu</button>
+      <button class="btn btn-s">Gán vào đơn</button>
+      <button class="btn btn-d" disabled>Xuất hoá đơn</button>
+      <div class="field" style="margin-left:12px"><label>Khách đưa</label><div class="input num">500.000<small>₫</small></div></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <span class="st st-pend"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.5V8l2.4 1.6"/></svg>Chờ xác minh</span>
+      <span class="st st-ok"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Đã xác minh</span>
+      <span class="st st-cqt"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="2" width="10" height="12" rx="1"/><path d="M5.5 6h5M5.5 9h3"/></svg>Chờ mã CQT</span>
+      <span class="st st-cqt-ok"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="2" width="10" height="12" rx="1"/><path d="M5.5 8.5l1.8 1.8 3.4-3.6"/></svg>Có mã CQT</span>
+      <span class="st st-err"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2l6.5 11.5h-13z"/><path d="M8 6.5v3.2M8 11.6v.1"/></svg>Lỗi · gửi lại</span>
+    </div>
+  </div>
+
+  <div><div class="lbl">Real content slice</div>
+    <div class="ledger-h"><h2>Tiền hôm nay</h2><span>cập nhật theo sao kê</span></div>
+    <div class="hero num">
+      <span class="k">Doanh thu</span>
+      <span class="v">8.460.000 ₫</span>
+      <span class="d">23 đơn · <b>+19%</b> so với hôm qua (7.120.000 ₫)</span>
+    </div>
+    <div class="lines num">
+      <div class="ln"><span class="t">QR/chuyển khoản</span><span></span><span class="a">5.940.000 ₫</span><span class="s"></span></div>
+      <div class="ln sub"><span class="t">đã xác minh</span><span></span><span class="a">4.560.000 ₫</span>
+        <span class="s"><span class="stamp stamp-ok"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Đã xác minh</span></span></div>
+      <div class="ln sub"><span class="t">chờ xác minh</span><span></span><span class="a">1.380.000 ₫</span>
+        <span class="s"><span class="stamp stamp-pend">chờ xác minh</span></span></div>
+      <div class="ln"><span class="t">Tiền mặt</span><span></span><span class="a">2.520.000 ₫</span><span class="s"></span></div>
+    </div>
+
+    <div class="todo-h" style="margin-top:26px"><h3>Cần xử lý</h3><span>2 việc</span></div>
+    <div class="todo num">
+      <div><div class="t">2 khoản QR chờ xác minh</div>
+        <div class="m">DH-1043 · <b>1.020.000 ₫</b> · 10:42 &nbsp;&nbsp; DH-1041 · <b>360.000 ₫</b> · 10:05</div></div>
+      <button class="btn btn-p">Đối chiếu</button>
+    </div>
+    <div class="todo num">
+      <div><div class="t">Chuyển khoản không có mã đơn — <span style="font-family:var(--font-display)">2.150.000 ₫</span></div>
+        <div class="m">từ NHA HANG BIEN DONG · 09:15 · gợi ý: công nợ Nhà hàng Biển Đông</div></div>
+      <button class="btn btn-s">Gán vào đơn</button>
+    </div>
+  </div>
+</section></div></body></html>

@@ -1,0 +1,347 @@
+{
+ "project": "OPC — app (owner, staff, accountant)",
+ "version": "4.4.1",
+ "group": "g45",
+ "screens": [
+  {
+   "file": "period.html",
+   "title": "Sổ & thuế · Đối chiếu Quý III/2026 (ba nguồn + việc trước khi khoá)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 38,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "fail",
+     "reading": "fail",
+     "spacing": "fail",
+     "type": "ok"
+    },
+    "fails": [
+     "words",
+     "rules",
+     "subLong",
+     "iconRows"
+    ],
+    "waived": {},
+    "measures": {
+     "words": 294,
+     "block": 24,
+     "icons": 11,
+     "iconRate": 3.7,
+     "rules": 13,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "600",
+      "400",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 4,
+     "chips": 4,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "order-detail.html",
+   "title": "DH-2052 · Order 360 (đã xác nhận, đã giữ hàng)",
+   "pattern": "detail",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 30,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "list",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "fail",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [
+     "words"
+    ],
+    "waived": {},
+    "measures": {
+     "words": 271,
+     "block": 17,
+     "icons": 1,
+     "iconRate": 0.4,
+     "rules": 8,
+     "sizes": 4,
+     "sizeList": [
+      14,
+      16,
+      18,
+      32
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 4,
+     "chips": 1,
+     "tinted": 0
+    }
+   }
+  },
+  {
+   "file": "orders.html",
+   "title": "Đơn hàng",
+   "pattern": "data-table",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 42,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "list",
+    "groups": {
+     "colour": "ok",
+     "icons": "fail",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [
+     "icons",
+     "iconRate"
+    ],
+    "waived": {},
+    "measures": {
+     "words": 187,
+     "block": 12,
+     "icons": 15,
+     "iconRate": 8,
+     "rules": 11,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 6,
+     "tinted": 1
+    }
+   }
+  },
+  {
+   "file": "home.html",
+   "title": "Tổng quan",
+   "pattern": "overview",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 41,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "overview",
+    "groups": {
+     "colour": "ok",
+     "icons": "fail",
+     "reading": "fail",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [
+     "words",
+     "iconRate"
+    ],
+    "waived": {},
+    "measures": {
+     "words": 187,
+     "block": 22,
+     "icons": 12,
+     "iconRate": 6.4,
+     "rules": 4,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "700",
+      "400",
+      "600"
+     ],
+     "greys": 3,
+     "hues": 3,
+     "chips": 1,
+     "tinted": 2
+    }
+   }
+  },
+  {
+   "file": "customer-detail.html",
+   "title": "Khách hàng · Sunrise Hotel",
+   "pattern": "v4.4 rail destinations",
+   "note": "",
+   "checks": [
+    {
+     "theme": "light",
+     "size": "1440x900",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "keys": {
+      "stops": 33,
+      "noRing": 0,
+      "escapesDialog": 0,
+      "unreached": 0
+     },
+     "details": []
+    },
+    {
+     "theme": "light",
+     "size": "390x844",
+     "probe": 0,
+     "stress": 0,
+     "a11y": [],
+     "details": []
+    }
+   ],
+   "budget": {
+    "kind": "detail",
+    "groups": {
+     "colour": "ok",
+     "icons": "ok",
+     "reading": "ok",
+     "spacing": "ok",
+     "type": "ok"
+    },
+    "fails": [],
+    "waived": {},
+    "measures": {
+     "words": 193,
+     "block": 19,
+     "icons": 7,
+     "iconRate": 3.6,
+     "rules": 3,
+     "sizes": 3,
+     "sizeList": [
+      14,
+      16,
+      18
+     ],
+     "weights": 3,
+     "weightList": [
+      "400",
+      "600",
+      "700"
+     ],
+     "greys": 3,
+     "hues": 4,
+     "chips": 1,
+     "tinted": 2
+    }
+   }
+  }
+ ]
+}

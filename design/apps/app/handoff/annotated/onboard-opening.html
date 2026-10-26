@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đăng ký · Số đầu kỳ — OPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../../../../system/tokens.css">
+<link rel="stylesheet" href="../../../../system/components/components.css">
+<link rel="stylesheet" href="../../../../system/components/recipes.css">
+<link rel="stylesheet" href="../../app-tokens.css">
+<style>
+/* layout only */
+.r-onboard__body > * { min-width: 0; }
+</style>
+</head>
+<body data-density="touch">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"></path> <path d="M19 12H5"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path> <path d="M12 17h.01"></path></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"></path> <path d="M12 5v14"></path></symbol>
+</svg>
+<div class="r-onboard" data-component="OnboardingStep">
+  <header class="r-onboard__top" data-part="OnboardingStep.top">
+    <a class="c-icon-btn c-icon-btn--outline" href="onboard-products--review.html" aria-label="Quay lại bước trước" data-component="IconButton" data-variant="outline"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-back"></use></svg></a>
+    <div class="c-steps" role="img" aria-label="Bước 6 trên 6: Hàng và số đầu kỳ" data-component="StepProgress"><span class="c-steps__label" data-part="StepProgress.label"><b>Bước 6/6</b> · Hàng và số đầu kỳ</span><ol class="c-steps__bar" data-part="StepProgress.bar"><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--done" data-part="StepProgress.seg"></li><li class="c-steps__seg c-steps__seg--now" data-part="StepProgress.seg"></li></ol></div>
+    <a class="r-onboard__help" href="onboard-help.html" data-part="OnboardingStep.help"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-help"></use></svg>Hỏi</a>
+  </header>
+  <main class="r-onboard__body" data-part="OnboardingStep.body">
+    <h1 class="r-onboard__title" data-part="OnboardingStep.title">Số đầu kỳ ngày 01/07/2026</h1>
+    <p class="c-say" data-component="OwnerSentence">Đếm thật một lần, chị xác nhận. Hộ mới chưa có gì thì chọn "Bắt đầu từ 0" ở dưới.</p>
+    <section aria-labelledby="op-s"><div class="r-open__head" data-part="Open.head"><h2 class="c-card__title" id="op-s" data-part="Card.title">Tồn đã đếm</h2><a class="c-btn" href="onboard-products.html" data-component="Button">Thêm món khác</a></div><p class="u-meta">2 món từ bảng giá chị vừa chụp</p><ul class="r-open" data-component="Open"><li class="r-open__i" data-part="Open.i"><span class="r-open__n" data-part="Open.n"><b>Bò một nắng 500g</b><small>gói</small></span><label class="u-sr" for="op-0">Số gói đã đếm của Bò một nắng 500g</label><input class="c-field__input r-open__q" id="op-0" inputmode="numeric" value="40" data-part="Field.input"></li><li class="r-open__i" data-part="Open.i"><span class="r-open__n" data-part="Open.n"><b>Muối kiến vàng 100g</b><small>hũ</small></span><label class="u-sr" for="op-1">Số hũ đã đếm của Muối kiến vàng 100g</label><input class="c-field__input r-open__q" id="op-1" inputmode="numeric" value="60" data-part="Field.input"></li></ul></section>
+    <div class="c-field" data-component="Field"><label class="c-field__label" for="op-cash" data-part="Field.label">Tiền mặt đang có</label><div class="c-field__control" data-part="Field.control"><input class="c-field__input" id="op-cash" inputmode="numeric" value="2.500.000" placeholder="" data-part="Field.input"><span class="c-field__suffix" data-part="Field.suffix">đồng</span></div></div>
+    <div class="c-field" data-component="Field"><label class="c-field__label" for="op-bank" data-part="Field.label">Tiền trong tài khoản MB</label><div class="c-field__control" data-part="Field.control"><input class="c-field__input" id="op-bank" inputmode="numeric" value="18.400.000" placeholder="" data-part="Field.input"><span class="c-field__suffix" data-part="Field.suffix">đồng</span></div><span class="c-field__hint" data-part="Field.hint">theo sao kê ngày 30/06</span></div>
+    <dl class="c-kv" data-component="FactList"><dt>Khách đang nợ</dt><dd>0 · thêm sau ở Công nợ</dd><dt>Chị đang nợ nhà cung cấp</dt><dd>0</dd></dl>
+    <p class="r-onboard__saved" data-part="OnboardingStep.saved">Đã lưu — làm tiếp lúc nào cũng được</p>
+  </main>
+  <aside class="r-onboard__aside r-onboard__aside--compact" aria-label="Các bước đăng ký" data-part="OnboardingStep.aside">
+    <nav class="c-stepmap" aria-label="Tiến độ đăng ký" data-component="StepMap"><p class="c-stepmap__k" data-part="StepMap.k">Đăng ký · còn khoảng 5 phút · làm dở vẫn lưu</p><ol class="c-stepmap__list" data-part="StepMap.list"><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Số điện thoại<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Hộ kinh doanh<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Cách bán<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Thuế và tài khoản<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--done" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n"><svg class="c-ic" aria-hidden="true" data-component="Icon"><use href="#i-check"></use></svg></span><span class="c-stepmap__t" data-part="StepMap.t">Hoá đơn<span class="u-sr"> — xong</span></span><span class="c-stepmap__m" data-part="StepMap.m">xong</span></li><li class="c-stepmap__s c-stepmap__s--now" aria-current="step" data-part="StepMap.s"><span class="c-stepmap__n" aria-hidden="true" data-part="StepMap.n">6</span><span class="c-stepmap__t" data-part="StepMap.t">Hàng và số đầu kỳ</span><span class="c-stepmap__m" data-part="StepMap.m">5 phút</span><p class="c-stepmap__why" data-part="StepMap.why">Thêm hàng và giá, rồi điền tồn đã đếm, tiền và công nợ lúc bắt đầu.</p></li></ol><p class="c-stepmap__end" data-part="StepMap.end">Xong 6 bước: làm giao dịch đầu tiên, rồi làm dần danh sách Sẵn sàng</p></nav>
+  </aside>
+  <footer class="r-onboard__foot" data-part="OnboardingStep.foot">
+    <a class="c-btn c-btn--act c-btn--block" href="onboard-done.html" data-component="Button" data-variant="act block">Xác nhận số đầu kỳ</a>
+    <div class="r-onboard__alt" data-part="OnboardingStep.alt"><a href="onboard-opening--empty.html">Bắt đầu từ 0</a><a href="onboard-help.html">Nhân viên OPC đếm cùng</a></div>
+  </footer>
+</div>
+
+
+</body></html>

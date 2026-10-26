@@ -1,0 +1,22 @@
+{
+  "$description": "uiux-studio export of tokens.css — set \"density-touch\" (overrides base)",
+  "semantic": {
+    "target": {
+      "$type": "dimension",
+      "$value": {
+        "value": 56,
+        "unit": "px"
+      }
+    },
+    "row-h": {
+      "$type": "dimension",
+      "$value": {
+        "value": 64,
+        "unit": "px"
+      }
+    },
+    "fs-control": {
+      "$value": "{primitive.p-size-18}"
+    }
+  }
+}
